@@ -1,0 +1,12 @@
+table {
+  border: none;
+}
+
+tr,
+tr:not(:last-child) {
+  border-bottom: 1px solid $color-primary-dark-blue;
+}
+
+td {
+  @extend .body;
+}

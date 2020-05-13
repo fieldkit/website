@@ -1,0 +1,95 @@
+.button {
+  border: none;
+  border-radius: 3px;
+  color: inherit;
+  cursor: pointer;
+  font-family: $font-family-primary;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background-color $duration-fast, color $duration-fast;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &:disabled {
+    box-shadow: 2px 2px 4px $color-gray-3;
+  }
+}
+
+.button--primary {
+  background-color: $color-primary-red;
+  border: none;
+  color: #ffffff;
+
+  &:focus,
+  &:hover {
+    background-color: #c24654;
+    color: #ffffff;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-gray-3;
+    color: #ffffff;
+  }
+}
+
+.button--secondary {
+  background: #ffffff;
+  border: 1px solid currentColor;
+  color: $color-primary-red;
+  transition: background-color $duration-fast, border $duration-fast,
+    color $duration-fast;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #ffffff;
+    border-width: 2px;
+    color: #c24654;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: #ffffff;
+    border-width: 1px;
+    color: $color-gray-3;
+  }
+}
+
+.button--tertiary {
+  background: #ffffff;
+  border: 1px solid $color-gray-4;
+  color: $color-primary-dark-blue;
+  transition: background-color $duration-fast, border $duration-fast,
+    color $duration-fast;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #ffffff;
+    border-color: $color-gray-4;
+    border-width: 2px;
+    color: $color-primary-dark-blue;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: #ffffff;
+    border-color: $color-gray-3;
+    border-width: 1px;
+    color: $color-gray-3;
+  }
+}

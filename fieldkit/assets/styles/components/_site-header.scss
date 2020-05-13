@@ -1,0 +1,29 @@
+.cd-primary-nav a,
+#mainNavUl .dropdown-menu.multi-level li a,
+a.mobilemenuopen,
+.cd-primary-nav a:hover,
+#mainNavUl .dropdown-menu.multi-level li a:hover,
+a.mobilemenuopen:hover {
+  color: $color-primary-dark-blue;
+  font-family: $font-family-primary !important;
+}
+
+.cd-primary-nav .current-menu-item a,
+.cd-primary-nav a:hover,
+#mainNavUl .dropdown-menu.multi-level li a:hover,
+a.mobilemenuopen:hover {
+  color: #0a67aa !important;
+}
+
+#hgr_top_navbar_container,
+#hgr_top_navbar_container #main_navbar > li > a,
+#hgr_top_navbar_container #main_navbar_left > li > a,
+.dropdown-menu > li > a {
+  font-family: $font-family-primary !important;
+}
+
+.mobileFsSearch,
+.hgr_minicart,
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+  display: none !important;
+}

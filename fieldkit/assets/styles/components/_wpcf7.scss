@@ -1,0 +1,115 @@
+body {
+  .wpcf7-form {
+    p {
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+
+    h3,
+    h5 {
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 80px;
+    }
+  }
+
+  div.wpcf7 {
+    margin: 0 auto;
+    max-width: 620px;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+    position: relative;
+  }
+
+  .wpcf7 input[type="email"],
+  .wpcf7 input[type="text"] {
+    @extend .text-input;
+
+    margin-bottom: 0;
+
+    &.wpcf7-not-valid {
+      border-bottom-color: $color-tertary-red;
+    }
+  }
+
+  .wpcf7 textarea {
+    @extend .textarea-input;
+
+    margin-bottom: 0;
+  }
+
+  .wpcf7-checkbox {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  span.wpcf7-list-item {
+    display: block;
+    margin: 16px auto 0;
+    max-width: 200px;
+    width: 100%;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    input {
+      margin-right: 6px;
+    }
+  }
+
+  .wpcf7-list-item-label {
+    @extend .body;
+  }
+
+  .wpcf7 input[type="submit"] {
+    @extend .vc_btn3.vc_btn3-style-modern;
+
+    display: block;
+    height: auto;
+    max-width: 260px;
+  }
+
+  span.wpcf7-not-valid-tip {
+    color: $color-tertary-red;
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 6px;
+  }
+
+  div.wpcf7-validation-errors {
+    display: none !important;
+  }
+}
+
+.wpcf7-form-control-wrap.other-role {
+  padding-left: 12px;
+}
+
+.wpcf7 .wpcf7-form-control-wrap.other-role input[type="text"] {
+  border: 1px solid $color-gray-3;
+  display: block;
+  margin: 16px auto 0;
+  max-width: 200px;
+  padding: 4px;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid $color-secondary-blue;
+  }
+
+  &::placeholder {
+    color: $color-gray-5;
+  }
+}

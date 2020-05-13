@@ -1,0 +1,13 @@
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.text-decoration-underline-fake,
+.vc_custom_heading h4 {
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 2px;
+  display: inline;
+  text-align: left;
+}

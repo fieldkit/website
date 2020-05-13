@@ -1,0 +1,30 @@
+{
+  "extra": {
+    "installer-paths": {
+      "wordpress/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ]
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^2.3",
+    "wpackagist-plugin/adminimize": "^1.11",
+    "wpackagist-plugin/advanced-custom-fields": "^5.8",
+    "wpackagist-plugin/akismet": "^4.1",
+    "wpackagist-plugin/cf7-conditional-fields": "^1.7",
+    "wpackagist-plugin/classic-editor": "^1.5",
+    "wpackagist-plugin/duplicate-post": "^3.2",
+    "wpackagist-plugin/flamingo": "^2.1",
+    "wpackagist-plugin/redirection": "^4.3",
+    "wpackagist-plugin/w3-total-cache": "^0.13",
+    "wpackagist-plugin/wordfence": "^7.4",
+    "wpackagist-plugin/wordpress-seo": "^14.0",
+    "wpackagist-plugin/wp-ses": "^1.3"
+  }
+}

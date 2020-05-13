@@ -1,0 +1,47 @@
+.link {
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-size: 100% 2px;
+  color: inherit;
+  font-family: $font-family-primary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  text-decoration: none;
+  transition: background-size $duration-fast, color $duration-fast;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  &:focus,
+  &:hover {
+    background-size: 100% 3px;
+    color: $color-primary-blue;
+    outline: none;
+  }
+
+  &:disabled {
+    background-size: 100% 2px;
+    color: $color-gray-4;
+  }
+}
+
+.link--small {
+  background-size: 100% 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+
+  &:focus,
+  &:hover {
+    background-size: 100% 1px;
+    outline: none;
+  }
+
+  &:disabled {
+    background-size: 100% 1px;
+  }
+}

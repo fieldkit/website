@@ -1,0 +1,22 @@
+.list {
+  @extend .body;
+}
+
+.list-item {
+  list-style: none;
+  padding-left: 36px;
+  position: relative;
+
+  &::before {
+    background-color: currentColor;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 6px;
+    left: 16px;
+    position: absolute;
+    top: (22px / 2);
+    transform: translate(-50%, -50%);
+    width: 6px;
+  }
+}
