@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.8"
 services:
   mysql:
     container_name: fieldkit-mysql
@@ -12,6 +12,7 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
   nginx-proxy:
+    container_name: fieldkit-nginx-proxy
     image: jwilder/nginx-proxy
     ports:
       - "80:80"
@@ -26,7 +27,7 @@ services:
     depends_on:
       - mysql
     environment:
-      - VIRTUAL_HOST=www.fieldkit.test
+      - VIRTUAL_HOST=fieldkit.test,www.fieldkit.test
       - WORDPRESS_DB_HOST=mysql:3306
       - WORDPRESS_DB_NAME=wordpress
       - WORDPRESS_DB_PASSWORD=wordpress
@@ -35,8 +36,8 @@ services:
     restart: always
     volumes:
       - ./configs/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./fieldkit:/var/www/html/wp-content/themes/fieldkit
       - ./wordpress/wp-content/plugins:/var/www/html/wp-content/plugins
       - ./wordpress/wp-content/uploads:/var/www/html/wp-content/uploads
-      - ./fieldkit:/var/www/html/wp-content/themes/fieldkit
 volumes:
   mysql_data: {}

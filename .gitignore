@@ -1,5 +1,13 @@
-# Created by https://www.gitignore.io/api/linux,macos,node,sublimetext,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=linux,macos,node,sublimetext,visualstudiocode
+# Created by https://www.gitignore.io/api/composer,linux,macos,node,sublimetext,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=composer,linux,macos,node,sublimetext,visualstudiocode
+
+### Composer ###
+composer.phar
+/vendor/
+
+# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
 
 ### Linux ###
 *~
@@ -122,8 +130,17 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# react / gatsby
-public/
+# rollup.js default build output
+dist/
+
+# Uncomment the public line if your project uses Gatsby
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# https://create-react-app.dev/docs/using-the-public-folder/#docsNav
+# public
+
+# Storybook build outputs
+.out
+.storybook-out
 
 # vuepress build output
 .vuepress/dist
@@ -136,6 +153,10 @@ public/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Temporary folders
+tmp/
+temp/
 
 ### SublimeText ###
 # Cache files for Sublime Text
@@ -180,7 +201,7 @@ GitHub.sublime-settings
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/linux,macos,node,sublimetext,visualstudiocode
+# End of https://www.gitignore.io/api/composer,linux,macos,node,sublimetext,visualstudiocode
 
 certs/
 fieldkit/assets/scripts/main.bundle.js

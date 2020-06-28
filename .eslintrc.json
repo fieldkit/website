@@ -8,7 +8,6 @@
     "plugin:compat/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:jsdoc/recommended",
     "plugin:promise/recommended",
     "plugin:prettier/recommended"
   ],

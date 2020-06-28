@@ -32,8 +32,8 @@ npm run build
 
 4. Add the following entries to your hosts file:
 
-- `127.0.0.1 fieldkit.test`.
-- `127.0.0.1 www.fieldkit.test`.
+- `127.0.0.1 fieldkit.test`
+- `127.0.0.1 www.fieldkit.test`
 
 5. Generate a self-signed certificate.
 
