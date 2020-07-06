@@ -1,5 +1,5 @@
-# Created by https://www.gitignore.io/api/composer,linux,macos,node,sublimetext,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=composer,linux,macos,node,sublimetext,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/composer,linux,macos,node,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=composer,linux,macos,node,windows
 
 ### Composer ###
 composer.phar
@@ -108,6 +108,12 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
 # Optional REPL history
 .node_repl_history
 
@@ -124,23 +130,18 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# next.js build output
+# Next.js build output
 .next
 
-# nuxt.js build output
+# Nuxt.js build / generate output
 .nuxt
+dist
 
-# rollup.js default build output
-dist/
-
-# Uncomment the public line if your project uses Gatsby
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
-# https://create-react-app.dev/docs/using-the-public-folder/#docsNav
 # public
-
-# Storybook build outputs
-.out
-.storybook-out
 
 # vuepress build output
 .vuepress/dist
@@ -154,57 +155,40 @@ dist/
 # DynamoDB Local files
 .dynamodb/
 
-# Temporary folders
-tmp/
-temp/
+# TernJS port file
+.tern-port
 
-### SublimeText ###
-# Cache files for Sublime Text
-*.tmlanguage.cache
-*.tmPreferences.cache
-*.stTheme.cache
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
 
-# Workspace files are user-specific
-*.sublime-workspace
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-# Project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using Sublime Text
-# *.sublime-project
+# Dump file
+*.stackdump
 
-# SFTP configuration file
-sftp-config.json
+# Folder config file
+[Dd]esktop.ini
 
-# Package control specific files
-Package Control.last-run
-Package Control.ca-list
-Package Control.ca-bundle
-Package Control.system-ca-bundle
-Package Control.cache/
-Package Control.ca-certs/
-Package Control.merged-ca-bundle
-Package Control.user-ca-bundle
-oscrypto-ca-bundle.crt
-bh_unicode_properties.cache
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Sublime-github package stores a github token in this file
-# https://packagecontrol.io/packages/sublime-github
-GitHub.sublime-settings
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# Windows shortcuts
+*.lnk
 
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-
-# End of https://www.gitignore.io/api/composer,linux,macos,node,sublimetext,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/composer,linux,macos,node,windows
 
 certs/
-fieldkit/assets/scripts/main.bundle.js
-fieldkit/style.css
 tmp/
 wordpress/
