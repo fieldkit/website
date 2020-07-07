@@ -1,0 +1,49 @@
+.section-about-values {
+  @extend %margins-horizontal;
+
+  padding-bottom: 181px;
+  padding-top: 51px;
+
+  @include mq($from: medium) {
+    padding-bottom: 116px;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
+
+.section-about-values__header {
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.section-about-values__list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  margin: auto;
+  text-align: center;
+
+  @include mq($from: medium) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.section-about-values__item {
+  margin-bottom: 76px;
+
+  @include mq($from: medium) {
+    margin-bottom: 0px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.section-about-values__icon {
+  margin-bottom: 26px;
+}

@@ -3,11 +3,11 @@
 <main class="site-main">
 	<?php
 	$error_404 = get_field('error_404');
-	$image = $error_404['image'];
-	$heading = $error_404['heading'];
-	$subheading = $error_404['subheading'];
-	$body = $error_404['body'];
-	$link = $error_404['link'];
+	$image = get_field('image');
+	$heading = get_field('heading');
+	$subheading = get_field('subheading');
+	$body = get_field('body');
+	$link = get_field('link');
 	?>
 	<section class="section section-error-404">
 		<div class="section__inner">

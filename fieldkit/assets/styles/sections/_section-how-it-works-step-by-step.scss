@@ -1,0 +1,83 @@
+.section-how-it-works-step-by-step {
+  @extend %margins-horizontal;
+
+  padding-bottom: 220px;
+  padding-top: 75px;
+
+  @include mq($from: medium) {
+    padding-top: 85px;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
+
+.section-how-it-works-step-by-step__header {
+  margin-bottom: 57px;
+  text-align: center;
+
+  @include mq($from: medium) {
+    margin-bottom: 110px;
+  }
+}
+
+.section-how-it-works-step-by-step__item-image {
+  grid-area: img;
+  margin-bottom: 29px;
+  text-align: center;
+
+  @include mq($from: medium) {
+    margin-bottom: initial;
+    text-align: left;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    margin: auto;
+    width: auto;
+  }
+}
+
+.section-how-it-works-step-by-step__item-text {
+  grid-area: info;
+}
+
+.section-how-it-works-step-by-step__item {
+  display: grid;
+  grid-template: auto/auto auto;
+  grid-template-areas: "img" "info";
+  margin-bottom: 70px;
+
+  @include mq($from: medium) {
+    grid-template: auto/40% 10% 50%;
+    grid-template-areas: "img . info";
+    margin-bottom: 126px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.section-how-it-works-step-by-step__item-time {
+  align-items: center;
+  color: $color-gray-5;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+
+  img {
+    margin-right: 10px;
+    width: 16px;
+  }
+
+  @include mq($from: medium) {
+    font-size: 20px;
+
+    img {
+      width: 18px;
+    }
+  }
+}
