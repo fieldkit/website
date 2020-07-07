@@ -1,0 +1,22 @@
+.section-contact-form {
+  @extend %margins-horizontal;
+
+  margin-bottom: 60px;
+
+  @include mq($from: medium) {
+    margin-bottom: 147px;
+  }
+
+  .text-input,
+  .wpcf7 input[type="email"],
+  .wpcf7 input[type="text"],
+  .textarea-input,
+  .wpcf7 textarea {
+    width: 100%;
+  }
+
+  .wpcf7 input[type="submit"] {
+    @extend .button;
+    @extend .button--primary;
+  }
+}

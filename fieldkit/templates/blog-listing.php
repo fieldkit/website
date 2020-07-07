@@ -38,7 +38,7 @@
 					<div class="section-blog-listing-featured-post__teaser-excerpt"><?php echo $excerpt; ?></div>
 					<?php
 					if ($link) {
-						$link['class_name'] = 'button button--primary section-blog-listing-featured-post__teaser-link';
+						$link['class_name'] = 'button button--link section-blog-listing-featured-post__teaser-link';
 						set_query_var('link', $link);
 						get_template_part('template-parts/utilities/link');
 					}
@@ -63,7 +63,7 @@
 				<h2 class="heading-3"><?php echo __('Recent Posts'); ?></h2>
 			</header>
 			<div class="section-blog-post-feed__feed">
-				<ul class="section-blog-post-feed__list">
+				<ul class="section-blog-post-feed__list load-more" >
 					<?php
 					while ($latest_posts->have_posts()) :
 						$latest_posts->the_post();
