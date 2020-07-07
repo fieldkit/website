@@ -1,0 +1,34 @@
+.section-about-header {
+  margin-bottom: 96px;
+
+  .section__inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .section-about-header__heading {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: -30px;
+  }
+}
+
+.section-about-header__background {
+  overflow: hidden;
+  z-index: -1;
+
+  img {
+    display: block;
+    height: auto;
+    transform: scale(1.7);
+    width: 100%;
+
+    @include mq($from: medium) {
+      transform: none;
+    }
+  }
+}
