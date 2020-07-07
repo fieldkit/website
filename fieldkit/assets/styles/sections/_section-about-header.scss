@@ -1,4 +1,6 @@
 .section-about-header {
+  margin-bottom: 96px;
+
   .section__inner {
     display: flex;
     justify-content: center;
@@ -15,8 +17,16 @@
 }
 
 .section-about-header__background {
+  overflow: hidden;
+  z-index: -1;
+
   img {
+    display: block;
     height: auto;
+    transform: scale(1.7);
     width: 100%;
+    @include mq($from: medium) {
+      transform: none;
+    }
   }
 }
