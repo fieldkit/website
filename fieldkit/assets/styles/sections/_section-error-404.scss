@@ -1,11 +1,12 @@
 .section-error-404 {
   @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
 
-  padding-bottom: 184px;
-  padding-top: 50px;
   text-align: center;
 
   .section__inner {
+    @extend %inset-width;
+
     max-width: 600px;
   }
 
@@ -13,16 +14,15 @@
     img {
       display: block;
       height: auto;
-      margin-bottom: 45px;
       width: 100%;
     }
   }
 
   h2 {
-    margin-bottom: 33px;
+    margin-top: 1em;
   }
 
   p {
-    margin-bottom: 38px;
+    margin-top: 1em;
   }
 }
