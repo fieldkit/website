@@ -10,7 +10,7 @@
   .section__inner {
     @extend %maximum-width;
 
-    @include mq($from: medium) {
+    @include mq($from: large) {
       padding-left: 160px;
       padding-right: 160px;
     }
