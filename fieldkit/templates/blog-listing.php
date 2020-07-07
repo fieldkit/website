@@ -32,16 +32,19 @@
 				<div class="section-blog-listing-featured-post__teaser-text">
 					<h2 class="heading-3 section-blog-listing-featured-post__teaser-title"><?php echo $title; ?></h2>
 					<div class="section-blog-listing-featured-post__teaser-date"><?php echo $date; ?> | <?php echo $author; ?></div>
+					<div class="section-blog-listing-featured-post__teaser-image hide-desktop">
+						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+					</div>
 					<div class="section-blog-listing-featured-post__teaser-excerpt"><?php echo $excerpt; ?></div>
 					<?php
 					if ($link) {
-						$link['class_name'] = 'button button--primary section-blog-listing-featured-post__teaser-link';
+						$link['class_name'] = 'button button--link section-blog-listing-featured-post__teaser-link';
 						set_query_var('link', $link);
 						get_template_part('template-parts/utilities/link');
 					}
 					?>
 				</div>
-				<div class="section-blog-listing-featured-post__teaser-image">
+				<div class="section-blog-listing-featured-post__teaser-image hide-mobile">
 					<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 				</div>
 			</div>
@@ -60,7 +63,7 @@
 				<h2 class="heading-3"><?php echo __('Recent Posts'); ?></h2>
 			</header>
 			<div class="section-blog-post-feed__feed">
-				<ul class="section-blog-post-feed__list">
+				<ul class="section-blog-post-feed__list load-more" >
 					<?php
 					while ($latest_posts->have_posts()) :
 						$latest_posts->the_post();
@@ -71,7 +74,7 @@
 						$date = get_the_date();
 						$permalink = get_permalink();
 					?>
-						<li class="section-blog-post-feed__item">
+						<li class="section-blog-post-feed__item load-more__item">
 							<div>
 								<div class="post-teaser">
 									<a href="<?php echo $permalink; ?>">
@@ -91,7 +94,7 @@
 				</ul>
 				<?php if ($latest_posts->found_posts > 3) : ?>
 					<div class="section-blog-post-feed__load-more">
-						<button class="action-load-more button button--primary">Load More</button>
+						<button class="button button--link action-load-more">Load More Posts</button>
 					</div>
 				<?php endif; ?>
 			</div>

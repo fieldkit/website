@@ -67,4 +67,21 @@
   li {
     @extend .list-item;
   }
+
+  blockquote {
+    @extend .heading-5;
+
+    border-left: 5px solid #1b80c9;
+    margin-left: 0;
+    padding: 4px 33px 10px;
+
+    @include mq($from: medium) {
+      margin-left: 20px;
+    }
+  }
+
+  video,
+  iframe {
+    max-width: 100%;
+  }
 }

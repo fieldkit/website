@@ -1,0 +1,82 @@
+.section-blog-listing-featured-post {
+  @extend %margins-horizontal;
+
+  background-image: url(https://www.fieldkit.org/wp-content/uploads/2019/11/blog-background-01.svg?id=85) !important;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include mq($from: medium) {
+    background-position: -50% 50%;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+
+    padding-bottom: 90px;
+    padding-top: 90px;
+  }
+}
+
+.section-blog-listing-featured-post__teaser {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq($from: medium) {
+    flex-wrap: nowrap;
+  }
+}
+
+.section-blog-listing-featured-post__teaser-text {
+  align-self: center;
+  max-width: 100%;
+  width: 100%;
+
+  @include mq($from: medium) {
+    max-width: 550px;
+    width: 50%;
+  }
+}
+
+.section-blog-listing-featured-post__teaser-date {
+  margin-bottom: 60px;
+}
+
+.section-blog-listing-featured-post__teaser-excerpt {
+  margin-bottom: 32px;
+}
+
+.section-blog-listing-featured-post__teaser-image {
+  align-self: center;
+  margin-bottom: 51px;
+  margin-left: 0;
+  width: 100%;
+
+  @include mq($from: medium) {
+    margin-bottom: 0;
+    margin-left: 60px;
+    width: 50%;
+  }
+
+  &.hide-desktop {
+    display: block;
+
+    @include mq($from: medium) {
+      display: none;
+    }
+  }
+
+  &.hide-mobile {
+    display: none;
+
+    @include mq($from: medium) {
+      display: block;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}

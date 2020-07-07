@@ -1,0 +1,14 @@
+.section-blog-listing-header {
+  @extend %margins-horizontal;
+
+  margin-bottom: 0;
+
+  @include mq($from: medium) {
+    margin-bottom: 103px;
+  }
+
+  .section__inner {
+    text-align: center;
+    @extend %maximum-width;
+  }
+}
