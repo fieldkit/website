@@ -1,6 +1,14 @@
 .section-default-content {
   @extend %margins-horizontal;
 
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+  @include mq($from: medium) {
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
+
   .section__inner {
     @extend %maximum-width;
 

@@ -2,10 +2,12 @@
   @extend %margins-horizontal;
 
   border-top: 1px solid #d8dce0;
-  margin-top: 91px;
-  padding-top: 93px;
+  margin-bottom: 50px;
+  margin-top: 80px;
+  padding-top: 80px;
 
   @include mq($from: medium) {
+    margin-bottom: 80px;
     margin-top: 30px;
     padding-top: 77px;
   }

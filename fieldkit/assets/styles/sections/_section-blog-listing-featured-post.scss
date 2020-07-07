@@ -13,8 +13,13 @@
   .section__inner {
     @extend %maximum-width;
 
-    padding-bottom: 90px;
-    padding-top: 90px;
+    padding-bottom: 0;
+    padding-top: 50px;
+
+    @include mq($from: medium) {
+      padding-bottom: 90px;
+      padding-top: 90px;
+    }
   }
 }
 
