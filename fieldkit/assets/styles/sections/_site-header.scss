@@ -1,3 +1,34 @@
 .site-header {
-  background-color: $color-gray-2;
+  @extend %margins-horizontal;
+
+  background-color: $color-background;
+
+  @include mq($until: medium) {
+    height: 56px;
+    padding: 20px 32px;
+    position: sticky;
+  }
+
+  @include mq($from: medium) {
+    height: 64px;
+    padding: 20px 32px;
+  }
+}
+
+.site-header__inner {
+  @extend %maximum-width;
+
+  height: 100%;
+}
+
+.site-header__logo {
+  a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    height: 24px;
+    width: auto;
+  }
 }

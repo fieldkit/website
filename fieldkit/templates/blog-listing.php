@@ -32,6 +32,9 @@
 				<div class="section-blog-listing-featured-post__teaser-text">
 					<h2 class="heading-3 section-blog-listing-featured-post__teaser-title"><?php echo $title; ?></h2>
 					<div class="section-blog-listing-featured-post__teaser-date"><?php echo $date; ?> | <?php echo $author; ?></div>
+					<div class="section-blog-listing-featured-post__teaser-image hide-desktop">
+						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+					</div>
 					<div class="section-blog-listing-featured-post__teaser-excerpt"><?php echo $excerpt; ?></div>
 					<?php
 					if ($link) {
@@ -41,7 +44,7 @@
 					}
 					?>
 				</div>
-				<div class="section-blog-listing-featured-post__teaser-image">
+				<div class="section-blog-listing-featured-post__teaser-image hide-mobile">
 					<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 				</div>
 			</div>

@@ -72,7 +72,7 @@ Replace `mysql.sql` with the path of the dump file.
 docker run -it --rm \
   --volumes-from fieldkit-wordpress \
   --network container:fieldkit-wordpress \
-  wordpress:cli search-replace 'https://www.fieldkit.com' 'https://www.fieldkit.test' \
+  wordpress:cli search-replace 'https://www.fieldkit.org' 'https://www.fieldkit.test' \
   --recurse-objects --skip-tables=wp_users
 ```
 

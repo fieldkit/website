@@ -1,0 +1,12 @@
+.section-post-main {
+  @extend %margins-horizontal;
+
+  .section__inner {
+    @extend %maximum-width;
+
+    @include mq($from: medium) {
+      padding-left: 160px;
+      padding-right: 160px;
+    }
+  }
+}
