@@ -1,0 +1,21 @@
+%margins-horizontal {
+  padding-left: $margin-left;
+  padding-right: $margin-right;
+
+  /* stylelint-disable */
+  @supports (padding: unquote("max(0px)")) {
+    padding-left: m#{a}x(#{$margin-left}, env(safe-area-inset-left));
+    padding-right: m#{a}x(#{$margin-right}, env(safe-area-inset-right));
+  }
+  /* stylelint-enable */
+
+  @include mq($from: medium) {
+    padding-left: $margin-left-medium;
+    padding-right: $margin-right-medium;
+  }
+
+  @include mq($from: large) {
+    padding-left: $margin-left-large;
+    padding-right: $margin-right-large;
+  }
+}

@@ -1,9 +1,5 @@
 <?php
 $header = get_field('header', 'option');
-$override_header_call_to_action = get_field('override_header_call_to_action');
-$call_to_action = $override_header_call_to_action
-	? get_field('header_call_to_action_override')
-	: $header['call_to_action'];
 ?>
 <header class="site-header">
 	<div class="site-header__inner">

@@ -6,13 +6,19 @@ License: Attribution-NonCommercial 4.0 International
 License URI: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 Version: 1.0.0
 */
+@import "normalize.css/normalize";
 @import "abstracts/variables/colors";
-@import "abstracts/variables/breakpoints";
 @import "abstracts/variables/durations";
 @import "abstracts/variables/typography";
-@import "abstracts/mixins/breakpoint";
+@import "abstracts/mixins/mq";
 @import "base/fonts";
 @import "base/root";
+@import "layout-grid/variables";
+@import "layout-grid/inset-width";
+@import "layout-grid/maximum-width";
+@import "layout-grid/margins";
+@import "layout-grid/site";
+@import "layout-grid/section";
 @import "content/blockquote";
 @import "content/body";
 @import "content/button";

@@ -23,7 +23,7 @@
   font-size: 20px;
   line-height: 26px;
 
-  @include breakpoint("medium") {
+  @include mq($from: medium) {
     font-size: 18px;
     line-height: 25px;
   }

@@ -41,7 +41,7 @@
   "scripts": {
     "build": "npm run build:scripts && npm run build:styles",
     "build:scripts": "webpack --mode=production",
-    "build:styles": "node-sass fieldkit/assets/styles/main.scss fieldkit/style.css",
+    "build:styles": "node-sass --include-path node_modules/ fieldkit/assets/styles/main.scss fieldkit/style.css",
     "commit": "git-cz",
     "lint": "npm run lint:scripts && npm run lint:styles",
     "lint:scripts": "eslint .",
@@ -50,7 +50,7 @@
     "release": "standard-version",
     "watch": "npm run watch:scripts & npm run watch:styles",
     "watch:scripts": "webpack --mode=development --watch",
-    "watch:styles": "node-sass --watch fieldkit/assets/styles/main.scss fieldkit/style.css"
+    "watch:styles": "node-sass --include-path node_modules/ --watch fieldkit/assets/styles/main.scss fieldkit/style.css"
   },
   "version": "0.1.0"
 }
