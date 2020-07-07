@@ -34,6 +34,7 @@ $site-header-breakpoint: 800px;
   .menu-item {
     @extend .body;
 
+    font-size: 14px;
     text-transform: uppercase;
 
     @include mq($until: $site-header-breakpoint) {
