@@ -1,0 +1,52 @@
+.section-how-it-works-steps {
+  @extend %margins-horizontal;
+
+  border-bottom: 1px solid $color-gray-3;
+  padding-bottom: 85px;
+
+  @include mq($from: medium) {
+    padding-bottom: 165px;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
+
+.section-how-it-works-steps__item {
+  margin-bottom: 62px;
+
+  @include mq($from: medium) {
+    align-items: flex-start;
+    display: grid;
+    grid-template: auto/24% 76%;
+    grid-template-areas: "img info";
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.section-how-it-works-steps__item-image {
+  grid-area: img;
+  margin-bottom: 19px;
+
+  @include mq($from: medium) {
+    margin: auto;
+    margin-bottom: initial;
+    margin-right: 47px;
+    margin-top: 0px;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 130px;
+    width: 100%;
+  }
+}
+
+.section-how-it-works-steps__item-text {
+  grid-area: info;
+}
