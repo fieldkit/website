@@ -91,7 +91,7 @@
 				</ul>
 				<?php if ($latest_posts->found_posts > 3) : ?>
 					<div class="section-blog-post-feed__load-more">
-						<button class="action-load-more button button--primary action-load-more">Load More Posts</button>
+						<button class="button button--tertiary action-load-more">Load More Posts</button>
 					</div>
 				<?php endif; ?>
 			</div>

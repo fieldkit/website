@@ -1,12 +1,9 @@
 .section-blog-post-feed {
   @extend %margins-horizontal;
 
-  position: relative;
-  width: 100%;
-
   .section__inner {
     @extend %maximum-width;
-    padding: 0 25px;
+
     text-align: center;
   }
 }

@@ -6,11 +6,12 @@
   background-repeat: no-repeat;
   background-size: contain;
   border-bottom: 1px solid #d8dce0;
-  margin-bottom: 90px;
-  margin-top: 90px;
 
   .section__inner {
     @extend %maximum-width;
+
+    padding-bottom: 90px;
+    padding-top: 90px;
   }
 }
 
@@ -20,7 +21,13 @@
 
 .section-blog-listing-featured-post__teaser-text {
   align-self: center;
-  flex: 0 0 50%;
+  max-width: 100%;
+  width: 100%;
+
+  @include mq($from: medium) {
+    max-width: 550px;
+    width: 50%;
+  }
 }
 
 .section-blog-listing-featured-post__teaser-date {
@@ -29,16 +36,17 @@
 
 .section-blog-listing-featured-post__teaser-excerpt {
   margin-bottom: 32px;
-  max-width: 100%;
-
-  @include mq($from: medium) {
-    max-width: 500px;
-  }
 }
 
 .section-blog-listing-featured-post__teaser-image {
   align-self: center;
-  flex: 0 0 50%;
+  margin-left: 0;
+  width: 100%;
+
+  @include mq($from: medium) {
+    margin-left: 60px;
+    width: 50%;
+  }
 
   img {
     height: auto;
