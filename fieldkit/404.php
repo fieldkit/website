@@ -2,12 +2,13 @@
 <?php get_header(); ?>
 <main class="site-main">
 	<?php
-	$error_404 = get_field('error_404');
-	$image = get_field('image');
-	$heading = get_field('heading');
-	$subheading = get_field('subheading');
-	$body = get_field('body');
-	$link = get_field('link');
+	$error_404_page = get_field('error_404_page', 'option');
+	$error_404 = get_field('error_404', $error_404_page);
+	$image = get_field('image', $error_404_page);
+	$heading = get_field('heading', $error_404_page);
+	$subheading = get_field('subheading', $error_404_page);
+	$body = get_field('body', $error_404_page);
+	$link = get_field('link', $error_404_page);
 	?>
 	<section class="section section-error-404">
 		<div class="section__inner">

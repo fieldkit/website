@@ -40,10 +40,10 @@
   margin: -16px;
 
   .teaser-item {
+    padding: 16px;
     width: 100%;
 
     @include mq($from: medium) {
-      padding: 20px;
       width: 50%;
     }
 
@@ -77,7 +77,7 @@
 .teaser-page__link,
 .teaser-product__link,
 .teaser-post__link {
-  :not(:first-child) {
+  &:not(:first-child) {
     margin-top: 0.5em;
   }
 }
