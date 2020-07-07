@@ -1,6 +1,6 @@
 .section-home-product-grid {
   @extend %margins-horizontal;
-  @extend %margins-vertical--scaled-margin;
+  @extend %margins-vertical--margin;
 
   .section__inner {
     @extend %maximum-width;

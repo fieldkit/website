@@ -1,6 +1,6 @@
 .section-home-text-and-image-2 {
   @extend %margins-horizontal;
-  @extend %margins-vertical--scaled-margin;
+  @extend %margins-vertical;
 
   .section__inner {
     @extend %maximum-width;
