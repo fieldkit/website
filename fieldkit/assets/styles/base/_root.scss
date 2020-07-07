@@ -3,3 +3,11 @@ body {
   color: $color-foreground;
   font-family: $font-family-base;
 }
+
+body.site-navigation-open {
+  overflow: hidden;
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+}

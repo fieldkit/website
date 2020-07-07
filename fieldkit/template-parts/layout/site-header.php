@@ -6,7 +6,10 @@ $header = get_field('header', 'option');
 		<div class="site-header__logo"><?php the_custom_logo(); ?></div>
 		<div class="site-header__controls">
 			<div class="site-header__control">
-				<button type="button" class="action-toggle-navigation site-header__control site-navigation-toggle"></button>
+				<button type="button" class="action-toggle-navigation site-header__control site-navigation-toggle">
+					<?php echo fieldkit_get_icon('menu'); ?>
+					<?php echo fieldkit_get_icon('close'); ?>
+				</button>
 				<nav class="site-navigation">
 					<button type="button" class="action-toggle-navigation site-navigation-close"></button>
 					<?php
