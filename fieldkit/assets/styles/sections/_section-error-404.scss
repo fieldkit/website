@@ -1,0 +1,28 @@
+.section-error-404 {
+  @extend %margins-horizontal;
+
+  padding-bottom: 184px;
+  padding-top: 50px;
+  text-align: center;
+
+  .section__inner {
+    max-width: 600px;
+  }
+
+  .section-error-404__image {
+    img {
+      display: block;
+      height: auto;
+      margin-bottom: 45px;
+      width: 100%;
+    }
+  }
+
+  h2 {
+    margin-bottom: 33px;
+  }
+
+  p {
+    margin-bottom: 38px;
+  }
+}

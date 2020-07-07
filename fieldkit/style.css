@@ -464,21 +464,21 @@ body {
   margin-right: auto;
   max-width: 1440px; }
 
-.section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values {
+.section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values, .section-error-404 {
   padding-left: 20px;
   padding-right: 20px;
   /* stylelint-disable */
   /* stylelint-enable */ }
   @supports (padding: max(0px)) {
-    .section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values {
+    .section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values, .section-error-404 {
       padding-left: max(20px, env(safe-area-inset-left));
       padding-right: max(20px, env(safe-area-inset-right)); } }
   @media (min-width: 45em) {
-    .section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values {
+    .section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values, .section-error-404 {
       padding-left: 56px;
       padding-right: 56px; } }
   @media (min-width: 80em) {
-    .section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values {
+    .section--margins, .margins-horizontal, .site-header, .site-footer, .section-about-text-and-image-grid, .section-about-values, .section-error-404 {
       padding-left: 80px;
       padding-right: 80px; } }
 
@@ -1128,3 +1128,19 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-about-values__icon {
   margin-bottom: 26px; }
+
+.section-error-404 {
+  padding-bottom: 184px;
+  padding-top: 50px;
+  text-align: center; }
+  .section-error-404 .section__inner {
+    max-width: 600px; }
+  .section-error-404 .section-error-404__image img {
+    display: block;
+    height: auto;
+    margin-bottom: 45px;
+    width: 100%; }
+  .section-error-404 h2 {
+    margin-bottom: 33px; }
+  .section-error-404 p {
+    margin-bottom: 38px; }
