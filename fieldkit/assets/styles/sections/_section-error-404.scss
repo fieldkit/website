@@ -10,19 +10,20 @@
     max-width: 600px;
   }
 
-  .section-error-404__image {
-    img {
-      display: block;
-      height: auto;
-      width: 100%;
-    }
-  }
-
   h2 {
+    margin-bottom: 1em;
     margin-top: 1em;
   }
+}
 
-  p {
-    margin-top: 1em;
+.section-error-404__image {
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
   }
+}
+
+.section-error-404__link {
+  margin-top: 1em;
 }
