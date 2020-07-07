@@ -1,21 +1,9 @@
 .section-default-content {
   @extend %margins-horizontal;
-
-  margin-bottom: 40px;
-  margin-top: 40px;
-
-  @include mq($from: medium) {
-    margin-bottom: 80px;
-    margin-top: 80px;
-  }
+  @extend %margins-vertical--margin;
 
   .section__inner {
-    @extend %maximum-width;
-
-    @include mq($from: large) {
-      padding-left: 160px;
-      padding-right: 160px;
-    }
+    @extend %inset-width;
   }
 }
 

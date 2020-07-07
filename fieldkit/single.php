@@ -9,7 +9,7 @@
 		<header class="section section-post-header">
 			<div class="section__inner">
 				<h1 class="heading-1"><?php echo $title; ?></h1>
-				<div><?php echo $date; ?> | <?php echo $author; ?></div>
+				<div class="section-post-header__date"><?php echo $date; ?> | <?php echo $author; ?></div>
 			</div>
 		</header>
 

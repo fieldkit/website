@@ -62,8 +62,8 @@
 			<div class="section-blog-post-feed__header">
 				<h2 class="heading-3"><?php echo __('Recent Posts'); ?></h2>
 			</header>
-			<div class="section-blog-post-feed__feed">
-				<ul class="section-blog-post-feed__list load-more" >
+			<div class="section-blog-post-feed__feed load-more">
+				<ul class="section-blog-post-feed__list">
 					<?php
 					while ($latest_posts->have_posts()) :
 						$latest_posts->the_post();

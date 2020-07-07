@@ -1,12 +1,6 @@
 .section-how-it-works-step-by-step {
   @extend %margins-horizontal;
-
-  padding-bottom: 220px;
-  padding-top: 75px;
-
-  @include mq($from: medium) {
-    padding-top: 85px;
-  }
+  @extend %margins-vertical--margin;
 
   .section__inner {
     @extend %maximum-width;
@@ -67,6 +61,11 @@
   display: flex;
   font-size: 18px;
   font-weight: 500;
+
+  .rich-text > &:not(:first-child) {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
 
   img {
     margin-right: 10px;

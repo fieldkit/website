@@ -1,12 +1,6 @@
 .section-about-values {
   @extend %margins-horizontal;
-
-  padding-bottom: 181px;
-  padding-top: 51px;
-
-  @include mq($from: medium) {
-    padding-bottom: 116px;
-  }
+  @extend %margins-vertical;
 
   .section__inner {
     @extend %maximum-width;
@@ -34,9 +28,11 @@
 
 .section-about-values__item {
   margin-bottom: 76px;
+  width: 100%;
 
   @include mq($from: medium) {
     margin-bottom: 0px;
+    width: (100% / 5);
   }
 
   &:last-child {

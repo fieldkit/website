@@ -1,12 +1,8 @@
 .section-how-it-works-steps {
   @extend %margins-horizontal;
+  @extend %margins-vertical;
 
   border-bottom: 1px solid $color-gray-3;
-  padding-bottom: 85px;
-
-  @include mq($from: medium) {
-    padding-bottom: 165px;
-  }
 
   .section__inner {
     @extend %maximum-width;

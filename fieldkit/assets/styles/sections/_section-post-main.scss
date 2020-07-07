@@ -2,12 +2,7 @@
   @extend %margins-horizontal;
 
   .section__inner {
-    @extend %maximum-width;
-
-    @include mq($from: large) {
-      padding-left: 160px;
-      padding-right: 160px;
-    }
+    @extend %inset-width;
   }
 }
 

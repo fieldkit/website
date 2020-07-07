@@ -1,30 +1,44 @@
 .section-how-it-works-header {
-  margin-bottom: 72px;
+  @extend %margins-horizontal;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vw * 729 / 2560;
+  position: relative;
+  z-index: 0;
 
   .section__inner {
+    @extend %maximum-width;
+
     display: flex;
     justify-content: center;
-    position: relative;
   }
+}
 
-  .section-how-it-works-header__heading {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    margin: 0;
-    position: absolute;
-    top: -30px;
+.section-how-it-works-header__heading {
+  position: relative;
+  top: -0.5em;
+
+  @include mq($from: medium) {
+    top: -1em;
   }
 }
 
 .section-how-it-works-header__background {
-  overflow: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
   z-index: -1;
 
   img {
     display: block;
-    height: auto;
-    transform: scale(1.7);
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.25);
     width: 100%;
 
     @include mq($from: medium) {

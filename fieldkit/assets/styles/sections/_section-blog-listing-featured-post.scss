@@ -1,25 +1,18 @@
 .section-blog-listing-featured-post {
   @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
 
-  background-image: url(https://www.fieldkit.org/wp-content/uploads/2019/11/blog-background-01.svg?id=85) !important;
-  background-position: 50% 10%;
+  background-image: url(/wp-content/uploads/2019/11/blog-background-01.svg) !important;
+  background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
 
   @include mq($from: medium) {
-    background-position: -50% 50%;
+    background-position: left center;
   }
 
   .section__inner {
     @extend %maximum-width;
-
-    padding-bottom: 0;
-    padding-top: 50px;
-
-    @include mq($from: medium) {
-      padding-bottom: 90px;
-      padding-top: 90px;
-    }
   }
 }
 
@@ -45,6 +38,7 @@
 
 .section-blog-listing-featured-post__teaser-date {
   margin-bottom: 60px;
+  margin-top: 0.5em;
 }
 
 .section-blog-listing-featured-post__teaser-excerpt {

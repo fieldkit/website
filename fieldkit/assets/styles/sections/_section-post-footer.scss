@@ -1,20 +1,14 @@
 .section-post-footer {
   @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
 
-  margin-bottom: 40px;
   margin-top: 40px;
 
   @include mq($from: medium) {
-    margin-bottom: 80px;
-    margin-top: 60px;
+    margin-top: 80px;
   }
 
   .section__inner {
-    @extend %maximum-width;
-
-    @include mq($from: large) {
-      padding-left: 160px;
-      padding-right: 160px;
-    }
+    @extend %inset-width;
   }
 }

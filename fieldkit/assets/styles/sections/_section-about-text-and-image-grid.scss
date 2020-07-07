@@ -1,5 +1,6 @@
 .section-about-text-and-image-grid {
   @extend %margins-horizontal;
+  @extend %margins-vertical;
 
   border-bottom: 1px solid $color-gray-3;
   padding-bottom: 51px;
