@@ -1,0 +1,22 @@
+.section-post-header {
+  @extend %margins-horizontal;
+
+  margin-bottom: 60px;
+  margin-top: 60px;
+
+  @include mq($from: medium) {
+    margin-bottom: 35px;
+    margin-top: 80px;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+
+    text-align: left;
+
+    @include mq($from: large) {
+      padding-left: 160px;
+      padding-right: 160px;
+    }
+  }
+}

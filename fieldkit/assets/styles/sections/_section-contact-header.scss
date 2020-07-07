@@ -1,0 +1,22 @@
+.section-contact-header {
+  @extend %margins-horizontal;
+
+  background-image: url(https://www.fieldkit.org/wp-content/uploads/2019/12/Contact_Header-scaled.png?id=497) !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 20px;
+  padding-bottom: 120px;
+  padding-top: 80px;
+
+  @include mq($from: medium) {
+    padding-bottom: 160px;
+    padding-top: 80px;
+  }
+
+  .section__inner {
+    text-align: center;
+
+    @extend %maximum-width;
+  }
+}
