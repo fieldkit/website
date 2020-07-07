@@ -1,0 +1,16 @@
+.section.search-no-results {
+  @extend %margins-horizontal;
+  @extend %margins-vertical;
+
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
+
+.search-no-results__header {
+  margin: 1em 0;
+
+  .search-form {
+    margin-bottom: 1em;
+  }
+}

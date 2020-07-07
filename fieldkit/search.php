@@ -6,7 +6,8 @@
 		<section class="section search-results">
 			<div class="section__inner">
 				<header class="search-results__header">
-					<h1 class="heading-1"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h1>
+					<?php get_search_form(); ?>
+					<h1 class="heading-4"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h1>
 				</header>
 				<div class="search-results__main">
 					<?php
@@ -29,8 +30,8 @@
 							: $current_post_type_object->label;
 					?>
 						<div class="search-results__group">
-							<h2 class="search-results__group-label"><?php echo $label; ?></h2>
-							<ul class="search-results__teaser-list teaser-list">
+							<h2 class="heading-3 search-results__group-label"><?php echo $label; ?></h2>
+							<ul class="search-results__teaser-list teaser-list teaser-list--<?php echo $current_post_type; ?>">
 								<?php
 								while (have_posts()) :
 									the_post();
@@ -52,11 +53,13 @@
 	<?php else : ?>
 		<section class="section search-no-results">
 			<div class="section__inner">
+				<header class="search-no-results__header">
+					<?php get_search_form(); ?>
+				</header>
 				<div class="section__main search-no-results__main">
 					<h1 class="heading-1 search-no-results__heading"><?php echo sprintf(__('No Results for <span>"%s"</span>'), get_search_query()) ?></h1>
 				</div>
 			</div>
-		</section>
 	<?php endif; ?>
 </main>
 <?php get_footer(); ?>
