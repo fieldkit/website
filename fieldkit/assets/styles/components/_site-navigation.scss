@@ -1,0 +1,27 @@
+$site-header-breakpoint: 800px;
+
+.site-navigation {
+  .menu {
+    @include mq($from: $site-header-breakpoint) {
+      display: flex;
+    }
+  }
+
+  .menu-item {
+    @extend .body;
+
+    text-transform: uppercase;
+
+    @include mq($from: $site-header-breakpoint) {
+      display: flex;
+
+      &:not(:first-child) {
+        margin-left: 1em;
+      }
+    }
+
+    a {
+      font-weight: normal;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.section-home-callout {
+  @extend %margins-horizontal;
+  @extend %margins-vertical;
+
+  background-color: $color-primary-blue;
+  color: $color-background;
+  text-align: center;
+
+  .section__inner {
+    @extend %maximum-width;
+
+    max-width: 640px;
+  }
+}
+
+.section-home-callout__link {
+  margin-top: 1em;
+}

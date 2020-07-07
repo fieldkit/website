@@ -8,7 +8,7 @@ $header = get_field('header', 'option');
 			<div class="site-header__control">
 				<button type="button" class="action-toggle-navigation site-header__control site-navigation-toggle"></button>
 				<nav class="site-navigation">
-					<button type="button" class="action-toggle-search site-search-close"></button>
+					<button type="button" class="action-toggle-navigation site-navigation-close"></button>
 					<?php
 					if (has_nav_menu('header')) {
 						wp_nav_menu(array('theme_location' => 'header'));
@@ -16,12 +16,16 @@ $header = get_field('header', 'option');
 					?>
 				</nav>
 			</div>
-			<div class="site-header__control">
-				<button type="button" class="action-toggle-search site-header__control site-search-toggle"></button>
-				<div class="site-search"><?php get_search_form(); ?></div>
+			<div class="site-header__control site-search">
+				<button type="button" class="action-toggle-search site-search-toggle">
+					<?php echo fieldkit_get_icon('search'); ?>
+				</button>
+				<?php get_search_form(); ?>
 			</div>
-			<div class="site-header__control">
-				<a href="/cart" class="action-toggle-search site-header__control site-cart"></a>
+			<div class="site-header__control site-cart">
+				<a href="/cart">
+					<?php echo fieldkit_get_icon('cart'); ?>
+				</a>
 			</div>
 		</div>
 	</div>

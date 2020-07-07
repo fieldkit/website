@@ -4,19 +4,18 @@ $site-header-breakpoint: 800px;
   @extend %margins-horizontal;
 
   background-color: $color-background;
+  height: 56px;
+  position: sticky;
+  z-index: 1000;
 
   @include mq($until: $site-header-breakpoint) {
-    height: 56px;
     left: 0;
-    padding: 0 32px;
-    position: sticky;
     top: 0;
-    z-index: 1000;
   }
 
   @include mq($from: $site-header-breakpoint) {
-    height: 64px;
-    padding: 0 32px;
+    padding-left: 32px;
+    position: relative;
   }
 }
 
@@ -38,5 +37,111 @@ $site-header-breakpoint: 800px;
     display: block;
     height: 24px;
     width: auto;
+  }
+}
+
+@include mq($from: $site-header-breakpoint) {
+  .site-header__controls {
+    align-items: center;
+    display: flex;
+  }
+
+  .site-header__control {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-right: $margin-left-medium;
+    }
+  }
+
+  .site-navigation-toggle,
+  .site-navigation-close {
+    display: none;
+  }
+}
+
+.site-search {
+  position: relative;
+  z-index: 0;
+}
+
+.site-search .search-form {
+  bottom: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  transform: translateY(100%);
+  transition: opacity $duration-fast, visibility 0s $duration-fast;
+  visibility: hidden;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  @include mq($from: $site-header-breakpoint) {
+    bottom: 20px * -1;
+    right: (20px + 20px) * -1;
+  }
+
+  .site-search-open & {
+    opacity: 1;
+    transition: opacity $duration-fast, visibility 0s;
+    visibility: visible;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  .search-form__input-container {
+    position: relative;
+    z-index: 0;
+
+    &::before,
+    &::after {
+      border-style: solid;
+      content: "";
+      display: block;
+      height: 0;
+      position: absolute;
+      top: 1px;
+      transform: translateY(-100%) translateX(-50%);
+      width: 0;
+      z-index: 1;
+    }
+
+    &::before {
+      border-color: transparent transparent #d8dce0 transparent;
+      border-width: 0 12px 12px 12px;
+      right: 25px;
+    }
+
+    &::after {
+      border-color: transparent transparent #ffffff transparent;
+      border-width: 0 10px 10px 10px;
+      right: 28.7px;
+    }
+  }
+
+  input {
+    @extend .textarea-input;
+
+    background-color: #ffffff;
+    border: solid 1px #d8dce0;
+    border-radius: 1px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.11);
+    padding-right: 40px;
+
+    @include mq($from: $site-header-breakpoint) {
+      min-width: 320px;
+    }
+  }
+
+  .search-form__submit {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
   }
 }

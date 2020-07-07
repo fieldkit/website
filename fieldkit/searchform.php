@@ -8,6 +8,8 @@
 			type="search"
 			value="<?php echo get_search_query(); ?>"
 		/>
-		<button aria-label="<?php echo __('Search'); ?>" class="search-form__submit" type="submit"></button>
+		<button aria-label="<?php echo __('Search'); ?>" class="search-form__submit" type="submit">
+			<?php echo fieldkit_get_icon('arrow-right'); ?>
+		</button>
 	</div>
 </form>

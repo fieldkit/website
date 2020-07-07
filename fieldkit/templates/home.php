@@ -12,9 +12,9 @@
 	<header class="section section-home-hero">
 		<div class="section__inner">
 			<div class="section-home-hero__text">
-				<div class="rich-text rich-text--body-heading-4">
+				<div class="rich-text">
 					<h1 class="heading-1"><?php echo $heading; ?></h1>
-					<?php echo $body; ?>
+					<p class="heading-4"><?php echo $body; ?></p>
 				</div>
 				<?php
 				if ($link) {
@@ -59,16 +59,16 @@
 				<?php endforeach; ?>
 				<?php
 				if ($last_item) :
-					$icon = $item['icon'];
-					$heading = $item['heading'];
-					$link = $item['link'];
+					$icon = $last_item['icond'];
+					$heading = $last_item['heading'];
+					$link = $last_item['link'];
 				?>
 					<li class="section-home-icon-grid__last-item">
-						<div class="section-home-icon-grid__last-item-top">
-							<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
-							<h2 class="heading-5 section-home-icon-grid__last-item-heading"><?php echo $heading; ?></h2>
-						</div>
-						<div class="section-home-icon-grid__last-item-bottom">
+						<div class="section-home-icon-grid__last-item-inner">
+							<div class="section-home-icon-grid__last-item-top">
+								<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
+								<h2 class="heading-5 section-home-icon-grid__last-item-heading"><?php echo $heading; ?></h2>
+							</div>
 							<?php
 							if ($link) {
 								$link['class_name'] = 'button button--primary section-home-icon-grid__last-item-link';
@@ -110,7 +110,7 @@
 						<div class="section-home-product-grid__item-text">
 							<div class="rich-text">
 								<h2 class="heading-6"><?php echo $heading; ?></h2>
-								<?php echo $body; ?>
+								<p><?php echo $body; ?></p>
 							</div>
 							<?php
 							if ($link) {
@@ -171,7 +171,7 @@
 			</div>
 			<?php
 			if ($link) {
-				$link['class_name'] = 'button button--primary section-home-callout__link';
+				$link['class_name'] = 'button button--tertiary section-home-callout__link';
 				set_query_var('link', $link);
 				get_template_part('template-parts/utilities/link');
 			}
