@@ -63,9 +63,21 @@
 
 .section-how-it-works-step-by-step__item-time {
   align-items: center;
+  color: $color-gray-5;
   display: flex;
+  font-size: 18px;
+  font-weight: 500;
 
   img {
     margin-right: 10px;
+    width: 16px;
+  }
+
+  @include mq($from: medium) {
+    font-size: 20px;
+
+    img {
+      width: 18px;
+    }
   }
 }
