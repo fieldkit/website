@@ -1,0 +1,34 @@
+#mc_embed_signup label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+#mc_embed_signup_scroll {
+  display: flex;
+}
+
+.mc-field-group input[type="email"] {
+  @extend .textarea-input;
+
+  background-color: #ffffff;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  border-top-right-radius: 0;
+
+  @include mq($from: large) {
+    min-width: 240px;
+  }
+}
+
+#mc-embedded-subscribe {
+  @extend .button;
+  @extend .button--primary;
+
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+
+  @include mq($from: large) {
+    min-width: 160px;
+  }
+}

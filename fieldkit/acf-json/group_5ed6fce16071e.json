@@ -70,7 +70,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": 4,
-                    "new_lines": "wpautop"
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_5f0370039e588",
@@ -719,5 +719,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1594069092
+    "modified": 1594119818
 }

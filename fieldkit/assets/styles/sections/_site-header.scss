@@ -4,19 +4,18 @@ $site-header-breakpoint: 800px;
   @extend %margins-horizontal;
 
   background-color: $color-background;
+  height: 56px;
+  position: sticky;
+  z-index: 1000;
 
   @include mq($until: $site-header-breakpoint) {
-    height: 56px;
     left: 0;
-    padding: 0 32px;
-    position: sticky;
     top: 0;
-    z-index: 1000;
   }
 
   @include mq($from: $site-header-breakpoint) {
-    height: 64px;
-    padding: 0 32px;
+    padding-left: 32px;
+    position: relative;
   }
 }
 
@@ -38,5 +37,22 @@ $site-header-breakpoint: 800px;
     display: block;
     height: 24px;
     width: auto;
+  }
+}
+
+.site-header__controls {
+  align-items: center;
+  display: flex;
+}
+
+.site-header__control {
+  margin-left: 16px;
+}
+
+@include mq($from: $site-header-breakpoint) {
+  .site-header__control {
+    &:first-child {
+      margin-right: $margin-left-medium;
+    }
   }
 }
