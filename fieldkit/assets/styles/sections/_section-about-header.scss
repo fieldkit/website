@@ -1,0 +1,22 @@
+.section-about-header {
+  .section__inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .section-about-header__heading {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: -30px;
+  }
+}
+
+.section-about-header__background {
+  img {
+    height: auto;
+    width: 100%;
+  }
+}

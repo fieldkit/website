@@ -1,0 +1,5 @@
+.section-about-values {
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
