@@ -1,55 +1,55 @@
 .site-footer {
+  @extend %margins-horizontal;
+  @extend %margins-vertical;
+
   background-color: $color-gray-2;
+
+  @include mq($until: medium) {
+    text-align: center;
+  }
 }
 
-// .site-footer {
-//   font-family: $font-family-base;
-//   text-align: center;
+.site-footer__inner {
+  @extend %maximum-width;
 
-//   @media (min-width: 768px) {
-//     text-align: left;
-//   }
-// }
+  @include mq($from: medium) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
-// .site-footer__logo {
-//   height: 30px !important;
-//   margin-left: auto;
-//   margin-right: auto;
-//   width: 141px !important;
+.site-footer__logo {
+  img {
+    display: block;
+    height: 32px;
+    width: auto;
+  }
 
-//   @media (min-width: 768px) {
-//     margin-left: 0;
-//     margin-right: 0;
-//   }
-// }
+  @include mq($until: medium) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-// .site-footer__social {
-//   margin-top: 24px;
+.site-footer__social {
+  display: flex;
+  justify-content: center;
 
-//   .wpb_wrapper {
-//     display: flex;
-//     justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 
-//     @media (min-width: 768px) {
-//       justify-content: flex-start;
-//     }
-//   }
+  .icon-button:not(:first-child) {
+    margin-left: 24px;
+  }
 
-//   .vc_icon_element {
-//     margin-left: 24px;
-
-//     &:first-child {
-//       margin-left: 0;
-//     }
-//   }
-
-//   .vc_icon_element.vc_icon_element-outer .vc_icon_element-inner {
-//     border: none;
-//     height: 24px;
-//     text-align: left;
-//     width: 24px;
-//   }
-// }
+  .icon-button img {
+    display: block;
+    height: 24px;
+    object-fit: contain;
+    width: 24px;
+  }
+}
 
 // .site-footer__menu-column {
 //   .wpb_content_element p {
@@ -62,3 +62,24 @@
 //     font-weight: normal;
 //   }
 // }
+
+.site-footer__right {
+  @include mq($from: medium) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.site-footer__right-title {
+  font-weight: 600;
+}
+
+.site-footer__right-column .menu-item {
+  margin-top: 8px;
+
+  a {
+    @extend .body;
+
+    font-weight: normal;
+  }
+}

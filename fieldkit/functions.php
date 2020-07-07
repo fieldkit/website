@@ -91,3 +91,13 @@ if (function_exists('acf_add_options_page')) {
 		'redirect' => false
 	));
 }
+
+function fieldkit_get_icon($icon_name, $attributes = array())
+{
+	$html = '<img';
+	foreach ($attributes as $name => $value) {
+		$html .= " $name=" . '"' . $value . '"';
+	}
+	$html .= ' alt="' . $icon_name . '" src="' . get_template_directory_uri() . '/assets/icons/' . $icon_name . '.svg" />';
+	return $html;
+}

@@ -19,3 +19,33 @@
     padding-right: $margin-right-large;
   }
 }
+
+%margins-vertical {
+  padding-bottom: $margin-bottom;
+  padding-top: $margin-top;
+
+  @include mq($from: medium) {
+    padding-bottom: $margin-bottom-medium;
+    padding-top: $margin-top-medium;
+  }
+
+  @include mq($from: large) {
+    padding-bottom: $margin-bottom-large;
+    padding-top: $margin-top-large;
+  }
+}
+
+%margins-vertical--margin {
+  margin-bottom: $margin-bottom;
+  margin-top: $margin-top;
+
+  @include mq($from: medium) {
+    margin-bottom: $margin-bottom-medium;
+    margin-top: $margin-top-medium;
+  }
+
+  @include mq($from: large) {
+    margin-bottom: $margin-bottom-large;
+    margin-top: $margin-top-large;
+  }
+}
