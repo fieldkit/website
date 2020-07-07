@@ -53,7 +53,6 @@ class SiteHeader {
   toggleNavigation() {
     $body.toggleClass("site-navigation-open");
     $body.removeClass("site-search-open");
-    this.$navigation.fadeToggle(200);
   }
 
   toggleSearch() {

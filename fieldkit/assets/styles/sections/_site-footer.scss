@@ -1,20 +1,35 @@
+$site-header-breakpoint: 800px;
+
 .site-footer {
   @extend %margins-horizontal;
   @extend %margins-vertical;
 
   background-color: $color-gray-2;
 
-  @include mq($until: medium) {
+  @include mq($until: $site-header-breakpoint) {
     text-align: center;
+  }
+
+  #mc_embed_signup {
+    margin-top: $margin-top * 2;
   }
 }
 
 .site-footer__inner {
   @extend %maximum-width;
 
-  @include mq($from: medium) {
+  @include mq($from: $site-header-breakpoint) {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.site-footer__left,
+.site-footer__right {
+  @include mq($until: $site-header-breakpoint) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -25,7 +40,7 @@
     width: auto;
   }
 
-  @include mq($until: medium) {
+  @include mq($until: $site-header-breakpoint) {
     margin-left: auto;
     margin-right: auto;
   }
@@ -34,8 +49,9 @@
 .site-footer__social {
   display: flex;
   justify-content: center;
+  margin-top: $margin-top;
 
-  @media (min-width: 768px) {
+  @include mq($from: $site-header-breakpoint) {
     justify-content: flex-start;
   }
 
@@ -64,7 +80,7 @@
 // }
 
 .site-footer__right {
-  @include mq($from: medium) {
+  @include mq($from: $site-header-breakpoint) {
     display: flex;
     justify-content: space-between;
   }
@@ -74,12 +90,24 @@
   font-weight: 600;
 }
 
-.site-footer__right-column .menu-item {
-  margin-top: 8px;
+.site-footer__right-column {
+  @include mq($until: $site-header-breakpoint) {
+    margin-top: $margin-top * 2;
+  }
 
-  a {
-    @extend .body;
+  &:not(:first-child) {
+    @include mq($from: $site-header-breakpoint) {
+      margin-left: $margin-left-medium;
+    }
+  }
 
-    font-weight: normal;
+  .menu-item {
+    margin-top: 8px;
+
+    a {
+      @extend .body;
+
+      font-weight: normal;
+    }
   }
 }
