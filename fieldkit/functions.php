@@ -52,6 +52,7 @@ function fieldkit_menus()
 		'footer-other' => __('Footer - Other', 'fieldkit'),
 		'footer-support' => __('Footer - Support', 'fieldkit'),
 		'header' => __('Header', 'fieldkit'),
+		'product-guide-sidebar' => __('Product Guide Sidebar', 'fieldkit'),
 	);
 	register_nav_menus($locations);
 }
