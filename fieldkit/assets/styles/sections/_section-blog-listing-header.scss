@@ -1,0 +1,13 @@
+.section-blog-listing-header {
+  margin-bottom: 90px;
+  max-width: 1280px;
+  width: 100%;
+
+  @include mq($from: medium) {
+    margin-bottom: 103px;
+  }
+
+  .section__inner {
+    text-align: center;
+  }
+}
