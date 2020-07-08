@@ -1,0 +1,40 @@
+.section-header {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  .section__inner {
+    @extend %inset-width;
+
+    text-align: center;
+
+    .heading-2 {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.section-header__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 24px;
+
+  @include mq($from: medium) {
+    flex-direction: row;
+  }
+}
+
+.section-header__links-item {
+  align-self: center;
+  margin-bottom: 20px;
+  margin-right: 0;
+
+  @include mq($from: medium) {
+    margin-bottom: 0;
+    margin-right: 21px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

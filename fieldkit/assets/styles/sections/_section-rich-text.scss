@@ -1,0 +1,8 @@
+.section-rich-text {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
