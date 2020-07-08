@@ -15,7 +15,6 @@
 					?>
 				</aside>
 				<div class="section-product-guide__content">
-
 					<div class="section-product-guide__content-inner rich-text">
 						<?php
 						$content = get_field('content');
@@ -23,11 +22,7 @@
 							while (have_rows('content')) : the_row();
 								$row_layout = get_row_layout();
 								$row_layout = str_replace('_', '-', $row_layout);
-								get_template_part('template-parts/blocks/' . $row_layout);
-
-
-
-
+								include(locate_template('template-parts/blocks/' . $row_layout . '.php', false, false));
 							endwhile;
 						endif;
 						?>
