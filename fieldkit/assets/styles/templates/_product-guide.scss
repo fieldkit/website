@@ -1,0 +1,22 @@
+.section-product-guide {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  .section__inner {
+    @extend %inset-width;
+  }
+}
+
+.section-product-guide-container {
+  display: grid;
+  grid-template: auto/calc(8.333% * 3) calc(8.333% * 9);
+  grid-template-areas: "aside content";
+
+  aside {
+    grid-area: aside;
+  }
+
+  .section-product-guide__content {
+    grid-area: content;
+  }
+}
