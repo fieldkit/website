@@ -3,7 +3,6 @@
 <main class="site-main">
 	<article>
 		<?php
-		$content = get_field('content');
 		if (have_rows('content')) :
 			while (have_rows('content')) : the_row();
 				$row_layout = get_row_layout();

@@ -1,0 +1,31 @@
+.section-definition-list {
+  @extend %margins-horizontal;
+  @extend %margins-vertical;
+
+  .section__inner {
+    @extend %inset-width;
+  }
+}
+
+.section-definition-list__header {
+  margin-bottom: $margin-top;
+}
+
+.section-definition-list__item {
+  display: flex;
+
+  &:not(:first-child) {
+    margin-top: $margin-top;
+  }
+}
+
+.section-definition-list__item-image {
+  margin-right: 20px;
+  max-width: 100px;
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}

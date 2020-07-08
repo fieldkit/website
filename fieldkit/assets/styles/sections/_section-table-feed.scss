@@ -1,26 +1,19 @@
-.section-table-feed {
+.section-table {
   @extend %margins-horizontal;
-  @extend %margins-vertical--margin;
+  @extend %margins-vertical;
 
   background-color: #f1fafb;
-  padding-bottom: 40px;
-  padding-top: 40px;
-
-  @include mq($from: medium) {
-    padding-bottom: 75px;
-    padding-top: 75px;
-  }
 
   .section__inner {
     @extend %inset-width;
   }
 }
 
-.section-table-feed__header {
+.section-table__header {
   margin-bottom: 12px;
 }
 
-.section-table-feed__feed {
+.section-table__table {
   width: 100%;
 
   td {

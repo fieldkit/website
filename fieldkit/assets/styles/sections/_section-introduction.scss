@@ -1,4 +1,4 @@
-.section-introduction-header {
+.section-introduction {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
@@ -7,27 +7,25 @@
 
     text-align: center;
   }
-
-  .heading-2 {
-    margin-bottom: 12px;
-  }
 }
 
-.section-introduction-content {
-  @extend %margins-horizontal;
-  @extend %margins-vertical--margin;
-
-  .section__inner {
-    @extend %inset-width;
-  }
+.section-introduction__header {
+  @extend %inset-width;
 }
 
-.section-introduction-content__image {
-  margin-bottom: 80px;
+.section-introduction__image {
+  margin-top: $margin-top * 2;
 
   img {
     display: block;
-    height: 100%;
+    height: auto;
     width: 100%;
   }
+}
+
+.section-introduction__text {
+  @extend %inset-width;
+
+  column-count: 2;
+  margin-top: $margin-top * 2;
 }

@@ -1,16 +1,21 @@
-<header class="section section-introduction-header">
+
+<?php
+$header_heading = get_sub_field('header_heading');
+$header_body = get_sub_field('header_body');
+$image = get_sub_field('image');
+$text = get_sub_field('text');
+?>
+<section class="section section-introduction">
 	<div class="section__inner">
-		<h2 class="heading-2">Sensor Specifications</h2>
-		<p class="body">A couple of sentences of a description of what the sensor is and how it operates within the broader FieldKit Ecosystem</p>
-	</div>
-</header>
-<section class="section section-introduction-content">
-	<div class="section__inner">
-		<div class="section-introduction-content__image">
-			<img src="https://via.placeholder.com/1440x960" alt="">
-		</div>
-		<div class="section-introduction-content__text">
-			<p class="body">Basic Tech Specs can be included here on the web page. This information can serve as a clear indication that the sensors are of scientific quality. We do not want to hide the expert quality of these sensors.</p>
+		<header class="rich-text section-introduction__header">
+			<h1 class="heading-2"><?php echo $header_heading; ?></h1>
+			<?php echo $header_body; ?>
+		</header>
+		<div class="section-introduction__content">
+			<div class="section-introduction__image">
+				<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+			</div>
+			<div class="section-introduction__text rich-text"><?php echo $text; ?></div>
 		</div>
 	</div>
 </section>

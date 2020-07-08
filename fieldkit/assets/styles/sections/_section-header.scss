@@ -2,22 +2,18 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
+  text-align: center;
+
   .section__inner {
     @extend %inset-width;
-
-    text-align: center;
-
-    .heading-2 {
-      margin-bottom: 12px;
-    }
   }
 }
 
 .section-header__links {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 24px;
 
   @include mq($from: medium) {
     flex-direction: row;
@@ -25,16 +21,17 @@
 }
 
 .section-header__links-item {
-  align-self: center;
-  margin-bottom: 20px;
-  margin-right: 0;
+  @include mq($until: medium) {
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
 
   @include mq($from: medium) {
     margin-bottom: 0;
-    margin-right: 21px;
-  }
 
-  &:last-child {
-    margin-right: 0;
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
   }
 }
