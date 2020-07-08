@@ -1,13 +1,15 @@
 <?php /* Template Name: Product Guide */ ?>
 <?php get_header(); ?>
 <main class="site-main">
-	<header class="section-product-guide__header">
-		<h1 class="heading-1">Product Guide</h1>
-	</header>
 	<article class="section section-product-guide">
-		<div class="section__inner">
-			<div class="section-product-guide-container">
-				<aside>
+		<header class="section-product-guide__header">
+			<div class="section__inner">
+				<h1 class="heading-1">Product Guide</h1>
+			</div>
+		</header>
+		<div class="section-product-guide-container">
+			<div class="section__inner">
+				<aside class="section-product-guide__aside">
 					<?php
 					if (has_nav_menu('product-guide-sidebar')) {
 						wp_nav_menu(array('theme_location' => 'product-guide-sidebar'));

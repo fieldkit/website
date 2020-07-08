@@ -1,6 +1,8 @@
 .section-definition-list {
   @extend %margins-horizontal;
-  @extend %margins-vertical;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
 
   .section__inner {
     @extend %inset-width;
@@ -22,6 +24,10 @@
 .section-definition-list__item-image {
   margin-right: 20px;
   max-width: 100px;
+
+  @include mq($from: small) {
+    max-width: 200px;
+  }
 
   img {
     display: block;
