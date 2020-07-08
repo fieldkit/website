@@ -1,13 +1,12 @@
 .section-contact-header {
   @extend %margins-horizontal;
 
-  background-image: url(https://www.fieldkit.org/wp-content/uploads/2019/12/Contact_Header-scaled.png?id=497) !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-top: 20px;
-  padding-bottom: 120px;
-  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 28.47656vw;
+  position: relative;
+  z-index: 0;
 
   @include mq($from: medium) {
     padding-bottom: 160px;
@@ -15,8 +14,41 @@
   }
 
   .section__inner {
-    text-align: center;
-
     @extend %maximum-width;
+
+    .rich-text {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.section-contact-header__heading {
+  position: relative;
+  top: -0.5em;
+
+  @include mq($from: medium) {
+    top: 0;
+  }
+}
+
+.section-contact-header__background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.25);
+    width: 100%;
+
+    @include mq($from: medium) {
+      transform: none;
+    }
   }
 }
