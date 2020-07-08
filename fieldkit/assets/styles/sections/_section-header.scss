@@ -21,11 +21,7 @@
 }
 
 .section-header__links-item {
-  @include mq($until: medium) {
-    &:not(:first-child) {
-      margin-top: 1em;
-    }
-  }
+  margin-top: 1em;
 
   @include mq($from: medium) {
     margin-bottom: 0;

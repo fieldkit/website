@@ -3,14 +3,12 @@
   @extend %margins-vertical--margin;
 
   .section__inner {
-    @extend %maximum-width;
-
-    text-align: center;
+    @extend %inset-width;
   }
 }
 
 .section-introduction__header {
-  @extend %inset-width;
+  text-align: center;
 }
 
 .section-introduction__image {
@@ -26,6 +24,9 @@
 .section-introduction__text {
   @extend %inset-width;
 
-  column-count: 2;
   margin-top: $margin-top * 2;
+
+  @include mq($from: medium) {
+    column-count: 2;
+  }
 }
