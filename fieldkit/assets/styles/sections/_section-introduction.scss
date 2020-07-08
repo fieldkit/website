@@ -1,0 +1,33 @@
+.section-introduction-header {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  .section__inner {
+    @extend %maximum-width;
+
+    text-align: center;
+  }
+
+  .heading-2 {
+    margin-bottom: 12px;
+  }
+}
+
+.section-introduction-content {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  .section__inner {
+    @extend %inset-width;
+  }
+}
+
+.section-introduction-content__image {
+  margin-bottom: 80px;
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
