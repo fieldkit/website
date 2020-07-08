@@ -1,0 +1,18 @@
+.section-image {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  .section__inner {
+    @extend %inset-width;
+
+    text-align: center;
+
+    .section-image__header {
+      margin-bottom: 16px;
+    }
+
+    .section-image__body {
+      margin-bottom: 22px;
+    }
+  }
+}
