@@ -1,4 +1,7 @@
 <?php
+$id = get_option( 'woocommerce_shop_page_id' );
+$products_text_and_image_1 = get_field('products_text_and_image_1', $id);
+
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *
@@ -29,23 +32,31 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-
-<section class="section section-product-services" style="background-image: url('https://www.fieldkit.test/wp-content/uploads/2019/11/background.svg')">
+<?php
+	$header = $products_text_and_image_1['header'];
+	$heading = $products_text_and_image_1['heading'];
+	$body = $products_text_and_image_1['body'];
+	$link1 = $products_text_and_image_1['link_1'];
+	$link2 = $products_text_and_image_1['link_2'];
+	$image = $products_text_and_image_1['image'];
+	$background_image = $products_text_and_image_1['background_image']['url'];
+?>
+<section class="section section-product-services" style="background-image: url('<?php echo $background_image; ?>')">
 	<div class="section__inner">
-		<h1 class="heading-1">Product and Services</h1>
+		<h1 class="heading-1"><?php echo $header; ?></h1>
 		<div class="section-product-services-container">
 			<div class="section-product-services__text">
 				<div class="rich-text">
-					<h2 class="heading-2">Built on the values of open source technology</h2>
-					<p class="heading-4">We’ve designed each product offering to work together as part of an integrated, modular system.</p>
+					<h2 class="heading-2"><?php echo $heading; ?></h2>
+					<h4 class="heading-4"><?php echo $body; ?></h4>
 				</div>
 				<div class="section-product-services__buttons">
-					<a href="#" class="product-services-button disable-woo-button button--primary">FieldKit Products</a>
-					<a href="#" class="product-services-button disable-woo-button button--primary">FieldKit Services</a>
+					<a href="<?php echo $link1['url']; ?>" class="product-services-button disable-woo-button button--primary"><?php echo $link1['title']; ?></a>
+					<a href="<?php echo $link2['url']; ?>" class="product-services-button disable-woo-button button--primary"><?php echo $link2['title']; ?></a>
 				</div>
 			</div>
 			<div class="section-product-services__image">
-				<img src="https://www.fieldkit.test/wp-content/uploads/2019/11/ProductServices_Header.png" alt="">
+				<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 			</div>
 		</div>
 	</div>
