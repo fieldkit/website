@@ -25,7 +25,7 @@ $header_heading = get_sub_field('header_heading');
 						<tr>
 							<?php foreach ($tr as $td) : ?>
 								<td><?php echo $td['c']; ?></td>
-							<? endforeach; ?>
+							<?php endforeach; ?>
 						</tr>
 					<?php endforeach; ?>
 					</tbody>
