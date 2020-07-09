@@ -101,14 +101,8 @@ do_action( 'woocommerce_before_main_content' );
 			 */
 			do_action( 'woocommerce_no_products_found' );
 		}
-
-		/**
-		 * Hook: woocommerce_after_main_content.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
 		?>
+
 	</div>
 </section>
 
@@ -158,6 +152,13 @@ do_action( 'woocommerce_before_main_content' );
 		</div>
 	</div>
 </section>
-
+<?php
+		/**
+		 * Hook: woocommerce_after_main_content.
+		 *
+		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+		 */
+		do_action( 'woocommerce_after_main_content' );
+		?>
 <?php
 get_footer( 'shop' );
