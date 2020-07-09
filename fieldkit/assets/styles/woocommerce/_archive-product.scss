@@ -8,10 +8,15 @@
   @extend %margins-horizontal;
   @extend %margins-vertical;
 
-  background-image: url("https://www.fieldkit.test/wp-content/uploads/2020/07/homepage_background.svg");
+  background-position: top left;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
   border-bottom: 1px solid $color-gray-3;
+
+  @include mq($from: medium) {
+    background-position: center left;
+    background-size: 50%;
+  }
 
   .section__inner {
     @extend %maximum-width;

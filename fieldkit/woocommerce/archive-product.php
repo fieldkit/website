@@ -30,7 +30,7 @@ do_action( 'woocommerce_before_main_content' );
 
 ?>
 
-<section class="section section-product-services">
+<section class="section section-product-services" style="background-image: url('https://www.fieldkit.test/wp-content/uploads/2019/11/background.svg')">
 	<div class="section__inner">
 		<h1 class="heading-1">Product and Services</h1>
 		<div class="section-product-services-container">
@@ -45,7 +45,8 @@ do_action( 'woocommerce_before_main_content' );
 				</div>
 			</div>
 			<div class="section-product-services__image">
-			<img width="2160" height="2016" src="https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header.png" class="vc_single_image-img attachment-full" alt="People deploying FieldKit stations in the environment" srcset="https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header.png 2160w, https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header-600x560.png 600w, https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header-300x280.png 300w, https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header-1024x956.png 1024w, https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header-768x717.png 768w, https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header-1536x1434.png 1536w, https://www.fieldkit.org/wp-content/uploads/2019/11/ProductServices_Header-2048x1911.png 2048w" sizes="(max-width: 2160px) 100vw, 2160px">			</div>
+				<img src="https://www.fieldkit.test/wp-content/uploads/2019/11/ProductServices_Header.png" alt="">
+			</div>
 		</div>
 	</div>
 </section>
