@@ -15,6 +15,7 @@ if (!function_exists('fieldkit_setup')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
+		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
 	}
 }
@@ -101,3 +102,4 @@ function fieldkit_get_icon($icon_name, $attributes = array())
 	$html .= ' alt="' . $icon_name . '" src="' . get_template_directory_uri() . '/assets/icons/' . $icon_name . '.svg" />';
 	return $html;
 }
+
