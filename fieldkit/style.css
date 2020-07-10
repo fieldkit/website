@@ -456,59 +456,59 @@ body.site-navigation-open {
 body.overflow-hidden {
   overflow: hidden; }
 
-.inset-width, .section-default-content .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner {
+.inset-width, .section-default-content .section__inner, .section-definition-list .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner, .section-introduction .section__inner, .section-introduction__text, .section-table .section__inner, .section-header .section__inner, .section-image .section__inner, .section-product-guide__header .section__inner {
   margin-left: auto;
   margin-right: auto;
   max-width: 1080px;
   width: 100%; }
   @media (min-width: 80em) {
-    .inset-width, .section-default-content .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner {
+    .inset-width, .section-default-content .section__inner, .section-definition-list .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner, .section-introduction .section__inner, .section-introduction__text, .section-table .section__inner, .section-header .section__inner, .section-image .section__inner, .section-product-guide__header .section__inner {
       width: 75%; } }
 
-.section__inner, .maximum-width, .site-header__inner, .site-footer__inner, .section.search-no-results .section__inner, .section.search-results .section__inner, .section-about-header .section__inner, .section-about-text-and-image-grid .section__inner, .section-about-values .section__inner, .section-blog-listing-featured-post .section__inner, .section-blog-listing-header .section__inner, .section-blog-post-feed .section__inner, .section-contact-header .section__inner, .section-home-callout .section__inner, .section-home-hero .section__inner, .section-home-icon-grid .section__inner, .section-home-product-grid .section__inner, .section-home-text-and-image-1 .section__inner, .section-home-text-and-image-2 .section__inner, .section-how-it-works-header .section__inner, .section-how-it-works-step-by-step .section__inner, .section-how-it-works-steps .section__inner {
+.section__inner, .maximum-width, .site-header__inner, .site-footer__inner, .section.search-no-results .section__inner, .section.search-results .section__inner, .section-about-header .section__inner, .section-about-text-and-image-grid .section__inner, .section-about-values .section__inner, .section-blog-listing-featured-post .section__inner, .section-blog-listing-header .section__inner, .section-blog-post-feed .section__inner, .section-contact-header .section__inner, .section-home-callout .section__inner, .section-home-hero .section__inner, .section-home-icon-grid .section__inner, .section-home-product-grid .section__inner, .section-home-text-and-image-1 .section__inner, .section-home-text-and-image-2 .section__inner, .section-how-it-works-header .section__inner, .section-how-it-works-step-by-step .section__inner, .section-how-it-works-steps .section__inner, .section-rich-text .section__inner, .section-product-guide-container > .section__inner {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px; }
 
-.section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main {
+.section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container {
   padding-left: 20px;
   padding-right: 20px;
   /* stylelint-disable */
   /* stylelint-enable */ }
   @supports (padding: max(0px)) {
-    .section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main {
+    .section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container {
       padding-left: max(20px, env(safe-area-inset-left));
       padding-right: max(20px, env(safe-area-inset-right)); } }
   @media (min-width: 30em) {
-    .section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main {
+    .section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container {
       padding-left: 56px;
       padding-right: 56px; } }
   @media (min-width: 80em) {
-    .section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main {
+    .section--margins, .margins-horizontal, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-contact-header, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container {
       padding-left: 80px;
       padding-right: 80px; } }
 
-.site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps {
+.site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table {
   padding-bottom: 40px;
   padding-top: 40px; }
   @media (min-width: 30em) {
-    .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps {
+    .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table {
       padding-bottom: 84px;
       padding-top: 84px; } }
   @media (min-width: 80em) {
-    .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps {
+    .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table {
       padding-bottom: 80px;
       padding-top: 80px; } }
 
-.section-blog-listing-featured-post, .section-blog-listing-header, .section-default-content, .section-error-404, .section-home-icon-grid, .section-home-product-grid, .section-how-it-works-step-by-step, .section-post-footer, .section-post-header {
+.section-blog-listing-featured-post, .section-blog-listing-header, .section-default-content, .section-error-404, .section-home-icon-grid, .section-home-product-grid, .section-how-it-works-step-by-step, .section-post-footer, .section-post-header, .section-introduction, .section-rich-text, .section-header, .section-image, .section-product-guide {
   margin-bottom: 40px;
   margin-top: 40px; }
   @media (min-width: 30em) {
-    .section-blog-listing-featured-post, .section-blog-listing-header, .section-default-content, .section-error-404, .section-home-icon-grid, .section-home-product-grid, .section-how-it-works-step-by-step, .section-post-footer, .section-post-header {
+    .section-blog-listing-featured-post, .section-blog-listing-header, .section-default-content, .section-error-404, .section-home-icon-grid, .section-home-product-grid, .section-how-it-works-step-by-step, .section-post-footer, .section-post-header, .section-introduction, .section-rich-text, .section-header, .section-image, .section-product-guide {
       margin-bottom: 84px;
       margin-top: 84px; } }
   @media (min-width: 80em) {
-    .section-blog-listing-featured-post, .section-blog-listing-header, .section-default-content, .section-error-404, .section-home-icon-grid, .section-home-product-grid, .section-how-it-works-step-by-step, .section-post-footer, .section-post-header {
+    .section-blog-listing-featured-post, .section-blog-listing-header, .section-default-content, .section-error-404, .section-home-icon-grid, .section-home-product-grid, .section-how-it-works-step-by-step, .section-post-footer, .section-post-header, .section-introduction, .section-rich-text, .section-header, .section-image, .section-product-guide {
       margin-bottom: 80px;
       margin-top: 80px; } }
 
@@ -549,21 +549,21 @@ body.overflow-hidden {
   font-style: italic; }
 
 .body, .blockquote, .text-label, .text-input, .wpcf7 input[type="email"],
-.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, td, .wpcf7-list-item-label, .rich-text p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p {
+.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, td a, .wpcf7-list-item-label a, .rich-text p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
     font-weight: bold;
     line-height: inherit; }
 
-.body--small {
+.body--small, .menu-product-guide-sidebar-container li {
   font-size: 14px;
   letter-spacing: 0;
   line-height: 20px; }
@@ -804,7 +804,7 @@ tr:not(:last-child) {
   font-weight: bold;
   letter-spacing: 0.1px;
   line-height: 24px;
-  padding: 10px 16px;
+  padding: 10px 50px;
   text-align: center;
   text-decoration: none;
   transition: background-color 200ms, color 200ms; }
@@ -976,6 +976,78 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     #mc-embedded-subscribe {
       min-width: 160px; } }
 
+.menu-product-guide-sidebar-container ul {
+  list-style: none;
+  margin-top: 8px; }
+
+.menu-product-guide-sidebar-container ul.sub-menu {
+  display: none; }
+
+.menu-product-guide-sidebar-container li {
+  list-style: none;
+  margin-top: 8px;
+  padding-left: 14px;
+  position: relative; }
+  .menu-product-guide-sidebar-container li:first-child {
+    margin-top: 0; }
+  .menu-product-guide-sidebar-container li::before {
+    background-color: #1b80c9;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 9px;
+    transform: translateY(-50%);
+    width: 6px; }
+  .menu-product-guide-sidebar-container li.menu-item-has-children::before {
+    background-color: transparent;
+    border-bottom: 2px solid #1b80c9;
+    border-left: 2px solid #1b80c9;
+    border-radius: 0;
+    content: "";
+    display: block;
+    height: 7px;
+    left: -1px;
+    position: absolute;
+    top: 9px;
+    transform: translateY(-50%) rotate(-135deg);
+    width: 7px; }
+  .menu-product-guide-sidebar-container li a {
+    color: #2c3e50;
+    font-weight: normal; }
+    .menu-product-guide-sidebar-container li a:hover, .menu-product-guide-sidebar-container li a:focus {
+      border-bottom: 1px solid #1b80c9; }
+
+.menu-product-guide-sidebar-container li.parent::before {
+  background-color: transparent;
+  border-bottom: 2px solid #1b80c9;
+  border-left: 2px solid #1b80c9;
+  border-radius: 0;
+  content: "";
+  display: block;
+  height: 7px;
+  left: -1px;
+  position: absolute;
+  top: 9px;
+  transform: translateY(-50%) rotate(-135deg);
+  width: 7px; }
+
+.menu-product-guide-sidebar-container li.current_page_item > a {
+  color: #1b80c9;
+  font-weight: bold; }
+
+.menu-product-guide-sidebar-container li.current_page_item.menu-item-has-children .sub-menu {
+  display: block; }
+
+.menu-product-guide-sidebar-container li.current_page_item.menu-item-has-children::before {
+  height: 7px;
+  left: 0;
+  top: 9px;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 7px; }
+
 .rich-text > *:not(:first-child) {
   margin-top: 1em; }
 
@@ -1009,6 +1081,12 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .rich-text video,
 .rich-text iframe {
   max-width: 100%; }
+
+.rich-text img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: auto; }
 
 .search-form__input-container {
   position: relative;
@@ -1653,6 +1731,30 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-default-content__rich-text iframe {
   max-width: 100%; }
 
+.section-definition-list {
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.section-definition-list__header {
+  margin-bottom: 20px; }
+
+.section-definition-list__item {
+  display: flex; }
+  .section-definition-list__item:not(:first-child) {
+    margin-top: 20px; }
+
+.section-definition-list__item-image {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  max-width: 100px; }
+  @media (min-width: 30em) {
+    .section-definition-list__item-image {
+      max-width: 200px; } }
+  .section-definition-list__item-image img {
+    display: block;
+    height: auto;
+    width: 100%; }
+
 .section-error-404 {
   text-align: center; }
   .section-error-404 .section__inner {
@@ -2038,3 +2140,111 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .wp-block-group .wp-block-group__inner-container video,
 .wp-block-group .wp-block-group__inner-container iframe {
   max-width: 100%; }
+
+.section-introduction__header {
+  text-align: center; }
+
+.section-introduction__image {
+  margin-top: 40px; }
+  .section-introduction__image img {
+    display: block;
+    height: auto;
+    width: 100%; }
+
+.section-introduction__text {
+  margin-top: 40px; }
+  @media (min-width: 50em) {
+    .section-introduction__text {
+      column-count: 2; } }
+
+.section-table {
+  background-color: #f1fafb; }
+
+.section-table__header {
+  margin-bottom: 12px; }
+
+.section-table__table {
+  width: 100%; }
+  .section-table__table td {
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 5px; }
+
+.section-rich-text hr {
+  background-color: #2c3e50;
+  border-width: 0;
+  color: #2c3e50;
+  height: 1px; }
+
+.section-header {
+  text-align: center; }
+
+.section-header__links {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media (min-width: 50em) {
+    .section-header__links {
+      flex-direction: row; } }
+
+.section-header__links-item {
+  margin-top: 1em; }
+  @media (min-width: 50em) {
+    .section-header__links-item {
+      margin-bottom: 0; }
+      .section-header__links-item:not(:first-child) {
+        margin-left: 20px; } }
+
+.section-image {
+  text-align: center; }
+
+.section-image__image {
+  margin-top: 40px; }
+  .section-image__image img {
+    display: block;
+    height: auto;
+    width: 100%; }
+
+.section-product-guide__header {
+  margin-bottom: 40px;
+  text-align: center; }
+  @media (min-width: 50em) {
+    .section-product-guide__header {
+      border-bottom: 1px solid #cccdcf;
+      margin-bottom: 60px;
+      padding-bottom: 60px; } }
+
+.section-product-guide-container > .section__inner {
+  display: grid;
+  grid-template: auto / 100%;
+  grid-template-areas: "aside" "content"; }
+  @media (min-width: 30em) {
+    .section-product-guide-container > .section__inner {
+      grid-gap: 56px; } }
+  @media (min-width: 50em) {
+    .section-product-guide-container > .section__inner {
+      grid-template: auto / auto 1fr;
+      grid-template-areas: "aside content"; } }
+
+.section-product-guide__aside {
+  grid-area: aside;
+  margin-bottom: 40px; }
+  @media (min-width: 50em) {
+    .section-product-guide__aside {
+      margin-bottom: 0px; } }
+
+.section-product-guide__content {
+  grid-area: content; }
+  .section-product-guide__content .section {
+    margin-top: 40px;
+    padding-left: 0;
+    padding-right: 0; }
+    .section-product-guide__content .section:first-child {
+      margin-top: 0; }
+  .section-product-guide__content .section__inner {
+    max-width: none;
+    width: 100%; }

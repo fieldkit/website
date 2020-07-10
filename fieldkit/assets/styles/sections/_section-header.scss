@@ -1,0 +1,33 @@
+.section-header {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  text-align: center;
+
+  .section__inner {
+    @extend %inset-width;
+  }
+}
+
+.section-header__links {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mq($from: medium) {
+    flex-direction: row;
+  }
+}
+
+.section-header__links-item {
+  margin-top: 1em;
+
+  @include mq($from: medium) {
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}
