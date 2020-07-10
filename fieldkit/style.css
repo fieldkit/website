@@ -549,14 +549,15 @@ body.overflow-hidden {
   font-style: italic; }
 
 .body, .blockquote, .text-label, .text-input, .wpcf7 input[type="email"],
-.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p {
+.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .section-default-content__rich-text ul,
+.section-default-content__rich-text ol, .wp-block-group .wp-block-group__inner-container ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .rich-text ol li, .rich-text ul li, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .section-default-content__rich-text ul a, .section-default-content__rich-text ol a, .wp-block-group .wp-block-group__inner-container ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .rich-text ol li a, .rich-text ul li a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
@@ -689,9 +690,9 @@ body.overflow-hidden {
       font-size: 24px; } }
 
 .heading-5, .rich-text h5,
-.rich-text .heading-5, .rich-text blockquote, .section-default-content__rich-text h5,
-.section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote, .wp-block-group .wp-block-group__inner-container h5,
-.wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote {
+.rich-text .heading-5, .rich-text blockquote > p, .section-default-content__rich-text h5,
+.section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote > p, .wp-block-group .wp-block-group__inner-container h5,
+.wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote > p {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -699,9 +700,9 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-5, .rich-text h5,
-    .rich-text .heading-5, .rich-text blockquote, .section-default-content__rich-text h5,
-    .section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote, .wp-block-group .wp-block-group__inner-container h5,
-    .wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote {
+    .rich-text .heading-5, .rich-text blockquote > p, .section-default-content__rich-text h5,
+    .section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote > p, .wp-block-group .wp-block-group__inner-container h5,
+    .wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote > p {
       font-size: 20px; } }
 
 .heading-6, .rich-text h6,
@@ -769,11 +770,11 @@ body.overflow-hidden {
   .link--small::after, .rich-text a::after, .section-default-content__rich-text a::after {
     height: 1px; }
 
-.list-item, .rich-text li, .section-default-content__rich-text li, .wp-block-group .wp-block-group__inner-container li {
+.list-item, .rich-text ul li, .section-default-content__rich-text li, .wp-block-group .wp-block-group__inner-container li {
   list-style: none;
   padding-left: 36px;
   position: relative; }
-  .list-item::before, .rich-text li::before, .section-default-content__rich-text li::before, .wp-block-group .wp-block-group__inner-container li::before {
+  .list-item::before, .rich-text ul li::before, .section-default-content__rich-text li::before, .wp-block-group .wp-block-group__inner-container li::before {
     background-color: currentColor;
     border-radius: 50%;
     content: "";
@@ -1053,8 +1054,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .rich-text ol,
 .rich-text ul {
-  list-style-position: outside;
-  padding-left: 20px; }
+  list-style-position: outside; }
 
 .rich-text h1 a:hover,
 .rich-text h1 a:focus,
@@ -1070,10 +1070,20 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .rich-text h6 a:focus {
   text-decoration: underline; }
 
+.rich-text ul {
+  padding-left: 6px; }
+
+.rich-text ol {
+  padding-left: 36px; }
+
+.rich-text ol li {
+  list-style-type: decimal;
+  padding-left: 8px; }
+
 .rich-text blockquote {
   border-left: 5px solid #1b80c9;
   margin-left: 0;
-  padding: 4px 33px 10px; }
+  padding: 4px 33px 20px; }
   @media (min-width: 50em) {
     .rich-text blockquote {
       margin-left: 20px; } }
@@ -1719,10 +1729,13 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-default-content__rich-text h6 a:focus {
   text-decoration: underline; }
 
+.section-default-content__rich-text ol {
+  list-style-type: decimal; }
+
 .section-default-content__rich-text blockquote {
   border-left: 5px solid #1b80c9;
   margin-left: 0;
-  padding: 4px 33px 10px; }
+  padding: 4px 33px 20px; }
   @media (min-width: 50em) {
     .section-default-content__rich-text blockquote {
       margin-left: 20px; } }
@@ -2132,7 +2145,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .wp-block-group .wp-block-group__inner-container blockquote {
   border-left: 5px solid #1b80c9;
   margin-left: 0;
-  padding: 4px 33px 10px; }
+  padding: 4px 33px 20px; }
   @media (min-width: 50em) {
     .wp-block-group .wp-block-group__inner-container blockquote {
       margin-left: 20px; } }
