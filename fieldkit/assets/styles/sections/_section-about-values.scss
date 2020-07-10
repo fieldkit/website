@@ -18,11 +18,17 @@
   flex-direction: column;
   justify-content: initial;
   margin: auto;
+  margin-bottom: 140px;
   text-align: center;
+
+  @include mq($from: small) {
+    margin-bottom: 100px;
+  }
 
   @include mq($from: medium) {
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: initial;
   }
 }
 
