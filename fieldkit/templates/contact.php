@@ -10,8 +10,7 @@
 	<header class="section section-contact-header">
 		<div class="section__inner">
 			<div class="rich-text">
-				<h1 class="heading-1 section-contact-header__heading"><?php echo $heading; ?></h1>
-				<?php if ($body) echo $body; ?>
+				<h1 class="heading-1 section-contact-header__heading"><?php echo get_the_title(); ?></h1>
 			</div>
 			<div class="section-contact-header__background">
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
@@ -25,6 +24,10 @@
 	?>
 	<header class="section section-contact-form">
 		<div class="section__inner">
+			<div class="section-contact-form__heading">
+				<h2 class="heading-2"><?php echo $heading; ?></h2>
+				<?php if ($body) echo $body; ?>
+			</div>
 			<?php
 			if ($contact_form_7_shortcode) {
 				$contact_form_markup = do_shortcode($contact_form_7_shortcode);

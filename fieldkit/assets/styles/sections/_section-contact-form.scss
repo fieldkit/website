@@ -7,6 +7,16 @@
     margin-bottom: 147px;
   }
 
+  .section-contact-form__heading {
+    margin-bottom: 70px;
+    margin-top: 50px;
+    text-align: center;
+
+    .heading-2 {
+      margin-bottom: 10px;
+    }
+  }
+
   .text-input,
   .wpcf7 input[type="email"],
   .wpcf7 input[type="text"],
@@ -18,5 +28,21 @@
   .wpcf7 input[type="submit"] {
     @extend .button;
     @extend .button--primary;
+  }
+
+  .wpcf7-form {
+    position: relative;
+
+    &::before {
+      color: #2c3e50;
+      content: "*Required";
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: normal;
+      position: absolute;
+      right: 0;
+      top: -8px;
+    }
   }
 }
