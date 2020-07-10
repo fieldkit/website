@@ -1,7 +1,9 @@
 <?php
 $id = get_option( 'woocommerce_shop_page_id' );
 $products_text_and_image_1 = get_field('products_text_and_image_1', $id);
-
+$product_grid_text = get_field('product_grid_text', $id);
+$services_grid_text = get_field('services_grid_text', $id);
+$products_text_and_image_2 = get_field('products_text_and_image_2', $id);
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *
@@ -62,12 +64,17 @@ do_action( 'woocommerce_before_main_content' );
 	</div>
 </section>
 
+
+<?php
+	$heading = $product_grid_text['heading'];
+	$body = $product_grid_text['body'];
+?>
 <section class="section section-product-fieldkit-packages">
 	<div class="section__inner">
 		<div class="section-product-fieldkit-packages-header">
-			<h3 class="heading-3">FieldKit Packages</h3>
+			<h3 class="heading-3"><?php echo $heading; ?></h3>
 			<div class="section-product-fieldkit-packages__text">
-			These kits will come prepackaged with necessary modules, sensors, and prefabricated bottom plates for environmental monitoring. We are excited to bring these to market in 2020.
+			<?php echo $body; ?>
 			</div>
 		</div>
 		<?php
@@ -118,48 +125,54 @@ do_action( 'woocommerce_before_main_content' );
 	</div>
 </section>
 
+<?php
+	$heading = $services_grid_text['heading'];
+	$body = $services_grid_text['body'];
+	$services_list = $services_grid_text['services_list'];
+	$heading_2 = $services_grid_text['heading_2'];
+	$link = $services_grid_text['link'];
+?>
 <section class="section section-product-fieldkit-services">
 	<div class="section__inner">
 		<div class="section-product-fieldkit-services-header">
-			<h2 class="heading-2">FieldKit Services</h2>
-			<div class="product-fieldkit-services__text">The FieldKit team is made up of hardware engineers, designers, sensor developers, software engineers, field experts, and quality assurance that know the FieldKit architecture backwards and forwards.</div>
-
+			<h2 class="heading-2"><?php echo $heading; ?></h2>
+			<div class="product-fieldkit-services__text"><?php echo $body; ?></div>
 		</div>
 		<ul class="product-fieldkit-services__list">
+			<?php foreach ($services_list as $item) :
+				$title = $item['title'];
+				$text = $item['text'];
+			?>
 			<li>
-				<h3 class="heading-3">Custom Sensor Module Design </h3>
-				<div class="product-fieldkit-services__list-text">We custom design sensors for clients to meet their environmental monitoring needs.</div>
+				<h3 class="heading-3"><?php echo $title; ?></h3>
+				<div class="product-fieldkit-services__list-text"><?php echo $text; ?></div>
 			</li>
-			<li>
-				<h3 class="heading-3">Custom Sensor Module Design </h3>
-				<div class="product-fieldkit-services__list-text">We custom design sensors for clients to meet their environmental monitoring needs.</div>
-			</li>
-			<li>
-				<h3 class="heading-3">Custom Sensor Module Design </h3>
-				<div class="product-fieldkit-services__list-text">We custom design sensors for clients to meet their environmental monitoring needs.</div>
-			</li>
-			<li>
-				<h3 class="heading-3">Custom Sensor Module Design </h3>
-				<div class="product-fieldkit-services__list-text">We custom design sensors for clients to meet their environmental monitoring needs.</div>
-			</li>
+			<?php endforeach; ?>
 		</ul>
-		<h3 class="heading-3">Want to learn more about FieldKit stations and services?</h3>
-		<a href="#" class="disable-woo-button button--primary">Contact Us</a>
+		<h3 class="heading-3 fieldkit-services-header-bottom"><?php echo $heading_2; ?></h3>
+		<a href="<?php echo $link['url']; ?>" class="disable-woo-button button--primary"><?php echo $link['title']; ?></a>
 	</div>
 </section>
 
+
+<?php
+	$heading = $products_text_and_image_2['heading'];
+	$body = $products_text_and_image_2['body'];
+	$link = $products_text_and_image_2['link'];
+	$image = $products_text_and_image_2['image'];
+?>
 <section class="section section-product-partner-with-us">
 	<div class="section__inner">
 		<div class="section-product-partner-with-us-container">
 			<div class="section-product-partner-with-us__image">
-				<img src="https://www.fieldkit.org/wp-content/uploads/2019/11/person-and-birds.svg" alt="">
+				<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 			</div>
 			<div class="section-product-partner-with-us__info">
-				<h3 class="heading-3">Didn’t find the perfect environmental sensor?</h3>
+				<h3 class="heading-3"><?php echo $heading; ?></h3>
 				<div class="section-product-partner-with-us__text">
-				You can always order a custom-made environmental sensor module.
+				<?php echo $body; ?>
 				</div>
-				<a href="#" class="button--link">Partner with us</a>
+				<a href="<?php echo $link['url']; ?>" class="button--link"><?php echo $link['title']; ?></a>
 			</div>
 		</div>
 	</div>
