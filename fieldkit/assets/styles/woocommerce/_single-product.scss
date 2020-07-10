@@ -1,5 +1,6 @@
 .woocommerce div.product {
   @extend %margins-horizontal;
+  @extend %margins-vertical;
 }
 
 .summary__details .product_title {
@@ -283,4 +284,38 @@
 .woocommerce table.shop_attributes th {
   text-align: left;
   width: auto;
+}
+
+.woocommerce .related.products {
+  text-align: center;
+}
+
+.woocommerce .related.products ul.products {
+  margin-top: $margin-top * 2;
+}
+
+.woocommerce .related.products ul.products li {
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+
+  @include mq($from: medium) {
+    margin: 0;
+    padding: 0 30px;
+    width: 33.33%;
+  }
+}
+
+.woocommerce .related.products ul.products li .woocommerce-loop-product__title {
+  @extend .heading-5;
+}
+
+.woocommerce .related.products ul.products li .price {
+  color: #0a67aa;
+}
+
+.woocommerce .related.products ul.products li .button {
+  @extend .button;
+  @extend .button--primary;
 }
