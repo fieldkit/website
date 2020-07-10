@@ -6,6 +6,16 @@
   }
 }
 
+.section-post-main__featured-image {
+  margin-bottom: $margin-bottom * 2;
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
 .wp-block-group {
   .wp-block-group__inner-container {
     > *:not(:first-child) {

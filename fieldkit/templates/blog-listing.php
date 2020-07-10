@@ -30,7 +30,7 @@
 		<div class="section__inner">
 			<div class="section-blog-listing-featured-post__teaser">
 				<div class="section-blog-listing-featured-post__teaser-text">
-					<h2 class="heading-3 section-blog-listing-featured-post__teaser-title"><?php echo $title; ?></h2>
+					<a href="<?php echo $permalink; ?>" class="section-blog-listing-featured-post__teaser-title"><h2 class="heading-3"><?php echo $title; ?></h2></a>
 					<div class="section-blog-listing-featured-post__teaser-date"><?php echo $date; ?> | <?php echo $author; ?></div>
 					<div class="section-blog-listing-featured-post__teaser-image hide-desktop">
 						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
@@ -60,7 +60,7 @@
 	<section class="section section-blog-post-feed">
 		<div class="section__inner">
 			<div class="section-blog-post-feed__header">
-				<h2 class="heading-3"><?php echo __('Recent Posts'); ?></h2>
+				<h2 class="heading-2"><?php echo __('Recent Posts'); ?></h2>
 			</header>
 			<div class="section-blog-post-feed__feed load-more">
 				<ul class="section-blog-post-feed__list">
@@ -81,7 +81,7 @@
 										<div class="post-teaser__image">
 											<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 										</div>
-										<h2 class="heading-4 post-teaser__title"><?php echo $title; ?></h2>
+										<h2 class="heading-3 post-teaser__title"><?php echo $title; ?></h2>
 										<div class="post-teaser__date"><?php echo $date; ?></div>
 									</a>
 								</div>
