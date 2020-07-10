@@ -30,7 +30,10 @@
   }
 
   .section-about-text-and-image-grid__item-image {
+    margin-top: 40px;
+
     @include mq($from: medium) {
+      margin-top: initial;
       width: 50%;
     }
 
