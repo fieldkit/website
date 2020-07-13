@@ -7,7 +7,7 @@
 			<div class="section__inner">
 				<header class="search-results__header">
 					<?php get_search_form(); ?>
-					<h4 class="heading-4 search-results__heading"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h4>
+					<h1 class="heading-4 search-results__heading"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h1>
 				</header>
 				<div class="search-results__main">
 					<?php
