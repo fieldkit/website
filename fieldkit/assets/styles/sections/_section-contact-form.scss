@@ -8,9 +8,13 @@
   }
 
   .section-contact-form__heading {
-    margin-bottom: 70px;
-    margin-top: 50px;
+    margin-bottom: 0;
     text-align: center;
+
+    @include mq($from: medium) {
+      margin-bottom: 70px;
+      margin-top: 50px;
+    }
 
     .heading-2 {
       margin-bottom: 10px;
@@ -28,10 +32,25 @@
   .wpcf7 input[type="submit"] {
     @extend .button;
     @extend .button--primary;
+
+    margin-top: 14px;
+    max-width: 100%;
+    width: 100%;
+
+    @include mq($from: medium) {
+      width: auto;
+    }
   }
 
   .wpcf7-form {
+    margin-top: 10px;
+    padding-top: 20px;
     position: relative;
+
+    @include mq($from: medium) {
+      margin-top: 0;
+      padding-top: 0;
+    }
 
     &::before {
       color: #2c3e50;
@@ -41,8 +60,35 @@
       font-weight: 400;
       line-height: normal;
       position: absolute;
-      right: 0;
-      top: -8px;
+      right: 50%;
+      top: 0;
+      transform: translateX(50%);
+
+      @include mq($from: medium) {
+        right: 0;
+        top: -8px;
+        transform: none;
+      }
+    }
+
+    .wpcf7-response-output {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      padding: 12px 15px;
+    }
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    background-color: #3f8530;
+    border: none;
+    color: #ffffff;
+
+    &::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='22' height='18' viewBox='0 0 22 18'%3E%3Cdefs%3E%3Cpath id='prefix__a' d='M477.392 1297.684l-12.592 13.1c-.811.844-2.124.844-2.933 0l-5.26-5.47c-.81-.844-.81-2.21 0-3.053.81-.842 2.124-.842 2.933 0l3.793 3.946 11.126-11.574c.809-.844 2.122-.844 2.933 0 .81.841.81 2.207 0 3.05'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(-456 -1294)'%3E%3Cuse fill='%23FFF' xlink:href='%23prefix__a'/%3E%3C/g%3E%3C/svg%3E%0A");
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: middle;
     }
   }
 }

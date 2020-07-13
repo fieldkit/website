@@ -921,8 +921,11 @@ div.wpcf7 {
 span.wpcf7-list-item {
   display: block;
   margin: 16px auto 0;
-  max-width: 200px;
+  max-width: 220px;
   width: 100%; }
+  @media (min-width: 50em) {
+    span.wpcf7-list-item {
+      max-width: 200px; } }
   span.wpcf7-list-item:first-child {
     margin-top: 0; }
   span.wpcf7-list-item input {
@@ -969,6 +972,18 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   color: #ffffff;
   font-size: 18px;
   padding-left: 42px; }
+
+.wpcf7-form-control-wrap.role {
+  margin-top: 50px; }
+  @media (min-width: 50em) {
+    .wpcf7-form-control-wrap.role {
+      margin-top: 60px; } }
+
+.wpcf7-form-control-wrap.how-can-we-help {
+  margin-top: 30px; }
+  @media (min-width: 50em) {
+    .wpcf7-form-control-wrap.how-can-we-help {
+      margin-top: 40px; } }
 
 #mc_embed_signup label {
   display: block;
@@ -1698,9 +1713,12 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     .section-contact-form {
       margin-bottom: 147px; } }
   .section-contact-form .section-contact-form__heading {
-    margin-bottom: 70px;
-    margin-top: 50px;
+    margin-bottom: 0;
     text-align: center; }
+    @media (min-width: 50em) {
+      .section-contact-form .section-contact-form__heading {
+        margin-bottom: 70px;
+        margin-top: 50px; } }
     .section-contact-form .section-contact-form__heading .heading-2, .section-contact-form .section-contact-form__heading .rich-text h2, .rich-text .section-contact-form .section-contact-form__heading h2, .section-contact-form .section-contact-form__heading .section-default-content__rich-text h2, .section-default-content__rich-text .section-contact-form .section-contact-form__heading h2, .section-contact-form .section-contact-form__heading .wp-block-group .wp-block-group__inner-container h2, .wp-block-group .wp-block-group__inner-container .section-contact-form .section-contact-form__heading h2 {
       margin-bottom: 10px; }
   .section-contact-form .text-input, .section-contact-form .wpcf7 input[type="email"], .wpcf7 .section-contact-form input[type="email"],
@@ -1716,8 +1734,21 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .search-form .section-contact-form input,
   .section-contact-form .wpcf7 textarea {
     width: 100%; }
+  .section-contact-form .wpcf7 input[type="submit"] {
+    margin-top: 14px;
+    max-width: 100%;
+    width: 100%; }
+    @media (min-width: 50em) {
+      .section-contact-form .wpcf7 input[type="submit"] {
+        width: auto; } }
   .section-contact-form .wpcf7-form {
+    margin-top: 10px;
+    padding-top: 20px;
     position: relative; }
+    @media (min-width: 50em) {
+      .section-contact-form .wpcf7-form {
+        margin-top: 0;
+        padding-top: 0; } }
     .section-contact-form .wpcf7-form::before {
       color: #2c3e50;
       content: "*Required";
@@ -1726,22 +1757,44 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
       font-weight: 400;
       line-height: normal;
       position: absolute;
-      right: 0;
-      top: -8px; }
+      right: 50%;
+      top: 0;
+      transform: translateX(50%); }
+      @media (min-width: 50em) {
+        .section-contact-form .wpcf7-form::before {
+          right: 0;
+          top: -8px;
+          transform: none; } }
+    .section-contact-form .wpcf7-form .wpcf7-response-output {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      padding: 12px 15px; }
+  .section-contact-form .wpcf7 form.sent .wpcf7-response-output {
+    background-color: #3f8530;
+    border: none;
+    color: #ffffff; }
+    .section-contact-form .wpcf7 form.sent .wpcf7-response-output::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='22' height='18' viewBox='0 0 22 18'%3E%3Cdefs%3E%3Cpath id='prefix__a' d='M477.392 1297.684l-12.592 13.1c-.811.844-2.124.844-2.933 0l-5.26-5.47c-.81-.844-.81-2.21 0-3.053.81-.842 2.124-.842 2.933 0l3.793 3.946 11.126-11.574c.809-.844 2.122-.844 2.933 0 .81.841.81 2.207 0 3.05'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd' transform='translate(-456 -1294)'%3E%3Cuse fill='%23FFF' xlink:href='%23prefix__a'/%3E%3C/g%3E%3C/svg%3E%0A");
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: middle; }
 
 .section-contact-header {
   background-image: url(https://www.fieldkit.org/wp-content/uploads/2019/12/Contact_Header-scaled.png?id=497) !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 170%;
   margin-top: 20px;
-  padding-bottom: 120px;
+  padding-bottom: 94px;
   padding-top: 80px; }
   @media (min-width: 50em) {
     .section-contact-header {
+      background-size: contain;
       padding-bottom: 160px;
       padding-top: 80px; } }
   .section-contact-header .section__inner {
+    max-width: 565px;
     text-align: center; }
 
 .section-default-content__rich-text > *:not(:first-child) {
@@ -2092,6 +2145,13 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-how-it-works-step-by-step__item-text {
   grid-area: info; }
+  .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .section-default-content__rich-text h3, .section-default-content__rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text h3,
+  .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text .heading-3 {
+    margin-bottom: 18px; }
+    @media (min-width: 50em) {
+      .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .section-default-content__rich-text h3, .section-default-content__rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text h3,
+      .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text .heading-3 {
+        margin-bottom: 23px; } }
 
 .section-how-it-works-step-by-step__item {
   display: grid;
