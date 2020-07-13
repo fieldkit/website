@@ -10,7 +10,7 @@ services:
     image: mysql:5.7
     restart: always
     volumes:
-      - mysql_data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql:delegated
   nginx-proxy:
     container_name: fieldkit-nginx-proxy
     image: jwilder/nginx-proxy
@@ -19,8 +19,8 @@ services:
       - "443:443"
     restart: always
     volumes:
-      - ./certs:/etc/nginx/certs
-      - ./configs/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:ro
+      - ./certs:/etc/nginx/certs:delegated,ro
+      - ./configs/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:delegated,ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
   wordpress:
     container_name: fieldkit-wordpress
@@ -35,9 +35,9 @@ services:
     image: wordpress:5.4
     restart: always
     volumes:
-      - ./configs/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - ./fieldkit:/var/www/html/wp-content/themes/fieldkit
-      - ./wordpress/wp-content/plugins:/var/www/html/wp-content/plugins
-      - ./wordpress/wp-content/uploads:/var/www/html/wp-content/uploads
+      - ./configs/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:delegated,ro
+      - ./fieldkit:/var/www/html/wp-content/themes/fieldkit:cached
+      - ./wordpress/wp-content/plugins:/var/www/html/wp-content/plugins:cached
+      - ./wordpress/wp-content/uploads:/var/www/html/wp-content/uploads:delegated
 volumes:
-  mysql_data: {}
+  mysql_data:
