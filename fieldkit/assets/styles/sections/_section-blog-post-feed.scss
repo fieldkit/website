@@ -2,7 +2,8 @@
   @extend %margins-horizontal;
   @extend %margins-vertical;
 
-  border-top: 1px solid #d8dce0;
+  border-top: 1px solid $color-gray-3;
+  padding-top: 93px;
   text-align: center;
 
   .section__inner {
@@ -62,7 +63,7 @@
 }
 
 .post-teaser a {
-  color: #2c3e50;
+  color: $color-primary-dark-blue;
 }
 
 .post-teaser__image {

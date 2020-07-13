@@ -921,8 +921,11 @@ div.wpcf7 {
 span.wpcf7-list-item {
   display: block;
   margin: 16px auto 0;
-  max-width: 200px;
+  max-width: 220px;
   width: 100%; }
+  @media (min-width: 50em) {
+    span.wpcf7-list-item {
+      max-width: 200px; } }
   span.wpcf7-list-item:first-child {
     margin-top: 0; }
   span.wpcf7-list-item input {
@@ -969,6 +972,18 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   color: #ffffff;
   font-size: 18px;
   padding-left: 42px; }
+
+.wpcf7-form-control-wrap.role {
+  margin-top: 50px; }
+  @media (min-width: 50em) {
+    .wpcf7-form-control-wrap.role {
+      margin-top: 60px; } }
+
+.wpcf7-form-control-wrap.how-can-we-help {
+  margin-top: 30px; }
+  @media (min-width: 50em) {
+    .wpcf7-form-control-wrap.how-can-we-help {
+      margin-top: 40px; } }
 
 #mc_embed_signup label {
   display: block;
@@ -1257,26 +1272,43 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
       min-width: 320px; } }
 
 .social-share-menu-container {
-  align-items: center;
   display: flex;
+  flex-direction: column;
   margin-bottom: 60px; }
+  @media (min-width: 50em) {
+    .social-share-menu-container {
+      flex-direction: row; } }
+  .social-share-menu-container > * {
+    align-self: start; }
+    @media (min-width: 50em) {
+      .social-share-menu-container > * {
+        align-self: center; } }
 
 .social-share-menu {
   display: flex;
-  margin-left: 20px;
-  padding-left: 20px;
+  margin-left: 0;
+  margin-top: 18px;
+  padding-left: 0;
   position: relative;
   z-index: 0; }
+  @media (min-width: 50em) {
+    .social-share-menu {
+      margin-left: 20px;
+      margin-top: 0;
+      padding-left: 20px; } }
   .social-share-menu::before {
     background-color: currentColor;
     content: "";
-    display: block;
+    display: none;
     height: 14px;
     left: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 1px; }
+    @media (min-width: 50em) {
+      .social-share-menu::before {
+        display: block; } }
 
 .social-share-menu-item {
   margin-left: 21px; }
@@ -1580,12 +1612,16 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-blog-listing-featured-post {
   background-image: url(/wp-content/uploads/2019/11/blog-background-01.svg) !important;
-  background-position: left center;
+  background-position: inherit;
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: 900px;
+  padding-bottom: 90px;
+  padding-top: 50px; }
   @media (min-width: 50em) {
     .section-blog-listing-featured-post {
-      background-position: left center; } }
+      background-position: left center;
+      background-size: contain;
+      padding-top: 0; } }
 
 .section-blog-listing-featured-post__teaser {
   display: flex;
@@ -1607,8 +1643,10 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   text-decoration: underline; }
 
 .section-blog-listing-featured-post__teaser-date {
+  color: #6a6d71;
   margin-bottom: 60px;
-  margin-top: 0.5em; }
+  margin-top: 0.5em;
+  text-transform: capitalize; }
 
 .section-blog-listing-featured-post__teaser-excerpt {
   margin-bottom: 32px; }
@@ -1643,6 +1681,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-blog-post-feed {
   border-top: 1px solid #d8dce0;
+  padding-top: 93px;
   text-align: center; }
 
 .section-blog-post-feed__feed {
@@ -1714,20 +1753,32 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .search-form .section-contact-form input,
   .section-contact-form .wpcf7 textarea {
     width: 100%; }
+  .section-contact-form .wpcf7 input[type="submit"] {
+    margin-left: 16px;
+    margin-top: 70px;
+    max-width: 260px;
+    width: 80%; }
+    @media (min-width: 50em) {
+      .section-contact-form .wpcf7 input[type="submit"] {
+        margin-left: initial;
+        margin-top: 86px;
+        width: 100%; } }
 
 .section-contact-header {
   background-image: url(https://www.fieldkit.org/wp-content/uploads/2019/12/Contact_Header-scaled.png?id=497) !important;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 170%;
   margin-top: 20px;
-  padding-bottom: 120px;
+  padding-bottom: 94px;
   padding-top: 80px; }
   @media (min-width: 50em) {
     .section-contact-header {
+      background-size: contain;
       padding-bottom: 160px;
       padding-top: 80px; } }
   .section-contact-header .section__inner {
+    max-width: 565px;
     text-align: center; }
 
 .section-default-content__rich-text > *:not(:first-child) {
@@ -2078,6 +2129,13 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-how-it-works-step-by-step__item-text {
   grid-area: info; }
+  .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .section-default-content__rich-text h3, .section-default-content__rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text h3,
+  .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text .heading-3 {
+    margin-bottom: 18px; }
+    @media (min-width: 50em) {
+      .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .section-default-content__rich-text h3, .section-default-content__rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text h3,
+      .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text .heading-3 {
+        margin-bottom: 23px; } }
 
 .section-how-it-works-step-by-step__item {
   display: grid;
@@ -2149,12 +2207,14 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
       margin-top: 80px; } }
 
 .section-post-header {
-  margin-bottom: 40px; }
+  margin-bottom: 35px; }
   .section-post-header .section__inner {
     text-align: left; }
 
 .section-post-header__date {
-  margin-top: 0.5em; }
+  color: #6a6d71;
+  margin-top: 0.5em;
+  text-transform: capitalize; }
 
 .section-post-main__featured-image {
   margin-bottom: 40px; }

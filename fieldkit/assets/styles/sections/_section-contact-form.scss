@@ -18,5 +18,16 @@
   .wpcf7 input[type="submit"] {
     @extend .button;
     @extend .button--primary;
+
+    margin-left: 16px;
+    margin-top: 70px;
+    max-width: 260px;
+    width: 80%;
+
+    @include mq($from: medium) {
+      margin-left: initial;
+      margin-top: 86px;
+      width: 100%;
+    }
   }
 }

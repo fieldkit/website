@@ -2,7 +2,7 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
-  margin-bottom: $margin-bottom * 2;
+  margin-bottom: 35px;
 
   .section__inner {
     @extend %inset-width;
@@ -12,5 +12,7 @@
 }
 
 .section-post-header__date {
+  color: $color-gray-5;
   margin-top: 0.5em;
+  text-transform: capitalize;
 }

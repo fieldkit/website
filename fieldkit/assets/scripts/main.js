@@ -1,9 +1,10 @@
 import "lazysizes";
 import $ from "jquery";
+import ContactForm from "./components/ContactForm";
 import LoadMore from "./components/LoadMore";
+import SearchForm from "./components/SearchForm";
 import SiteHeader from "./components/SiteHeader";
 import TextInputContainer from "./components/TextInputContainer";
-import SearchForm from "./components/SearchForm";
 
 $(".site-header").each((index, element) => new SiteHeader(element));
 $(".load-more").each((index, element) => new LoadMore(element));
@@ -12,3 +13,4 @@ $(".text-input-container").each(
 );
 
 $(".search-form").each((index, element) => new SearchForm(element));
+$(".section-contact-form").each((index, element) => new ContactForm(element));

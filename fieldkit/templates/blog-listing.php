@@ -25,6 +25,7 @@
 		title => 'Read More',
 		url => get_permalink($featured_post->ID),
 	];
+	$permalink = get_permalink($featured_post->ID);
 	?>
 	<section class="section section-blog-listing-featured-post">
 		<div class="section__inner">
@@ -94,7 +95,7 @@
 				</ul>
 				<?php if ($latest_posts->found_posts > 3) : ?>
 					<div class="section-blog-post-feed__load-more">
-						<button class="button button--link action-load-more">Load More Posts</button>
+						<button class="button button--link action-load-more">Load more</button>
 					</div>
 				<?php endif; ?>
 			</div>
