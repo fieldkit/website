@@ -19,19 +19,25 @@ $github = $social['github'];
 		</div>
 		<div class="site-footer__right">
 			<div class="site-footer__right-column">
-				<h2 class="body site-footer__right-title">Support</h2>
+				<h2 class="body site-footer__right-title">
+					<?php echo wp_get_nav_menu_name('footer-support'); ?>
+				</h2>
 				<?php
 				if (has_nav_menu('footer-support')) wp_nav_menu(array('theme_location' => 'footer-support'));
 				?>
 			</div>
 			<div class="site-footer__right-column">
-				<h2 class="body site-footer__right-title">Legal</h2>
+				<h2 class="body site-footer__right-title">
+					<?php echo wp_get_nav_menu_name('footer-legal'); ?>
+				</h2>
 				<?php
 				if (has_nav_menu('footer-legal')) wp_nav_menu(array('theme_location' => 'footer-legal'));
 				?>
 			</div>
 			<div class="site-footer__right-column">
-				<h2 class="body site-footer__right-title">Other</h2>
+				<h2 class="body site-footer__right-title">
+					<?php echo wp_get_nav_menu_name('footer-other'); ?>
+				</h2>
 				<?php
 				if (has_nav_menu('footer-other')) wp_nav_menu(array('theme_location' => 'footer-other'));
 				?>

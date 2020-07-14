@@ -312,6 +312,14 @@ template {
 [hidden] {
   display: none; }
 
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 4px; }
+
 /**
  * Universal reset.
  */
@@ -794,6 +802,7 @@ tr:not(:last-child) {
   font-weight: bold;
   letter-spacing: 0.1px;
   line-height: 24px;
+  min-width: 200px;
   padding: 10px 16px;
   text-align: center;
   text-decoration: none;
@@ -857,6 +866,7 @@ tr:not(:last-child) {
 .button--link {
   border-bottom: 2px solid transparent;
   display: inline-block;
+  min-width: none;
   padding-bottom: 4px;
   padding-left: 0;
   padding-right: 0;
@@ -1132,6 +1142,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   border-radius: 1px;
   padding-right: 40px;
   width: 100%; }
+  .search-form input:focus {
+    border: solid 1px #d8dce0; }
 
 .search-form__submit {
   position: absolute;
@@ -1438,6 +1450,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     margin-bottom: 1em; }
 
 .search-results__header {
+  font-weight: 600;
   margin: 1em 0; }
   .search-results__header .search-form {
     margin-bottom: 1em; }
@@ -1490,9 +1503,13 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .teaser-product__price {
   color: #1b80c9; }
 
-.teaser-page__link:not(:first-child),
-.teaser-product__link:not(:first-child),
-.teaser-post__link:not(:first-child) {
+.teaser-product__price:not(:first-child),
+.teaser-product__title:not(:first-child),
+.teaser-product__excerpt:not(:first-child),
+.teaser-post__title:not(:first-child),
+.teaser-post__date:not(:first-child),
+.teaser-page__title:not(:first-child),
+.teaser-page__excerpt:not(:first-child) {
   margin-top: 0.5em; }
 
 .teaser-post__image img,
@@ -1702,6 +1719,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-blog-post-feed__item {
   padding: 10px;
   width: 100%; }
+  .section-blog-post-feed__item:nth-child(n + 4) {
+    display: none; }
   @media (min-width: 30em) {
     .section-blog-post-feed__item {
       padding: 28px;
@@ -1710,9 +1729,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
         display: none; } }
   @media (min-width: 50em) {
     .section-blog-post-feed__item {
-      width: 33.33%; }
-      .section-blog-post-feed__item:nth-child(n + 4) {
-        display: none; } }
+      width: 33.33%; } }
 
 .post-teaser {
   text-align: left; }

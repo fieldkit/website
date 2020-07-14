@@ -34,6 +34,10 @@
   padding: ($margin-left / 2);
   width: 100%;
 
+  &:nth-child(n + 4) {
+    display: none;
+  }
+
   @include mq($from: small) {
     padding: ($margin-left-medium / 2);
     width: 50%;
@@ -45,10 +49,6 @@
 
   @include mq($from: medium) {
     width: 33.33%;
-
-    &:nth-child(n + 4) {
-      display: none;
-    }
   }
 }
 

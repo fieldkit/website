@@ -1,0 +1,15 @@
+%outline {
+  outline: 1px dotted currentColor;
+  outline-offset: 4px;
+}
+%outline--inset {
+  outline-offset: -4px;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  @extend %outline;
+}
