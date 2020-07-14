@@ -10,6 +10,7 @@
   font-weight: bold;
   letter-spacing: 0.1px;
   line-height: 24px;
+  min-width: 200px;
   padding: 10px 16px;
   text-align: center;
   text-decoration: none;
@@ -99,6 +100,7 @@
 .button--link {
   border-bottom: 2px solid transparent;
   display: inline-block;
+  min-width: none;
   padding-bottom: 4px;
   padding-left: 0;
   padding-right: 0;
