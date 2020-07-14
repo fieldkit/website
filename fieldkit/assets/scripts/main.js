@@ -1,4 +1,5 @@
 import "lazysizes";
+import "./utilities/scrollTo";
 import $ from "jquery";
 import ContactForm from "./components/ContactForm";
 import LoadMore from "./components/LoadMore";
