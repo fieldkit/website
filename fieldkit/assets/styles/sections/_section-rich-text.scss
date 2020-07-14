@@ -2,6 +2,12 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
+  margin-top: $margin-top * 4;
+
+  @include mq($from: medium) {
+    margin-top: $margin-top * 10;
+  }
+
   .section__inner {
     @extend %maximum-width;
   }

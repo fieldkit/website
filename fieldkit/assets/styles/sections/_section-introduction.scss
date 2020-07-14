@@ -2,17 +2,30 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
+  margin-top: $margin-top * 5;
+
   .section__inner {
     @extend %inset-width;
   }
 }
 
 .section-introduction__header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 565px;
   text-align: center;
+
+  .heading-2 {
+    margin-bottom: 10px;
+  }
 }
 
 .section-introduction__image {
-  margin-top: $margin-top * 2;
+  margin-top: $margin-top * 5;
+
+  @include mq($from: medium) {
+    margin-top: $margin-top * 9;
+  }
 
   img {
     display: block;
@@ -22,11 +35,10 @@
 }
 
 .section-introduction__text {
-  @extend %inset-width;
-
-  margin-top: $margin-top * 2;
+  margin-top: $margin-top * 4;
 
   @include mq($from: medium) {
     column-count: 2;
+    margin-top: $margin-top * 8;
   }
 }
