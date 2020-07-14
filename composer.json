@@ -22,7 +22,7 @@
       "package": {
         "dist": {
           "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.8.9"
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}"
         },
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
         "require": {
@@ -30,7 +30,7 @@
           "ffraenz/private-composer-installer": "^3.0"
         },
         "type": "wordpress-plugin",
-        "version": "5.8.9"
+        "version": "5.8.12"
       },
       "type": "package"
     }
