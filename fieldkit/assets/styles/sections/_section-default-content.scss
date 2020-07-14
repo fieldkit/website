@@ -68,6 +68,10 @@
     @extend .heading-6;
   }
 
+  hr {
+    border-bottom: 1px solid $color-gray-4;
+  }
+
   ul {
     padding-left: 6px;
   }
