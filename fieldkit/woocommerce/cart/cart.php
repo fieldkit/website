@@ -151,7 +151,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 
-
 					<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 
 				</td>
