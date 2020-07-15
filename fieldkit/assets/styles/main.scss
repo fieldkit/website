@@ -30,7 +30,7 @@ Version: 1.0.0
 @import "components/button";
 @import "components/contact-form-7";
 @import "components/mailchimp";
-// @import "components/products-guide-sidebar";
+@import "components/products-guide-sidebar";
 @import "components/rich-text";
 @import "components/search";
 @import "components/search-form";
@@ -50,6 +50,7 @@ Version: 1.0.0
 @import "sections/section-contact-form";
 @import "sections/section-contact-header";
 @import "sections/section-default-content";
+@import "sections/section-definition-list";
 @import "sections/section-error-404";
 @import "sections/section-home-callout";
 @import "sections/section-home-hero";
@@ -63,6 +64,11 @@ Version: 1.0.0
 @import "sections/section-post-footer";
 @import "sections/section-post-header";
 @import "sections/section-post-main";
+@import "sections/section-introduction";
+@import "sections/section-table-feed";
+@import "sections/section-rich-text";
+@import "sections/section-header";
+@import "sections/section-image";
 @import "templates/404";
 @import "templates/about";
 @import "templates/blog-listing";

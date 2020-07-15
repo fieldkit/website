@@ -1,0 +1,32 @@
+.section-introduction {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  .section__inner {
+    @extend %inset-width;
+  }
+}
+
+.section-introduction__header {
+  text-align: center;
+}
+
+.section-introduction__image {
+  margin-top: $margin-top * 2;
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.section-introduction__text {
+  @extend %inset-width;
+
+  margin-top: $margin-top * 2;
+
+  @include mq($from: medium) {
+    column-count: 2;
+  }
+}

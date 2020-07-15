@@ -1,0 +1,27 @@
+.section-table {
+  @extend %margins-horizontal;
+  @extend %margins-vertical;
+
+  background-color: #f1fafb;
+
+  .section__inner {
+    @extend %inset-width;
+  }
+}
+
+.section-table__header {
+  margin-bottom: 12px;
+}
+
+.section-table__table {
+  width: 100%;
+
+  td {
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 5px;
+  }
+}

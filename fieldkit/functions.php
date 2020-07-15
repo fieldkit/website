@@ -15,6 +15,7 @@ if (!function_exists('fieldkit_setup')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
+		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
 	}
 }
@@ -57,18 +58,6 @@ function fieldkit_menus()
 	register_nav_menus($locations);
 }
 add_action('init', 'fieldkit_menus');
-
-function fieldkit_wp_head() {
-	$google_tag_manager_snippet_head = get_field('google_tag_manager_snippet_head', 'option');
-	if ($google_tag_manager_snippet_head) echo $google_tag_manager_snippet_head;
-}
-add_action('wp_head', 'fieldkit_wp_head', 0);
-
-function fieldkit_wp_body_open() {
-	$google_tag_manager_snippet_body = get_field('google_tag_manager_snippet_body', 'option');
-	if ($google_tag_manager_snippet_body) echo $google_tag_manager_snippet_body;
-}
-add_action('wp_body_open', 'fieldkit_wp_body_open');
 
 function fieldkit_upload_mimes($mimes = array())
 {

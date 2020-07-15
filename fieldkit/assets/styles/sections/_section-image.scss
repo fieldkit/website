@@ -1,0 +1,20 @@
+.section-image {
+  @extend %margins-horizontal;
+  @extend %margins-vertical--margin;
+
+  text-align: center;
+
+  .section__inner {
+    @extend %inset-width;
+  }
+}
+
+.section-image__image {
+  margin-top: $margin-top * 2;
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
