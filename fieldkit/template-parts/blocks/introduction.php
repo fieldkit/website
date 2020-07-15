@@ -7,11 +7,9 @@ $text = get_sub_field('text');
 ?>
 <section class="section section-introduction">
 	<div class="section__inner">
-		<header class="section-introduction__header">
+		<header class="rich-text section-introduction__header">
 			<h1 class="heading-2"><?php echo $header_heading; ?></h1>
-			<div class="rich-text">
-				<?php echo $header_body; ?>
-			</div>
+			<?php echo $header_body; ?>
 		</header>
 		<div class="section-introduction__content">
 			<div class="section-introduction__image">

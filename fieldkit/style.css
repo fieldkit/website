@@ -464,13 +464,13 @@ body.site-navigation-open {
 body.overflow-hidden {
   overflow: hidden; }
 
-.inset-width, .section-default-content .section__inner, .section-definition-list .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner, .section-introduction .section__inner, .section-table .section__inner, .section-header .section__inner, .section-image .section__inner, .section-product-guide__header .section__inner {
+.inset-width, .section-default-content .section__inner, .section-definition-list .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner, .section-introduction .section__inner, .section-introduction__header, .section-table .section__inner, .section-header .section__inner, .section-image .section__inner, .section-product-guide__header .section__inner {
   margin-left: auto;
   margin-right: auto;
   max-width: 1080px;
   width: 100%; }
   @media (min-width: 80em) {
-    .inset-width, .section-default-content .section__inner, .section-definition-list .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner, .section-introduction .section__inner, .section-table .section__inner, .section-header .section__inner, .section-image .section__inner, .section-product-guide__header .section__inner {
+    .inset-width, .section-default-content .section__inner, .section-definition-list .section__inner, .section-error-404 .section__inner, .section-post-footer .section__inner, .section-post-header .section__inner, .section-post-main .section__inner, .section-introduction .section__inner, .section-introduction__header, .section-table .section__inner, .section-header .section__inner, .section-image .section__inner, .section-product-guide__header .section__inner {
       width: 75%; } }
 
 .section__inner, .maximum-width, .site-header__inner, .site-footer__inner, .section.search-no-results .section__inner, .section.search-results .section__inner, .section-about-header .section__inner, .section-about-text-and-image-grid .section__inner, .section-about-values .section__inner, .section-blog-listing-featured-post .section__inner, .section-blog-listing-header .section__inner, .section-blog-post-feed .section__inner, .section-contact-header .section__inner, .section-home-callout .section__inner, .section-home-hero .section__inner, .section-home-icon-grid .section__inner, .section-home-product-grid .section__inner, .section-home-text-and-image-1 .section__inner, .section-home-text-and-image-2 .section__inner, .section-how-it-works-header .section__inner, .section-how-it-works-step-by-step .section__inner, .section-how-it-works-steps .section__inner, .section-rich-text .section__inner, .section-product-guide-container > .section__inner {
@@ -2222,33 +2222,27 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   max-width: 100%; }
 
 .section-introduction {
-  margin-top: 100px; }
+  margin-top: 118px; }
 
 .section-introduction__header {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 565px;
   text-align: center; }
-  .section-introduction__header .heading-2, .section-introduction__header .rich-text h2, .rich-text .section-introduction__header h2, .section-introduction__header .section-default-content__rich-text h2, .section-default-content__rich-text .section-introduction__header h2, .section-introduction__header .wp-block-group .wp-block-group__inner-container h2, .wp-block-group .wp-block-group__inner-container .section-introduction__header h2,
-  .section-introduction__header .wp-block-group .wp-block-group__inner-container .heading-2, .wp-block-group .wp-block-group__inner-container .section-introduction__header .heading-2 {
-    margin-bottom: 10px; }
 
 .section-introduction__image {
-  margin-top: 100px; }
+  margin-top: 102px; }
   @media (min-width: 50em) {
     .section-introduction__image {
-      margin-top: 180px; } }
+      margin-top: 198px; } }
   .section-introduction__image img {
     display: block;
     height: auto;
     width: 100%; }
 
 .section-introduction__text {
-  margin-top: 80px; }
+  margin-top: 73px; }
   @media (min-width: 50em) {
     .section-introduction__text {
       column-count: 2;
-      margin-top: 160px; } }
+      margin-top: 154px; } }
 
 .section-table {
   background-color: #f1fafb; }
@@ -2267,22 +2261,17 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     padding: 5px; }
 
 .section-rich-text {
-  margin-top: 80px; }
+  margin-top: 81px; }
   @media (min-width: 50em) {
     .section-rich-text {
-      margin-top: 200px; } }
-  .section-rich-text hr {
-    background-color: #2c3e50;
-    border-width: 0;
-    color: #2c3e50;
-    height: 1px; }
+      margin-top: 228px; } }
 
 .section-header {
-  margin-top: 100px;
+  margin-top: 176px;
   text-align: center; }
   @media (min-width: 50em) {
     .section-header {
-      margin-top: 200px; } }
+      margin-top: 276px; } }
 
 .section-header__links {
   align-items: center;

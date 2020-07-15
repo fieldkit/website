@@ -2,20 +2,13 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
-  margin-top: $margin-top * 4;
+  margin-top: 81px;
 
   @include mq($from: medium) {
-    margin-top: $margin-top * 10;
+    margin-top: 228px;
   }
 
   .section__inner {
     @extend %maximum-width;
-  }
-
-  hr {
-    background-color: $color-primary-dark-blue;
-    border-width: 0;
-    color: $color-primary-dark-blue;
-    height: 1px;
   }
 }
