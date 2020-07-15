@@ -7,7 +7,8 @@
     flex-direction: row;
   }
 
-  > * {
+  .social-share-menu-heading,
+  .social-share-menu {
     align-self: start;
 
     @include mq($from: medium) {

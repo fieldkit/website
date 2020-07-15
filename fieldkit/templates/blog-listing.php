@@ -31,7 +31,7 @@
 		<div class="section__inner">
 			<div class="section-blog-listing-featured-post__teaser">
 				<div class="section-blog-listing-featured-post__teaser-text">
-					<a href="<?php echo $permalink; ?>" class="section-blog-listing-featured-post__teaser-title"><h2 class="heading-3"><?php echo $title; ?></h2></a>
+					<h2 class="heading-3 section-blog-listing-featured-post__teaser-title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h2>
 					<div class="section-blog-listing-featured-post__teaser-date"><?php echo $date; ?> | <?php echo $author; ?></div>
 					<div class="section-blog-listing-featured-post__teaser-image hide-desktop">
 						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
