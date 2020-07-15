@@ -1,54 +1,11 @@
 .section-contact-header {
-  @extend %margins-horizontal;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 28.47656vw;
-  position: relative;
-  z-index: 0;
-
-  @include mq($from: medium) {
-    padding-bottom: 160px;
-    padding-top: 80px;
-  }
-
-  .section__inner {
-    @extend %maximum-width;
-
-    .rich-text {
-      display: flex;
-      justify-content: center;
-    }
-  }
+  @extend .section-about-header;
 }
 
-.section-contact-header__heading {
-  position: relative;
-  top: -0.5em;
-
-  @include mq($from: medium) {
-    top: 0;
-  }
+.section-about-header__heading {
+  @extend .section-about-header;
 }
 
 .section-contact-header__background {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-
-  img {
-    display: block;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.25);
-    width: 100%;
-
-    @include mq($from: medium) {
-      transform: none;
-    }
-  }
+  @extend .section-about-header__background;
 }
