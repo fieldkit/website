@@ -90,3 +90,4 @@ function fieldkit_get_icon($icon_name, $attributes = array())
 	$html .= ' alt="' . $icon_name . '" src="' . get_template_directory_uri() . '/assets/icons/' . $icon_name . '.svg" />';
 	return $html;
 }
+
