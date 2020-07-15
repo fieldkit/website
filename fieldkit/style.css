@@ -557,14 +557,15 @@ body.overflow-hidden {
   font-style: italic; }
 
 .body, .blockquote, .text-label, .text-input, .wpcf7 input[type="email"],
-.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .rich-text ol li, .rich-text ul li, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p, .section-default-content__rich-text ol li, .section-default-content__rich-text ul li, .wp-block-group .wp-block-group__inner-container p, .wp-block-group .wp-block-group__inner-container ol li, .wp-block-group .wp-block-group__inner-container ul li {
+.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul,
+.rich-text ol, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .rich-text ol li a, .rich-text ul li a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a, .section-default-content__rich-text ol li a, .section-default-content__rich-text ul li a, .wp-block-group .wp-block-group__inner-container p a, .wp-block-group .wp-block-group__inner-container ol li a, .wp-block-group .wp-block-group__inner-container ul li a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .rich-text ol a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
@@ -633,9 +634,7 @@ body.overflow-hidden {
     color: #6a6d71; }
 
 .heading-1, .rich-text h1,
-.rich-text .heading-1, .section-default-content__rich-text h1,
-.section-default-content__rich-text .heading-1, .wp-block-group .wp-block-group__inner-container h1,
-.wp-block-group .wp-block-group__inner-container .heading-1 {
+.rich-text .heading-1 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 26px;
   font-style: normal;
@@ -643,15 +642,11 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-1, .rich-text h1,
-    .rich-text .heading-1, .section-default-content__rich-text h1,
-    .section-default-content__rich-text .heading-1, .wp-block-group .wp-block-group__inner-container h1,
-    .wp-block-group .wp-block-group__inner-container .heading-1 {
+    .rich-text .heading-1 {
       font-size: 40px; } }
 
 .heading-2, .rich-text h2,
-.rich-text .heading-2, .section-default-content__rich-text h2,
-.section-default-content__rich-text .heading-2, .wp-block-group .wp-block-group__inner-container h2,
-.wp-block-group .wp-block-group__inner-container .heading-2 {
+.rich-text .heading-2 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -659,15 +654,11 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-2, .rich-text h2,
-    .rich-text .heading-2, .section-default-content__rich-text h2,
-    .section-default-content__rich-text .heading-2, .wp-block-group .wp-block-group__inner-container h2,
-    .wp-block-group .wp-block-group__inner-container .heading-2 {
+    .rich-text .heading-2 {
       font-size: 36px; } }
 
 .heading-3, .rich-text h3,
-.rich-text .heading-3, .section-default-content__rich-text h3,
-.section-default-content__rich-text .heading-3, .wp-block-group .wp-block-group__inner-container h3,
-.wp-block-group .wp-block-group__inner-container .heading-3 {
+.rich-text .heading-3 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -675,15 +666,11 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-3, .rich-text h3,
-    .rich-text .heading-3, .section-default-content__rich-text h3,
-    .section-default-content__rich-text .heading-3, .wp-block-group .wp-block-group__inner-container h3,
-    .wp-block-group .wp-block-group__inner-container .heading-3 {
+    .rich-text .heading-3 {
       font-size: 32px; } }
 
 .heading-4, .rich-text h4,
-.rich-text .heading-4, .section-default-content__rich-text h4,
-.section-default-content__rich-text .heading-4, .wp-block-group .wp-block-group__inner-container h4,
-.wp-block-group .wp-block-group__inner-container .heading-4 {
+.rich-text .heading-4 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -691,15 +678,11 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-4, .rich-text h4,
-    .rich-text .heading-4, .section-default-content__rich-text h4,
-    .section-default-content__rich-text .heading-4, .wp-block-group .wp-block-group__inner-container h4,
-    .wp-block-group .wp-block-group__inner-container .heading-4 {
+    .rich-text .heading-4 {
       font-size: 24px; } }
 
 .heading-5, .rich-text h5,
-.rich-text .heading-5, .rich-text blockquote > p, .section-default-content__rich-text h5,
-.section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote > p, .wp-block-group .wp-block-group__inner-container h5,
-.wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote > p {
+.rich-text .heading-5, .rich-text blockquote p {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -707,15 +690,11 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-5, .rich-text h5,
-    .rich-text .heading-5, .rich-text blockquote > p, .section-default-content__rich-text h5,
-    .section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote > p, .wp-block-group .wp-block-group__inner-container h5,
-    .wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote > p {
+    .rich-text .heading-5, .rich-text blockquote p {
       font-size: 20px; } }
 
 .heading-6, .rich-text h6,
-.rich-text .heading-6, .section-default-content__rich-text h6,
-.section-default-content__rich-text .heading-6, .wp-block-group .wp-block-group__inner-container h6,
-.wp-block-group .wp-block-group__inner-container .heading-6 {
+.rich-text .heading-6 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -723,12 +702,10 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-6, .rich-text h6,
-    .rich-text .heading-6, .section-default-content__rich-text h6,
-    .section-default-content__rich-text .heading-6, .wp-block-group .wp-block-group__inner-container h6,
-    .wp-block-group .wp-block-group__inner-container .heading-6 {
+    .rich-text .heading-6 {
       font-size: 18px; } }
 
-.link, .rich-text a, .section-default-content__rich-text a {
+.link, .rich-text a {
   border: none;
   color: inherit;
   cursor: pointer;
@@ -746,7 +723,7 @@ body.overflow-hidden {
   text-align: center;
   top: 0;
   vertical-align: middle; }
-  .link::after, .rich-text a::after, .section-default-content__rich-text a::after {
+  .link::after, .rich-text a::after {
     background-color: #2c3e50;
     bottom: 0;
     content: "";
@@ -757,14 +734,14 @@ body.overflow-hidden {
     transition: width 100ms linear;
     width: 100%; }
     @media screen and (prefers-reduced-motion: reduce) {
-      .link::after, .rich-text a::after, .section-default-content__rich-text a::after {
+      .link::after, .rich-text a::after {
         transition: none; } }
-  .link:hover::after, .rich-text a:hover::after, .section-default-content__rich-text a:hover::after, .link:focus::after, .rich-text a:focus::after, .section-default-content__rich-text a:focus::after {
+  .link:hover::after, .rich-text a:hover::after, .link:focus::after, .rich-text a:focus::after {
     width: calc(100% - 12px); }
-  .link:disabled, .rich-text a:disabled, .section-default-content__rich-text a:disabled {
+  .link:disabled, .rich-text a:disabled {
     color: #cccdcf;
     pointer-events: none; }
-    .link:disabled::after, .rich-text a:disabled::after, .section-default-content__rich-text a:disabled::after {
+    .link:disabled::after, .rich-text a:disabled::after {
       background-color: #cccdcf; }
 
 .link--large {
@@ -772,16 +749,21 @@ body.overflow-hidden {
   .link--large::after {
     height: 2px; }
 
-.link--small, .rich-text a, .section-default-content__rich-text a {
+.link--small, .rich-text a {
   font-size: 16px; }
-  .link--small::after, .rich-text a::after, .section-default-content__rich-text a::after {
+  .link--small::after, .rich-text a::after {
     height: 1px; }
 
-.list-item, .rich-text ul li, .section-default-content__rich-text ul li, .wp-block-group .wp-block-group__inner-container ul li {
+.list--ordered, .rich-text ol li {
+  list-style-type: decimal;
+  margin-left: 30px;
+  padding-left: 8px; }
+
+.list-item, .rich-text ul li {
   list-style: none;
   padding-left: 36px;
   position: relative; }
-  .list-item::before, .rich-text ul li::before, .section-default-content__rich-text ul li::before, .wp-block-group .wp-block-group__inner-container ul li::before {
+  .list-item::before, .rich-text ul li::before {
     background-color: currentColor;
     border-radius: 50%;
     content: "";
@@ -812,7 +794,8 @@ tr:not(:last-child) {
   font-weight: bold;
   letter-spacing: 0.1px;
   line-height: 24px;
-  padding: 10px 50px;
+  min-width: 200px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   transition: background-color 200ms, color 200ms; }
@@ -1093,22 +1076,16 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   text-decoration: underline; }
 
 .rich-text hr {
-  border-bottom: 1px solid #cccdcf; }
-
-.rich-text ul {
-  padding-left: 6px; }
-
-.rich-text ol {
-  padding-left: 36px; }
-
-.rich-text ol li {
-  list-style-type: decimal;
-  padding-left: 8px; }
+  background-color: #cccdcf;
+  border: none;
+  display: inline-block;
+  height: 1px;
+  width: 100%; }
 
 .rich-text blockquote {
   border-left: 5px solid #1b80c9;
   margin-left: 0;
-  padding: 4px 33px 20px; }
+  padding: 0.25em 2em 1.25em; }
   @media (min-width: 50em) {
     .rich-text blockquote {
       margin-left: 20px; } }
@@ -1595,8 +1572,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
       width: 20%; } }
   .section-about-values__item:last-child {
     margin-bottom: 0px; }
-  .section-about-values__item .heading-4, .section-about-values__item .rich-text h4, .rich-text .section-about-values__item h4, .section-about-values__item .section-default-content__rich-text h4, .section-default-content__rich-text .section-about-values__item h4, .section-about-values__item .wp-block-group .wp-block-group__inner-container h4, .wp-block-group .wp-block-group__inner-container .section-about-values__item h4,
-  .section-about-values__item .wp-block-group .wp-block-group__inner-container .heading-4, .wp-block-group .wp-block-group__inner-container .section-about-values__item .heading-4 {
+  .section-about-values__item .heading-4, .section-about-values__item .rich-text h4, .rich-text .section-about-values__item h4 {
     font-weight: 700; }
 
 .section-about-values__icon {
@@ -1761,52 +1737,6 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .section-contact-header .section__inner {
     max-width: 565px;
     text-align: center; }
-
-.section-default-content__rich-text > *:not(:first-child) {
-  margin-top: 1em; }
-
-.section-default-content__rich-text ol,
-.section-default-content__rich-text ul {
-  list-style-position: outside; }
-
-.section-default-content__rich-text h1 a:hover,
-.section-default-content__rich-text h1 a:focus,
-.section-default-content__rich-text h2 a:hover,
-.section-default-content__rich-text h2 a:focus,
-.section-default-content__rich-text h3 a:hover,
-.section-default-content__rich-text h3 a:focus,
-.section-default-content__rich-text h4 a:hover,
-.section-default-content__rich-text h4 a:focus,
-.section-default-content__rich-text h5 a:hover,
-.section-default-content__rich-text h5 a:focus,
-.section-default-content__rich-text h6 a:hover,
-.section-default-content__rich-text h6 a:focus {
-  text-decoration: underline; }
-
-.section-default-content__rich-text hr {
-  border-bottom: 1px solid #cccdcf; }
-
-.section-default-content__rich-text ul {
-  padding-left: 6px; }
-
-.section-default-content__rich-text ol {
-  padding-left: 36px; }
-
-.section-default-content__rich-text ol li {
-  list-style-type: decimal;
-  padding-left: 8px; }
-
-.section-default-content__rich-text blockquote {
-  border-left: 5px solid #1b80c9;
-  margin-left: 0;
-  padding: 4px 33px 20px; }
-  @media (min-width: 50em) {
-    .section-default-content__rich-text blockquote {
-      margin-left: 20px; } }
-
-.section-default-content__rich-text video,
-.section-default-content__rich-text iframe {
-  max-width: 100%; }
 
 .section-definition-list {
   margin-bottom: 20px;
@@ -2122,12 +2052,10 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-how-it-works-step-by-step__item-text {
   grid-area: info; }
-  .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .section-default-content__rich-text h3, .section-default-content__rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text h3,
-  .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text .heading-3 {
+  .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3 {
     margin-bottom: 18px; }
     @media (min-width: 50em) {
-      .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .section-default-content__rich-text h3, .section-default-content__rich-text .section-how-it-works-step-by-step__item-text h3, .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text h3,
-      .section-how-it-works-step-by-step__item-text .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .section-how-it-works-step-by-step__item-text .heading-3 {
+      .section-how-it-works-step-by-step__item-text .heading-3, .section-how-it-works-step-by-step__item-text .rich-text h3, .rich-text .section-how-it-works-step-by-step__item-text h3 {
         margin-bottom: 23px; } }
 
 .section-how-it-works-step-by-step__item {
@@ -2209,38 +2137,6 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-post-header__date {
   margin-top: 0.5em; }
-
-.wp-block-group .wp-block-group__inner-container > *:not(:first-child) {
-  margin-top: 1em; }
-
-.wp-block-group .wp-block-group__inner-container ol,
-.wp-block-group .wp-block-group__inner-container ul {
-  list-style-position: outside; }
-
-.wp-block-group .wp-block-group__inner-container hr {
-  border-bottom: 1px solid #cccdcf; }
-
-.wp-block-group .wp-block-group__inner-container ul {
-  padding-left: 6px; }
-
-.wp-block-group .wp-block-group__inner-container ol {
-  padding-left: 36px; }
-
-.wp-block-group .wp-block-group__inner-container ol li {
-  list-style-type: decimal;
-  padding-left: 8px; }
-
-.wp-block-group .wp-block-group__inner-container blockquote {
-  border-left: 5px solid #1b80c9;
-  margin-left: 0;
-  padding: 4px 33px 20px; }
-  @media (min-width: 50em) {
-    .wp-block-group .wp-block-group__inner-container blockquote {
-      margin-left: 20px; } }
-
-.wp-block-group .wp-block-group__inner-container video,
-.wp-block-group .wp-block-group__inner-container iframe {
-  max-width: 100%; }
 
 .section-introduction__header {
   text-align: center; }

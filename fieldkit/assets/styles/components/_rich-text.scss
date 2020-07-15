@@ -60,39 +60,36 @@
   }
 
   hr {
-    border-bottom: 1px solid $color-gray-4;
+    background-color: $color-gray-4;
+    border: none;
+    display: inline-block;
+    height: 1px;
+    width: 100%;
   }
 
-  ul {
-    padding-left: 6px;
-  }
-
+  ul,
   ol {
-    padding-left: 36px;
+    @extend .list;
   }
 
   ol li {
-    @extend .body;
-
-    list-style-type: decimal;
-    padding-left: 8px;
+    @extend .list--ordered;
   }
 
   ul li {
-    @extend .body;
     @extend .list-item;
   }
 
   blockquote {
     border-left: 5px solid #1b80c9;
     margin-left: 0;
-    padding: 4px 33px 20px;
+    padding: 0.25em 2em 1.25em;
 
     @include mq($from: medium) {
       margin-left: 20px;
     }
 
-    > p {
+    p {
       @extend .heading-5;
     }
   }
