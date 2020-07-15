@@ -18,7 +18,7 @@
 		'ID' => get_post_thumbnail_id($featured_post->ID)
 	];
 	$title = get_the_title($featured_post->ID);
-	$author = get_the_author_meta('user_nicename', $featured_post->post_author);
+	$author = get_the_author_meta('display_name', $featured_post->post_author);
 	$date = get_the_date('', $featured_post->ID);
 	$excerpt = get_the_excerpt($featured_post->ID);
 	$link = [
