@@ -139,6 +139,11 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 
+$pre_footer_text_and_image = get_field('pre_footer_text_and_image',$shop_page_id);
+if($pre_footer_text_and_image){
+	include(locate_template('template-parts/blocks/pre_footer_text_and_image.php', false, false));
+}
+
 $pre_footer = get_field('pre_footer',$shop_page_id);
 if($pre_footer){
 	include(locate_template('template-parts/blocks/pre_footer.php', false, false));
