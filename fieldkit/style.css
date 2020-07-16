@@ -2522,6 +2522,9 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   margin-left: 6px;
   text-decoration: none; }
 
+.woocommerce span.onsale {
+  display: none; }
+
 .summary__details .woocommerce-product-details__short-description {
   margin-bottom: 32px; }
 
