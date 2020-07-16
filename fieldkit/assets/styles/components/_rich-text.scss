@@ -4,8 +4,12 @@
   }
 
   a {
-    @extend .link;
-    @extend .link--small;
+    color: $color-primary-blue;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
   }
 
   p {
@@ -62,18 +66,20 @@
   hr {
     background-color: $color-gray-4;
     border: none;
-    display: inline-block;
+    display: block;
     height: 1px;
+    margin-bottom: 2em;
+    margin-top: 2em;
     width: 100%;
   }
 
-  ul,
-  ol {
+  ol,
+  ul {
     @extend .list;
   }
 
   ol li {
-    @extend .list--ordered;
+    @extend .list-item--ordered;
   }
 
   ul li {
