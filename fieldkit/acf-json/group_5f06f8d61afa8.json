@@ -240,6 +240,33 @@
                     "maxlength": "",
                     "rows": "",
                     "new_lines": ""
+                },
+                {
+                    "key": "field_5f0fd8b99d178",
+                    "label": "Items",
+                    "name": "items",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "product"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "post_type"
+                    ],
+                    "elements": [
+                        "featured_image"
+                    ],
+                    "min": "",
+                    "max": "",
+                    "return_format": "object"
                 }
             ]
         },
@@ -539,5 +566,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1594865510
+    "modified": 1594874133
 }

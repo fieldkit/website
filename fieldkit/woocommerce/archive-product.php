@@ -68,6 +68,7 @@ do_action( 'woocommerce_before_main_content' );
 <?php
 	$heading = $product_grid_text['heading'];
 	$body = $product_grid_text['body'];
+	$items = $product_grid_text['items'];
 ?>
 <section class="section section-product-fieldkit-packages">
 	<div class="section__inner">
@@ -77,51 +78,44 @@ do_action( 'woocommerce_before_main_content' );
 			<?php echo $body; ?>
 			</div>
 		</div>
-		<?php
-		if ( woocommerce_product_loop() ) {
-
-			/**
-			 * Hook: woocommerce_before_shop_loop.
-			 *
-			 * @hooked woocommerce_output_all_notices - 10
-			 * @hooked woocommerce_result_count - 20
-			 * @hooked woocommerce_catalog_ordering - 30
-			 */
-			do_action( 'woocommerce_before_shop_loop' );
-
-			woocommerce_product_loop_start();
-
-			if ( wc_get_loop_prop( 'total' ) ) {
-				while ( have_posts() ) {
-					the_post();
-
-					/**
-					 * Hook: woocommerce_shop_loop.
-					 */
-					do_action( 'woocommerce_shop_loop' );
-
-					wc_get_template_part( 'content', 'product' );
-				}
-			}
-
-			woocommerce_product_loop_end();
-
-			/**
-			 * Hook: woocommerce_after_shop_loop.
-			 *
-			 * @hooked woocommerce_pagination - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop' );
-		} else {
-			/**
-			 * Hook: woocommerce_no_products_found.
-			 *
-			 * @hooked wc_no_products_found - 10
-			 */
-			do_action( 'woocommerce_no_products_found' );
-		}
-		?>
-
+		<div class="section-product-fieldkit-packages__products">
+			<?php
+				foreach($items as $post) :
+					setup_postdata($post);
+					$image = [
+						'ID' => get_post_thumbnail_id()
+					];
+					$heading = get_the_title();
+					$body = get_the_excerpt();
+					$link = [
+						title => 'Learn More',
+						url => get_the_permalink(),
+					];
+			?>
+			<div class="product-fieldkit-packages__products-item">
+				<div class="rich-text">
+					<h2 class="heading-6"><?php echo $heading; ?></h2>
+					<p><?php echo $body; ?></p>
+				</div>
+				<div class="product-fieldkit-packages__products-item-image">
+					<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+				</div>
+				<?php if ($link) :
+					$link['class_name'] = 'disable-woo-button button--primary';
+					?>
+					<div class="product-fieldkit-packages__products-button">
+						<?php
+						set_query_var('link', $link);
+						get_template_part('template-parts/utilities/link');
+						?>
+					</div>
+				<?php endif; ?>
+			</div>
+			<?php
+			endforeach;
+			wp_reset_postdata();
+			?>
+		</div>
 	</div>
 </section>
 

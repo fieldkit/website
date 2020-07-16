@@ -2348,16 +2348,6 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .disable-woo-button:disabled {
     box-shadow: 2px 2px 4px #d8dce0; }
 
-.section-product-fieldkit-packages .woocommerce-result-count,
-.section-product-fieldkit-packages .woocommerce-ordering {
-  display: none; }
-
-.section-product-fieldkit-packages .products .woocommerce-loop-product__link {
-  display: flex;
-  flex-direction: column; }
-  .section-product-fieldkit-packages .products .woocommerce-loop-product__link img {
-    order: 99; }
-
 .section-product-fieldkit-packages .product {
   text-align: center; }
 
@@ -2369,13 +2359,40 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-product-fieldkit-packages-header {
   margin: auto;
-  margin-bottom: 153px;
   max-width: 550px;
   text-align: center; }
   .section-product-fieldkit-packages-header .heading-3, .section-product-fieldkit-packages-header .rich-text h3, .rich-text .section-product-fieldkit-packages-header h3, .section-product-fieldkit-packages-header .section-default-content__rich-text h3, .section-default-content__rich-text .section-product-fieldkit-packages-header h3, .section-product-fieldkit-packages-header .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .section-product-fieldkit-packages-header h3,
   .section-product-fieldkit-packages-header .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .section-product-fieldkit-packages-header .heading-3, .section-product-fieldkit-packages-header .summary__details .product_title, .summary__details .section-product-fieldkit-packages-header .product_title, .section-product-fieldkit-packages-header .woocommerce div.product .woocommerce-tabs .panel h3, .woocommerce div.product .woocommerce-tabs .panel .section-product-fieldkit-packages-header h3,
   .section-product-fieldkit-packages-header .woocommerce div.product .woocommerce-tabs .panel .heading-3, .woocommerce div.product .woocommerce-tabs .panel .section-product-fieldkit-packages-header .heading-3 {
     margin-bottom: 10px; }
+
+.section-product-fieldkit-packages__products {
+  display: grid;
+  grid-template: auto/100%;
+  margin-top: 61px; }
+  @media (min-width: 50em) {
+    .section-product-fieldkit-packages__products {
+      grid-gap: 50px;
+      grid-template: auto/calc(50% - 25px) calc(50% - 25px);
+      margin-top: 153px; } }
+  .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item {
+    margin-bottom: 65px; }
+    .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item:last-child {
+      margin-bottom: 0px; }
+    @media (min-width: 50em) {
+      .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item {
+        margin-bottom: 0px; } }
+    .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item .heading-6, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item .rich-text h6, .rich-text .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item h6, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item .section-default-content__rich-text h6, .section-default-content__rich-text .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item h6, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item .wp-block-group .wp-block-group__inner-container h6, .wp-block-group .wp-block-group__inner-container .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item h6, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item .woocommerce div.product .woocommerce-tabs .panel h6, .woocommerce div.product .woocommerce-tabs .panel .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item h6,
+    .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item .woocommerce div.product .woocommerce-tabs .panel .heading-6, .woocommerce div.product .woocommerce-tabs .panel .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item .heading-6 {
+      text-align: center; }
+  .section-product-fieldkit-packages__products .product-fieldkit-packages__products-item-image {
+    margin-bottom: 25px;
+    margin-top: 25px; }
+  .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button {
+    text-align: center; }
+    .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .button--primary, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button #mc-embedded-subscribe, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .section-contact-form .wpcf7 input[type="submit"], .section-contact-form .wpcf7 .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button input[type="submit"], .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .section-product-fieldkit-packages .products .button, .section-product-fieldkit-packages .products .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .button, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .woocommerce div.product .summary__details form.cart .button, .woocommerce div.product .summary__details form.cart .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .button, .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .woocommerce .related.products ul.products li .button, .woocommerce .related.products ul.products li .section-product-fieldkit-packages__products .product-fieldkit-packages__products-button .button {
+      max-width: 270px;
+      width: 100%; }
 
 .section-product-fieldkit-services {
   background: rgba(160, 219, 225, 0.15);
