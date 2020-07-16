@@ -277,7 +277,7 @@
             "sub_fields": [
                 {
                     "key": "field_5f08424ffc70f",
-                    "label": "Heading",
+                    "label": "Header Heading",
                     "name": "heading",
                     "type": "text",
                     "instructions": "",
@@ -296,7 +296,7 @@
                 },
                 {
                     "key": "field_5f08425bfc710",
-                    "label": "Body",
+                    "label": "Header Body",
                     "name": "body",
                     "type": "textarea",
                     "instructions": "",
@@ -334,7 +334,7 @@
                     "sub_fields": [
                         {
                             "key": "field_5f0842bafc712",
-                            "label": "Title",
+                            "label": "Heading",
                             "name": "title",
                             "type": "text",
                             "instructions": "",
@@ -353,7 +353,7 @@
                         },
                         {
                             "key": "field_5f0842d5fc713",
-                            "label": "Text",
+                            "label": "Body",
                             "name": "text",
                             "type": "textarea",
                             "instructions": "",
@@ -374,7 +374,7 @@
                 },
                 {
                     "key": "field_5f084329fc714",
-                    "label": "Heading 2",
+                    "label": "Footer Heading",
                     "name": "heading_2",
                     "type": "text",
                     "instructions": "",
@@ -393,7 +393,7 @@
                 },
                 {
                     "key": "field_5f08434ffc715",
-                    "label": "Link",
+                    "label": "Footer Link",
                     "name": "link",
                     "type": "link",
                     "instructions": "",
@@ -539,5 +539,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1594377236
+    "modified": 1594865510
 }
