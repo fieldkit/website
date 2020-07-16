@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="dashboard-portal">
 	<ul>
 		<li>
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/cart.svg" alt=""/>
+		<?php echo fieldkit_get_icon('cart'); ?>
 			<?php
 			printf(
 				__( '
@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 		</li>
 		<li>
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-timer.svg" alt=""/>
+		<?php echo fieldkit_get_icon('cart'); ?>
 			<?php
 			printf(
 				__( '
@@ -54,8 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 		</li>
 		<li>
-
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/icons/user.svg" alt=""/>
+			<?php echo fieldkit_get_icon('user'); ?>
 			<?php
 			printf(
 				__( '
