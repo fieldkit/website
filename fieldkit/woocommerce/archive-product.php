@@ -14,8 +14,9 @@
  * @package WooCommerce/Templates
  * @version 3.4.0
  */
-
 defined( 'ABSPATH' ) || exit;
+
+
 
 get_header( 'shop' );
 
@@ -27,8 +28,42 @@ get_header( 'shop' );
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 do_action( 'woocommerce_before_main_content' );
+$terms = get_terms(array('taxonomy' => 'product_tag', 'hide_empty' => false));
 
+$shop_page_id = wc_get_page_id( 'shop' );
+$text_and_image = get_field('text_and_image',$shop_page_id);
+if($text_and_image){
+	include(locate_template('template-parts/blocks/text-and-image.php', false, false));
+}
+
+$call_out = get_field('call_out',$shop_page_id);
+if($call_out){
+	include(locate_template('template-parts/blocks/call-out.php', false, false));
+
+}
+$header = get_field('header',$shop_page_id);
+if($header){
+	include(locate_template('template-parts/blocks/header.php', false, false));
+}
 ?>
+<?php if($terms): ?>
+	<div class="post-type-archive-product__filters">
+		<form class="woocommerce-ordering--variant" method="get">
+			<select name="product_tag" aria-label="Product filter">
+			<option value="all">filter by: Default</option>
+			<?php
+				foreach($terms as $term){
+					printf(
+						__( '<option value="%1$s"> %1$s </option>' , 'all' ),
+						esc_html($term->name)
+					);
+				}
+				?>
+			</select>
+		</form>
+	</div>
+<? endif;?>
+
 <header class="woocommerce-products-header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
@@ -48,6 +83,7 @@ do_action( 'woocommerce_before_main_content' );
 <?php
 if ( woocommerce_product_loop() ) {
 
+
 	/**
 	 * Hook: woocommerce_before_shop_loop.
 	 *
@@ -55,6 +91,7 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
+
 	do_action( 'woocommerce_before_shop_loop' );
 
 	woocommerce_product_loop_start();

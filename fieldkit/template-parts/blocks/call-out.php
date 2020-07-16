@@ -1,7 +1,7 @@
 <?php
-$heading = get_sub_field('heading') ? get_sub_field('heading') : $header['heading'];
-$body = get_sub_field('body') ? get_sub_field('body') : $header['body'];
-$links = get_sub_field('header_links') ? get_sub_field('header_links') : $header['header_links'];
+$heading = $call_out['heading'];
+$body = $call_out['body'];
+$links = $call_out['links'];
 ?>
 <header class="section section-header">
 	<div class="section__inner">
