@@ -14,6 +14,7 @@
 				<?php if ($body) echo $body; ?>
 			</div>
 			<div class="section-contact-header__background">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact_Header-scaled.png" alt="">
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
 			</div>
 		</div>
