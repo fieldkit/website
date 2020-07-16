@@ -139,4 +139,9 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 
+$pre_footer = get_field('pre_footer',$shop_page_id);
+if($pre_footer){
+	include(locate_template('template-parts/blocks/pre_footer.php', false, false));
+}
+
 get_footer( 'shop' );

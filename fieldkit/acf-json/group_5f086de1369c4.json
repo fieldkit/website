@@ -143,7 +143,7 @@
         },
         {
             "key": "field_5f086e70a9cf5",
-            "label": "Product Text",
+            "label": "Header",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -161,7 +161,7 @@
         {
             "key": "field_5f086e84a9cf6",
             "label": "",
-            "name": "product_text",
+            "name": "header",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -175,8 +175,8 @@
             "sub_fields": [
                 {
                     "key": "field_5f086e97a9cf7",
-                    "label": "Header",
-                    "name": "header",
+                    "label": "Heading",
+                    "name": "heading",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -233,5 +233,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1594388158
+    "modified": 1594931435
 }

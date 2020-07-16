@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5f0853fc0954f",
-            "label": "Text and Image 1",
+            "label": "Text and Image",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -22,7 +22,7 @@
         {
             "key": "field_5f08540a09550",
             "label": "",
-            "name": "text_and_image_1",
+            "name": "text_and_image",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -143,7 +143,7 @@
         },
         {
             "key": "field_5f08546409556",
-            "label": "Product Text",
+            "label": "Header",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -161,7 +161,7 @@
         {
             "key": "field_5f086c8609557",
             "label": "",
-            "name": "product_text",
+            "name": "header",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -175,8 +175,8 @@
             "sub_fields": [
                 {
                     "key": "field_5f086c9c09558",
-                    "label": "Header",
-                    "name": "header",
+                    "label": "Heading",
+                    "name": "heading",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -298,7 +298,7 @@
         },
         {
             "key": "field_5f086d360955e",
-            "label": "Text and Image 2",
+            "label": "Pre Footer Text and Image",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -316,7 +316,7 @@
         {
             "key": "field_5f086d5e0955f",
             "label": "",
-            "name": "text_and_image_2",
+            "name": "pre_footer_text_and_image",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -427,5 +427,5 @@
     ],
     "active": 0,
     "description": "",
-    "modified": 1594387933
+    "modified": 1594932715
 }
