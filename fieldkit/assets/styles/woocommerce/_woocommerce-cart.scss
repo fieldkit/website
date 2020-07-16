@@ -71,6 +71,11 @@
       strong {
         font-weight: 500;
       }
+
+      [data-title="Subtotal"],
+      [data-title="Total"] {
+        text-align: right;
+      }
     }
   }
 }
