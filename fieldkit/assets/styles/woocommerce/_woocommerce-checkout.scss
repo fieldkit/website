@@ -1,0 +1,124 @@
+.woocommerce-checkout {
+  input {
+    border-bottom: 1px solid $color-gray-3;
+    padding-bottom: 5px;
+  }
+
+  .select2-selection {
+    border: 0px;
+    border-bottom: 1px solid $color-gray-3;
+    border-radius: 0px;
+  }
+
+  textarea {
+    border-bottom: 1px solid $color-gray-3;
+  }
+
+  .select2-container--open .select2-dropdown {
+    border-color: $color-gray-3;
+    top: 4px;
+  }
+
+  .select2-selection--single .select2-selection__arrow b {
+    background-color: transparent;
+    border-bottom: 1px solid $color-primary-dark-blue;
+    border-left: 1px solid $color-primary-dark-blue;
+    border-width: 0px 0px 1px 1px;
+    content: "";
+    display: block;
+    height: 10px;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 10px;
+  }
+
+  .select2-container--open
+    .select2-selection--single
+    .select2-selection__arrow
+    b {
+    background-color: transparent;
+    border-bottom: 1px solid $color-primary-dark-blue;
+    border-left: 1px solid $color-primary-dark-blue;
+    border-width: 0px 0px 1px 1px;
+    content: "";
+    display: block;
+    height: 10px;
+    top: 20px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 10px;
+  }
+
+  .woocommerce-form-coupon-toggle {
+    .woocommerce-info {
+      background: $color-primary-dark-blue;
+      border-top: 0px;
+      color: $color-background;
+      padding: 18px 33px;
+      text-transform: uppercase;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  table.shop_table {
+    border: 0px;
+
+    th {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .woocommerce-Price-amount.amount {
+      font-weight: 500;
+    }
+
+    .product-total {
+      text-align: right;
+    }
+
+    .cart-subtotal td,
+    .order-total td {
+      text-align: right;
+    }
+  }
+
+  #customer_details {
+    margin-bottom: 74px;
+  }
+
+  #payment {
+    background: $color-gray-2;
+
+    ul.payment_methods li {
+      padding-left: 0px;
+
+      &::before {
+        content: none !important;
+      }
+    }
+
+    div.payment_box {
+      background: $color-primary-dark-blue;
+      color: $color-background;
+
+      &::before {
+        border-color: $color-primary-dark-blue;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+      }
+    }
+  }
+
+  button.button[type="submit"] {
+    @extend .button--primary;
+
+    margin-top: 30px;
+  }
+
+  .woocommerce-privacy-policy-text p {
+    font-size: 14px;
+  }
+}
