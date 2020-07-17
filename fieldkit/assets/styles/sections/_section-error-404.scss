@@ -17,13 +17,15 @@
 }
 
 .section-error-404__image {
-  margin-bottom: 40px;
-
   img {
     display: block;
     height: auto;
     width: 100%;
   }
+}
+
+.section-error-404__text {
+  margin-top: 40px;
 }
 
 .section-error-404__link {
