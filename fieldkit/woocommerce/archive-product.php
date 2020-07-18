@@ -46,6 +46,8 @@ if($header){
 	include(locate_template('template-parts/blocks/header.php', false, false));
 }
 ?>
+<div class="woocommerce-products">
+
 <?php if($terms): ?>
 	<div class="post-type-archive-product__filters">
 		<form class="woocommerce-ordering--variant" method="get">
@@ -63,22 +65,6 @@ if($header){
 		</form>
 	</div>
 <? endif;?>
-
-<header class="woocommerce-products-header">
-	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
-
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
-</header>
 
 <?php
 if ( woocommerce_product_loop() ) {
@@ -110,7 +96,7 @@ if ( woocommerce_product_loop() ) {
 	}
 
 	woocommerce_product_loop_end();
-
+	echo '</div>';
 	/**
 	 * Hook: woocommerce_after_shop_loop.
 	 *

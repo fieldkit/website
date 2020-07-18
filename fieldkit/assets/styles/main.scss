@@ -6,6 +6,7 @@ License: Attribution-NonCommercial 4.0 International
 License URI: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 Version: 1.0.0
 */
+
 @import "normalize.css/normalize";
 @import "abstracts/variables/colors";
 @import "abstracts/variables/durations";
@@ -68,6 +69,7 @@ Version: 1.0.0
 @import "sections/section-introduction";
 @import "sections/section-table-feed";
 @import "sections/section-rich-text";
+@import "sections/section-text-and-image";
 @import "sections/section-header";
 @import "sections/section-image";
 @import "templates/404";
@@ -81,7 +83,7 @@ Version: 1.0.0
 @import "templates/search";
 @import "templates/sensor-specification";
 @import "templates/single";
-// @import "woocommerce/archive-product";
+@import "woocommerce/archive-product";
 // @import "woocommerce/single-product";
 // @import "woocommerce/woocommerce";
 @import "woocommerce/woocommerce-account";

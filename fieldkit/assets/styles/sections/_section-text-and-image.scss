@@ -1,0 +1,38 @@
+.section-text-and-image {
+  @extend %margins-horizontal;
+  @extend %margins-vertical;
+
+  min-height: 100vw * 612 / 1440;
+  position: relative;
+}
+
+.section-text-and-image__content {
+  @extend %maximum-width;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+
+  @include mq($from: medium) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.section-text-and-image__heading {
+  text-align: center;
+  width: 100%;
+}
+
+.section-text-and-image__text {
+  @extend .section-home-hero__text;
+}
+
+.section-home-text-and-image__image {
+  @extend .section-home-hero__image;
+}
+
+.section-text-and-image__background {
+  @extend .section-home-hero__background;
+}
