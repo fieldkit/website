@@ -32,8 +32,7 @@ select {
   @extend %margins-horizontal;
 }
 
-.woocommerce ul.products.columns-3 li.product,
-.woocommerce-page ul.products.columns-3 li.product {
+.woocommerce-page ul.products li.product {
   text-align: center;
 }
 
@@ -42,6 +41,21 @@ select {
   font-weight: 500;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+.woocommerce ul.products.columns-3 {
+  @include mq($until: medium) {
+    li.product {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    a {
+      float: none;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
 }
 
 .woocommerce ul.products li.product .price {

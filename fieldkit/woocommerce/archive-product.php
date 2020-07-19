@@ -41,6 +41,12 @@ if($call_out){
 	include(locate_template('template-parts/blocks/call-out.php', false, false));
 
 }
+
+$category = get_terms(array('taxonomy' => 'product_cat', 'hide_empty' => false));
+if($category){
+	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
+}
+
 $header = get_field('header',$shop_page_id);
 if($header){
 	include(locate_template('template-parts/blocks/header.php', false, false));

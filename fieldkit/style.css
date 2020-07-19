@@ -2371,8 +2371,7 @@ select {
   font-weight: 500;
   margin: 1em 0; }
 
-.woocommerce ul.products.columns-3 li.product,
-.woocommerce-page ul.products.columns-3 li.product {
+.woocommerce-page ul.products li.product {
   text-align: center; }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
@@ -2380,6 +2379,15 @@ select {
   font-weight: 500;
   margin-bottom: 1em;
   margin-top: 1em; }
+
+@media (max-width: 49.99em) {
+  .woocommerce ul.products.columns-3 li.product {
+    margin-right: 0;
+    width: 100%; }
+  .woocommerce ul.products.columns-3 a {
+    float: none;
+    margin-right: 0;
+    width: 100%; } }
 
 .woocommerce ul.products li.product .price {
   color: #0a67aa;
