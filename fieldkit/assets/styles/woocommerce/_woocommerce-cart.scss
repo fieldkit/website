@@ -20,10 +20,15 @@
       .woocommerce-cart-form__cart-item a {
         font-weight: 500;
       }
-    }
 
-    .actions {
-      padding-top: 33px;
+      .actions {
+        background-color: transparent;
+        padding-top: 33px;
+      }
+
+      tr {
+        border-color: $color-gray-3;
+      }
     }
 
     .button[name="update_cart"] {
@@ -75,6 +80,10 @@
       [data-title="Subtotal"],
       [data-title="Total"] {
         text-align: right;
+      }
+
+      table.shop_table_responsive td {
+        background-color: transparent;
       }
     }
   }
