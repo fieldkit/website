@@ -10,6 +10,10 @@
     top: 4px;
   }
 
+  address {
+    font-style: normal;
+  }
+
   .select2-selection--single .select2-selection__arrow b {
     background-color: transparent;
     border-bottom: 1px solid $color-primary-dark-blue;
@@ -304,10 +308,6 @@
         margin-bottom: 0px;
         padding-bottom: 0px;
       }
-    }
-
-    address {
-      font-style: normal;
     }
   }
 
