@@ -73,3 +73,24 @@ select {
     @extend .button--primary;
   }
 }
+
+.section-navbar--secondary {
+  background-color: $color-gray-2;
+}
+
+.menu-navbar--secondary {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .menu-item {
+    padding: 36px 20px;
+  }
+
+  a.menu-link {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.09px;
+  }
+}

@@ -2394,6 +2394,21 @@ select {
   font-size: 20px;
   margin-bottom: 0.5em; }
 
+.section-navbar--secondary {
+  background-color: #f4f5f7; }
+
+.menu-navbar--secondary {
+  align-items: center;
+  display: flex;
+  justify-content: center; }
+  .menu-navbar--secondary .menu-item {
+    padding: 36px 20px; }
+  .menu-navbar--secondary a.menu-link {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.09px; }
+
 .woocommerce-account .select2-selection {
   border: 0px;
   border-bottom: 1px solid #d8dce0;
