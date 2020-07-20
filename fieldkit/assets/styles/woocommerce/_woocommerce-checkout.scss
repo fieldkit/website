@@ -121,4 +121,21 @@
   .woocommerce-privacy-policy-text p {
     font-size: 14px;
   }
+
+  .woocommerce-error {
+    background: $color-primary-red;
+    border-top-color: $color-primary-red;
+
+    li {
+      color: $color-background;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &::before {
+      content: none;
+    }
+  }
 }
