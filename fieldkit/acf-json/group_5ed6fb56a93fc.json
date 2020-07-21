@@ -154,6 +154,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5f1158b343104",
+                            "label": "Block ID",
+                            "name": "block_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5f052799e593b",
                             "label": "Rich Text",
                             "name": "rich_text",
@@ -201,5 +220,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1594224273
+    "modified": 1594972469
 }
