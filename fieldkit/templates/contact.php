@@ -13,6 +13,7 @@
 				<h1 class="heading-1 section-contact-header__heading"><?php echo get_the_title(); ?></h1>
 			</div>
 			<div class="section-contact-header__background">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact_Header-scaled.png" alt="">
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
 			</div>
 		</div>

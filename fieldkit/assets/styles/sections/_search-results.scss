@@ -8,6 +8,7 @@
 }
 
 .search-results__header {
+  font-weight: 600;
   margin: 1em 0;
 
   .search-form {
@@ -74,9 +75,13 @@
   color: $color-accent;
 }
 
-.teaser-page__link,
-.teaser-product__link,
-.teaser-post__link {
+.teaser-product__price,
+.teaser-product__title,
+.teaser-product__excerpt,
+.teaser-post__title,
+.teaser-post__date,
+.teaser-page__title,
+.teaser-page__excerpt {
   &:not(:first-child) {
     margin-top: 0.5em;
   }
