@@ -18,19 +18,20 @@
 		'ID' => get_post_thumbnail_id($featured_post->ID)
 	];
 	$title = get_the_title($featured_post->ID);
-	$author = get_the_author_meta('user_nicename', $featured_post->post_author);
+	$author = get_the_author_meta('display_name', $featured_post->post_author);
 	$date = get_the_date('', $featured_post->ID);
 	$excerpt = get_the_excerpt($featured_post->ID);
 	$link = [
 		title => 'Read More',
 		url => get_permalink($featured_post->ID),
 	];
+	$permalink = get_permalink($featured_post->ID);
 	?>
 	<section class="section section-blog-listing-featured-post">
 		<div class="section__inner">
 			<div class="section-blog-listing-featured-post__teaser">
 				<div class="section-blog-listing-featured-post__teaser-text">
-					<h2 class="heading-3 section-blog-listing-featured-post__teaser-title"><?php echo $title; ?></h2>
+					<h2 class="heading-3 section-blog-listing-featured-post__teaser-title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h2>
 					<div class="section-blog-listing-featured-post__teaser-date"><?php echo $date; ?> | <?php echo $author; ?></div>
 					<div class="section-blog-listing-featured-post__teaser-image hide-desktop">
 						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
@@ -60,7 +61,7 @@
 	<section class="section section-blog-post-feed">
 		<div class="section__inner">
 			<div class="section-blog-post-feed__header">
-				<h2 class="heading-3"><?php echo __('Recent Posts'); ?></h2>
+				<h2 class="heading-2"><?php echo __('Recent Posts'); ?></h2>
 			</header>
 			<div class="section-blog-post-feed__feed load-more">
 				<ul class="section-blog-post-feed__list">
@@ -81,7 +82,7 @@
 										<div class="post-teaser__image">
 											<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 										</div>
-										<h2 class="heading-4 post-teaser__title"><?php echo $title; ?></h2>
+										<h2 class="heading-3 post-teaser__title"><?php echo $title; ?></h2>
 										<div class="post-teaser__date"><?php echo $date; ?></div>
 									</a>
 								</div>
@@ -94,7 +95,7 @@
 				</ul>
 				<?php if ($latest_posts->found_posts > 3) : ?>
 					<div class="section-blog-post-feed__load-more">
-						<button class="button button--link action-load-more">Load More Posts</button>
+						<button class="button button--link action-load-more">Load more</button>
 					</div>
 				<?php endif; ?>
 			</div>
