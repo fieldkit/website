@@ -93,25 +93,28 @@
         },
         {
             "key": "field_5f1605858141b",
-            "label": "Text and Image List",
-            "name": "text_and_image_list",
-            "type": "repeater",
+            "label": "",
+            "name": "product_feed_text_and_image",
+            "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f08523cba295",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5f1605bb8141c",
+                    "key": "field_5f164be9865ca",
                     "label": "Body",
                     "name": "body",
                     "type": "wysiwyg",
@@ -130,7 +133,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_5f1605cf8141d",
+                    "key": "field_5f164c08865cb",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -267,5 +270,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1595280347
+    "modified": 1595296912
 }

@@ -53,7 +53,7 @@ if($header){
 }else{
 
 global $post;
-$cat_id = get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
+$cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 
 	$text_and_image = get_field('text_and_image',$shop_page_id);
 	if($text_and_image){
@@ -61,14 +61,14 @@ $cat_id = get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 	}
 	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
 
-	$header = get_field('header','term_'.$cat_id);
+	$header = get_field('header',$cat_id);
 	if($header){
 	include(locate_template('template-parts/blocks/header.php', false, false));
 	}
 
-	$text_and_image_list = get_field('text_and_image_list');
-	if($text_and_image_list){
-	include(locate_template('template-parts/blocks/text-and-image-list.php', false, false));
+	$product_feed_text_and_image = get_field('product_feed_text_and_image',$cat_id);
+	if($product_feed_text_and_image){
+	include(locate_template('template-parts/blocks/product-feed-text-and-image.php', false, false));
 	}
 }
 
@@ -122,7 +122,12 @@ if ( woocommerce_product_loop() ) {
 	 */
 	do_action( 'woocommerce_no_products_found' );
 }
+if(is_product_category()){
 
+	$pre_footer = get_field('pre_footer',$cat_id);
+	if($pre_footer){
+		include(locate_template('template-parts/blocks/pre-footer.php', false, false));
+	}
 /**
  * Hook: woocommerce_after_main_content.
  *
@@ -136,16 +141,7 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 
-if(is_product_category()){
-$pre_footer_text_and_image = get_field('text-and-image');
-if($pre_footer_text_and_image){
-	include(locate_template('template-parts/blocks/text-and-image.php', false, false));
-}
 
-$pre_footer = get_field('pre_footer');
-if($pre_footer){
-	include(locate_template('template-parts/blocks/pre_footer.php', false, false));
-}
 }
 
 get_footer( 'shop' );

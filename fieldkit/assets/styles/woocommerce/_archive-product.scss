@@ -30,6 +30,7 @@ select {
 
 .woocommerce-products {
   @extend %margins-horizontal;
+  @extend %margins-vertical;
 }
 
 .woocommerce-page ul.products li.product {

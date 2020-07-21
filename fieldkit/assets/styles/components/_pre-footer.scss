@@ -1,0 +1,38 @@
+.section-pre-footer {
+  @extend %margins-vertical;
+  @extend %margins-horizontal;
+
+  .section__inner {
+    border-top: 1px solid $color-gray-3;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include mq($from: medium) {
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+}
+
+.section-pre-footer__text {
+  @include mq($from: medium) {
+    width: calc(50% - 28px);
+  }
+}
+
+.section-pre-footer__links {
+  margin-top: 2.5em;
+}
+
+.section-pre-footer__image {
+  @include mq($from: medium) {
+    width: calc(50% - 28px);
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}

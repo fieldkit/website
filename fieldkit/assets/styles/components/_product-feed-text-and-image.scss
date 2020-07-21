@@ -1,0 +1,40 @@
+.section-product-feed-text-and-image {
+  @extend %margins-horizontal;
+
+  .section__inner {
+    background-color: $color-gray-1;
+    padding: 38px 45px;
+  }
+}
+
+.section-product-feed-text-and-image__content {
+  display: flex;
+  flex-direction: column;
+
+  @include mq($from: medium) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.section-product-feed-text-and-image__text {
+  @include mq($from: medium) {
+    width: 50%;
+  }
+}
+
+.section-product-feed-text-and-image__image {
+  margin-top: 2em;
+
+  @include mq($from: medium) {
+    margin-top: unset;
+    width: calc(50% - 96px);
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
