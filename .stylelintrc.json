@@ -4,13 +4,22 @@
     "stylelint-a11y/recommended",
     "stylelint-config-prettier"
   ],
-  "plugins": ["stylelint-order", "stylelint-prettier", "stylelint-scss"],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-prettier",
+    "stylelint-scss"
+  ],
   "rules": {
     "at-rule-empty-line-before": [
       "always",
       {
-        "except": ["blockless-after-same-name-blockless", "first-nested"],
-        "ignore": ["after-comment"],
+        "except": [
+          "blockless-after-same-name-blockless",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ],
         "severity": "warning"
       }
     ],
@@ -20,24 +29,39 @@
     "comment-empty-line-before": [
       "always",
       {
-        "except": ["first-nested"],
-        "ignore": ["after-comment", "stylelint-commands"],
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "stylelint-commands"
+        ],
         "severity": "warning"
       }
     ],
     "custom-property-empty-line-before": [
       "always",
       {
-        "except": ["after-custom-property", "first-nested"],
-        "ignore": ["after-comment"],
+        "except": [
+          "after-custom-property",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ],
         "severity": "warning"
       }
     ],
     "declaration-empty-line-before": [
       "always",
       {
-        "except": ["after-declaration", "first-nested"],
-        "ignore": ["after-comment"],
+        "except": [
+          "after-declaration",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ],
         "severity": "warning"
       }
     ],
@@ -46,8 +70,13 @@
     "max-nesting-depth": [
       2,
       {
-        "ignore": ["pseudo-classes"],
-        "ignoreAtRules": ["media", "supports"],
+        "ignore": [
+          "pseudo-classes"
+        ],
+        "ignoreAtRules": [
+          "media",
+          "supports"
+        ],
         "severity": "warning"
       }
     ],
@@ -58,13 +87,22 @@
     "rule-empty-line-before": [
       "always",
       {
-        "except": ["first-nested"],
-        "ignore": ["after-comment"],
+        "except": [
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ],
         "severity": "warning"
       }
     ],
     "scss/at-rule-no-unknown": true,
-    "selector-max-compound-selectors": [3, { "severity": "warning" }],
+    "selector-max-compound-selectors": [
+      3,
+      {
+        "severity": "warning"
+      }
+    ],
     "selector-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "double",
     "value-no-vendor-prefix": true
