@@ -89,25 +89,57 @@
   }
 
   #payment {
-    background: $color-gray-2;
+    background: none;
 
-    ul.payment_methods li {
-      padding-left: 0px;
+    ul.payment_methods {
+      background-color: transparent;
+      border: 1px solid $color-gray-3;
 
-      &::before {
-        content: none !important;
+      li {
+        padding-left: 0px;
+
+        &::before {
+          content: none !important;
+        }
       }
     }
 
-    div.payment_box {
-      background: $color-primary-dark-blue;
-      color: $color-background;
+    .payment_method_paypal .about_paypal {
+      float: unset;
+      line-height: unset;
+    }
 
-      &::before {
-        border-color: $color-primary-dark-blue;
-        border-left-color: transparent;
-        border-right-color: transparent;
-        border-top-color: transparent;
+    ul.payment_methods li img {
+      float: right;
+      margin: -10px 0 0 0.5em;
+    }
+
+    div.payment_box {
+      background-color: transparent;
+      border-top: 1px solid $color-gray-2;
+      padding: unset;
+      padding-top: 10px;
+
+      &::before,
+      &::after {
+        background-color: transparent;
+        border: none;
+      }
+    }
+
+    div.form-row {
+      padding: unset;
+    }
+
+    .place-order {
+      @include mq($from: medium) {
+        margin-top: 4em;
+        padding: unset;
+      }
+
+      .woocommerce-terms-and-conditions-wrapper {
+        border-top: 1px solid $color-gray-3;
+        padding-top: 10px;
       }
     }
   }
@@ -115,7 +147,9 @@
   button.button[type="submit"] {
     @extend .button--primary;
 
+    float: unset;
     margin-top: 30px;
+    width: 100%;
   }
 
   .woocommerce-privacy-policy-text p {
