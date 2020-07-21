@@ -478,33 +478,33 @@ body.overflow-hidden {
   margin-right: auto;
   max-width: 1440px; }
 
-.section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product {
+.section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product.first {
   padding-left: 20px;
   padding-right: 20px;
   /* stylelint-disable */
   /* stylelint-enable */ }
   @supports (padding: max(0px)) {
-    .section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product {
+    .section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product.first {
       padding-left: max(20px, env(safe-area-inset-left));
       padding-right: max(20px, env(safe-area-inset-right)); } }
   @media (min-width: 30em) {
-    .section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product {
+    .section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product.first {
       padding-left: 56px;
       padding-right: 56px; } }
   @media (min-width: 80em) {
-    .section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product {
+    .section--margins, .margins-horizontal, .section-product-feed-text-and-image, .section-pre-footer, .site-navigation, .site-header, .site-footer, .section.search-no-results, .section.search-results, .section-about-header, .section-contact-header, .section-about-header__heading, .section-about-text-and-image-grid, .section-about-values, .section-blog-listing-featured-post, .section-blog-listing-header, .section-blog-post-feed, .section-contact-form, .section-default-content, .section-definition-list, .section-error-404, .section-home-callout, .section-home-hero, .section-home-icon-grid, .section-home-product-grid, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-header, .section-how-it-works-step-by-step, .section-how-it-works-steps, .section-post-footer, .section-post-header, .section-post-main, .section-introduction, .section-table, .section-rich-text, .section-text-and-image, .section-header, .section-image, .section-product-guide__header, .section-product-guide-container, .woocommerce-products, .woocommerce div.product.first {
       padding-left: 80px;
       padding-right: 80px; } }
 
-.section-pre-footer, .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table, .section-text-and-image, .woocommerce-products, .woocommerce div.product {
+.section-pre-footer, .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table, .section-text-and-image, .woocommerce-products, .woocommerce div.product.first {
   padding-bottom: 40px;
   padding-top: 40px; }
   @media (min-width: 30em) {
-    .section-pre-footer, .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table, .section-text-and-image, .woocommerce-products, .woocommerce div.product {
+    .section-pre-footer, .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table, .section-text-and-image, .woocommerce-products, .woocommerce div.product.first {
       padding-bottom: 84px;
       padding-top: 84px; } }
   @media (min-width: 80em) {
-    .section-pre-footer, .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table, .section-text-and-image, .woocommerce-products, .woocommerce div.product {
+    .section-pre-footer, .site-footer, .section.search-no-results, .section.search-results, .section-about-text-and-image-grid, .section-about-values, .section-blog-post-feed, .section-home-callout, .section-home-hero, .section-home-text-and-image-1, .section-home-text-and-image-2, .section-how-it-works-steps, .section-table, .section-text-and-image, .woocommerce-products, .woocommerce div.product.first {
       padding-bottom: 80px;
       padding-top: 80px; } }
 
@@ -557,20 +557,21 @@ body.overflow-hidden {
   font-style: italic; }
 
 .body, .blockquote, .text-label, .text-input, .wpcf7 input[type="email"],
-.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .woocommerce-account .woocommerce-MyAccount-content ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p, select, select option, .woocommerce .woocommerce-result-count, .woocommerce ul.products li.product .price, .woocommerce div.product .woocommerce-tabs .panel p, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount, .woocommerce-checkout .woocommerce-billing-fields label, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong {
+.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .woocommerce-account .woocommerce-MyAccount-content ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p, select, select option, .woocommerce .woocommerce-result-count, .woocommerce ul.products li.product .price, .woocommerce div.product .woocommerce-tabs .panel p, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount, .woocommerce-checkout .woocommerce-billing-fields label {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a, .woocommerce ul.order_details li a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce div.product .woocommerce-tabs .panel p a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .woocommerce ul.order_details li a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
     font-weight: bold;
     line-height: inherit; }
 
-.body--small, .menu-product-guide-sidebar-container li, select, select option, .woocommerce-checkout .woocommerce-billing-fields label, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong {
+.body--small, .menu-product-guide-sidebar-container li, select, select option, .product-type-composite .details.component_data p,
+.product-type-composite .details.component_data li, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce-checkout .woocommerce-billing-fields label {
   font-size: 14px;
   line-height: 20px; }
 
@@ -2596,6 +2597,18 @@ select {
 .summary__details .product_title {
   margin-bottom: 4px; }
 
+.woocommerce-product-details__short-description .product-icons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 1em 0; }
+  .woocommerce-product-details__short-description .product-icons img {
+    display: block;
+    height: auto;
+    max-width: 40px; }
+    .woocommerce-product-details__short-description .product-icons img:not(:last-child) {
+      margin-right: 1em; }
+
 .summary__details .woocommerce-Price-amount {
   color: #0a67aa; }
 
@@ -2717,6 +2730,72 @@ select {
 
 .woocommerce .related.products ul.products li .price {
   color: #0a67aa; }
+
+.product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element {
+  background-color: #f4f5f7;
+  color: #2c3e50; }
+  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element span,
+  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element a {
+    color: inherit; }
+
+.product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current {
+  background-color: #2c3e50;
+  color: #ffffff; }
+  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current span,
+  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current a {
+    color: inherit; }
+  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current::after {
+    border-left-color: #2c3e50; }
+  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current::before {
+    border-bottom-color: #2c3e50;
+    border-top-color: #2c3e50; }
+
+.product-type-composite .composite_form ul.summary_elements {
+  display: flex;
+  flex-direction: column; }
+  .product-type-composite .composite_form ul.summary_elements li.summary_element {
+    text-align: left; }
+
+.product-type-composite .full_width .columns-4 .summary_elements li.summary_element {
+  width: 100% !important; }
+
+.product-type-composite .full_width .columns-3 ul.component_option_thumbnails_container {
+  display: flex;
+  flex-direction: column; }
+  .product-type-composite .full_width .columns-3 ul.component_option_thumbnails_container li.component_option_thumbnail_container {
+    width: 100% !important; }
+
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
+  background-color: #fcfcfc;
+  display: flex;
+  flex-direction: column; }
+
+.woocommerce-order .heading-3, .woocommerce-order .rich-text h3, .rich-text .woocommerce-order h3, .woocommerce-order .woocommerce-account .woocommerce-MyAccount-content h3, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-order h3, .woocommerce-order .section-default-content__rich-text h3, .section-default-content__rich-text .woocommerce-order h3, .woocommerce-order .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .woocommerce-order h3,
+.woocommerce-order .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .woocommerce-order .heading-3, .woocommerce-order .summary__details .product_title, .summary__details .woocommerce-order .product_title, .woocommerce-order .woocommerce div.product .woocommerce-tabs .panel h3, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-order h3,
+.woocommerce-order .woocommerce div.product .woocommerce-tabs .panel .heading-3, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-order .heading-3 {
+  text-align: center; }
+
+.woocommerce-order .woocommerce-notice {
+  text-align: center; }
+
+.woocommerce ul.order_details {
+  margin: 3em 0; }
+
+.woocommerce .woocommerce-order-details__title {
+  font-weight: 500; }
+
+.woocommerce ul.order_details li {
+  border: none;
+  border-bottom: 1px solid #d8dce0;
+  float: unset;
+  padding: 0.8em;
+  text-transform: none; }
+  .woocommerce ul.order_details li strong {
+    color: #2c3e50;
+    font-weight: 500;
+    line-height: 1.31; }
+  .woocommerce ul.order_details li::before {
+    content: unset; }
 
 .woocommerce-account .select2-selection {
   border: 0px;
@@ -3146,38 +3225,6 @@ select {
 @media (max-width: 49.99em) {
   .woocommerce-checkout .col-2 {
     margin-top: 3em; } }
-
-.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
-  background-color: #fcfcfc;
-  display: flex;
-  flex-direction: column; }
-
-.woocommerce-order .heading-3, .woocommerce-order .rich-text h3, .rich-text .woocommerce-order h3, .woocommerce-order .woocommerce-account .woocommerce-MyAccount-content h3, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-order h3, .woocommerce-order .section-default-content__rich-text h3, .section-default-content__rich-text .woocommerce-order h3, .woocommerce-order .wp-block-group .wp-block-group__inner-container h3, .wp-block-group .wp-block-group__inner-container .woocommerce-order h3,
-.woocommerce-order .wp-block-group .wp-block-group__inner-container .heading-3, .wp-block-group .wp-block-group__inner-container .woocommerce-order .heading-3, .woocommerce-order .summary__details .product_title, .summary__details .woocommerce-order .product_title, .woocommerce-order .woocommerce div.product .woocommerce-tabs .panel h3, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-order h3,
-.woocommerce-order .woocommerce div.product .woocommerce-tabs .panel .heading-3, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-order .heading-3 {
-  text-align: center; }
-
-.woocommerce-order .woocommerce-notice {
-  text-align: center; }
-
-.woocommerce ul.order_details {
-  margin: 3em 0; }
-
-.woocommerce .woocommerce-order-details__title {
-  font-weight: 500; }
-
-.woocommerce ul.order_details li {
-  border: none;
-  border-bottom: 1px solid #d8dce0;
-  float: unset;
-  padding: 0.8em;
-  text-transform: none; }
-  .woocommerce ul.order_details li strong {
-    color: #2c3e50;
-    font-weight: 500;
-    line-height: 1.31; }
-  .woocommerce ul.order_details li::before {
-    content: unset; }
 
 @media (min-width: 50em) {
   .side-nav .menu-account-container {

@@ -32,4 +32,16 @@ if ( ! $short_description ) {
 	<div class="rich-text">
 		<?php echo $short_description; // WPCS: XSS ok. ?>
 	</div>
+
+	<div class="product-icons">
+	<?php
+		$meta_icons = get_field('product_icons', $post->ID);
+		if( $meta_icons ) {
+		foreach( $meta_icons as $icon ) {
+			$image = $icon['image'];
+			echo wp_get_attachment_image( $image['ID'], 'full' );
+			}
+		}
+	?>
+	</div>
 </div>
