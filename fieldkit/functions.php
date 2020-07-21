@@ -53,7 +53,9 @@ function fieldkit_menus()
 		'footer-other' => __('Footer - Other', 'fieldkit'),
 		'footer-support' => __('Footer - Support', 'fieldkit'),
 		'header' => __('Header', 'fieldkit'),
+		'account' => __('Account', 'fieldkit'),
 		'product-guide-sidebar' => __('Product Guide Sidebar', 'fieldkit'),
+		'product-feed-navigation' => __('Product Feed Navigation', 'fieldkit'),
 	);
 	register_nav_menus($locations);
 }
@@ -89,4 +91,67 @@ function fieldkit_get_icon($icon_name, $attributes = array())
 	}
 	$html .= ' alt="' . $icon_name . '" src="' . get_template_directory_uri() . '/assets/icons/' . $icon_name . '.svg" />';
 	return $html;
+}
+
+/**
+ * Remove the breadcrumbs
+ */
+add_action( 'init', 'bc_remove_wc_breadcrumbs' );
+function bc_remove_wc_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+
+/**
+* Remove related products output
+*/
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+/**
+* Remove category tags
+*/
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+/**
+* Remove product thumbnail link
+*/
+add_filter('woocommerce_single_product_image_thumbnail_html','wc_remove_link_on_thumbnails' );
+
+function wc_remove_link_on_thumbnails( $html ) {
+     return strip_tags( $html,'<div><img>' );
+}
+
+function fieldkit_widget() {
+    register_sidebar( array(
+        'name'          => "Product Header",
+        'id'            => 'product-header',
+    ) );
+}
+add_action( 'widgets_init', 'fieldkit_widget' );
+
+
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function woo_remove_product_tabs( $tabs ) {
+
+	unset( $tabs['reviews'] );
+	unset( $tabs['additional_information'] );
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'woo_additional_information' );
+function woo_additional_information( $tabs ) {
+	// Adds the new tab
+	$tabs['custom-additional-information'] = array(
+		'title' 	=> __( 'Additional Information', 'woocommerce' ),
+		'priority' 	=> 50,
+		'callback' 	=> 'woo_additional_information_content'
+	);
+	return $tabs;
+}
+function woo_additional_information_content() {
+	if(get_field('body') or get_field('table')){
+		include(locate_template('template-parts/components/additional-information.php', false, false));
+	}else{
+		echo "<style>li.custom-additional-information_tab{ display:none !important; }</style>";
+	}
 }

@@ -217,9 +217,9 @@
     "location": [
         [
             {
-                "param": "post_taxonomy",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "product_cat:accessories"
+                "value": "product_cat"
             }
         ]
     ],
@@ -231,7 +231,7 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": 0,
     "description": "",
-    "modified": 1595253517
+    "modified": 1595278666
 }

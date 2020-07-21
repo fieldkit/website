@@ -2,13 +2,9 @@
 <div class="section__inner">
 <ul class="menu-navbar--secondary">
 <?php
-foreach($category as $cat){
-	printf(
-		__( '<li class="menu-item"> <a class="menu-link" href="%1$s#product-listing"> %2$s </a> </li>' , 'all' ),
-		esc_html(get_category_link($cat->term_id)),
-		esc_html($cat->name)
-	);
-}
+
+if (has_nav_menu('product-feed-navigation')) wp_nav_menu(array('theme_location' => 'product-feed-navigation'));
+
 ?>
 </ul>
 </div>

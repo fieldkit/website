@@ -78,7 +78,7 @@ select {
   background-color: $color-gray-2;
 }
 
-.menu-navbar--secondary {
+.menu-navbar--secondary ul {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -87,7 +87,7 @@ select {
     padding: 36px 20px;
   }
 
-  a.menu-link {
+  a {
     color: #2c3e50;
     font-size: 16px;
     font-weight: 500;

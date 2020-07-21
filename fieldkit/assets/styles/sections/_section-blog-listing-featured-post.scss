@@ -57,25 +57,25 @@
     width: 50%;
   }
 
-  &.hide-desktop {
-    display: block;
-
-    @include mq($from: medium) {
-      display: none;
-    }
-  }
-
-  &.hide-mobile {
-    display: none;
-
-    @include mq($from: medium) {
-      display: block;
-    }
-  }
-
   img {
     display: block;
     height: auto;
     width: 100%;
+  }
+}
+
+.hide-mobile {
+  display: none;
+
+  @include mq($from: medium) {
+    display: block;
+  }
+}
+
+.hide-desktop {
+  display: block;
+
+  @include mq($from: medium) {
+    display: none;
   }
 }

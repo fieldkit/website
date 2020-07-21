@@ -55,6 +55,11 @@ $site-header-breakpoint: 800px;
       font-weight: normal;
     }
   }
+
+  .nav-button li {
+    @extend .button;
+    @extend .button--tertiary;
+  }
 }
 
 .site-navigation {

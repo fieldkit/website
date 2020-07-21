@@ -28,9 +28,10 @@ get_header( 'shop' );
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 do_action( 'woocommerce_before_main_content' );
-$terms = get_terms(array('taxonomy' => 'product_tag', 'hide_empty' => false));
 
 $shop_page_id = wc_get_page_id( 'shop' );
+
+if(!is_product_category()){
 $text_and_image = get_field('text_and_image',$shop_page_id);
 if($text_and_image){
 	include(locate_template('template-parts/blocks/text-and-image.php', false, false));
@@ -42,35 +43,39 @@ if($call_out){
 
 }
 
-$category = get_terms(array('taxonomy' => 'product_cat', 'hide_empty' => false));
-if($category){
-	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
-}
+include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
+
 
 $header = get_field('header',$shop_page_id);
 if($header){
 	include(locate_template('template-parts/blocks/header.php', false, false));
 }
+}else{
+
+global $post;
+$cat_id = get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
+
+	$text_and_image = get_field('text_and_image',$shop_page_id);
+	if($text_and_image){
+		include(locate_template('template-parts/blocks/text-and-image.php', false, false));
+	}
+	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
+
+	$header = get_field('header','term_'.$cat_id);
+	if($header){
+	include(locate_template('template-parts/blocks/header.php', false, false));
+	}
+
+	$text_and_image_list = get_field('text_and_image_list');
+	if($text_and_image_list){
+	include(locate_template('template-parts/blocks/text-and-image-list.php', false, false));
+	}
+}
+
+
 ?>
 <div class="woocommerce-products">
-
-<?php if($terms): ?>
-	<div class="post-type-archive-product__filters">
-		<form class="woocommerce-ordering--variant" method="get">
-			<select name="product_tag" aria-label="Product filter">
-			<option value="all">filter by: Default</option>
-			<?php
-				foreach($terms as $term){
-					printf(
-						__( '<option value="%1$s"> %1$s </option>' , 'all' ),
-						esc_html($term->name)
-					);
-				}
-				?>
-			</select>
-		</form>
-	</div>
-<? endif;?>
+<?php dynamic_sidebar('product-header'); ?>
 
 <?php
 if ( woocommerce_product_loop() ) {
@@ -131,14 +136,16 @@ do_action( 'woocommerce_after_main_content' );
  * @hooked woocommerce_get_sidebar - 10
  */
 
-$pre_footer_text_and_image = get_field('pre_footer_text_and_image',$shop_page_id);
+if(is_product_category()){
+$pre_footer_text_and_image = get_field('text-and-image');
 if($pre_footer_text_and_image){
-	include(locate_template('template-parts/blocks/pre_footer_text_and_image.php', false, false));
+	include(locate_template('template-parts/blocks/text-and-image.php', false, false));
 }
 
-$pre_footer = get_field('pre_footer',$shop_page_id);
+$pre_footer = get_field('pre_footer');
 if($pre_footer){
 	include(locate_template('template-parts/blocks/pre_footer.php', false, false));
+}
 }
 
 get_footer( 'shop' );
