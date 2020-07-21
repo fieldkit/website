@@ -21,7 +21,6 @@ class WooCommerceAccount {
 
   addListeners() {
     this.handleLoginRegister();
-    // this.$input.on("input", this.handleInput.bind(this));
   }
 
   initLogin() {
@@ -59,9 +58,11 @@ class WooCommerceAccount {
     if (this.$pathName === "login") {
       this.loginShow();
       this.initLogin();
+      $("body").addClass("woocommerce-account--login-register-parent");
     } else {
       this.registerShow();
       this.initRegister();
+      $("body").addClass("woocommerce-account--login-register-parent");
     }
   }
 }

@@ -1,4 +1,8 @@
 .woocommerce-account {
+  &.woocommerce-account--login-register-parent .site-header__control.side-nav {
+    display: none;
+  }
+
   #customer_login {
     > div {
       display: none;
