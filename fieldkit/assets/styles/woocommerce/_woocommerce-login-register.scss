@@ -1,45 +1,73 @@
+@include mq($from: medium) {
+  .side-nav .menu-account-container {
+    opacity: 0;
+    position: absolute;
+    transform: translateY(100%);
+    transition: opacity $duration-fast, visibility 0s $duration-fast;
+    visibility: hidden;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+
+    .site-login-register-open & {
+      opacity: 1;
+      transition: opacity $duration-fast, visibility 0s;
+      visibility: visible;
+
+      @media screen and (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+}
+
 .woocommerce-account {
-  // &.woocommerce-account--login-register-parent .site-header__control.side-nav {
-  //   display: none;
-  // }
+  .menu-account-container .menu {
+    li {
+      border: 0px;
+      font-size: 14px;
+      margin-top: 1em;
+      padding: 0px;
+      text-align: left;
+    }
+  }
 
-  // &.logged-in.woocommerce-account--login-register-parent
-  //   .site-header__control.side-nav {
-  //   display: block;
-  // }
-  &.woocommerce-account--login-register-parent {
-    .menu-account-container {
-      position: relative;
+  @include mq($from: medium) {
+    &.woocommerce-account--login-register-parent {
+      .menu-account-container {
+        position: relative;
 
-      .menu {
-        border: 1px solid $color-gray-3;
-        border-radius: 2px;
-        box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.11);
-        padding: 10px 15px;
-        position: absolute;
-        right: -20px;
-        top: 15px;
-
-        &::before {
-          background: $color-background;
-          border-bottom: 1px solid $color-gray-3;
-          border-left: 1px solid $color-gray-3;
-          border-width: 0px 0px 1px 1px;
-          content: "";
-          display: block;
-          height: 15px;
+        .menu {
+          border: 1px solid $color-gray-3;
+          border-radius: 2px;
+          box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.11);
+          padding: 10px 15px;
           position: absolute;
-          right: 20px;
-          top: -9px;
-          transform: rotate(135deg);
-          width: 15px;
-          z-index: 1;
-        }
+          right: -20px;
+          top: 15px;
 
-        li {
-          font-size: 14px;
-          line-height: 1.79;
-          text-transform: uppercase;
+          &::before {
+            background: $color-background;
+            border-bottom: 1px solid $color-gray-3;
+            border-left: 1px solid $color-gray-3;
+            border-width: 0px 0px 1px 1px;
+            content: "";
+            display: block;
+            height: 15px;
+            position: absolute;
+            right: 20px;
+            top: -9px;
+            transform: rotate(135deg);
+            width: 15px;
+            z-index: 1;
+          }
+
+          li {
+            font-size: 14px;
+            line-height: 1.79;
+            text-transform: uppercase;
+          }
         }
       }
     }

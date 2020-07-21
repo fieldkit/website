@@ -43,9 +43,15 @@ $header = get_field('header', 'option');
 					}
 			?>
 			<?php if ( is_user_logged_in() ): ?>
-			<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"
-			title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
-			<a href="<?php echo wp_logout_url(); ?>">Logout</a>
+			<ul class="my-account-menu">
+				<li>
+					<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"
+					title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a>
+				</li>
+				<li>
+					<a href="<?php echo wp_logout_url(); ?>">Logout</a>
+				</li>
+			</ul>
 			<?php endif; ?>
 			</div>
 
