@@ -1,29 +1,30 @@
 <?php
-$heading = $pre_footer['heading'];
 $body = $pre_footer['body'];
-$links = $pre_footer['header_links'];
+$link = $pre_footer['link'];
+$image = $pre_footer['image'];
 ?>
 <header class="section section-pre-footer">
-	<div class="section__inner">
+	<div class="section__inner section__inner--inset">
+	<div class="section-pre-footer__text">
+
 		<div class="rich-text">
-			<h2 class="heading-2"><?php echo $heading; ?></h2>
 			<?php echo $body; ?>
 		</div>
-		<?php if ($links) : ?>
-			<div class="section-header__links">
-				<?php
-				foreach ($links as $link_item) :
-					$link = $link_item['link'];
-				?>
-					<div class="section-header__links-item">
+		<?php if ($link) : ?>
+			<div class="section-pre-footer__links">
+
+					<div class="section-pre-footer__links-item">
 						<?php
 						$link['class_name'] = 'button button--primary';
 						set_query_var('link', $link);
 						get_template_part('template-parts/utilities/link');
 						?>
 					</div>
-				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
+	</div>
+			<div class="section-pre-footer__image">
+				<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+			</div>
 	</div>
 </header>
