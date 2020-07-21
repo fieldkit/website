@@ -31,6 +31,96 @@ select {
 .woocommerce-products {
   @extend %margins-horizontal;
   @extend %margins-vertical;
+
+  li.woocommerce-widget-layered-nav {
+    align-items: center;
+    display: flex;
+    height: 42px;
+    list-style: none;
+    position: relative;
+
+    .widgettitle {
+      align-items: center;
+      display: flex;
+      font-size: 14px;
+      font-weight: 500;
+      left: 0;
+      padding-left: 10px;
+      position: absolute;
+      z-index: 1;
+
+      &::after {
+        content: ":";
+      }
+    }
+
+    form.woocommerce-widget-layered-nav-dropdown {
+      height: 42px;
+    }
+
+    .select2-selection.select2-selection--single {
+      border-color: $color-gray-3;
+      border-radius: 0px;
+      color: $color-primary-dark-blue;
+      font-size: 14px;
+      font-weight: 900;
+      height: 42px;
+      // margin-right: -5px;
+      padding-left: 60px;
+      padding-right: 20px;
+    }
+
+    .select2-selection__placeholder {
+      color: $color-primary-dark-blue;
+    }
+
+    .select2-selection__clear {
+      display: none;
+    }
+
+    .select2-selection__rendered {
+      align-items: center;
+      display: flex;
+      height: 40px;
+    }
+
+    .select2-selection__arrow {
+      height: 42px;
+      right: 10px;
+    }
+
+    .select2-selection__arrow b {
+      background-color: transparent;
+      border-bottom: 1px solid $color-primary-dark-blue;
+      border-left: 1px solid $color-primary-dark-blue;
+      border-width: 0px 0px 2px 2px;
+      content: "";
+      display: block;
+      height: 10px;
+      transform: translateY(-50%) rotate(-45deg);
+      width: 10px;
+    }
+
+    .select2-container--open
+      .select2-selection--single
+      .select2-selection__arrow
+      b {
+      background-color: transparent;
+      border-bottom: 1px solid $color-primary-dark-blue;
+      border-left: 1px solid $color-primary-dark-blue;
+      border-width: 0px 0px 2px 2px;
+      content: "";
+      display: block;
+      height: 10px;
+      top: 20px;
+      transform: rotate(135deg);
+      width: 10px;
+    }
+  }
+}
+
+.select2-dropdown.select2-dropdown--below {
+  border-color: $color-gray-3;
 }
 
 .woocommerce-page ul.products li.product {
@@ -93,5 +183,13 @@ select {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.09px;
+  }
+}
+
+#menu-product-feed-navigation {
+  li.current-menu-item {
+    a {
+      border-bottom: 1px solid $color-primary-dark-blue;
+    }
   }
 }

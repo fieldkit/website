@@ -6,6 +6,7 @@ import SiteHeader from "./components/SiteHeader";
 import TextInputContainer from "./components/TextInputContainer";
 import SortDropdown from "./components/SortDropdown";
 import WooCommerceAccount from "./components/WooCommerceAccount";
+
 $(".site-header").each((index, element) => new SiteHeader(element));
 $(".load-more").each((index, element) => new LoadMore(element));
 $(".text-input-container").each(
