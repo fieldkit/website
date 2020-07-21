@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
 		do_action( 'woocommerce_before_thankyou', $order->get_id() );
 		?>
-
+		<h2 class="heading-3">Order Confirmation</h2>
 		<?php if ( $order->has_status( 'failed' ) ) : ?>
 
 			<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php esc_html_e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
