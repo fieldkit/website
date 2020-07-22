@@ -557,14 +557,14 @@ body.overflow-hidden {
   font-style: italic; }
 
 .body, .blockquote, .text-label, .text-input, .wpcf7 input[type="email"],
-.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .woocommerce-account .woocommerce-MyAccount-content ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p, select, select option, .woocommerce .woocommerce-result-count, .woocommerce ul.products li.product .price, .woocommerce div.product .woocommerce-tabs .panel p, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
-.bundled_product_summary span.bundled_item_price_quantity, .summary_elements .summary_element_selection.summary_element_data .content_product_title, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount, .summary__details .summary_elements .summary_element_content .content_product_meta, .woocommerce-message, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount, .woocommerce-checkout .woocommerce-billing-fields label {
+.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .woocommerce-account .woocommerce-MyAccount-content ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p, select, select option, .woocommerce .woocommerce-result-count, .woocommerce ul.products li.product .price, .woocommerce div.product .woocommerce-tabs .panel p, .woocommerce-message, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
+.bundled_product_summary span.bundled_item_price_quantity, .summary_elements .summary_element_selection.summary_element_data .content_product_title, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount, .summary__details .summary_elements .summary_element_content .content_product_meta, .attribute_options .label label, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount, .woocommerce-checkout .woocommerce-billing-fields label {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce div.product .woocommerce-tabs .panel p a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary_elements .summary_element_selection.summary_element_data .content_product_title a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .woocommerce-message a, .woocommerce ul.order_details li a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-message a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary_elements .summary_element_selection.summary_element_data .content_product_title a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .attribute_options .label label a, .woocommerce ul.order_details li a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
@@ -701,7 +701,8 @@ body.overflow-hidden {
 .woocommerce-account .woocommerce-MyAccount-content .heading-4, .section-default-content__rich-text h4,
 .section-default-content__rich-text .heading-4, .wp-block-group .wp-block-group__inner-container h4,
 .wp-block-group .wp-block-group__inner-container .heading-4, .summary__details .woocommerce-Price-amount, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs .panel h4,
-.woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce .woocommerce-order-details__title {
+.woocommerce div.product .woocommerce-tabs .panel .heading-4, .composite_form .composite_navigation.paged .prev,
+.composite_form .composite_navigation.paged .next, .woocommerce .woocommerce-order-details__title {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -713,7 +714,8 @@ body.overflow-hidden {
     .woocommerce-account .woocommerce-MyAccount-content .heading-4, .section-default-content__rich-text h4,
     .section-default-content__rich-text .heading-4, .wp-block-group .wp-block-group__inner-container h4,
     .wp-block-group .wp-block-group__inner-container .heading-4, .summary__details .woocommerce-Price-amount, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs .panel h4,
-    .woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce .woocommerce-order-details__title {
+    .woocommerce div.product .woocommerce-tabs .panel .heading-4, .composite_form .composite_navigation.paged .prev,
+    .composite_form .composite_navigation.paged .next, .woocommerce .woocommerce-order-details__title {
       font-size: 24px;
       line-height: 32px; } }
 
@@ -722,7 +724,7 @@ body.overflow-hidden {
 .woocommerce-account .woocommerce-MyAccount-content .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .section-default-content__rich-text h5,
 .section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote, .wp-block-group .wp-block-group__inner-container h5,
 .wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote, .woocommerce div.product .woocommerce-tabs .panel h5,
-.woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel .product-type-composite .details.component_data .bundled_product_title.product_title, .product-type-composite .details.component_data .woocommerce div.product .woocommerce-tabs .panel .bundled_product_title.product_title, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title, .product-type-composite .details.component_data .bundled_product_title.product_title {
+.woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title, .product-type-composite .details.component_data .bundled_product_title.product_title {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -734,7 +736,7 @@ body.overflow-hidden {
     .woocommerce-account .woocommerce-MyAccount-content .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .section-default-content__rich-text h5,
     .section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote, .wp-block-group .wp-block-group__inner-container h5,
     .wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote, .woocommerce div.product .woocommerce-tabs .panel h5,
-    .woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel .product-type-composite .details.component_data .bundled_product_title.product_title, .product-type-composite .details.component_data .woocommerce div.product .woocommerce-tabs .panel .bundled_product_title.product_title, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title, .product-type-composite .details.component_data .bundled_product_title.product_title {
+    .woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title, .product-type-composite .details.component_data .bundled_product_title.product_title {
       font-size: 20px;
       line-height: 32px; } }
 
@@ -1801,7 +1803,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     margin-bottom: 0px; }
   .section-about-values__item .heading-4, .section-about-values__item .rich-text h4, .rich-text .section-about-values__item h4, .section-about-values__item .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-account .woocommerce-MyAccount-content .section-about-values__item h4, .section-about-values__item .section-default-content__rich-text h4, .section-default-content__rich-text .section-about-values__item h4, .section-about-values__item .wp-block-group .wp-block-group__inner-container h4, .wp-block-group .wp-block-group__inner-container .section-about-values__item h4,
   .section-about-values__item .wp-block-group .wp-block-group__inner-container .heading-4, .wp-block-group .wp-block-group__inner-container .section-about-values__item .heading-4, .section-about-values__item .summary__details .woocommerce-Price-amount, .summary__details .section-about-values__item .woocommerce-Price-amount, .section-about-values__item .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs ul.tabs li .section-about-values__item a, .section-about-values__item .woocommerce div.product .woocommerce-tabs .panel h4, .woocommerce div.product .woocommerce-tabs .panel .section-about-values__item h4,
-  .section-about-values__item .woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce div.product .woocommerce-tabs .panel .section-about-values__item .heading-4, .section-about-values__item .woocommerce .woocommerce-order-details__title, .woocommerce .section-about-values__item .woocommerce-order-details__title {
+  .section-about-values__item .woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce div.product .woocommerce-tabs .panel .section-about-values__item .heading-4, .section-about-values__item .composite_form .composite_navigation.paged .prev, .composite_form .composite_navigation.paged .section-about-values__item .prev,
+  .section-about-values__item .composite_form .composite_navigation.paged .next, .composite_form .composite_navigation.paged .section-about-values__item .next, .section-about-values__item .woocommerce .woocommerce-order-details__title, .woocommerce .section-about-values__item .woocommerce-order-details__title {
     font-weight: 700; }
 
 .section-about-values__icon {
@@ -2711,17 +2714,18 @@ select {
   margin-bottom: 0.5em; }
 
 .woocommerce div.product .summary__details form.cart div.quantity {
-  margin: 0 16px 0 0; }
+  margin-right: 16px; }
   .woocommerce div.product .summary__details form.cart div.quantity input {
     background-color: #ffffff;
     border: solid 1px #b7bcd6;
     border-radius: 4px;
-    min-height: 44px;
-    outline: none;
-    padding-bottom: 6px;
-    padding-left: 10px;
-    padding-top: 6px;
-    width: 50px; }
+    height: 45px;
+    padding-left: 14px;
+    text-align: center;
+    width: 45px; }
+    @media (min-width: 50em) {
+      .woocommerce div.product .summary__details form.cart div.quantity input {
+        padding-left: 18px; } }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
   display: flex;
@@ -2813,67 +2817,6 @@ select {
 .woocommerce .related.products ul.products li .price {
   color: #0a67aa; }
 
-.product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element {
-  background-color: #f4f5f7;
-  color: #2c3e50; }
-  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element span,
-  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element a {
-    color: inherit; }
-
-.product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current {
-  background-color: #2c3e50;
-  color: #ffffff; }
-  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current span,
-  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current a {
-    color: inherit; }
-  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current::after {
-    border-left-color: #2c3e50; }
-  .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element.pagination_element_current::before {
-    border-bottom-color: #2c3e50;
-    border-top-color: #2c3e50; }
-
-.product-type-composite .composite_form ul.summary_elements {
-  display: flex;
-  flex-direction: column; }
-  .product-type-composite .composite_form ul.summary_elements li.summary_element {
-    text-align: left; }
-
-.product-type-composite .full_width .columns-4 .summary_elements li.summary_element {
-  width: 100% !important; }
-
-.product-type-composite .full_width .columns-3 ul.component_option_thumbnails_container {
-  display: flex;
-  flex-direction: column; }
-  .product-type-composite .full_width .columns-3 ul.component_option_thumbnails_container li.component_option_thumbnail_container {
-    width: 100% !important; }
-
-.type-product table.variations tr td {
-  display: block; }
-
-.type-product table.variations a.reset_variations {
-  display: block; }
-
-.woocommerce div.product div.images .flex-control-thumbs li {
-  margin-right: 1em;
-  width: 14%; }
-
-.product-type-composite .summary_element_image.summary_element_data {
-  float: left;
-  width: 20%; }
-
-.summary_elements .summary_element_selection.summary_element_data,
-.summary_elements .summary_element_price.summary_element_data,
-.summary_elements .summary_element_button.summary_element_data {
-  float: right;
-  padding-left: 1em;
-  width: 80%; }
-
-.summary_elements .summary_element_selection.summary_element_data .content_product_title {
-  font-weight: 900; }
-
-.summary_elements .summary_element_button.summary_element_data {
-  display: none; }
-
 .woocommerce-message {
   border-top-color: #1b80c9; }
 
@@ -2911,6 +2854,9 @@ select {
   .product-type-composite .full_width .columns-3 ul.component_option_thumbnails_container li.component_option_thumbnail_container {
     width: 100% !important; }
 
+.product-type-composite .component_options_inner .thumbnail_price {
+  margin-top: 0.8em; }
+
 .type-product table.variations tr td {
   display: block; }
 
@@ -2926,18 +2872,27 @@ select {
   width: 20%; }
 
 .component_options_inner .component_option_thumbnail .image {
-  float: left;
-  padding: 0;
-  width: 20%; }
+  float: left !important;
+  padding: 0 !important;
+  width: 40% !important; }
+  @media (min-width: 50em) {
+    .component_options_inner .component_option_thumbnail .image {
+      width: 20% !important; } }
 
 .component_options_inner .component_option_thumbnail_container .thumbnail_description {
-  float: right;
-  padding: 1em 1em 0.5em;
-  text-align: left;
-  width: 80%; }
+  float: right !important;
+  padding: 1em 1em 0.5em !important;
+  text-align: left !important;
+  width: 60% !important; }
+  @media (min-width: 50em) {
+    .component_options_inner .component_option_thumbnail_container .thumbnail_description {
+      width: 80% !important; } }
 
-.component_options_inner .summary__details form.cart .button, .component_options_inner .summary__details form.cart #mc-embedded-subscribe, .component_options_inner .summary__details form.cart .site-navigation .nav-button li a, .site-navigation .nav-button li .component_options_inner .summary__details form.cart a, .component_options_inner .summary__details form.cart .section-contact-form .wpcf7 input[type="submit"], .section-contact-form .wpcf7 .component_options_inner .summary__details form.cart input[type="submit"], .component_options_inner .summary__details form.cart .woocommerce ul.products li.product .button.product_type_simple, .woocommerce ul.products li.product .component_options_inner .summary__details form.cart .button.product_type_simple, .component_options_inner .summary__details form.cart .woocommerce ul.products li.product .button.add_to_cart_button, .woocommerce ul.products li.product .component_options_inner .summary__details form.cart .button.add_to_cart_button, .component_options_inner .woocommerce div.product .summary__details form.cart .button, .woocommerce div.product .component_options_inner .summary__details form.cart .button, .component_options_inner .summary__details form.cart .woocommerce .related.products ul.products li .button, .woocommerce .related.products ul.products li .component_options_inner .summary__details form.cart .button {
-  min-width: unset; }
+.component_option_thumbnail .component_option_thumbnail_select {
+  margin-left: 1em !important; }
+
+.component_selections p.component_section_title {
+  margin-top: 1em; }
 
 .summary_elements .summary_element_selection.summary_element_data,
 .summary_elements .summary_element_price.summary_element_data,
@@ -2951,6 +2906,56 @@ select {
 
 .summary_elements .summary_element_button.summary_element_data {
   display: none; }
+
+.component_option_thumbnail.selected .component_option_thumbnail_select {
+  background-color: #ffffff !important;
+  border: solid 1px #ce596b !important;
+  border-radius: 3px !important;
+  max-width: 89px !important;
+  min-width: 89px !important;
+  opacity: 1 !important; }
+  .component_option_thumbnail.selected .component_option_thumbnail_select::after {
+    color: #ce596b !important; }
+
+.composite_form.small_width .composite_navigation.top,
+.composite_form .composite_navigation.movable.paged.standard {
+  display: none !important; }
+
+.composite_form .composite_navigation.paged .prev,
+.composite_form .composite_navigation.paged .next {
+  font-weight: 500; }
+
+.component_selections .component_message.top,
+.bundled_product_permalink,
+.clear_component_options,
+.reset_variations,
+.product-type-composite .bundle_button,
+.product-type-composite .single_variation_wrap.component_wrap .quantity,
+.component_option_each {
+  display: none !important; }
+
+.component .component_description {
+  margin-bottom: 1em !important; }
+
+.component_option_thumbnail .component_option_thumbnail_select {
+  min-width: 89px !important; }
+
+.bundled_product_summary .bundled_item_button .quantity {
+  margin-top: 0.7em !important; }
+
+.attribute_options .label {
+  line-height: unset !important; }
+  .attribute_options .label label {
+    color: #6a6d71 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1.17; }
+
+.attribute_options .value select {
+  border: unset !important;
+  border-bottom: solid 1px #d8dce0 !important;
+  border-radius: 0;
+  padding: 10px 40px 2px 0 !important; }
 
 .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
   background-color: #fcfcfc;
@@ -3382,7 +3387,8 @@ select {
     content: none; }
 
 .woocommerce-checkout .woocommerce-billing-fields .heading-4, .woocommerce-checkout .woocommerce-billing-fields .rich-text h4, .rich-text .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .section-default-content__rich-text h4, .section-default-content__rich-text .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .wp-block-group .wp-block-group__inner-container h4, .wp-block-group .wp-block-group__inner-container .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .summary__details .woocommerce-Price-amount, .summary__details .woocommerce-checkout .woocommerce-billing-fields .woocommerce-Price-amount, .woocommerce-checkout .woocommerce-billing-fields .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs ul.tabs li .woocommerce-checkout .woocommerce-billing-fields a, .woocommerce-checkout .woocommerce-billing-fields .woocommerce div.product .woocommerce-tabs .panel h4, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-checkout .woocommerce-billing-fields h4,
-.woocommerce-checkout .woocommerce-billing-fields .woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-checkout .woocommerce-billing-fields .heading-4, .woocommerce-checkout .woocommerce-billing-fields .woocommerce .woocommerce-order-details__title, .woocommerce .woocommerce-checkout .woocommerce-billing-fields .woocommerce-order-details__title,
+.woocommerce-checkout .woocommerce-billing-fields .woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-checkout .woocommerce-billing-fields .heading-4, .woocommerce-checkout .woocommerce-billing-fields .composite_form .composite_navigation.paged .prev, .composite_form .composite_navigation.paged .woocommerce-checkout .woocommerce-billing-fields .prev,
+.woocommerce-checkout .woocommerce-billing-fields .composite_form .composite_navigation.paged .next, .composite_form .composite_navigation.paged .woocommerce-checkout .woocommerce-billing-fields .next, .woocommerce-checkout .woocommerce-billing-fields .woocommerce .woocommerce-order-details__title, .woocommerce .woocommerce-checkout .woocommerce-billing-fields .woocommerce-order-details__title,
 .woocommerce-checkout .heading-4,
 .woocommerce-checkout .rich-text h4,
 .rich-text .woocommerce-checkout h4,
@@ -3402,6 +3408,10 @@ select {
 .woocommerce div.product .woocommerce-tabs .panel .woocommerce-checkout h4,
 .woocommerce-checkout .woocommerce div.product .woocommerce-tabs .panel .heading-4,
 .woocommerce div.product .woocommerce-tabs .panel .woocommerce-checkout .heading-4,
+.woocommerce-checkout .composite_form .composite_navigation.paged .prev,
+.composite_form .composite_navigation.paged .woocommerce-checkout .prev,
+.woocommerce-checkout .composite_form .composite_navigation.paged .next,
+.composite_form .composite_navigation.paged .woocommerce-checkout .next,
 .woocommerce-checkout .woocommerce .woocommerce-order-details__title,
 .woocommerce .woocommerce-checkout .woocommerce-order-details__title {
   font-weight: 500; }
