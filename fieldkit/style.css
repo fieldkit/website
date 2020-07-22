@@ -557,21 +557,21 @@ body.overflow-hidden {
   font-style: italic; }
 
 .body, .blockquote, .text-label, .text-input, .wpcf7 input[type="email"],
-.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .woocommerce-account .woocommerce-MyAccount-content ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p, select, select option, .woocommerce .woocommerce-result-count, .woocommerce ul.products li.product .price, .woocommerce div.product .woocommerce-tabs .panel p, .woocommerce-message, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
+.wpcf7 input[type="text"], .textarea-input, .wpcf7 textarea, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ul, .woocommerce-account .woocommerce-MyAccount-content ul, .section-default-content__rich-text ul, .wp-block-group .wp-block-group__inner-container ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .site-navigation .menu-item, .social-share-menu-heading, .site-footer__right-column .menu-item a, .section-default-content__rich-text p, select, select option, .woocommerce .woocommerce-result-count, .woocommerce ul.products li.product .price, .woocommerce div.product .woocommerce-tabs .panel p, .woocommerce-message, .summary .pre_order_single, #display-deposit-product, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
 .bundled_product_summary span.bundled_item_price_quantity, .summary_elements .summary_element_selection.summary_element_data .content_product_title, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount, .summary__details .summary_elements .summary_element_content .content_product_meta, .attribute_options .label label, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount, .woocommerce-checkout .woocommerce-billing-fields label {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-message a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary_elements .summary_element_selection.summary_element_data .content_product_title a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .attribute_options .label label a, .woocommerce ul.order_details li a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .textarea-input a, .wpcf7 textarea a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .section-default-content__rich-text ul a, .wp-block-group .wp-block-group__inner-container ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .site-navigation .menu-item a, .social-share-menu-heading a, .site-footer__right-column .menu-item a a, .section-default-content__rich-text p a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-message a, .summary .pre_order_single a, #display-deposit-product a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary_elements .summary_element_selection.summary_element_data .content_product_title a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .attribute_options .label label a, .woocommerce ul.order_details li a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
     font-weight: bold;
     line-height: inherit; }
 
-.body--small, .menu-product-guide-sidebar-container li, select, select option, .product-type-composite .details.component_data p,
+.body--small, .menu-product-guide-sidebar-container li, select, select option, #display-deposit-product, .product-type-composite .details.component_data p,
 .product-type-composite .details.component_data li, .bundled_product_summary .bundled_product_optional_checkbox,
 .bundled_product_summary span.bundled_item_price_quantity, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount, .summary__details .summary_elements .summary_element_content .content_product_meta, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce-checkout .woocommerce-billing-fields label {
   font-size: 14px;
@@ -2819,6 +2819,30 @@ select {
 
 .woocommerce-message {
   border-top-color: #1b80c9; }
+
+.summary .pre_order_single {
+  background-color: #f4f5f7;
+  border: solid 1px #cccdcf;
+  border-radius: 1px;
+  color: #c42c44 !important;
+  padding: 1em; }
+
+#display-deposit-product {
+  background-color: #f4f5f7;
+  border: solid 1px #cccdcf;
+  border-radius: 1px;
+  color: #2c3e50;
+  padding: 1em; }
+  #display-deposit-product .deposit-info strong {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: unset; }
+  #display-deposit-product .woocommerce-Price-amount.amount {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: unset; }
 
 .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element {
   background-color: #f4f5f7;
