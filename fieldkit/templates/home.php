@@ -145,7 +145,7 @@
 				</div>
 				<?php
 				if ($link) {
-					$link['class_name'] = 'button button--link section-home-text-and-image-1__link';
+					$link['class_name'] = 'link link--large section-home-text-and-image-1__link';
 					set_query_var('link', $link);
 					get_template_part('template-parts/utilities/link');
 				}
@@ -195,7 +195,7 @@
 				</div>
 				<?php
 				if ($link) {
-					$link['class_name'] = 'button button--primary section-home-text-and-image-2__link';
+					$link['class_name'] = 'link link--large section-home-text-and-image-2__link';
 					set_query_var('link', $link);
 					get_template_part('template-parts/utilities/link');
 				}
