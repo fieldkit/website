@@ -56,9 +56,21 @@ $site-header-breakpoint: 800px;
     }
   }
 
-  .nav-button li {
-    @extend .button;
-    @extend .button--tertiary;
+  .nav-button {
+    border-top: 1px solid $color-gray-3;
+    margin-top: 33px;
+    padding-top: 33px;
+
+    li a {
+      @extend .button;
+      @extend .button--secondary;
+
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 24px;
+      }
+    }
   }
 }
 
