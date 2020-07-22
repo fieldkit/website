@@ -142,6 +142,7 @@
 
   .product-fieldkit-packages__products-item {
     margin-bottom: 65px;
+    text-align: center;
 
     &:last-child {
       margin-bottom: 0px;
@@ -149,10 +150,6 @@
 
     @include mq($from: medium) {
       margin-bottom: 0px;
-    }
-
-    .heading-6 {
-      text-align: center;
     }
   }
 
@@ -178,7 +175,6 @@
   @extend %margins-vertical;
 
   background: rgba($color-secondary-light-blue, 0.15);
-  text-align: center;
 
   .section__inner {
     @extend %maximum-width;
@@ -198,12 +194,14 @@
   .fieldkit-services-header-bottom {
     margin: auto;
     max-width: 500px;
+    text-align: center;
   }
 }
 
 .section-product-fieldkit-services-header {
   margin: auto;
   max-width: 600px;
+  text-align: center;
 
   .product-fieldkit-services__text {
     font-size: 16px;
@@ -313,4 +311,8 @@
   @include mq($from: medium) {
     max-width: 350px;
   }
+}
+
+.section-product-partner-with-us__text {
+  margin-bottom: 1em;
 }
