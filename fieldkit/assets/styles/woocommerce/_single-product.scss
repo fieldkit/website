@@ -49,7 +49,7 @@
 }
 
 .summary__details .woocommerce-product-details__short-description {
-  margin-bottom: 32px;
+  margin-bottom: 0.5em;
 }
 
 .woocommerce div.product .summary__details form.cart div.quantity {
@@ -309,6 +309,10 @@
 }
 
 .product-type-composite .details.component_data {
+  .bundled_product_title.product_title {
+    @extend .heading-5;
+  }
+
   p,
   li {
     @extend .body--small;
@@ -316,5 +320,15 @@
 
   .woocommerce-Price-amount.amount {
     @extend .body;
+  }
+}
+
+.type-product table.variations {
+  tr td {
+    display: block;
+  }
+
+  a.reset_variations {
+    display: block;
   }
 }

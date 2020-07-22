@@ -720,7 +720,7 @@ body.overflow-hidden {
 .woocommerce-account .woocommerce-MyAccount-content .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .section-default-content__rich-text h5,
 .section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote, .wp-block-group .wp-block-group__inner-container h5,
 .wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote, .woocommerce div.product .woocommerce-tabs .panel h5,
-.woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title {
+.woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title, .product-type-composite .details.component_data .bundled_product_title.product_title {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -732,7 +732,7 @@ body.overflow-hidden {
     .woocommerce-account .woocommerce-MyAccount-content .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .section-default-content__rich-text h5,
     .section-default-content__rich-text .heading-5, .section-default-content__rich-text blockquote, .wp-block-group .wp-block-group__inner-container h5,
     .wp-block-group .wp-block-group__inner-container .heading-5, .wp-block-group .wp-block-group__inner-container blockquote, .woocommerce div.product .woocommerce-tabs .panel h5,
-    .woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title {
+    .woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title, .product-type-composite .details.component_data .bundled_product_title.product_title {
       font-size: 20px;
       line-height: 32px; } }
 
@@ -2626,7 +2626,7 @@ select {
   display: none; }
 
 .summary__details .woocommerce-product-details__short-description {
-  margin-bottom: 32px; }
+  margin-bottom: 0.5em; }
 
 .woocommerce div.product .summary__details form.cart div.quantity {
   margin: 0 16px 0 0; }
@@ -2764,6 +2764,12 @@ select {
   flex-direction: column; }
   .product-type-composite .full_width .columns-3 ul.component_option_thumbnails_container li.component_option_thumbnail_container {
     width: 100% !important; }
+
+.type-product table.variations tr td {
+  display: block; }
+
+.type-product table.variations a.reset_variations {
+  display: block; }
 
 .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
   background-color: #fcfcfc;
