@@ -3,7 +3,7 @@
 	<article>
 		<?php
 		$title = get_the_title();
-		$author = get_the_author_meta('user_nicename');
+		$author = get_the_author_meta('display_name', $featured_post->post_author);
 		$date = get_the_date();
 		$image = [
 			'ID' => get_post_thumbnail_id($featured_post->ID)
