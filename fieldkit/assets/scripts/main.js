@@ -22,3 +22,7 @@ $(".woocommerce-ordering--variant").each(
 $(".woocommerce-account").each(
   (index, element) => new WooCommerceAccount(element)
 );
+
+$(".woocommerce-loop-product__link img.wp-post-image").wrap(
+  "<div class='wp-post-image--container'></div>"
+);

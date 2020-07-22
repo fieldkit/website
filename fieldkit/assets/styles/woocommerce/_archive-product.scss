@@ -125,6 +125,26 @@ select {
 
 .woocommerce-page ul.products li.product {
   text-align: center;
+
+  a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
+    .wp-post-image--container {
+      background: white;
+      border: 1px solid $color-gray-3;
+      height: 0;
+      overflow: hidden;
+      padding-top: 591.44px / 1127.34px * 100%;
+      position: relative;
+
+      img.wp-post-image {
+        height: 100%;
+        left: 0;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
@@ -172,7 +192,16 @@ select {
 .menu-navbar--secondary ul {
   align-items: center;
   display: flex;
-  justify-content: center;
+  overflow-x: scroll;
+  padding-left: 20px;
+  white-space: nowrap;
+
+  @include mq($from: medium) {
+    justify-content: center;
+    overflow-x: initial;
+    padding-left: initial;
+    white-space: initial;
+  }
 
   .menu-item {
     padding: 36px 20px;
