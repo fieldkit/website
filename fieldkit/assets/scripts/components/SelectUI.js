@@ -4,10 +4,7 @@ class SelectUI {
   constructor(element) {
     this.$element = $(element);
     this.$select = this.$element.find("select");
-    console.log(this.$element[0].childNodes);
-    // this.$element[0].childNodes.forEach((element) => {
-    //   console.log(element.innerText);
-    // });
+
     this.renderDropdown();
     this.addListeners();
     this.$renderedDd = $(".rendered-dropdown");
@@ -15,6 +12,9 @@ class SelectUI {
   }
 
   addListeners() {
+    $(".rendered-dropdown")
+      .find("li")
+      .on("click", this.handleSelectVariant.bind(this));
     $(document).click((event) => {
       const $target = $(event.target);
       if (
@@ -49,7 +49,9 @@ class SelectUI {
       this.$element.find(".rendered-dropdown").append(renderLI);
 
       if (element.selected) {
-        $(".rendered-dropdown-selected").text(element.innerText);
+        $(".rendered-dropdown-selected").append(
+          "<span>Filter by: </span>" + element.innerText
+        );
       }
     });
 
@@ -57,7 +59,29 @@ class SelectUI {
   }
 
   handleSelect() {
-    this.$renderDdContainer.addClass("rendered-dropdown-container--open");
+    this.$renderDdContainer.toggleClass("rendered-dropdown-container--open");
+  }
+
+  handleSelectVariant(event) {
+    const value = $(event.target)[0].dataset.value;
+
+    this.handleURL("filter_module=", value);
+  }
+
+  handleURL(x1, x2) {
+    const rootURL = window.location.origin;
+    const pathUrl = window.location.pathname;
+    const x = window.location.search;
+    window.location.href = rootURL + pathUrl + "?" + x1 + x2;
+
+    const selectx = x.match(/(?<name>orderby=)(?<value>[a-zA-Z0-9_-]+)/);
+    if (selectx) {
+      console.log(selectx[0]);
+      window.location.href =
+        rootURL + pathUrl + "?" + selectx[0] + "&" + x1 + x2;
+    } else {
+      window.location.href = rootURL + pathUrl + "?" + x1 + x2;
+    }
   }
 }
 
