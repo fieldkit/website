@@ -141,7 +141,7 @@
 			<div class="section-home-text-and-image-1__text">
 				<div class="rich-text">
 					<h2 class="heading-3"><?php echo $heading; ?></h2>
-					<?php echo $body; ?>
+					<p class="heading-5"><?php echo $body; ?></p>
 				</div>
 				<?php
 				if ($link) {
@@ -191,7 +191,7 @@
 			<div class="section-home-text-and-image-2__text">
 				<div class="rich-text">
 					<h2 class="heading-3"><?php echo $heading; ?></h2>
-					<?php echo $body; ?>
+					<p class="heading-5"><?php echo $body; ?></p>
 				</div>
 				<?php
 				if ($link) {
