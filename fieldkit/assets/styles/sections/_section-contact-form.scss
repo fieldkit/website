@@ -7,6 +7,20 @@
     margin-bottom: 147px;
   }
 
+  .section-contact-form__heading {
+    margin-bottom: 0;
+    text-align: center;
+
+    @include mq($from: medium) {
+      margin-bottom: 70px;
+      margin-top: 50px;
+    }
+
+    .heading-2 {
+      margin-bottom: 10px;
+    }
+  }
+
   .text-input,
   .wpcf7 input[type="email"],
   .wpcf7 input[type="text"],
@@ -18,5 +32,51 @@
   .wpcf7 input[type="submit"] {
     @extend .button;
     @extend .button--primary;
+
+    margin-top: 14px;
+    max-width: 100%;
+    width: 100%;
+
+    @include mq($from: medium) {
+      width: auto;
+    }
+  }
+
+  .wpcf7-form {
+    .text-input-required {
+      color: $color-primary-dark-blue;
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: normal;
+      text-align: center;
+
+      @include mq($from: medium) {
+        text-align: right;
+      }
+    }
+
+    .wpcf7-response-output {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      padding: 12px 15px;
+    }
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    background-color: #3f8530;
+    border: none;
+    color: #ffffff;
+
+    &::before {
+      background-image: url(./assets/icons/icon-check.svg);
+      content: "";
+      display: inline-block;
+      height: 18px;
+      margin-right: 15px;
+      vertical-align: middle;
+      width: 22px;
+    }
   }
 }

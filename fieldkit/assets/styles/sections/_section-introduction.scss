@@ -2,17 +2,25 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
+  margin-top: 118px;
+
   .section__inner {
     @extend %inset-width;
   }
 }
 
 .section-introduction__header {
+  @extend %inset-width;
+
   text-align: center;
 }
 
 .section-introduction__image {
-  margin-top: $margin-top * 2;
+  margin-top: 102px;
+
+  @include mq($from: medium) {
+    margin-top: 198px;
+  }
 
   img {
     display: block;
@@ -22,11 +30,10 @@
 }
 
 .section-introduction__text {
-  @extend %inset-width;
-
-  margin-top: $margin-top * 2;
+  margin-top: 73px;
 
   @include mq($from: medium) {
     column-count: 2;
+    margin-top: 154px;
   }
 }

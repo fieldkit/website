@@ -67,7 +67,7 @@
 						</div>
 						<div class="section-how-it-works-step-by-step__item-text rich-text">
 							<h2 class="heading-3"><?php echo $heading; ?></h2>
-							<div class="section-how-it-works-step-by-step__item-time"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-timer.png" alt=""><?php echo $time; ?></div>
+							<div class="section-how-it-works-step-by-step__item-time"><img src="<?php echo get_template_directory_uri(); ?>/assets/icons/icon-timer.svg" alt=""><?php echo $time; ?></div>
 							<?php echo $body; ?>
 						</div>
 					</li>

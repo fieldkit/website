@@ -2,11 +2,7 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
-  margin-bottom: 40px;
-
-  @include mq($from: medium) {
-    margin-bottom: 80px;
-  }
+  margin-bottom: 35px;
 
   .section__inner {
     @extend %inset-width;
@@ -16,5 +12,6 @@
 }
 
 .section-post-header__date {
+  color: $color-gray-5;
   margin-top: 0.5em;
 }

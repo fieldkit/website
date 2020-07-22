@@ -54,8 +54,12 @@ div.wpcf7 {
 span.wpcf7-list-item {
   display: block;
   margin: 16px auto 0;
-  max-width: 200px;
+  max-width: 220px;
   width: 100%;
+
+  @include mq($from: medium) {
+    max-width: 200px;
+  }
 
   &:first-child {
     margin-top: 0;
@@ -122,4 +126,20 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   color: #ffffff;
   font-size: 18px;
   padding-left: 42px;
+}
+
+.wpcf7-form-control-wrap.role {
+  margin-top: 50px;
+
+  @include mq($from: medium) {
+    margin-top: 60px;
+  }
+}
+
+.wpcf7-form-control-wrap.how-can-we-help {
+  margin-top: 30px;
+
+  @include mq($from: medium) {
+    margin-top: 40px;
+  }
 }

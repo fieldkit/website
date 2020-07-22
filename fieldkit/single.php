@@ -3,18 +3,24 @@
 	<article>
 		<?php
 		$title = get_the_title();
-		$author = get_the_author_meta('user_nicename');
+		$author = get_the_author_meta('display_name', $featured_post->post_author);
 		$date = get_the_date();
+		$image = [
+			'ID' => get_post_thumbnail_id($featured_post->ID)
+		];
 		?>
 		<header class="section section-post-header">
 			<div class="section__inner">
-				<h1 class="heading-1"><?php echo $title; ?></h1>
+				<h1 class="heading-3"><?php echo $title; ?></h1>
 				<div class="section-post-header__date"><?php echo $date; ?> | <?php echo $author; ?></div>
 			</div>
 		</header>
 
 		<section class="section section-post-main">
 			<div class="section__inner">
+				<div class="section-post-main__featured-image">
+					<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+				</div>
 				<div class="rich-text"><?php the_content(); ?></div>
 			</div>
 		</section>
