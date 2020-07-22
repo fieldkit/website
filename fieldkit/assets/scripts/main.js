@@ -27,6 +27,6 @@ $(".woocommerce-loop-product__link img").wrap(
   "<div class='wp-post-image--container'></div>"
 );
 
-// $("form.woocommerce-widget-layered-nav-dropdown").each(
-//   (index, element) => new SelectUI(element)
-// );
+$("form.woocommerce-widget-layered-nav-dropdown").each(
+  (index, element) => new SelectUI(element)
+);
