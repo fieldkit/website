@@ -2917,6 +2917,10 @@ select {
   .component_option_thumbnail.selected .component_option_thumbnail_select::after {
     color: #ce596b !important; }
 
+li.component_option_thumbnail_container {
+  border-bottom: solid 1px #d8dce0;
+  padding-bottom: 1.5em !important; }
+
 .composite_form.small_width .composite_navigation.top,
 .composite_form .composite_navigation.movable.paged.standard {
   display: none !important; }
@@ -2956,6 +2960,10 @@ select {
   border-bottom: solid 1px #d8dce0 !important;
   border-radius: 0;
   padding: 10px 40px 2px 0 !important; }
+
+.product-type-composite .composite_navigation.paged.bottom .composite_navigation_inner {
+  padding: 0;
+  padding-top: 1em; }
 
 .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
   background-color: #fcfcfc;
