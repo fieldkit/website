@@ -162,8 +162,8 @@
   }
 
   .woocommerce-error {
-    background: $color-primary-red;
-    border-top-color: $color-primary-red;
+    background: $color-tertary-red;
+    border-top: none;
 
     li {
       color: $color-background;
