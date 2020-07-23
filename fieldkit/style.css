@@ -682,7 +682,7 @@ body.overflow-hidden {
       font-size: 24px; } }
 
 .heading-5, .rich-text h5,
-.rich-text .heading-5, .rich-text blockquote p {
+.rich-text .heading-5, .rich-text blockquote p, .section-home-text-and-image-1__text p, .section-home-text-and-image-2__text p {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -690,7 +690,7 @@ body.overflow-hidden {
   line-height: normal; }
   @media (min-width: 50em) {
     .heading-5, .rich-text h5,
-    .rich-text .heading-5, .rich-text blockquote p {
+    .rich-text .heading-5, .rich-text blockquote p, .section-home-text-and-image-1__text p, .section-home-text-and-image-2__text p {
       font-size: 20px; } }
 
 .heading-6, .rich-text h6,
@@ -2016,8 +2016,9 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .section-home-text-and-image-1__text {
     width: calc(50% - 28px); } }
 
-.section-home-text-and-image-1__text .heading-5, .section-home-text-and-image-1__text .rich-text h5, .rich-text .section-home-text-and-image-1__text h5, .section-home-text-and-image-1__text .rich-text blockquote p, .rich-text blockquote .section-home-text-and-image-1__text p {
-  font-weight: 400; }
+.section-home-text-and-image-1__text p {
+  font-weight: 400;
+  margin-top: 1em; }
 
 .section-home-text-and-image-1__link {
   margin-top: 1em; }
@@ -2048,8 +2049,9 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .section-home-text-and-image-2__text {
     width: calc(50% - 28px); } }
 
-.section-home-text-and-image-2__text .heading-5, .section-home-text-and-image-2__text .rich-text h5, .rich-text .section-home-text-and-image-2__text h5, .section-home-text-and-image-2__text .rich-text blockquote p, .rich-text blockquote .section-home-text-and-image-2__text p {
-  font-weight: 400; }
+.section-home-text-and-image-2__text p {
+  font-weight: 400;
+  margin-top: 1em; }
 
 .section-home-text-and-image-2__link {
   margin-top: 1em; }
