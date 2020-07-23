@@ -1,9 +1,4 @@
 <?php
-$id = get_option( 'woocommerce_shop_page_id' );
-$products_text_and_image_1 = get_field('products_text_and_image_1', $id);
-$product_grid_text = get_field('product_grid_text', $id);
-$services_grid_text = get_field('services_grid_text', $id);
-$products_text_and_image_2 = get_field('products_text_and_image_2', $id);
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *
@@ -22,6 +17,12 @@ $products_text_and_image_2 = get_field('products_text_and_image_2', $id);
 
 defined( 'ABSPATH' ) || exit;
 
+$id = get_option( 'woocommerce_shop_page_id' );
+$products_text_and_image_1 = get_field('products_text_and_image_1', $id);
+$product_grid_text = get_field('product_grid_text', $id);
+$services_grid_text = get_field('services_grid_text', $id);
+$products_text_and_image_2 = get_field('products_text_and_image_2', $id);
+
 get_header( 'shop' );
 
 /**
@@ -32,16 +33,16 @@ get_header( 'shop' );
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 do_action( 'woocommerce_before_main_content' );
-
 ?>
+
 <?php
-	$header = $products_text_and_image_1['header'];
-	$heading = $products_text_and_image_1['heading'];
-	$body = $products_text_and_image_1['body'];
-	$link1 = $products_text_and_image_1['link_1'];
-	$link2 = $products_text_and_image_1['link_2'];
-	$image = $products_text_and_image_1['image'];
-	$background_image = $products_text_and_image_1['background_image']['url'];
+$header = $products_text_and_image_1['header'];
+$heading = $products_text_and_image_1['heading'];
+$body = $products_text_and_image_1['body'];
+$link1 = $products_text_and_image_1['link_1'];
+$link2 = $products_text_and_image_1['link_2'];
+$image = $products_text_and_image_1['image'];
+$background_image = $products_text_and_image_1['background_image']['url'];
 ?>
 <section class="section section-product-services" style="background-image: url('<?php echo $background_image; ?>')">
 	<div class="section__inner">
@@ -50,7 +51,7 @@ do_action( 'woocommerce_before_main_content' );
 			<div class="section-product-services__text">
 				<div class="rich-text">
 					<h2 class="heading-2"><?php echo $heading; ?></h2>
-					<h4 class="heading-4"><?php echo $body; ?></h4>
+					<p><?php echo $body; ?></p>
 				</div>
 				<div class="section-product-services__buttons">
 					<a href="<?php echo $link1['url']; ?>" class="product-services-button disable-woo-button button--primary"><?php echo $link1['title']; ?></a>
@@ -64,53 +65,50 @@ do_action( 'woocommerce_before_main_content' );
 	</div>
 </section>
 
-
 <?php
-	$heading = $product_grid_text['heading'];
-	$body = $product_grid_text['body'];
-	$items = $product_grid_text['items'];
+$heading = $product_grid_text['heading'];
+$body = $product_grid_text['body'];
+$items = $product_grid_text['items'];
 ?>
-<section class="section section-product-fieldkit-packages">
+<section class="section section-product-fieldkit-packages" id="packages">
 	<div class="section__inner">
-		<div class="section-product-fieldkit-packages-header">
+		<div class="section-product-fieldkit-packages-header rich-text">
 			<h3 class="heading-3"><?php echo $heading; ?></h3>
-			<div class="section-product-fieldkit-packages__text">
-			<?php echo $body; ?>
-			</div>
+			<p><?php echo $body; ?></p>
 		</div>
 		<div class="section-product-fieldkit-packages__products">
 			<?php
-				foreach($items as $post) :
-					setup_postdata($post);
-					$image = [
-						'ID' => get_post_thumbnail_id()
-					];
-					$heading = get_the_title();
-					$body = get_the_excerpt();
-					$link = [
-						title => 'Learn More',
-						url => get_the_permalink(),
-					];
+			foreach($items as $post) :
+				setup_postdata($post);
+				$image = [
+					'ID' => get_post_thumbnail_id()
+				];
+				$heading = get_the_title();
+				$link = [
+					title => 'View Product',
+					url => get_the_permalink(),
+				];
 			?>
-			<div class="product-fieldkit-packages__products-item">
-				<div class="rich-text">
-					<h2 class="heading-6"><?php echo $heading; ?></h2>
-					<p><?php echo $body; ?></p>
-				</div>
-				<div class="product-fieldkit-packages__products-item-image">
-					<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
-				</div>
-				<?php if ($link) :
-					$link['class_name'] = 'disable-woo-button button--primary';
-					?>
-					<div class="product-fieldkit-packages__products-button">
-						<?php
-						set_query_var('link', $link);
-						get_template_part('template-parts/utilities/link');
-						?>
+				<div class="product-fieldkit-packages__products-item">
+					<div class="rich-text">
+						<h2 class="heading-6"><?php echo $heading; ?></h2>
+						<p>(Available Soon)</p>
 					</div>
-				<?php endif; ?>
-			</div>
+					<div class="product-fieldkit-packages__products-item-image">
+						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+					</div>
+					<?php
+					if ($link) :
+						$link['class_name'] = 'disable-woo-button button--primary';
+					?>
+						<div class="product-fieldkit-packages__products-button">
+							<?php
+							set_query_var('link', $link);
+							get_template_part('template-parts/utilities/link');
+							?>
+						</div>
+					<?php endif; ?>
+				</div>
 			<?php
 			endforeach;
 			wp_reset_postdata();
@@ -120,40 +118,43 @@ do_action( 'woocommerce_before_main_content' );
 </section>
 
 <?php
-	$heading = $services_grid_text['heading'];
-	$body = $services_grid_text['body'];
-	$services_list = $services_grid_text['services_list'];
-	$heading_2 = $services_grid_text['heading_2'];
-	$link = $services_grid_text['link'];
+$heading = $services_grid_text['heading'];
+$body = $services_grid_text['body'];
+$services_list = $services_grid_text['services_list'];
+$heading_2 = $services_grid_text['heading_2'];
+$link = $services_grid_text['link'];
 ?>
-<section class="section section-product-fieldkit-services">
+<section class="section section-product-fieldkit-services" id="services">
 	<div class="section__inner">
-		<div class="section-product-fieldkit-services-header">
+		<header class="section-product-fieldkit-services-header rich-text">
 			<h2 class="heading-2"><?php echo $heading; ?></h2>
-			<div class="product-fieldkit-services__text"><?php echo $body; ?></div>
-		</div>
+			<p><?php echo $body; ?></p>
+		</header>
 		<ul class="product-fieldkit-services__list">
-			<?php foreach ($services_list as $item) :
+			<?php
+			foreach ($services_list as $item) :
 				$title = $item['title'];
 				$text = $item['text'];
 			?>
-			<li>
-				<h3 class="heading-3"><?php echo $title; ?></h3>
-				<div class="product-fieldkit-services__list-text"><?php echo $text; ?></div>
-			</li>
+				<li class="rich-text">
+					<h3 class="heading-3"><?php echo $title; ?></h3>
+					<p><?php echo $text; ?></p>
+				</li>
 			<?php endforeach; ?>
 		</ul>
-		<h3 class="heading-3 fieldkit-services-header-bottom"><?php echo $heading_2; ?></h3>
-		<a href="<?php echo $link['url']; ?>" class="disable-woo-button button--primary"><?php echo $link['title']; ?></a>
+		<footer class="fieldkit-services-header-bottom">
+			<h3 class="heading-3"><?php echo $heading_2; ?></h3>
+			<a href="<?php echo $link['url']; ?>" class="disable-woo-button button--primary"><?php echo $link['title']; ?></a>
+		</footer>
 	</div>
 </section>
 
 
 <?php
-	$heading = $products_text_and_image_2['heading'];
-	$body = $products_text_and_image_2['body'];
-	$link = $products_text_and_image_2['link'];
-	$image = $products_text_and_image_2['image'];
+$heading = $products_text_and_image_2['heading'];
+$body = $products_text_and_image_2['body'];
+$link = $products_text_and_image_2['link'];
+$image = $products_text_and_image_2['image'];
 ?>
 <section class="section section-product-partner-with-us">
 	<div class="section__inner">
@@ -164,20 +165,21 @@ do_action( 'woocommerce_before_main_content' );
 			<div class="section-product-partner-with-us__info">
 				<h3 class="heading-3"><?php echo $heading; ?></h3>
 				<div class="section-product-partner-with-us__text">
-				<?php echo $body; ?>
+					<?php echo $body; ?>
 				</div>
-				<a href="<?php echo $link['url']; ?>" class="button--link"><?php echo $link['title']; ?></a>
+				<a href="<?php echo $link['url']; ?>" class="link link--large"><?php echo $link['title']; ?></a>
 			</div>
 		</div>
 	</div>
 </section>
+
 <?php
-		/**
-		 * Hook: woocommerce_after_main_content.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-		?>
+/**
+ * Hook: woocommerce_after_main_content.
+ *
+ * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+ */
+do_action( 'woocommerce_after_main_content' );
+?>
 <?php
 get_footer( 'shop' );
