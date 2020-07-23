@@ -30,7 +30,14 @@ select {
 
 .woocommerce-products {
   @extend %margins-horizontal;
-  @extend %margins-vertical;
+
+  margin-bottom: 38px;
+  margin-top: 64px;
+
+  @include mq($from: medium) {
+    margin-bottom: 188px;
+    margin-top: 55px;
+  }
 
   li.woocommerce-widget-layered-nav {
     align-items: center;
@@ -122,22 +129,52 @@ select {
     }
   }
 
+<<<<<<< HEAD
+  .woocommerce-ordering,
+  .woocommerce-ordering select {
+    width: 100%;
+
+    @include mq($from: medium) {
+      width: auto;
+    }
+  }
+
+  .woocommerce-ordering {
+=======
   form.woocommerce-ordering {
+>>>>>>> 1278420f81d1a43c4e604fddd1c3a2088797deaf
     position: relative;
 
     &::before {
       background-color: transparent;
+<<<<<<< HEAD
+      border-bottom: 1px solid #2c3e50;
+      border-left: 1px solid #2c3e50;
+      border-width: 0px 0px 1px 1px;
+=======
       border-bottom: 1px solid $color-primary-dark-blue;
       border-left: 1px solid $color-primary-dark-blue;
       border-width: 0px 0px 2px 2px;
+>>>>>>> 1278420f81d1a43c4e604fddd1c3a2088797deaf
       content: "";
       display: block;
       height: 10px;
       position: absolute;
+<<<<<<< HEAD
+      right: 12px;
+      top: 24px;
+      transform: translateY(-100%) rotate(-45deg);
+      width: 10px;
+
+      @include mq($from: medium) {
+        display: none;
+      }
+=======
       right: 10px;
       top: 20px;
       transform: translateY(-70%) rotate(-45deg);
       width: 10px;
+>>>>>>> 1278420f81d1a43c4e604fddd1c3a2088797deaf
     }
   }
 }
@@ -167,6 +204,10 @@ select {
         width: 100%;
       }
     }
+  }
+
+  .pre_order_loop {
+    @extend .body;
   }
 }
 
@@ -198,6 +239,19 @@ select {
   color: #0a67aa;
   font-size: 20px;
   margin-bottom: 0.5em;
+
+  .from {
+    @extend .body;
+
+    color: #0a67aa;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  ins {
+    font-weight: 400;
+    text-decoration: none;
+  }
 }
 
 .woocommerce ul.products li.product .button {
@@ -242,6 +296,7 @@ select {
   li.current-menu-item {
     a {
       border-bottom: 1px solid $color-primary-dark-blue;
+      font-weight: 900;
     }
   }
 }
