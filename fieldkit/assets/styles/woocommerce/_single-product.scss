@@ -62,11 +62,17 @@
     height: 45px;
     padding-left: 14px;
     text-align: center;
-    width: 45px;
+    width: 50px;
 
     @include mq($from: medium) {
-      padding-left: 18px;
+      padding-left: 12px;
     }
+  }
+}
+
+.single-product {
+  .woocommerce-notices-wrapper {
+    @extend %inset-width;
   }
 }
 
