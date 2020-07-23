@@ -3607,6 +3607,42 @@ li.component_option_thumbnail_container {
   .woocommerce-checkout .col-2 {
     margin-top: 3em; } }
 
+.side-nav .menu-account-container .menu li {
+  border: 0px;
+  font-size: 14px;
+  padding: 0px;
+  text-align: left; }
+
+@media (min-width: 50em) {
+  .side-nav.woocommerce-account--login-register-parent .menu-account-container {
+    position: relative; }
+    .side-nav.woocommerce-account--login-register-parent .menu-account-container .menu {
+      border: 1px solid #d8dce0;
+      border-radius: 2px;
+      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.11);
+      padding: 10px 15px;
+      position: absolute;
+      right: -20px;
+      top: 15px; }
+      .side-nav.woocommerce-account--login-register-parent .menu-account-container .menu::before {
+        background: #ffffff;
+        border-bottom: 1px solid #d8dce0;
+        border-left: 1px solid #d8dce0;
+        border-width: 0px 0px 1px 1px;
+        content: "";
+        display: block;
+        height: 15px;
+        position: absolute;
+        right: 20px;
+        top: -9px;
+        transform: rotate(135deg);
+        width: 15px;
+        z-index: 1; }
+      .side-nav.woocommerce-account--login-register-parent .menu-account-container .menu li {
+        font-size: 14px;
+        line-height: 1.79;
+        text-transform: uppercase; } }
+
 @media (min-width: 50em) {
   .side-nav .menu-account-container {
     opacity: 0;
@@ -3626,42 +3662,6 @@ li.component_option_thumbnail_container {
     @media screen and (min-width: 50em) and (prefers-reduced-motion: reduce) {
       .site-login-register-open .side-nav .menu-account-container {
         transition: none; } }
-
-.woocommerce-account .menu-account-container .menu li {
-  border: 0px;
-  font-size: 14px;
-  padding: 0px;
-  text-align: left; }
-
-@media (min-width: 50em) {
-  .woocommerce-account.woocommerce-account--login-register-parent .menu-account-container {
-    position: relative; }
-    .woocommerce-account.woocommerce-account--login-register-parent .menu-account-container .menu {
-      border: 1px solid #d8dce0;
-      border-radius: 2px;
-      box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.11);
-      padding: 10px 15px;
-      position: absolute;
-      right: -20px;
-      top: 15px; }
-      .woocommerce-account.woocommerce-account--login-register-parent .menu-account-container .menu::before {
-        background: #ffffff;
-        border-bottom: 1px solid #d8dce0;
-        border-left: 1px solid #d8dce0;
-        border-width: 0px 0px 1px 1px;
-        content: "";
-        display: block;
-        height: 15px;
-        position: absolute;
-        right: 20px;
-        top: -9px;
-        transform: rotate(135deg);
-        width: 15px;
-        z-index: 1; }
-      .woocommerce-account.woocommerce-account--login-register-parent .menu-account-container .menu li {
-        font-size: 14px;
-        line-height: 1.79;
-        text-transform: uppercase; } }
 
 .woocommerce-account #customer_login > div {
   display: none; }

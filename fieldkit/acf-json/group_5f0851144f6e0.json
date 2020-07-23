@@ -304,7 +304,7 @@
                     "name": "body",
                     "type": "wysiwyg",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -378,5 +378,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1595541008
+    "modified": 1595546025
 }

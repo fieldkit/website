@@ -1,28 +1,4 @@
-@include mq($from: medium) {
-  .side-nav .menu-account-container {
-    opacity: 0;
-    position: absolute;
-    transform: translateY(100%);
-    transition: opacity $duration-fast, visibility 0s $duration-fast;
-    visibility: hidden;
-
-    @media screen and (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-
-    .site-login-register-open & {
-      opacity: 1;
-      transition: opacity $duration-fast, visibility 0s;
-      visibility: visible;
-
-      @media screen and (prefers-reduced-motion: reduce) {
-        transition: none;
-      }
-    }
-  }
-}
-
-.woocommerce-account {
+.side-nav {
   .menu-account-container .menu {
     li {
       border: 0px;
@@ -71,7 +47,33 @@
       }
     }
   }
+}
 
+@include mq($from: medium) {
+  .side-nav .menu-account-container {
+    opacity: 0;
+    position: absolute;
+    transform: translateY(100%);
+    transition: opacity $duration-fast, visibility 0s $duration-fast;
+    visibility: hidden;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+
+    .site-login-register-open & {
+      opacity: 1;
+      transition: opacity $duration-fast, visibility 0s;
+      visibility: visible;
+
+      @media screen and (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+}
+
+.woocommerce-account {
   #customer_login {
     > div {
       display: none;
