@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-class SelectUI {
+class FilterDropdown {
   constructor(element) {
     this.$element = $(element);
     this.$select = this.$element.find("select");
@@ -85,4 +85,4 @@ class SelectUI {
   }
 }
 
-export default SelectUI;
+export default FilterDropdown;
