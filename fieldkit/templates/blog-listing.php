@@ -39,7 +39,7 @@
 					<div class="section-blog-listing-featured-post__teaser-excerpt"><?php echo $excerpt; ?></div>
 					<?php
 					if ($link) {
-						$link['class_name'] = 'button button--link section-blog-listing-featured-post__teaser-link';
+						$link['class_name'] = 'link link--large section-blog-listing-featured-post__teaser-link';
 						set_query_var('link', $link);
 						get_template_part('template-parts/utilities/link');
 					}
@@ -95,7 +95,7 @@
 				</ul>
 				<?php if ($latest_posts->found_posts > 3) : ?>
 					<div class="section-blog-post-feed__load-more">
-						<button class="button button--link action-load-more">Load more</button>
+						<button class="link link--large action-load-more">Load more</button>
 					</div>
 				<?php endif; ?>
 			</div>
