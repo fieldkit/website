@@ -61,6 +61,20 @@
     }
   }
 
+  .woocommerce-form-login-toggle {
+    .woocommerce-info {
+      background: $color-primary-dark-blue;
+      border-top: 0px;
+      color: $color-background;
+      padding: 18px 33px;
+      text-transform: uppercase;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
   table.shop_table {
     border: 0px;
 
@@ -86,6 +100,19 @@
 
   #customer_details {
     margin-bottom: 74px;
+
+    .form-row .required {
+      color: $color-gray-5;
+    }
+
+    .form-row.woocommerce-invalid input.input-text {
+      border-color: $color-tertary-red;
+    }
+
+    .form-row.woocommerce-invalid label,
+    .form-row.woocommerce-invalid .required {
+      color: $color-tertary-red;
+    }
   }
 
   #payment {
