@@ -27,7 +27,7 @@ $header = get_field('header', 'option');
 					<ul>
 						<li> <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"
 						title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a></li>
-						<li><a href="<?php echo wp_logout_url(); ?>">Logout</a></li>
+						<li><a href="<?php echo wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ); ?>">Logout</a></li>
 					</ul>
 					<?php endif; ?>
 					</div>
