@@ -323,3 +323,46 @@
     width: 10px;
   }
 }
+
+.woocommerce-Tabs-panel--custom-additional-information {
+  section.section-table {
+    background: $color-background;
+    padding: 0px;
+
+    @include mq($from: medium) {
+      padding: 28px;
+    }
+
+    .section__inner {
+      width: 100%;
+
+      @include mq($from: medium) {
+        padding-right: 10%;
+      }
+    }
+  }
+
+  table.section-table__table {
+    tr {
+      border-bottom: 1px solid $color-gray-3;
+      border-top: 1px solid $color-gray-3;
+    }
+
+    td {
+      font-size: 14px;
+      font-weight: 500;
+      padding-bottom: 13px;
+      padding-top: 13px;
+
+      &:first-child {
+        display: inline-block;
+        font-weight: 900;
+        width: 145px;
+      }
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+}
