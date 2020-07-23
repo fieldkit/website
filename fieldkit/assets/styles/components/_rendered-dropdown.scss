@@ -1,3 +1,11 @@
+.woocommerce-widget-layered-nav-dropdown {
+  width: 100%;
+
+  @include mq($from: medium) {
+    width: auto;
+  }
+}
+
 .rendered-dropdown-container {
   background: $color-background;
   border: 1px solid $color-gray-3;

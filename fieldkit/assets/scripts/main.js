@@ -6,7 +6,7 @@ import SiteHeader from "./components/SiteHeader";
 import TextInputContainer from "./components/TextInputContainer";
 import SortDropdown from "./components/SortDropdown";
 import WooCommerceAccount from "./components/WooCommerceAccount";
-import SelectUI from "./components/SelectUI";
+import FilterDropdown from "./components/FilterDropdown";
 $(".site-header").each((index, element) => new SiteHeader(element));
 $(".load-more").each((index, element) => new LoadMore(element));
 $(".text-input-container").each(
@@ -28,5 +28,5 @@ $(".woocommerce-loop-product__link img").wrap(
 );
 
 $("form.woocommerce-widget-layered-nav-dropdown").each(
-  (index, element) => new SelectUI(element)
+  (index, element) => new FilterDropdown(element)
 );
