@@ -139,10 +139,8 @@
 	<section class="section section-home-text-and-image-1">
 		<div class="section__inner">
 			<div class="section-home-text-and-image-1__text">
-				<div class="rich-text">
-					<h2 class="heading-3"><?php echo $heading; ?></h2>
-					<?php echo $body; ?>
-				</div>
+				<h2 class="heading-3"><?php echo $heading; ?></h2>
+				<?php echo $body; ?>
 				<?php
 				if ($link) {
 					$link['class_name'] = 'link link--large section-home-text-and-image-1__link';
@@ -189,10 +187,8 @@
 	<section class="section section-home-text-and-image-2">
 		<div class="section__inner section__inner--inset">
 			<div class="section-home-text-and-image-2__text">
-				<div class="rich-text">
-					<h2 class="heading-3"><?php echo $heading; ?></h2>
-					<?php echo $body; ?>
-				</div>
+				<h2 class="heading-3"><?php echo $heading; ?></h2>
+				<?php echo $body; ?>
 				<?php
 				if ($link) {
 					$link['class_name'] = 'link link--large section-home-text-and-image-2__link';

@@ -26,6 +26,13 @@
   @include mq($from: medium) {
     width: calc(50% - #{$margin-left-medium / 2});
   }
+
+  p {
+    @extend .heading-5;
+
+    font-weight: 400;
+    margin-top: 1em;
+  }
 }
 
 .section-home-text-and-image-1__link {
