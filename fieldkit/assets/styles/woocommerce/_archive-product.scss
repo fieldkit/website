@@ -154,10 +154,6 @@ select {
       top: 24px;
       transform: translateY(-100%) rotate(-45deg);
       width: 10px;
-
-      @include mq($from: medium) {
-        display: none;
-      }
     }
   }
 }
