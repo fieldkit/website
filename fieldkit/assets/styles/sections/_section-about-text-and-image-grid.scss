@@ -13,6 +13,14 @@
 .section-about-text-and-image-grid__header {
   margin-bottom: 100px;
   text-align: center;
+
+  p {
+    font-size: 18px;
+
+    @include mq($from: medium) {
+      font-size: 24px;
+    }
+  }
 }
 
 .section-about-text-and-image-grid__item {
@@ -24,8 +32,17 @@
   }
 
   .section-about-text-and-image-grid__item-text {
+    p {
+      font-size: 18px;
+      line-height: normal;
+    }
+
     @include mq($from: medium) {
       width: 50%;
+
+      p {
+        font-size: 20px;
+      }
     }
   }
 

@@ -36,7 +36,7 @@
 				?>
 					<li class="section-about-text-and-image-grid__item">
 						<div class="section-about-text-and-image-grid__item-text rich-text">
-							<h2 class="heading-2"><?php echo $heading; ?></h2>
+							<h3 class="heading-3"><?php echo $heading; ?></h3>
 							<?php echo $body; ?>
 						</div>
 						<div class="section-about-text-and-image-grid__item-image">
