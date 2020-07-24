@@ -188,23 +188,6 @@
     font-size: 14px;
   }
 
-  .woocommerce-error {
-    background: $color-tertary-red;
-    border-top: none;
-
-    li {
-      color: $color-background;
-
-      &::before {
-        content: none;
-      }
-    }
-
-    &::before {
-      content: none;
-    }
-  }
-
   .woocommerce-billing-fields .heading-4,
   .heading-4 {
     font-weight: 500;
@@ -221,5 +204,22 @@
     @include mq($until: medium) {
       margin-top: 3em;
     }
+  }
+}
+
+.woocommerce .woocommerce-error {
+  background: $color-tertary-red;
+  border-top: none;
+
+  li {
+    color: $color-background;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &::before {
+    content: none;
   }
 }
