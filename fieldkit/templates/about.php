@@ -56,7 +56,7 @@
 	<section class="section section-about-values">
 		<div class="section__inner section__inner--inset">
 			<header class="section-about-values__header">
-				<h2 class="heading-3"><?php echo $header_heading; ?></h2>
+				<h3 class="heading-3"><?php echo $header_heading; ?></h3>
 			</header>
 			<ul class="section-about-values__list">
 				<?php
@@ -68,7 +68,7 @@
 						<div class="section-about-values__icon">
 							<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
 						</div>
-						<h3 class="heading-4"><?php echo $text; ?><h3>
+						<h4 class="heading-4"><?php echo $text; ?></h4>
 					</li>
 				<?php endforeach; ?>
 			</ul>

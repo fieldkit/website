@@ -10,6 +10,12 @@
 .section-about-values__header {
   margin-bottom: 52px;
   text-align: center;
+
+  .heading-3 {
+    @include mq($until: medium) {
+      font-size: 24px;
+    }
+  }
 }
 
 .section-about-values__list {
@@ -45,8 +51,17 @@
     margin-bottom: 0px;
   }
 
+  .heading-3 {
+    font-size: 20px;
+  }
+
   .heading-4 {
+    font-size: 20px;
     font-weight: 700;
+
+    @include mq($from: medium) {
+      font-size: 24px;
+    }
   }
 }
 
