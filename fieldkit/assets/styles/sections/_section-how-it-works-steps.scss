@@ -46,13 +46,11 @@
 .section-how-it-works-steps__item-text {
   grid-area: info;
 
-  @include mq($until: medium) {
-    .heading-2 {
-      font-size: 22px;
-    }
+  p {
+    font-size: 18px;
 
-    p {
-      font-size: 18px;
+    @include mq($from: medium) {
+      font-size: 20px;
     }
   }
 }
