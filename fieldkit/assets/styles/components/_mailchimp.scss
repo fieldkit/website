@@ -6,15 +6,26 @@
 
 #mc_embed_signup_scroll {
   display: flex;
+  flex-direction: column;
+
+  @include mq($from: medium) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
 }
 
 .mc-field-group input[type="email"] {
   @extend .textarea-input;
 
   background-color: #ffffff;
-  border-bottom-right-radius: 0;
-  border-right: none;
-  border-top-right-radius: 0;
+  margin-bottom: 11px;
+  width: 100%;
+
+  @include mq($from: medium) {
+    border-bottom-right-radius: 0;
+    border-right: none;
+    border-top-right-radius: 0;
+  }
 
   @include mq($from: large) {
     min-width: 240px;
