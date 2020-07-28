@@ -22,11 +22,11 @@
 }
 
 .body--large {
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 25px;
 
   @include mq($from: medium) {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 27px;
   }
 }

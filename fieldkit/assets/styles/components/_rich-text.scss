@@ -113,14 +113,16 @@
   }
 }
 
-.rich-text--heading-4 {
+.rich-text--small {
   p {
-    @extend .heading-4;
+    @extend .body;
+    @extend .body--small;
   }
 }
 
-.rich-text--heading-5 {
+.rich-text--large {
   p {
-    @extend .heading-5;
+    @extend .body;
+    @extend .body--large;
   }
 }

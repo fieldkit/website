@@ -23,7 +23,7 @@
 	?>
 	<section class="section section-about-text-and-image-grid">
 		<div class="section__inner">
-			<header class="section-about-text-and-image-grid__header rich-text rich-text--heading-4">
+			<header class="section-about-text-and-image-grid__header rich-text rich-text--large">
 				<h2 class="heading-2"><?php echo $header_heading; ?></h2>
 				<?php echo $header_body; ?>
 			</header>
@@ -35,7 +35,7 @@
 					$image = $item['image'];
 				?>
 					<li class="section-about-text-and-image-grid__item">
-						<div class="section-about-text-and-image-grid__item-text rich-text rich-text--heading-5">
+						<div class="section-about-text-and-image-grid__item-text rich-text rich-text--large">
 							<h3 class="heading-3"><?php echo $heading; ?></h3>
 							<?php echo $body; ?>
 						</div>
