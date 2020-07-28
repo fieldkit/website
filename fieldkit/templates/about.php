@@ -23,7 +23,7 @@
 	?>
 	<section class="section section-about-text-and-image-grid">
 		<div class="section__inner">
-			<header class="section-about-text-and-image-grid__header rich-text">
+			<header class="section-about-text-and-image-grid__header rich-text rich-text--heading-4">
 				<h2 class="heading-2"><?php echo $header_heading; ?></h2>
 				<?php echo $header_body; ?>
 			</header>
@@ -35,8 +35,8 @@
 					$image = $item['image'];
 				?>
 					<li class="section-about-text-and-image-grid__item">
-						<div class="section-about-text-and-image-grid__item-text rich-text">
-							<h2 class="heading-2"><?php echo $heading; ?></h2>
+						<div class="section-about-text-and-image-grid__item-text rich-text rich-text--heading-5">
+							<h3 class="heading-3"><?php echo $heading; ?></h3>
 							<?php echo $body; ?>
 						</div>
 						<div class="section-about-text-and-image-grid__item-image">
@@ -68,7 +68,7 @@
 						<div class="section-about-values__icon">
 							<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
 						</div>
-						<h3 class="heading-4"><?php echo $text; ?><h3>
+						<h3 class="section-about-values__item-text heading-4"><?php echo $text; ?></h3>
 					</li>
 				<?php endforeach; ?>
 			</ul>

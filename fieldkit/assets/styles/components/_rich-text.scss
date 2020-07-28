@@ -112,3 +112,15 @@
     width: auto;
   }
 }
+
+.rich-text--heading-4 {
+  p {
+    @extend .heading-4;
+  }
+}
+
+.rich-text--heading-5 {
+  p {
+    @extend .heading-5;
+  }
+}
