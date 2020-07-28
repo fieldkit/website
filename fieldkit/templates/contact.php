@@ -29,6 +29,7 @@
 				<h2 class="heading-2"><?php echo $heading; ?></h2>
 				<?php if ($body) echo $body; ?>
 			</div>
+			<div class="section-contact-form__required">*Required</div>
 			<?php
 			if ($contact_form_7_shortcode) {
 				$contact_form_markup = do_shortcode($contact_form_7_shortcode);

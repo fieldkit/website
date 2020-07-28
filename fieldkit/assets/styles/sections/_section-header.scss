@@ -3,7 +3,6 @@
   @extend %margins-vertical--margin;
 
   margin-top: 176px;
-  text-align: center;
 
   @include mq($from: medium) {
     margin-top: 276px;
@@ -11,6 +10,10 @@
 
   .section__inner {
     @extend %inset-width;
+  }
+
+  .section-header__heading {
+    text-align: center;
   }
 }
 
