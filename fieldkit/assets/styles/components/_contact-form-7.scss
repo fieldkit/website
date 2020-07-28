@@ -2,8 +2,8 @@
   p {
     margin-top: 20px;
 
-    &:first-child {
-      margin-top: 20px;
+    &:first-of-type {
+      margin-top: 0px;
     }
   }
 
@@ -17,9 +17,26 @@
   }
 }
 
+.section-contact-form__required {
+  font-size: 13px;
+  margin: 10px auto 0px;
+  margin-top: 10px;
+  max-width: 620px;
+  text-align: center;
+
+  @include mq($from: medium) {
+    margin-top: initial;
+    text-align: right;
+  }
+}
+
 div.wpcf7 {
   margin: 0 auto;
   max-width: 620px;
+
+  @include mq($until: medium) {
+    margin-top: 40px;
+  }
 }
 
 .wpcf7-form-control-wrap {
