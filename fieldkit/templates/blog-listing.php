@@ -36,7 +36,7 @@
 					<div class="section-blog-listing-featured-post__teaser-image hide-desktop">
 						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 					</div>
-					<div class="section-blog-listing-featured-post__teaser-excerpt"><?php echo $excerpt; ?></div>
+					<div class="body--large section-blog-listing-featured-post__teaser-excerpt"><?php echo $excerpt; ?></div>
 					<?php
 					if ($link) {
 						$link['class_name'] = 'link link--large section-blog-listing-featured-post__teaser-link';
