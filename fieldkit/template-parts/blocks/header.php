@@ -6,7 +6,7 @@ $links = get_sub_field('header_links');
 <header class="section section-header">
 	<div class="section__inner">
 		<div class="rich-text">
-			<h2 class="heading-2"><?php echo $heading; ?></h2>
+			<h2 class="heading-2 section-header__heading"><?php echo $heading; ?></h2>
 			<?php echo $body; ?>
 		</div>
 		<?php if ($links) : ?>

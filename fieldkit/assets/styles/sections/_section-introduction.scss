@@ -12,7 +12,9 @@
 .section-introduction__header {
   @extend %inset-width;
 
-  text-align: center;
+  .section-introduction__heading {
+    text-align: center;
+  }
 }
 
 .section-introduction__image {

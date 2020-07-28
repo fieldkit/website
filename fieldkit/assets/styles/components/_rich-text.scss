@@ -112,3 +112,17 @@
     width: auto;
   }
 }
+
+.rich-text--small {
+  p {
+    @extend .body;
+    @extend .body--small;
+  }
+}
+
+.rich-text--large {
+  p {
+    @extend .body;
+    @extend .body--large;
+  }
+}
