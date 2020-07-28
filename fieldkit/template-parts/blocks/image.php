@@ -8,7 +8,7 @@ $image = get_sub_field('image');
 		<?php if ($header_heading || $header_body) : ?>
 			<div class="section-image__header rich-text">
 				<?php if ($header_heading) : ?>
-					<h2><?php echo $header_heading; ?></h2>
+					<h2 class="heading-2 section-image__heading"><?php echo $header_heading; ?></h2>
 				<?php endif; ?>
 				<?php if ($header_body) echo $header_body; ?>
 			</div>
