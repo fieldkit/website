@@ -32,8 +32,8 @@
 						<div class="section-how-it-works-steps__item-image">
 							<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 						</div>
-						<div class="section-how-it-works-steps__item-text rich-text">
-							<h3 class="heading-3"><?php echo $heading; ?></h3>
+						<div class="section-how-it-works-steps__item-text rich-text rich-text--large">
+							<h2 class="heading-3"><?php echo $heading; ?></h2>
 							<?php echo $body; ?>
 						</div>
 					</li>

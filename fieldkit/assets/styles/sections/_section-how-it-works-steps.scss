@@ -45,12 +45,4 @@
 
 .section-how-it-works-steps__item-text {
   grid-area: info;
-
-  p {
-    font-size: 18px;
-
-    @include mq($from: medium) {
-      font-size: 20px;
-    }
-  }
 }
