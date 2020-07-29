@@ -113,4 +113,8 @@ $site-header-breakpoint: 800px;
   .site-navigation-close {
     display: none;
   }
+
+  .site-navigation .current-menu-item {
+    border-bottom: 1px solid currentColor;
+  }
 }

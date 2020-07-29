@@ -57,7 +57,6 @@
   &:focus,
   &:hover {
     background-color: #ffffff;
-    border-width: 2px;
     color: #c24654;
     outline: none;
   }
@@ -84,7 +83,6 @@
   &:hover {
     background-color: #ffffff;
     border-color: $color-gray-4;
-    border-width: 2px;
     color: $color-primary-dark-blue;
     outline: none;
   }
@@ -92,7 +90,6 @@
   &:disabled {
     background-color: #ffffff;
     border-color: $color-gray-3;
-    border-width: 1px;
     color: $color-gray-3;
   }
 }

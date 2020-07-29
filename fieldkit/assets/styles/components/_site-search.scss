@@ -7,7 +7,8 @@
   bottom: 20px * -1;
   opacity: 0;
   position: absolute;
-  right: (20px + 20px) * -1;
+  right: 15px * -1;
+  // right: (20px + 20px) * -1;
   transform: translateY(100%);
   transition: opacity $duration-fast, visibility 0s $duration-fast;
   visibility: hidden;
@@ -53,13 +54,14 @@
   &::before {
     border-color: transparent transparent #d8dce0 transparent;
     border-width: 0 12px 12px 12px;
-    right: 25px;
+    right: 0px;
   }
 
   &::after {
     border-color: transparent transparent #ffffff transparent;
     border-width: 0 10px 10px 10px;
-    right: 28.7px;
+    right: 3.7px;
+    // right: 28.7px;
   }
 }
 

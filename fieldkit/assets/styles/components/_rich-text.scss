@@ -3,7 +3,7 @@
     margin-top: 1em;
   }
 
-  a {
+  a:not(.button) {
     color: $color-primary-blue;
 
     &:hover,
@@ -110,6 +110,20 @@
     height: auto;
     max-width: 100%;
     width: auto;
+  }
+
+  figure {
+    max-width: 100%;
+  }
+
+  figcaption {
+    @extend .body;
+    @extend .body--small;
+
+    color: #5a5a5b;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 1em;
   }
 }
 

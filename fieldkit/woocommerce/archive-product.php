@@ -70,7 +70,8 @@ $heading = $product_grid_text['heading'];
 $body = $product_grid_text['body'];
 $items = $product_grid_text['items'];
 ?>
-<section class="section section-product-fieldkit-packages" id="packages">
+<div class="anchor-point" id="packages"></div>
+<section class="section section-product-fieldkit-packages">
 	<div class="section__inner">
 		<div class="section-product-fieldkit-packages-header rich-text">
 			<h3 class="heading-2"><?php echo $heading; ?></h3>
@@ -124,7 +125,8 @@ $services_list = $services_grid_text['services_list'];
 $heading_2 = $services_grid_text['heading_2'];
 $link = $services_grid_text['link'];
 ?>
-<section class="section section-product-fieldkit-services" id="services">
+<div class="anchor-point" id="services"></div>
+<section class="section section-product-fieldkit-services">
 	<div class="section__inner">
 		<header class="section-product-fieldkit-services-header rich-text">
 			<h2 class="heading-2"><?php echo $heading; ?></h2>

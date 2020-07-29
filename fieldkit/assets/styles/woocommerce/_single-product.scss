@@ -1,6 +1,11 @@
 .woocommerce div.product {
   @extend %margins-horizontal;
   @extend %margins-vertical;
+
+  @include mq($until: small) {
+    padding-left: $margin-left * 2;
+    padding-right: $margin-right * 2;
+  }
 }
 
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
