@@ -75,11 +75,15 @@
     display: block;
     height: 100%;
     object-fit: cover;
-    // height: auto;
-    // width: 100%;
     position: absolute;
     width: 100%;
   }
+}
+
+.post-teaser__date {
+  @extend .heading-5;
+
+  font-weight: 400;
 }
 
 .section-blog-post-feed__load-more {
