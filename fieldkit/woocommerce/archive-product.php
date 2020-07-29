@@ -73,7 +73,7 @@ $items = $product_grid_text['items'];
 <section class="section section-product-fieldkit-packages" id="packages">
 	<div class="section__inner">
 		<div class="section-product-fieldkit-packages-header rich-text">
-			<h3 class="heading-3"><?php echo $heading; ?></h3>
+			<h3 class="heading-2"><?php echo $heading; ?></h3>
 			<p><?php echo $body; ?></p>
 		</div>
 		<div class="section-product-fieldkit-packages__products">
@@ -91,7 +91,7 @@ $items = $product_grid_text['items'];
 			?>
 				<div class="product-fieldkit-packages__products-item">
 					<div class="rich-text">
-						<h2 class="heading-6"><?php echo $heading; ?></h2>
+						<h2 class="product-fieldkit-packages__heading"><?php echo $heading; ?></h2>
 						<p>(Available Soon)</p>
 					</div>
 					<div class="product-fieldkit-packages__products-item-image">

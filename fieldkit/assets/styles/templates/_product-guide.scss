@@ -1,5 +1,11 @@
 .section-product-guide {
-  @extend %margins-vertical--margin;
+  padding-bottom: 120px;
+  padding-top: 80px;
+
+  @include mq($from: medium) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
 }
 
 .section-product-guide__header {

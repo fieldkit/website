@@ -16,6 +16,10 @@
   }
 }
 
+.search-results__heading {
+  font-weight: 500;
+}
+
 .search-results__group {
   margin-top: $margin-top;
 
@@ -72,7 +76,9 @@
 }
 
 .teaser-product__price {
-  color: $color-accent;
+  @extend .heading-5;
+
+  color: $color-bahama-blue;
 }
 
 .teaser-product__price,

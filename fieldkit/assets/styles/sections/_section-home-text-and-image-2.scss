@@ -1,6 +1,8 @@
 .section-home-text-and-image-2 {
   @extend %margins-horizontal;
-  @extend %margins-vertical;
+
+  padding-bottom: 80px;
+  padding-top: 80px;
 
   .section__inner {
     @extend %maximum-width;

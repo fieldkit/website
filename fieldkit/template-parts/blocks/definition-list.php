@@ -27,7 +27,7 @@ $items = get_sub_field('items');
 						</div>
 					<?php endif; ?>
 					<div class="section-definition-list__item-text rich-text">
-						<h3 class="heading-4"><?php echo $name; ?></h3>
+						<h3 class="heading-5"><?php echo $name; ?></h3>
 						<?php echo $definition; ?>
 					</div>
 				</div>
