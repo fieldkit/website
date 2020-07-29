@@ -8,14 +8,13 @@
   @extend %margins-horizontal;
   @extend %margins-vertical;
 
-  background-position: top left;
+  background-position: center left;
   background-repeat: no-repeat;
   background-size: 100%;
   border-bottom: 1px solid $color-gray-3;
 
   @include mq($from: medium) {
-    background-position: center left;
-    background-size: 50%;
+    background-size: auto 66%;
   }
 
   .section__inner {
@@ -31,10 +30,15 @@
 .section-product-services-container {
   align-items: center;
   display: grid;
-  grid-template: auto/100%;
+  grid-gap: $margin-left;
+  grid-template: auto / 100%;
+
+  @include mq($from: small) {
+    grid-gap: $margin-left-medium;
+  }
 
   @include mq($from: medium) {
-    grid-template: auto/50% 50%;
+    grid-template: auto / 1fr 50%;
   }
 }
 
@@ -131,40 +135,49 @@
 
 .section-product-fieldkit-packages__products {
   display: grid;
-  grid-template: auto/100%;
+  grid-template: auto / 100%;
   margin-top: 61px;
 
   @include mq($from: medium) {
     grid-gap: 50px;
-    grid-template: auto/calc(50% - 25px) calc(50% - 25px);
+    grid-template: auto / calc(50% - 25px) calc(50% - 25px);
     margin-top: 153px;
   }
+}
 
-  .product-fieldkit-packages__products-item {
+.product-fieldkit-packages__products-item {
+  text-align: center;
+
+  &:not(:last-child) {
     margin-bottom: 65px;
-    text-align: center;
-
-    &:last-child {
-      margin-bottom: 0px;
-    }
 
     @include mq($from: medium) {
       margin-bottom: 0px;
     }
   }
+}
 
-  .product-fieldkit-packages__products-item-image {
-    margin-bottom: 25px;
-    margin-top: 25px;
+.product-fieldkit-packages__products-item-note {
+  margin-top: 1em;
+}
+
+.product-fieldkit-packages__products-item-image {
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
   }
+}
 
-  .product-fieldkit-packages__products-button {
-    text-align: center;
+.product-fieldkit-packages__products-button {
+  text-align: center;
 
-    .button--primary {
-      max-width: 270px;
-      width: 100%;
-    }
+  .button--primary {
+    max-width: 270px;
+    width: 100%;
   }
 }
 

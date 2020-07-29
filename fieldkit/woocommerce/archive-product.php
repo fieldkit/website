@@ -70,7 +70,8 @@ $heading = $product_grid_text['heading'];
 $body = $product_grid_text['body'];
 $items = $product_grid_text['items'];
 ?>
-<section class="section section-product-fieldkit-packages" id="packages">
+<div class="anchor-point" id="packages"></div>
+<section class="section section-product-fieldkit-packages">
 	<div class="section__inner">
 		<div class="section-product-fieldkit-packages-header rich-text">
 			<h3 class="heading-3"><?php echo $heading; ?></h3>
@@ -90,10 +91,8 @@ $items = $product_grid_text['items'];
 				];
 			?>
 				<div class="product-fieldkit-packages__products-item">
-					<div class="rich-text">
-						<h2 class="heading-6"><?php echo $heading; ?></h2>
-						<p>(Available Soon)</p>
-					</div>
+					<h2 class="heading-6"><a href="<?php echo get_the_permalink(); ?>"><?php echo $heading; ?></a></h2>
+					<p class="product-fieldkit-packages__products-item-note">(Available Soon)</p>
 					<div class="product-fieldkit-packages__products-item-image">
 						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 					</div>
@@ -124,7 +123,8 @@ $services_list = $services_grid_text['services_list'];
 $heading_2 = $services_grid_text['heading_2'];
 $link = $services_grid_text['link'];
 ?>
-<section class="section section-product-fieldkit-services" id="services">
+<div class="anchor-point" id="services"></div>
+<section class="section section-product-fieldkit-services">
 	<div class="section__inner">
 		<header class="section-product-fieldkit-services-header rich-text">
 			<h2 class="heading-2"><?php echo $heading; ?></h2>
