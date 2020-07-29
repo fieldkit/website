@@ -15,6 +15,7 @@ if (!function_exists('fieldkit_setup')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
+		add_theme_support('wc-product-gallery-zoom');
 		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
 	}
@@ -91,29 +92,30 @@ function fieldkit_get_icon($icon_name, $attributes = array())
 	return $html;
 }
 
-/**
- * Remove the breadcrumbs
- */
-add_action( 'init', 'bc_remove_wc_breadcrumbs' );
-function bc_remove_wc_breadcrumbs() {
-    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+// Remove the breadcrumbs
+function fieldkit_remove_wc_breadcrumbs()
+{
+	remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 }
+add_action('init', 'fieldkit_remove_wc_breadcrumbs');
 
-/**
-* Remove related products output
-*/
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// Remove related products output
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 
-/**
-* Remove category tags
-*/
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+// Remove category tags
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 
-/**
-* Remove product thumbnail link
-*/
-add_filter('woocommerce_single_product_image_thumbnail_html','wc_remove_link_on_thumbnails' );
-
-function wc_remove_link_on_thumbnails( $html ) {
-     return strip_tags( $html,'<div><img>' );
+// Remove product thumbnail link
+function wc_remove_link_on_thumbnails($html)
+{
+	return strip_tags($html, '<div><img>');
 }
+add_filter('woocommerce_single_product_image_thumbnail_html', 'wc_remove_link_on_thumbnails');
+
+// Remove additional information tab
+function fieldkit_remove_product_tabs($tabs)
+{
+	unset($tabs['additional_information']);
+    return $tabs;
+}
+add_filter('woocommerce_product_tabs', 'fieldkit_remove_product_tabs', 9999);

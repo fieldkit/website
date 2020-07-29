@@ -36,14 +36,6 @@
 
 .section-how-it-works-step-by-step__item-text {
   grid-area: info;
-
-  .heading-3 {
-    margin-bottom: 18px;
-
-    @include mq($from: medium) {
-      margin-bottom: 23px;
-    }
-  }
 }
 
 .section-how-it-works-step-by-step__item {

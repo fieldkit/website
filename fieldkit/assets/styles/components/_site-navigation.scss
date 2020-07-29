@@ -74,7 +74,7 @@ $site-header-breakpoint: 800px;
     top: 0;
     transition: opacity $duration-fast, visibility 0s $duration-fast;
     visibility: hidden;
-    width: 100vw;
+    width: 100%;
     z-index: -1;
 
     @media screen and (prefers-reduced-motion: reduce) {
