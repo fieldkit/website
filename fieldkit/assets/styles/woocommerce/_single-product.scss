@@ -23,12 +23,12 @@
 .summary__details .woocommerce-Price-amount {
   @extend .heading-4;
 
-  color: #0a67aa;
+  color: $color-primary-blue;
 }
 
 .woocommerce div.product .summary__details p.price,
 .woocommerce div.product .summary__details span.price {
-  color: #0a67aa;
+  color: $color-primary-blue;
   margin-bottom: 18px;
 }
 
@@ -248,7 +248,7 @@
 }
 
 .woocommerce .related.products ul.products li .price {
-  color: #0a67aa;
+  color: $color-primary-blue;
 }
 
 .woocommerce .related.products ul.products li .button {
