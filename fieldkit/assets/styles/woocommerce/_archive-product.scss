@@ -176,19 +176,13 @@
 .product-fieldkit-packages__products-item-image {
   margin-bottom: 25px;
   margin-top: 25px;
+}
 
-  .product-fieldkit-packages__products-item-note {
-    @extend .heading-6;
-  }
+.product-fieldkit-packages__heading {
+  font-weight: bold;
 
-  .product-fieldkit-packages__heading {
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  .product-fieldkit-packages__products-item-image {
-    margin-bottom: 25px;
-    margin-top: 25px;
+  a {
+    color: inherit !important;
   }
 }
 
