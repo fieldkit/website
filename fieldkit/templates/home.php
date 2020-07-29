@@ -163,7 +163,7 @@
 	?>
 	<section class="section section-home-callout">
 		<div class="section__inner section__inner--inset">
-			<div class="rich-text">
+			<div class="rich-text rich-text--large">
 				<h2 class="heading-3"><?php echo $heading; ?></h2>
 				<?php echo $body; ?>
 			</div>
