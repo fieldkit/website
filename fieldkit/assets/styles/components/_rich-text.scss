@@ -3,7 +3,7 @@
     margin-top: 1em;
   }
 
-  a {
+  a:not(.button) {
     color: $color-primary-blue;
 
     &:hover,

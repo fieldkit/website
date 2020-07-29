@@ -5,17 +5,13 @@ $site-header-breakpoint: 800px;
 
   background-color: $color-background;
   height: 56px;
+  left: 0;
   position: sticky;
+  top: 0;
   z-index: 1000;
-
-  @include mq($until: $site-header-breakpoint) {
-    left: 0;
-    top: 0;
-  }
 
   @include mq($from: $site-header-breakpoint) {
     padding-left: 32px;
-    position: relative;
   }
 }
 
@@ -37,6 +33,10 @@ $site-header-breakpoint: 800px;
     display: block;
     height: 24px;
     width: auto;
+
+    @include mq($from: $site-header-breakpoint) {
+      height: 30px;
+    }
   }
 }
 
@@ -47,6 +47,10 @@ $site-header-breakpoint: 800px;
 
 .site-header__control {
   margin-left: 16px;
+}
+
+.site-header__control.site-cart {
+  display: none;
 }
 
 @include mq($from: $site-header-breakpoint) {
