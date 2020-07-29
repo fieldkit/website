@@ -67,13 +67,27 @@
 }
 
 .post-teaser__image {
+  height: 0;
   margin-bottom: 20px;
+  padding-bottom: 75%;
+  position: relative;
+  width: 100%;
 
   img {
     display: block;
-    height: auto;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
     width: 100%;
   }
+}
+
+.post-teaser__date {
+  @extend .heading-5;
+
+  font-weight: 400;
 }
 
 .section-blog-post-feed__load-more {
