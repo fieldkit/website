@@ -2,7 +2,11 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
-  margin-bottom: 35px;
+  margin-bottom: 60px;
+
+  @include mq($from: medium) {
+    margin-bottom: 35px;
+  }
 
   .section__inner {
     @extend %inset-width;

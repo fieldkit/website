@@ -68,10 +68,16 @@
 
 .post-teaser__image {
   margin-bottom: 20px;
+  padding-bottom: 75%;
+  position: relative;
 
   img {
     display: block;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    // height: auto;
+    // width: 100%;
+    position: absolute;
     width: 100%;
   }
 }
