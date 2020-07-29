@@ -52,7 +52,12 @@ $site-header-breakpoint: 800px;
     }
 
     a {
-      font-weight: normal;
+      font-weight: 500;
+
+      &:hover,
+      &:focus {
+        font-weight: 600;
+      }
     }
   }
 }

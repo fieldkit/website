@@ -38,7 +38,7 @@
   font-family: $font-family-base;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
 
   @include mq($from: medium) {
@@ -50,7 +50,7 @@
   font-family: $font-family-base;
   font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 
   @include mq($from: medium) {

@@ -42,6 +42,10 @@
 
 .section-home-hero__link {
   margin-top: 1em;
+
+  @include mq($until: small) {
+    width: 100%;
+  }
 }
 
 .section-home-hero__image {

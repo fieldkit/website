@@ -74,7 +74,7 @@ $items = $product_grid_text['items'];
 <section class="section section-product-fieldkit-packages">
 	<div class="section__inner">
 		<div class="section-product-fieldkit-packages-header rich-text">
-			<h3 class="heading-3"><?php echo $heading; ?></h3>
+			<h3 class="heading-2"><?php echo $heading; ?></h3>
 			<p><?php echo $body; ?></p>
 		</div>
 		<div class="section-product-fieldkit-packages__products">
@@ -91,8 +91,10 @@ $items = $product_grid_text['items'];
 				];
 			?>
 				<div class="product-fieldkit-packages__products-item">
-					<h2 class="heading-6"><a href="<?php echo get_the_permalink(); ?>"><?php echo $heading; ?></a></h2>
-					<p class="product-fieldkit-packages__products-item-note">(Available Soon)</p>
+					<div class="rich-text">
+						<h3 class="product-fieldkit-packages__heading"><a href="<?php echo get_the_permalink(); ?>"><?php echo $heading; ?></a></h3>
+						<p class="heading-6 product-fieldkit-packages__products-item-note">(Available Soon)</p>
+					</div>
 					<div class="product-fieldkit-packages__products-item-image">
 						<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 					</div>

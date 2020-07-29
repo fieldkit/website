@@ -25,7 +25,11 @@
 }
 
 .section-error-404__text {
-  margin-top: 40px;
+  margin-top: 30px;
+
+  @include mq($from: medium) {
+    margin-top: 50px;
+  }
 }
 
 .section-error-404__link {

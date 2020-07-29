@@ -28,7 +28,7 @@
 		<aside class="section section-post-footer">
 			<div class="section__inner">
 				<div class="social-share-menu-container">
-					<div class="social-share-menu-heading"><?php echo __('Share this Post'); ?></div>
+					<div class="heading-5 social-share-menu-heading"><?php echo __('Share this Post'); ?></div>
 					<ul class="social-share-menu">
 						<li class="social-share-menu-item">
 							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink()); ?>" target="_blank" title="<?php echo __('Facebook', 'rocnation'); ?>">

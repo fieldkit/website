@@ -46,7 +46,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-top: 23px;
 
   @include mq($from: small) {
@@ -59,14 +58,20 @@
 
   .product-services-button {
     margin-bottom: 20px;
+    margin-right: 0;
     width: 100%;
 
     @include mq($from: small) {
-      width: 48%;
+      margin-right: 16px;
+      min-width: 200px;
     }
 
     @include mq($from: medium) {
       margin-bottom: initial;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
@@ -100,7 +105,14 @@
 
 .section-product-fieldkit-packages {
   @extend %margins-horizontal;
-  @extend %margins-vertical;
+
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @include mq($from: medium) {
+    padding-bottom: 105px;
+    padding-top: 112px;
+  }
 
   .section__inner {
     @extend %maximum-width;
@@ -140,8 +152,8 @@
 
   @include mq($from: medium) {
     grid-gap: 50px;
-    grid-template: auto / calc(50% - 25px) calc(50% - 25px);
-    margin-top: 153px;
+    grid-template: auto/calc(50% - 25px) calc(50% - 25px);
+    margin-top: 80px;
   }
 }
 
@@ -164,11 +176,13 @@
 .product-fieldkit-packages__products-item-image {
   margin-bottom: 25px;
   margin-top: 25px;
+}
 
-  img {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 400px;
+.product-fieldkit-packages__heading {
+  font-weight: bold;
+
+  a {
+    color: inherit !important;
   }
 }
 
@@ -185,16 +199,28 @@
 
 .section-product-fieldkit-services {
   @extend %margins-horizontal;
-  @extend %margins-vertical;
 
   background: rgba($color-secondary-light-blue, 0.15);
+  padding-bottom: 83px;
+  padding-top: 74px;
+
+  @include mq($from: medium) {
+    padding-bottom: 105px;
+    padding-top: 105px;
+  }
 
   .section__inner {
-    @extend %maximum-width;
+    @extend %inset-width;
+
+    width: 100%;
+
+    @include mq($from: medium) {
+      width: 85%;
+    }
   }
 
   .disable-woo-button {
-    margin-top: 42px;
+    margin-top: 32px;
     max-width: 300px;
     width: 100%;
   }
@@ -279,6 +305,14 @@
   @extend %margins-horizontal;
   @extend %margins-vertical;
 
+  padding-bottom: 175px;
+  padding-top: 45px;
+
+  @include mq($from: medium) {
+    padding-bottom: 125px;
+    padding-top: 60px;
+  }
+
   .section__inner {
     @extend %maximum-width;
   }
@@ -316,16 +350,18 @@
   text-align: center;
 
   @include mq($from: medium) {
+    align-self: center;
     margin-bottom: initial;
   }
 }
 
 .section-product-partner-with-us__info {
   @include mq($from: medium) {
+    align-self: center;
     max-width: 350px;
   }
 }
 
 .section-product-partner-with-us__text {
-  margin-bottom: 1em;
+  margin-bottom: 40px;
 }

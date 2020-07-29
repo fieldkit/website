@@ -52,6 +52,7 @@
       }
     ],
     "media-feature-name-no-vendor-prefix": true,
+    "no-descending-specificity": null,
     "order/properties-alphabetical-order": true,
     "prettier/prettier": true,
     "property-no-vendor-prefix": true,
