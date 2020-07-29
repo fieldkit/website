@@ -67,6 +67,7 @@
 }
 
 .post-teaser__image {
+  height: 0;
   margin-bottom: 20px;
   padding-bottom: 75%;
   position: relative;
@@ -74,8 +75,10 @@
   img {
     display: block;
     height: 100%;
+    left: 0;
     object-fit: cover;
     position: absolute;
+    top: 0;
     width: 100%;
   }
 }
