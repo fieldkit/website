@@ -2,7 +2,7 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 
   @include mq($from: medium) {
     margin-bottom: 35px;

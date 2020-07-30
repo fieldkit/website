@@ -73,6 +73,12 @@
     width: 100%;
   }
 
+  .list-style-none {
+    &::before {
+      width: 0px;
+    }
+  }
+
   ol,
   ul {
     @extend .list;

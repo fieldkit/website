@@ -5,6 +5,5 @@
         </div>
         <h3 class="heading-5 teaser-product__title"><?php the_title(); ?></h3>
         <div class="body teaser-product__excerpt"><?php the_excerpt(); ?></div>
-        <div class="heading-5 teaser-product__price">$xx.xx</div>
     </a>
 </div>
