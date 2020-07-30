@@ -1896,7 +1896,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-definition-list__item {
   display: flex;
   flex-direction: column; }
-  @media (min-width: 30em) {
+  @media (min-width: 50em) {
     .section-definition-list__item {
       flex-direction: row; } }
   .section-definition-list__item:not(:first-child) {
@@ -1909,11 +1909,11 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-definition-list__item-image {
   flex: 0 0 auto;
   margin-bottom: 25px;
-  margin-right: 25px;
-  max-width: 100px; }
-  @media (min-width: 30em) {
+  max-width: 100%; }
+  @media (min-width: 50em) {
     .section-definition-list__item-image {
       margin-bottom: initial;
+      margin-right: 25px;
       max-width: 200px; } }
   .section-definition-list__item-image img {
     display: block;
