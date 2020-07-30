@@ -63,4 +63,8 @@
 
 .section-home-product-grid__item-link {
   margin-top: 1em;
+
+  @include mq($until: small) {
+    width: 100%;
+  }
 }
