@@ -38,7 +38,8 @@
   }
 }
 
-.section-blog-listing-featured-post__teaser-title {
+.section-blog-listing-featured-post__teaser-title a {
+  font-weight: 900;
   text-decoration: underline;
 }
 
@@ -64,25 +65,25 @@
     width: 50%;
   }
 
-  &.hide-desktop {
-    display: block;
-
-    @include mq($from: medium) {
-      display: none;
-    }
-  }
-
-  &.hide-mobile {
-    display: none;
-
-    @include mq($from: medium) {
-      display: block;
-    }
-  }
-
   img {
     display: block;
     height: auto;
     width: 100%;
+  }
+}
+
+.hide-desktop {
+  display: block;
+
+  @include mq($from: medium) {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  display: none;
+
+  @include mq($from: medium) {
+    display: block;
   }
 }

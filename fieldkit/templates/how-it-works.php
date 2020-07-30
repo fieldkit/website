@@ -9,8 +9,11 @@
 	<header class="section section-how-it-works-header">
 		<div class="section__inner">
 			<h1 class="heading-1 section-how-it-works-header__heading"><?php echo $heading; ?></h1>
-			<div class="section-how-it-works-header__background">
+			<div class="section-how-it-works-header__background hide-mobile">
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
+			</div>
+			<div class="section-how-it-works-header__background section-how-it-works-header__background-mobile hide-desktop">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Mobile_About_Header.svg" alt="">
 			</div>
 		</div>
 	</header>

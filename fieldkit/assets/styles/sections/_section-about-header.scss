@@ -47,3 +47,8 @@
     }
   }
 }
+
+.section-about-header__background-mobile img {
+  object-fit: contain;
+  transform: scale(1);
+}

@@ -18,3 +18,8 @@
 .section-contact-header__background {
   @extend .section-about-header__background;
 }
+
+.section-contact-header__background-mobile img {
+  object-fit: contain;
+  transform: scale(1);
+}

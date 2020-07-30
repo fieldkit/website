@@ -19,7 +19,7 @@
 					<h1 class="heading-1 section-contact-header__heading"><?php echo get_the_title(); ?></h1>
 				<?php endif; ?>
 			</div>
-			<div class="section-contact-header__background">
+			<div class="section-contact-header__background hide-mobile">
 				<?php if (is_page('partner-with-us') ):?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-with-us-header.png" alt="">
 				<?php else : ?>
@@ -27,6 +27,12 @@
 				<?php endif; ?>
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
 			</div>
+
+			<div class="section-contact-header__background section-contact-header__background-mobile hide-desktop">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Mobile_About_Header.svg" alt="">
+			</div>
+
+
 		</div>
 	</header>
 

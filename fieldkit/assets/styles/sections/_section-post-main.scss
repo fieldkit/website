@@ -8,6 +8,18 @@
 
 .section-post-main__featured-image {
   margin-bottom: 50px;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @include mq($from: 480px) {
+    margin-left: -56px;
+    margin-right: -56px;
+  }
+
+  @include mq($from: large) {
+    margin-left: unset;
+    margin-right: unset;
+  }
 
   img {
     display: block;

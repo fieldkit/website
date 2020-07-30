@@ -103,7 +103,6 @@
       margin-left: 20px;
     }
 
-<<<<<<< HEAD
     > * {
       font-size: 20px;
       font-weight: 500;
@@ -114,20 +113,6 @@
         font-weight: 400;
         margin-top: 11px;
       }
-=======
-    p {
-      @extend .heading-5;
-
-      font-weight: 500;
-    }
-
-    h6 {
-      @extend .heading-6;
-
-      color: $color-gray-5;
-      font-weight: 400;
-      margin-top: 1em;
->>>>>>> origin/chore-blockquote
     }
   }
 

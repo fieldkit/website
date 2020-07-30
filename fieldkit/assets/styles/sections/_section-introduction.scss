@@ -16,10 +16,19 @@
 }
 
 .section-introduction__image {
+  margin-left: -20px;
+  margin-right: -20px;
   margin-top: 36px;
 
-  @include mq($from: medium) {
+  @include mq($from: 480px) {
+    margin-left: -56px;
+    margin-right: -56px;
     margin-top: 60px;
+  }
+
+  @include mq($from: large) {
+    margin-left: unset;
+    margin-right: unset;
   }
 
   img {
