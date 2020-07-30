@@ -87,16 +87,26 @@
   }
 
   blockquote {
+    @extend .heading-5;
+
     border-left: 5px solid #1b80c9;
     margin-left: 0;
-    padding: 0.25em 2em 1.25em;
+    padding: 4px 33px 4px;
 
     @include mq($from: medium) {
       margin-left: 20px;
     }
 
-    p {
-      @extend .heading-5;
+    > * {
+      font-size: 20px;
+      font-weight: 500;
+
+      &:not(:first-child) {
+        color: $color-gray-5;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 11px;
+      }
     }
   }
 
