@@ -8,8 +8,8 @@
 
   @include mq($from: medium) {
     margin-top: 0;
-    padding-bottom: $margin-bottom * 2;
-    padding-top: $margin-top * 2;
+    padding-bottom: $margin-bottom * 5;
+    padding-top: $margin-top * 5;
   }
 
   .section__inner {
