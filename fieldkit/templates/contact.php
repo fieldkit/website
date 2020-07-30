@@ -11,10 +11,11 @@
 		<div class="section__inner">
 			<div class="rich-text">
 				<?php if (is_page('partner-with-us') ):?>
-					<div class="section-contact-header__heading">
+					<div class="section-contact-header__heading hide-mobile">
 						<h1 class="heading-1"><?php echo $heading; ?></h1>
 						<?php if ($body) echo $body; ?>
 					</div>
+					<h1 class="heading-1 section-contact-header__heading hide-desktop">Partner with Us</h1>
 				<?php else : ?>
 					<h1 class="heading-1 section-contact-header__heading"><?php echo get_the_title(); ?></h1>
 				<?php endif; ?>
@@ -44,6 +45,11 @@
 		<div class="section__inner">
 			<?php if (!is_page('partner-with-us') ):?>
 			<div class="section-contact-form__heading">
+				<h2 class="heading-2"><?php echo $heading; ?></h2>
+				<?php if ($body) echo $body; ?>
+			</div>
+			<?php else: ?>
+			<div class="section-contact-form__heading hide-desktop">
 				<h2 class="heading-2"><?php echo $heading; ?></h2>
 				<?php if ($body) echo $body; ?>
 			</div>

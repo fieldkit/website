@@ -1886,9 +1886,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
       .section-contact-form .section-contact-form__heading {
         margin-bottom: 70px;
         margin-top: 50px; } }
-    .section-contact-form .section-contact-form__heading .heading-2, .section-contact-form .section-contact-form__heading .rich-text h2, .rich-text .section-contact-form .section-contact-form__heading h2, .section-contact-form .section-contact-form__heading .woocommerce div.product .woocommerce-tabs .panel h2, .woocommerce div.product .woocommerce-tabs .panel .section-contact-form .section-contact-form__heading h2,
-    .section-contact-form .section-contact-form__heading .woocommerce div.product .woocommerce-tabs .panel .heading-2, .woocommerce div.product .woocommerce-tabs .panel .section-contact-form .section-contact-form__heading .heading-2 {
-      margin-bottom: 10px; }
+    .section-contact-form .section-contact-form__heading :first-child {
+      margin-bottom: 20px; }
   .section-contact-form .text-input, .section-contact-form .wpcf7 input[type="email"], .wpcf7 .section-contact-form input[type="email"],
   .section-contact-form .wpcf7 input[type="text"], .wpcf7 .section-contact-form input[type="text"], .section-contact-form .wpcf7 textarea, .wpcf7 .section-contact-form textarea,
   .section-contact-form .wpcf7 input[type="email"],
@@ -1946,8 +1945,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     .section-contact-header__heading {
       max-width: 565px;
       padding-top: 0; } }
-  .section-contact-header__heading:first-child {
-    margin-bottom: 1em; }
+  .section-contact-header__heading :first-child {
+    margin-bottom: 20px; }
 
 .section-contact-header__background-mobile img {
   object-fit: contain;
