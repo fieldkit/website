@@ -31,6 +31,10 @@
     width: 100%;
   }
 
+  span.wpcf7-list-item {
+    max-width: 240px;
+  }
+
   .wpcf7 input[type="submit"] {
     @extend .button;
     @extend .button--primary;

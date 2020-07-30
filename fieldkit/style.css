@@ -1837,6 +1837,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .search-form .section-contact-form input,
   .section-contact-form .wpcf7 textarea {
     width: 100%; }
+  .section-contact-form span.wpcf7-list-item {
+    max-width: 240px; }
   .section-contact-form .wpcf7 input[type="submit"] {
     margin-top: 50px;
     max-width: 100%;
