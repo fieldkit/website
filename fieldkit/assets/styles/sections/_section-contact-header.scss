@@ -4,6 +4,15 @@
 
 .section-contact-header__heading {
   @extend .section-about-header__heading;
+
+  max-width: 300px;
+  padding-top: 40px;
+  text-align: center;
+
+  @include mq($from: medium) {
+    max-width: 565px;
+    padding-top: 0;
+  }
 }
 
 .section-contact-header__background {
