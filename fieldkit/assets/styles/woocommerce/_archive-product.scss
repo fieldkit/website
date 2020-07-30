@@ -179,10 +179,11 @@
 }
 
 .product-fieldkit-packages__heading {
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 900;
 
-  a {
-    color: inherit !important;
+  @include mq($from: medium) {
+    font-size: 32px;
   }
 }
 

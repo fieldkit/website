@@ -91,8 +91,8 @@ $items = $product_grid_text['items'];
 				];
 			?>
 				<div class="product-fieldkit-packages__products-item">
-					<div class="rich-text">
-						<h3 class="product-fieldkit-packages__heading"><a href="<?php echo get_the_permalink(); ?>"><?php echo $heading; ?></a></h3>
+					<div class="product-fieldkit-packages__header">
+						<a href="<?php echo get_the_permalink(); ?>" class="product-fieldkit-packages__heading link-blue"><?php echo $heading; ?></a>
 						<p class="heading-6 product-fieldkit-packages__products-item-note">(Available Soon)</p>
 					</div>
 					<div class="product-fieldkit-packages__products-item-image">

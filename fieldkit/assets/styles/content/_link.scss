@@ -80,3 +80,11 @@
     }
   }
 }
+
+.link-blue {
+  &:hover,
+  &:focus {
+    color: $color-primary-blue;
+    text-decoration: underline;
+  }
+}
