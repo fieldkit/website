@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
 
-  @include mq($from: small) {
+  @include mq($from: medium) {
     flex-direction: row;
   }
 
@@ -26,18 +26,19 @@
   }
 }
 
-.section-definition-list__item-text-name {
-  font-weight: 900;
+.rich-text .section-definition-list__item-text-name {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .section-definition-list__item-image {
   flex: 0 0 auto;
   margin-bottom: 25px;
-  margin-right: 25px;
-  max-width: 100px;
+  max-width: 100%;
 
-  @include mq($from: small) {
+  @include mq($from: medium) {
     margin-bottom: initial;
+    margin-right: 25px;
     max-width: 200px;
   }
 
