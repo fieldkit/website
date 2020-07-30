@@ -553,6 +553,18 @@ body.overflow-hidden {
   margin-right: auto;
   max-width: 620px; }
 
+.hide-desktop {
+  display: block; }
+  @media (min-width: 50em) {
+    .hide-desktop {
+      display: none; } }
+
+.hide-mobile {
+  display: none; }
+  @media (min-width: 50em) {
+    .hide-mobile {
+      display: block; } }
+
 .blockquote {
   font-style: italic; }
 
@@ -1776,17 +1788,19 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     height: auto;
     width: 100%; }
 
-.hide-desktop {
-  display: block; }
-  @media (min-width: 50em) {
-    .hide-desktop {
-      display: none; } }
-
-.hide-mobile {
-  display: none; }
-  @media (min-width: 50em) {
-    .hide-mobile {
-      display: block; } }
+.section-blog-listing-featured-post__teaser-image.hide-desktop {
+  margin-bottom: 51px;
+  margin-left: -20px;
+  margin-right: -20px; }
+  @media (min-width: 30em) {
+    .section-blog-listing-featured-post__teaser-image.hide-desktop {
+      margin-bottom: 0;
+      margin-left: -56px;
+      margin-right: -56px; } }
+  @media (min-width: 80em) {
+    .section-blog-listing-featured-post__teaser-image.hide-desktop {
+      margin-left: unset;
+      margin-right: unset; } }
 
 .section-blog-listing-header .section__inner {
   text-align: center; }
@@ -1932,6 +1946,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     .section-contact-header__heading {
       max-width: 565px;
       padding-top: 0; } }
+  .section-contact-header__heading:first-child {
+    margin-bottom: 1em; }
 
 .section-contact-header__background-mobile img {
   object-fit: contain;
@@ -2437,6 +2453,9 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-introduction__header {
   text-align: center; }
+  @media (min-width: 50em) {
+    .section-introduction__header {
+      max-width: 565px; } }
 
 .section-introduction__image {
   margin-left: -20px;
@@ -2467,7 +2486,10 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   background-color: #f1fafb; }
 
 .section-table__header {
-  margin-bottom: 12px; }
+  margin-bottom: 3em;
+  text-align: center; }
+  .section-table__header > * {
+    text-align: center; }
 
 .section-table__table {
   width: 100%; }
@@ -2492,6 +2514,9 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   @media (min-width: 50em) {
     .section-header {
       margin-top: 100px; } }
+
+.section-header__heading {
+  text-align: center; }
 
 .section-header__links {
   align-items: center;

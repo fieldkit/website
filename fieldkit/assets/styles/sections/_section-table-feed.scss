@@ -10,7 +10,12 @@
 }
 
 .section-table__header {
-  margin-bottom: 12px;
+  margin-bottom: 3em;
+  text-align: center;
+
+  > * {
+    text-align: center;
+  }
 }
 
 .section-table__table {

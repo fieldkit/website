@@ -13,6 +13,10 @@
   @extend %inset-width;
 
   text-align: center;
+
+  @include mq($from: medium) {
+    max-width: 565px;
+  }
 }
 
 .section-introduction__image {
