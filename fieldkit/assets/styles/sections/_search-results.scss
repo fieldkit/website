@@ -91,9 +91,22 @@
   }
 }
 
+.teaser-post__image,
+.teaser-product__image {
+  height: 0;
+  margin-bottom: 20px;
+  padding-bottom: 75%;
+  position: relative;
+  width: 100%;
+}
+
 .teaser-post__image img,
 .teaser-product__image img {
   display: block;
-  height: auto;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
   width: 100%;
 }
