@@ -57,7 +57,7 @@
 					<?php get_search_form(); ?>
 				</header>
 				<div class="section__main search-no-results__main">
-					<h1 class="heading-1 search-no-results__heading"><?php echo sprintf(__('No Results for <span>"%s"</span>'), get_search_query()) ?></h1>
+					<h1 class="heading-5 search-no-results__heading"><?php echo sprintf(__('No Results for <span>"%s"</span>'), get_search_query()) ?></h1>
 				</div>
 			</div>
 	<?php endif; ?>
