@@ -14,7 +14,8 @@
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  transition: background-color $duration-fast, color $duration-fast;
+  transition: background-color $duration-fast, color $duration-fast,
+    box-shadow $duration-fast;
 
   @media screen and (prefers-reduced-motion: reduce) {
     transition: none;
@@ -22,6 +23,11 @@
 
   &:disabled {
     box-shadow: 2px 2px 4px $color-gray-3;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(black, 0.15);
   }
 }
 
@@ -45,13 +51,29 @@
 
 .button--secondary {
   background: #ffffff;
-  border: 1px solid currentColor;
   color: $color-primary-red;
-  transition: background-color $duration-fast, border $duration-fast,
-    color $duration-fast;
+  position: relative;
+  transition: color $duration-fast;
 
   @media screen and (prefers-reduced-motion: reduce) {
     transition: none;
+  }
+
+  &::before {
+    border: 1px solid #c24654;
+    border-radius: inherit;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: border $duration-fast;
+    width: 100%;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
   &:focus,
@@ -59,6 +81,10 @@
     background-color: #ffffff;
     color: #c24654;
     outline: none;
+
+    &::before {
+      border-width: 2px;
+    }
   }
 
   &:disabled {
@@ -70,13 +96,29 @@
 
 .button--tertiary {
   background: #ffffff;
-  border: 1px solid $color-gray-4;
   color: $color-primary-dark-blue;
-  transition: background-color $duration-fast, border $duration-fast,
-    color $duration-fast;
+  position: relative;
+  transition: color $duration-fast;
 
   @media screen and (prefers-reduced-motion: reduce) {
     transition: none;
+  }
+
+  &::before {
+    border: 1px solid $color-gray-4;
+    border-radius: inherit;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: border $duration-fast;
+    width: 100%;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 
   &:focus,
@@ -85,6 +127,10 @@
     border-color: $color-gray-4;
     color: $color-primary-dark-blue;
     outline: none;
+
+    &::before {
+      border-width: 2px;
+    }
   }
 
   &:disabled {
