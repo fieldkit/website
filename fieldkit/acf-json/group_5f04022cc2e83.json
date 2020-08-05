@@ -4,27 +4,8 @@
     "fields": [
         {
             "key": "field_5f0402513f60f",
-            "label": "Google Tag Manager Snippet Head",
-            "name": "google_tag_manager_snippet_head",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
-            "new_lines": ""
-        },
-        {
-            "key": "field_5f0402793f610",
-            "label": "Google Tag Manager Snippet Body",
-            "name": "google_tag_manager_snippet_body",
+            "label": "Matomo Snippet",
+            "name": "matomo_snippet",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -161,5 +142,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1596000809
+    "modified": 1596151588
 }

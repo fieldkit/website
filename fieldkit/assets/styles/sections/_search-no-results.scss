@@ -1,6 +1,12 @@
 .section.search-no-results {
   @extend %margins-horizontal;
-  @extend %margins-vertical;
+
+  padding-bottom: 80px;
+  padding-top: 20px;
+
+  @include mq($from: medium) {
+    padding-top: 40px;
+  }
 
   .section__inner {
     @extend %maximum-width;

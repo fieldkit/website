@@ -7,13 +7,40 @@
     }
   }
 
+  h1,
+  h2,
   h3,
-  h5 {
+  h4,
+  h5,
+  h6 {
+    margin-top: 1em;
     text-align: center;
   }
 
+  h1 {
+    @extend .heading-1;
+  }
+
+  h2 {
+    @extend .heading-2;
+  }
+
   h3 {
+    @extend .heading-3;
+
     margin-top: 80px;
+  }
+
+  h4 {
+    @extend .heading-4;
+  }
+
+  h5 {
+    @extend .heading-5;
+  }
+
+  h6 {
+    @extend .heading-6;
   }
 }
 

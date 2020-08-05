@@ -74,17 +74,13 @@
 
 .section-blog-listing-featured-post__teaser-image.hide-desktop {
   margin-bottom: 51px;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: $margin-left * -1;
+  margin-right: $margin-left * -1;
+  min-width: 100%;
+  width: auto;
 
-  @include mq($from: 480px) {
-    margin-bottom: 0;
-    margin-left: -56px;
-    margin-right: -56px;
-  }
-
-  @include mq($from: large) {
-    margin-left: unset;
-    margin-right: unset;
+  @include mq($from: small) {
+    margin-left: $margin-left-medium * -1;
+    margin-right: $margin-right-medium * -1;
   }
 }

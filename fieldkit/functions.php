@@ -3,6 +3,7 @@
 if (!function_exists('fieldkit_setup')) {
 	function fieldkit_setup()
 	{
+		add_post_type_support('page', 'excerpt');
 		add_theme_support('custom-logo');
 		add_theme_support('html5', array(
 			'caption',
@@ -66,6 +67,13 @@ function fieldkit_upload_mimes($mimes = array())
 	return $mimes;
 }
 add_filter('upload_mimes', 'fieldkit_upload_mimes');
+
+function fieldkit_wp_head()
+{
+	$matomo_snippet = get_field('matomo_snippet', 'option');
+	if ($matomo_snippet) echo $matomo_snippet;
+}
+add_action('wp_head', 'fieldkit_wp_head', 0);
 
 function fieldkit_wpseo_metabox_prio() {
 	return 'low';
