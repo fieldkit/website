@@ -589,11 +589,11 @@ body.overflow-hidden {
   letter-spacing: 0;
   line-height: 20px; }
 
-.body--large, .rich-text--large p {
+.body--large {
   font-size: 18px;
   line-height: 25px; }
   @media (min-width: 50em) {
-    .body--large, .rich-text--large p {
+    .body--large {
       font-size: 20px;
       line-height: 27px; } }
 
@@ -713,7 +713,7 @@ body.overflow-hidden {
     .heading-5, .rich-text h5,
     .rich-text .heading-5, .rich-text blockquote, .post-teaser__date, .section-home-text-and-image-1__text p, .section-home-text-and-image-2__text p, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs .panel h5,
     .woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title {
-      font-size: 20px; } }
+      font-size: 24px; } }
 
 .heading-6, .rich-text h6,
 .rich-text .heading-6, .woocommerce div.product .woocommerce-tabs .panel h6,
@@ -1192,6 +1192,15 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   font-weight: 500;
   margin-top: 1em; }
 
+.rich-text--large p {
+  font-size: 18px;
+  letter-spacing: 0.08px;
+  line-height: normal; }
+  @media (min-width: 50em) {
+    .rich-text--large p {
+      font-size: 24px;
+      letter-spacing: 0.1px; } }
+
 .search-form__input-container {
   position: relative;
   width: 100%;
@@ -1357,6 +1366,8 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   @media (min-width: 50em) {
     .social-share-menu-container {
       flex-direction: row; } }
+  .social-share-menu-container .social-share-menu-heading {
+    font-size: 20px; }
   .social-share-menu-container .social-share-menu-heading,
   .social-share-menu-container .social-share-menu {
     align-self: start; }
@@ -1430,7 +1441,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .site-header__logo img {
   display: block;
-  height: 24px;
+  height: 25px;
   width: auto; }
   @media (min-width: 50em) {
     .site-header__logo img {
@@ -1541,7 +1552,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   margin-top: 20px; }
   @media (min-width: 50em) {
     .search-results__group {
-      margin-top: 3em; } }
+      margin-top: 31px; } }
 
 .search-results__group-label {
   border-bottom: 1px solid #d8dce0;
@@ -1902,12 +1913,10 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .section-contact-form span.wpcf7-list-item {
     max-width: 240px; }
   .section-contact-form .wpcf7 input[type="submit"] {
-    margin-top: 1em;
     max-width: 100%;
     width: 100%; }
     @media (min-width: 50em) {
       .section-contact-form .wpcf7 input[type="submit"] {
-        margin-top: 0.5em;
         width: auto; } }
   .section-contact-form .wpcf7-form .text-input-required {
     color: #2c3e50;
@@ -1962,7 +1971,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-definition-list__item {
   display: flex;
   flex-direction: column; }
-  @media (min-width: 50em) {
+  @media (min-width: 80em) {
     .section-definition-list__item {
       flex-direction: row; } }
   .section-definition-list__item:not(:first-child) {
@@ -1976,7 +1985,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   flex: 0 0 auto;
   margin-bottom: 25px;
   max-width: 100%; }
-  @media (min-width: 50em) {
+  @media (min-width: 80em) {
     .section-definition-list__item-image {
       margin-bottom: initial;
       margin-right: 25px;
@@ -2722,13 +2731,12 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .product-fieldkit-packages__products-item-image {
   margin-bottom: 25px;
   margin-top: 25px; }
+  .product-fieldkit-packages__products-item-image img {
+    max-width: 460px; }
 
 .product-fieldkit-packages__heading {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 900; }
-  @media (min-width: 50em) {
-    .product-fieldkit-packages__heading {
-      font-size: 32px; } }
 
 .product-fieldkit-packages__products-button {
   text-align: center; }
@@ -2791,7 +2799,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     .product-fieldkit-services__list {
       grid-gap: 50px;
       grid-template: auto/auto auto;
-      margin: 105px 0px; } }
+      margin: 105px 0px 50px; } }
   .product-fieldkit-services__list .heading-3, .product-fieldkit-services__list .rich-text h3, .rich-text .product-fieldkit-services__list h3, .product-fieldkit-services__list .woocommerce div.product .woocommerce-tabs .panel h3, .woocommerce div.product .woocommerce-tabs .panel .product-fieldkit-services__list h3,
   .product-fieldkit-services__list .woocommerce div.product .woocommerce-tabs .panel .heading-3, .woocommerce div.product .woocommerce-tabs .panel .product-fieldkit-services__list .heading-3 {
     text-align: left; }
@@ -2817,7 +2825,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
       font-size: 20px; } }
 
 .section-product-partner-with-us {
-  padding-bottom: 175px;
+  padding-bottom: 105px;
   padding-top: 45px; }
   @media (min-width: 50em) {
     .section-product-partner-with-us {

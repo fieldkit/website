@@ -39,12 +39,10 @@
     @extend .button;
     @extend .button--primary;
 
-    margin-top: 1em;
     max-width: 100%;
     width: 100%;
 
     @include mq($from: medium) {
-      margin-top: 0.5em;
       width: auto;
     }
   }
