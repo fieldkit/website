@@ -2014,10 +2014,18 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-default-content__rich-text blockquote {
   border-left: 5px solid #1b80c9;
   margin-left: 0;
-  padding: 4px 33px 10px; }
+  padding: 4px 33px 4px; }
   @media (min-width: 50em) {
     .section-default-content__rich-text blockquote {
       margin-left: 20px; } }
+  .section-default-content__rich-text blockquote > * {
+    font-size: 20px;
+    font-weight: 500; }
+    .section-default-content__rich-text blockquote > *:not(:first-child) {
+      color: #6a6d71;
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 11px; }
 
 .section-default-content__rich-text video,
 .section-default-content__rich-text iframe {
@@ -2980,6 +2988,13 @@ select {
   .woocommerce-Tabs-panel--custom-additional-information table.section-table__table td:last-child {
     width: 100%; }
 
+.woocommerce div.product div.images ol.flex-control-thumbs li {
+  margin-right: 10px;
+  margin-top: 10px; }
+
+.woocommerce .woocommerce-product-gallery__trigger {
+  display: none; }
+
 .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element {
   background-color: #f4f5f7;
   color: #2c3e50; }
@@ -3341,11 +3356,14 @@ li.component_option_thumbnail_container {
   .woocommerce-account .woocommerce-MyAccount-navigation-link.is-active a {
     color: #1b80c9;
     font-weight: 900; }
-  .woocommerce-account .woocommerce-MyAccount-navigation-link img {
+  .woocommerce-account .woocommerce-MyAccount-navigation-link.is-active .link-icon {
+    filter: invert(34%) sepia(71%) saturate(706%) hue-rotate(166deg) brightness(108%) contrast(97%); }
+  .woocommerce-account .woocommerce-MyAccount-navigation-link .link-icon {
+    background-repeat: no-repeat;
     height: 18px;
     position: absolute;
     right: 10px;
-    width: 18px;
+    width: 20px;
     z-index: -1; }
 
 .woocommerce-account .woocommerce-EditAccountForm fieldset {
