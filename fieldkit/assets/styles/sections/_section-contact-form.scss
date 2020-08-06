@@ -14,8 +14,8 @@
     text-align: center;
 
     @include mq($from: medium) {
-      margin-bottom: 70px;
-      margin-top: 50px;
+      margin: 50px auto 70px;
+      max-width: 565px;
     }
 
     :first-child {
@@ -32,7 +32,7 @@
   }
 
   span.wpcf7-list-item {
-    max-width: 240px;
+    max-width: 280px;
   }
 
   .wpcf7 input[type="submit"] {
