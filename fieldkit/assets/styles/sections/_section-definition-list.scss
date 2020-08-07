@@ -15,18 +15,30 @@
 
 .section-definition-list__item {
   display: flex;
+  flex-direction: column;
+
+  @include mq($from: large) {
+    flex-direction: row;
+  }
 
   &:not(:first-child) {
-    margin-top: $margin-top;
+    margin-top: $margin-top + 5px;
   }
+}
+
+.rich-text .section-definition-list__item-text-name {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .section-definition-list__item-image {
   flex: 0 0 auto;
-  margin-right: 20px;
-  max-width: 100px;
+  margin-bottom: 25px;
+  max-width: 100%;
 
-  @include mq($from: small) {
+  @include mq($from: large) {
+    margin-bottom: initial;
+    margin-right: 25px;
     max-width: 200px;
   }
 

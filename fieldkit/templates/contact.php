@@ -10,12 +10,29 @@
 	<header class="section section-contact-header">
 		<div class="section__inner">
 			<div class="rich-text">
-				<h1 class="heading-1 section-contact-header__heading"><?php echo $heading; ?></h1>
-				<?php if ($body) echo $body; ?>
+				<h1 class="heading-1 section-contact-header__heading">
+				<?php
+				if (is_page('partner-with-us') ){
+					echo $heading;
+				}else{
+					echo get_the_title();
+				}
+				?>
+				</h1>
+				<div class="section-contact-header__body">
+					<?php if ($body) echo $body; ?>
+				</div>
 			</div>
-			<div class="section-contact-header__background">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact_Header-scaled.png" alt="">
+			<div class="section-contact-header__background hide-mobile">
+				<?php if (is_page('partner-with-us') ):?>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-with-us-header.png" alt="">
+				<?php else : ?>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact_Header-scaled.png" alt="">
+				<?php endif; ?>
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
+			</div>
+			<div class="section-contact-header__background section-contact-header__background-mobile hide-desktop">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Mobile_About_Header.svg" alt="">
 			</div>
 		</div>
 	</header>
@@ -26,6 +43,13 @@
 	?>
 	<header class="section section-contact-form">
 		<div class="section__inner">
+			<?php if (!is_page('partner-with-us') ):?>
+			<div class="section-contact-form__heading">
+				<h2 class="heading-2"><?php echo $heading; ?></h2>
+				<?php if ($body) echo $body; ?>
+			</div>
+			<?php endif; ?>
+			<div class="section-contact-form__required">*Required</div>
 			<?php
 			if ($contact_form_7_shortcode) {
 				$contact_form_markup = do_shortcode($contact_form_7_shortcode);

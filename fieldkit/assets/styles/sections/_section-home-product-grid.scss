@@ -1,6 +1,13 @@
 .section-home-product-grid {
   @extend %margins-horizontal;
-  @extend %margins-vertical--margin;
+
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @include mq($from: medium) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
 
   .section__inner {
     @extend %maximum-width;
@@ -56,4 +63,8 @@
 
 .section-home-product-grid__item-link {
   margin-top: 1em;
+
+  @include mq($until: small) {
+    width: 100%;
+  }
 }

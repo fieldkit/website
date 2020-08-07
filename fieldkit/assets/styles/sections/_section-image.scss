@@ -2,10 +2,12 @@
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
-  text-align: center;
-
   .section__inner {
     @extend %inset-width;
+  }
+
+  .section-image__heading {
+    text-align: center;
   }
 }
 

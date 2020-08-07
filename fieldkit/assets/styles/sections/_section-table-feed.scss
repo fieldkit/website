@@ -10,10 +10,14 @@
 }
 
 .section-table__header {
-  margin-bottom: $margin-top;
+  margin-bottom: 3em;
 }
 
 .section-table__table {
+  th {
+    padding: 5px;
+  }
+
   width: 100%;
 
   td {

@@ -35,3 +35,19 @@
 .maximum-width {
   @extend %maximum-width;
 }
+
+.hide-desktop {
+  display: block;
+
+  @include mq($from: medium) {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  display: none;
+
+  @include mq($from: medium) {
+    display: block;
+  }
+}

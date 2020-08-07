@@ -3,18 +3,24 @@
 	<article>
 		<?php
 		$title = get_the_title();
-		$author = get_the_author_meta('user_nicename');
+		$author = get_the_author_meta('display_name', $featured_post->post_author);
 		$date = get_the_date();
+		$image = [
+			'ID' => get_post_thumbnail_id($featured_post->ID)
+		];
 		?>
 		<header class="section section-post-header">
 			<div class="section__inner">
-				<h1 class="heading-1"><?php echo $title; ?></h1>
+				<h1 class="heading-3"><?php echo $title; ?></h1>
 				<div class="section-post-header__date"><?php echo $date; ?> | <?php echo $author; ?></div>
 			</div>
 		</header>
 
 		<section class="section section-post-main">
 			<div class="section__inner">
+				<div class="section-post-main__featured-image">
+					<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+				</div>
 				<div class="rich-text"><?php the_content(); ?></div>
 			</div>
 		</section>
@@ -22,7 +28,7 @@
 		<aside class="section section-post-footer">
 			<div class="section__inner">
 				<div class="social-share-menu-container">
-					<div class="social-share-menu-heading"><?php echo __('Share this post'); ?></div>
+					<div class="heading-5 social-share-menu-heading"><?php echo __('Share this Post'); ?></div>
 					<ul class="social-share-menu">
 						<li class="social-share-menu-item">
 							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_the_permalink()); ?>" target="_blank" title="<?php echo __('Facebook', 'rocnation'); ?>">

@@ -7,7 +7,7 @@
 			<div class="section__inner">
 				<header class="search-results__header">
 					<?php get_search_form(); ?>
-					<h1 class="heading-4 search-results__heading"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h1>
+					<h1 class="heading-5 search-results__heading"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h1>
 				</header>
 				<div class="search-results__main">
 					<?php
@@ -57,7 +57,7 @@
 					<?php get_search_form(); ?>
 				</header>
 				<div class="section__main search-no-results__main">
-					<h1 class="heading-1 search-no-results__heading"><?php echo sprintf(__('No Results for <span>"%s"</span>'), get_search_query()) ?></h1>
+					<h1 class="heading-5 search-no-results__heading"><?php echo sprintf(__('No Results for <span>"%s"</span>'), get_search_query()) ?></h1>
 				</div>
 			</div>
 	<?php endif; ?>
