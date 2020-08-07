@@ -176,15 +176,15 @@
 .product-fieldkit-packages__products-item-image {
   margin-bottom: 25px;
   margin-top: 25px;
+
+  img {
+    max-width: 460px;
+  }
 }
 
 .product-fieldkit-packages__heading {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 900;
-
-  @include mq($from: medium) {
-    font-size: 32px;
-  }
 }
 
 .product-fieldkit-packages__products-button {
@@ -265,7 +265,7 @@
   @include mq($from: medium) {
     grid-gap: 50px;
     grid-template: auto/auto auto;
-    margin: 105px 0px;
+    margin: 105px 0px 50px;
   }
 
   .heading-3 {
@@ -306,7 +306,7 @@
   @extend %margins-horizontal;
   @extend %margins-vertical;
 
-  padding-bottom: 175px;
+  padding-bottom: 105px;
   padding-top: 45px;
 
   @include mq($from: medium) {
