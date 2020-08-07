@@ -1,0 +1,225 @@
+.woocommerce-checkout {
+  input {
+    border-bottom: 1px solid $color-gray-3;
+    padding-bottom: 5px;
+  }
+
+  .select2-selection {
+    border: 0px;
+    border-bottom: 1px solid $color-gray-3;
+    border-radius: 0px;
+  }
+
+  textarea {
+    border-bottom: 1px solid $color-gray-3;
+  }
+
+  .select2-container--open .select2-dropdown {
+    border-color: $color-gray-3;
+    top: 4px;
+  }
+
+  .select2-selection--single .select2-selection__arrow b {
+    background-color: transparent;
+    border-bottom: 1px solid $color-primary-dark-blue;
+    border-left: 1px solid $color-primary-dark-blue;
+    border-width: 0px 0px 1px 1px;
+    content: "";
+    display: block;
+    height: 10px;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 10px;
+  }
+
+  .select2-container--open
+    .select2-selection--single
+    .select2-selection__arrow
+    b {
+    background-color: transparent;
+    border-bottom: 1px solid $color-primary-dark-blue;
+    border-left: 1px solid $color-primary-dark-blue;
+    border-width: 0px 0px 1px 1px;
+    content: "";
+    display: block;
+    height: 10px;
+    top: 20px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 10px;
+  }
+
+  .woocommerce-form-coupon-toggle {
+    .woocommerce-info {
+      background: $color-primary-dark-blue;
+      border-top: 0px;
+      color: $color-background;
+      padding: 18px 33px;
+      text-transform: uppercase;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  .woocommerce-form-login-toggle {
+    .woocommerce-info {
+      background: $color-primary-dark-blue;
+      border-top: 0px;
+      color: $color-background;
+      padding: 18px 33px;
+      text-transform: uppercase;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  table.shop_table {
+    border: 0px;
+
+    th {
+      font-family: $font-family-base;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .woocommerce-Price-amount.amount {
+      @extend .body;
+    }
+
+    .cart_item .product-total {
+      text-align: right;
+    }
+
+    .cart-subtotal td,
+    .order-total td {
+      text-align: right;
+    }
+  }
+
+  #customer_details {
+    margin-bottom: 74px;
+
+    .form-row .required {
+      color: $color-gray-5;
+    }
+
+    .form-row.woocommerce-invalid input.input-text {
+      border-color: $color-tertary-red;
+    }
+
+    .form-row.woocommerce-invalid label,
+    .form-row.woocommerce-invalid .required {
+      color: $color-tertary-red;
+    }
+  }
+
+  #payment {
+    background: none;
+
+    ul.payment_methods {
+      background-color: transparent;
+      border: 1px solid $color-gray-3;
+
+      li {
+        padding-left: 0px;
+
+        &::before {
+          content: none !important;
+        }
+      }
+    }
+
+    .payment_method_paypal .about_paypal {
+      float: unset;
+      line-height: unset;
+    }
+
+    ul.payment_methods li img {
+      float: right;
+      margin: -10px 0 0 0.5em;
+      max-width: 90px;
+
+      @include mq($from: medium) {
+        margin: -10px 0 0 0.5em;
+      }
+    }
+
+    div.payment_box {
+      background-color: transparent;
+      border-top: 1px solid $color-gray-2;
+      padding: unset;
+      padding-top: 10px;
+
+      &::before,
+      &::after {
+        background-color: transparent;
+        border: none;
+      }
+    }
+
+    div.form-row {
+      padding: unset;
+    }
+
+    .place-order {
+      @include mq($from: medium) {
+        margin-top: 4em;
+        padding: unset;
+      }
+
+      .woocommerce-terms-and-conditions-wrapper {
+        border-top: 1px solid $color-gray-3;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  #payment button#place_order {
+    @extend .button--primary;
+
+    float: unset;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .woocommerce-privacy-policy-text p {
+    font-size: 14px;
+  }
+
+  .woocommerce-billing-fields .heading-4,
+  .heading-4 {
+    font-weight: 500;
+  }
+
+  .woocommerce-billing-fields label {
+    @extend .body;
+    @extend .body--small;
+
+    color: #6a6d71;
+  }
+
+  .col-2 {
+    @include mq($until: medium) {
+      margin-top: 3em;
+    }
+  }
+}
+
+.woocommerce .woocommerce-error {
+  background: $color-tertary-red;
+  border-top: none;
+
+  li {
+    color: $color-background;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &::before {
+    content: none;
+  }
+}

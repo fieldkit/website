@@ -1,10 +1,10 @@
 {
-    "key": "group_5f06f8d61afa8",
-    "title": "Page Template Products",
+    "key": "group_5f084ed589261",
+    "title": "Page Products All Products",
     "fields": [
         {
-            "key": "field_5f06f98f5c14b",
-            "label": "Text and Image 1",
+            "key": "field_5f084f3f01e77",
+            "label": "Text and Image",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -20,9 +20,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5f06fa045c14c",
+            "key": "field_5f084f7201e78",
             "label": "",
-            "name": "products_text_and_image_1",
+            "name": "text_and_image",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -35,7 +35,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5f06fa905c14d",
+                    "key": "field_5f084f9801e79",
                     "label": "Header",
                     "name": "header",
                     "type": "text",
@@ -54,7 +54,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f06fa9c5c14e",
+                    "key": "field_5f084fa301e7a",
                     "label": "Heading",
                     "name": "heading",
                     "type": "text",
@@ -73,7 +73,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f06fac85c14f",
+                    "key": "field_5f084fad01e7b",
                     "label": "Body",
                     "name": "body",
                     "type": "textarea",
@@ -92,37 +92,7 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_5f06fb165c150",
-                    "label": "Link 1",
-                    "name": "link_1",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_5f06fb355c151",
-                    "label": "Link 2",
-                    "name": "link_2",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_5f06fb685c152",
+                    "key": "field_5f084fba01e7c",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
@@ -146,7 +116,7 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5f06fb885c153",
+                    "key": "field_5f084fd001e7d",
                     "label": "Background Image",
                     "name": "background_image",
                     "type": "image",
@@ -172,8 +142,8 @@
             ]
         },
         {
-            "key": "field_5f08409afc709",
-            "label": "Product Grid",
+            "key": "field_5f08500601e7e",
+            "label": "Call Out",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -189,9 +159,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5f084108fc70a",
+            "key": "field_5f08501501e7f",
             "label": "",
-            "name": "product_grid_text",
+            "name": "call_out",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -204,7 +174,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5f084150fc70b",
+                    "key": "field_5f08502e01e80",
                     "label": "Heading",
                     "name": "heading",
                     "type": "text",
@@ -223,7 +193,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f08415cfc70c",
+                    "key": "field_5f08503801e81",
                     "label": "Body",
                     "name": "body",
                     "type": "textarea",
@@ -242,108 +212,9 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_5f0fd8b99d178",
-                    "label": "Items",
-                    "name": "items",
-                    "type": "relationship",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "product"
-                    ],
-                    "taxonomy": "",
-                    "filters": [
-                        "post_type"
-                    ],
-                    "elements": [
-                        "featured_image"
-                    ],
-                    "min": "",
-                    "max": "",
-                    "return_format": "object"
-                }
-            ]
-        },
-        {
-            "key": "field_5f0841b3fc70d",
-            "label": "Services Grid",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_5f0841ccfc70e",
-            "label": "",
-            "name": "services_grid_text",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5f08424ffc70f",
-                    "label": "Header Heading",
-                    "name": "heading",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5f08425bfc710",
-                    "label": "Header Body",
-                    "name": "body",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_5f08428bfc711",
-                    "label": "Services List",
-                    "name": "services_list",
+                    "key": "field_5f1204b247f4d",
+                    "label": "Links",
+                    "name": "links",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -360,84 +231,27 @@
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_5f0842bafc712",
-                            "label": "Heading",
-                            "name": "title",
-                            "type": "text",
+                            "key": "field_5f1204d147f4e",
+                            "label": "link",
+                            "name": "link",
+                            "type": "link",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5f0842d5fc713",
-                            "label": "Body",
-                            "name": "text",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": ""
+                            "return_format": "array"
                         }
                     ]
-                },
-                {
-                    "key": "field_5f084329fc714",
-                    "label": "Footer Heading",
-                    "name": "heading_2",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5f08434ffc715",
-                    "label": "Footer Link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
                 }
             ]
         },
         {
-            "key": "field_5f084375fc716",
-            "label": "Text and Image 2",
+            "key": "field_5f08505201e82",
+            "label": "Header",
             "name": "",
             "type": "accordion",
             "instructions": "",
@@ -453,9 +267,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5f084392fc717",
+            "key": "field_5f0850a001e83",
             "label": "",
-            "name": "products_text_and_image_2",
+            "name": "header",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -468,32 +282,8 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5f0843cbfc718",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_5f0843dafc719",
-                    "label": "Heading",
+                    "key": "field_5f0850b301e84",
+                    "label": "heading",
                     "name": "heading",
                     "type": "text",
                     "instructions": "",
@@ -511,7 +301,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5f0843e9fc71a",
+                    "key": "field_5f0850bc01e85",
                     "label": "Body",
                     "name": "body",
                     "type": "textarea",
@@ -528,21 +318,6 @@
                     "maxlength": "",
                     "rows": "",
                     "new_lines": ""
-                },
-                {
-                    "key": "field_5f0843f7fc71b",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
                 }
             ]
         }
@@ -552,7 +327,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "13"
+                "value": "1780"
             }
         ]
     ],

@@ -75,3 +75,19 @@
     width: 100%;
   }
 }
+
+.woocommerce-message {
+  background-color: $color-primary-dark-blue;
+  border-top: none;
+  color: #ffffff;
+  margin-top: 1em;
+  padding: 18px 33px;
+
+  &::before {
+    color: #ffffff;
+    left: inherit;
+    margin-top: 2px;
+    position: inherit;
+    top: inherit;
+  }
+}

@@ -14,8 +14,7 @@
   position: absolute;
   top: (12px + (30px / 2));
   transform: translateY(-50%);
-  transition: font-size $duration-fast, line-height $duration-fast,
-    transform $duration-fast, top $duration-fast;
+  transition: none;
   width: 100%;
   z-index: 0;
 
@@ -24,6 +23,12 @@
     line-height: 12px;
     top: 0;
     transform: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .text-label {
+    transition: none;
   }
 }
 
@@ -40,6 +45,10 @@
 
   &:focus {
     border-bottom: 1px solid $color-secondary-blue;
+  }
+
+  &::placeholder {
+    color: $color-gray-5;
   }
 }
 

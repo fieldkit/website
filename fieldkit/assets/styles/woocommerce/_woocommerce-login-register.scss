@@ -1,0 +1,171 @@
+.side-nav {
+  .menu-account-container .menu {
+    li {
+      border: 0px;
+      font-size: 14px;
+      padding: 0px;
+      text-align: left;
+    }
+  }
+
+  @include mq($from: medium) {
+    &.woocommerce-account--login-register-parent {
+      .menu-account-container {
+        position: relative;
+
+        .menu {
+          border: 1px solid $color-gray-3;
+          border-radius: 2px;
+          box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.11);
+          padding: 10px 15px;
+          position: absolute;
+          right: -20px;
+          top: 15px;
+
+          &::before {
+            background: $color-background;
+            border-bottom: 1px solid $color-gray-3;
+            border-left: 1px solid $color-gray-3;
+            border-width: 0px 0px 1px 1px;
+            content: "";
+            display: block;
+            height: 15px;
+            position: absolute;
+            right: 20px;
+            top: -9px;
+            transform: rotate(135deg);
+            width: 15px;
+            z-index: 1;
+          }
+
+          li {
+            font-size: 14px;
+            line-height: 1.79;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq($from: medium) {
+  .side-nav .menu-account-container {
+    opacity: 0;
+    position: absolute;
+    transform: translateY(100%);
+    transition: opacity $duration-fast, visibility 0s $duration-fast;
+    visibility: hidden;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+
+    .site-login-register-open & {
+      opacity: 1;
+      transition: opacity $duration-fast, visibility 0s;
+      visibility: visible;
+
+      @media screen and (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+}
+
+.woocommerce-account {
+  #customer_login {
+    > div {
+      display: none;
+    }
+
+    .woocommerce-form-login--show,
+    .woocommerce-form-register--show {
+      display: block;
+    }
+  }
+
+  .woocommerce {
+    .woocommerce-form-login--column-container,
+    .woocommerce-form-register--column-container {
+      float: none;
+      margin: auto;
+      max-width: 320px;
+      width: 100%;
+
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      label {
+        display: none;
+      }
+
+      input {
+        border-bottom: 1px solid $color-gray-3;
+        padding-bottom: 5px;
+        padding-top: 10px;
+      }
+
+      input::placeholder {
+        color: $color-gray-5;
+      }
+
+      form {
+        border: 0;
+        padding: 0px;
+      }
+
+      button.button {
+        width: 100%;
+      }
+
+      #username,
+      #reg_username,
+      #reg_email {
+        margin-bottom: 40px;
+      }
+
+      .woocommerce-LostPassword a {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .woocommerce-privacy-policy-text p {
+        font-size: 13px;
+        line-height: 1.23;
+      }
+
+      .login-link,
+      .register-link {
+        display: flex;
+        justify-content: center;
+
+        a {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &.woocommerce--login-register {
+      flex-direction: column;
+
+      .woocommerce-error {
+        background: $color-primary-red;
+        border-top: 0;
+        color: $color-background;
+        margin: auto;
+        max-width: 320px;
+        width: 100%;
+      }
+
+      .woocommerce-error::before,
+      .woocommerce-error li::before {
+        content: none;
+      }
+    }
+  }
+}

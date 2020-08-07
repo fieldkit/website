@@ -35,6 +35,7 @@ $site-header-breakpoint: 800px;
     @extend .body;
 
     font-size: 14px;
+    margin-right: 29px;
     text-transform: uppercase;
 
     @include mq($until: $site-header-breakpoint) {
@@ -51,12 +52,36 @@ $site-header-breakpoint: 800px;
       }
     }
 
+    &:last-child {
+      margin-right: 0px;
+    }
+
     a {
+      font-size: 14px;
+      font-weight: normal;
       font-weight: 500;
+      letter-spacing: 0.08px;
 
       &:hover,
       &:focus {
         font-weight: 600;
+      }
+    }
+  }
+
+  .nav-button {
+    border-top: 1px solid $color-gray-3;
+    margin-top: 33px;
+    padding-top: 33px;
+
+    li a {
+      @extend .button;
+      @extend .button--secondary;
+
+      width: 100%;
+
+      &:first-child {
+        margin-bottom: 24px;
       }
     }
   }

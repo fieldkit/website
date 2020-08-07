@@ -4,6 +4,7 @@ const $actionToggleNavigation = $(".action-toggle-navigation");
 const $actionToggleSearch = $(".action-toggle-search");
 const $body = $("body");
 const $document = $(document);
+const $actionToggleLoginRegister = $(".action-toggle-account");
 
 class SiteHeader {
   constructor(element) {
@@ -21,6 +22,7 @@ class SiteHeader {
     $actionToggleNavigation.click(() => this.toggleNavigation());
     $actionToggleSearch.click(() => this.toggleSearch());
     this.$parentMenuLink.click(this.handleClickParentMenuLink.bind(this));
+    $actionToggleLoginRegister.click(() => this.toggleLoginRegisterMenu());
   }
 
   handleClickDocument(event) {
@@ -30,6 +32,12 @@ class SiteHeader {
       !$target.closest(".site-search").length
     ) {
       $body.removeClass("site-search-open");
+    }
+    if (
+      !$target.closest(".action-toggle-account").length &&
+      !$target.closest(".side-nav").length
+    ) {
+      $body.removeClass("site-login-register-open");
     }
   }
 
@@ -53,12 +61,19 @@ class SiteHeader {
   toggleNavigation() {
     $body.toggleClass("site-navigation-open");
     $body.removeClass("site-search-open");
+    $body.removeClass("site-login-register-open");
   }
 
   toggleSearch() {
     $body.toggleClass("site-search-open");
     $body.removeClass("site-navigation-open");
-    $body.find(".search-form__input").focus();
+    $body.removeClass("site-login-register-open");
+  }
+
+  toggleLoginRegisterMenu() {
+    $body.toggleClass("site-login-register-open");
+    $body.removeClass("site-navigation-open");
+    $body.removeClass("site-search-open");
   }
 }
 
