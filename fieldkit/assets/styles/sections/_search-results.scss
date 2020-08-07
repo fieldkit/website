@@ -13,7 +13,8 @@
   }
 }
 
-.search-results__header {
+.search-results__header,
+.search-no-results__header {
   font-weight: 600;
   margin: 1em 0;
 
@@ -22,7 +23,8 @@
   }
 }
 
-.search-results__heading {
+.search-results__heading,
+.search-no-results__heading {
   font-weight: 500;
 }
 
