@@ -139,13 +139,11 @@
 	<section class="section section-home-text-and-image-1">
 		<div class="section__inner">
 			<div class="section-home-text-and-image-1__text">
-				<div class="rich-text">
-					<h2 class="heading-3"><?php echo $heading; ?></h2>
-					<?php echo $body; ?>
-				</div>
+				<h2 class="heading-3"><?php echo $heading; ?></h2>
+				<?php echo $body; ?>
 				<?php
 				if ($link) {
-					$link['class_name'] = 'button button--link section-home-text-and-image-1__link';
+					$link['class_name'] = 'link link--large section-home-text-and-image-1__link';
 					set_query_var('link', $link);
 					get_template_part('template-parts/utilities/link');
 				}
@@ -165,7 +163,7 @@
 	?>
 	<section class="section section-home-callout">
 		<div class="section__inner section__inner--inset">
-			<div class="rich-text">
+			<div class="rich-text rich-text--large">
 				<h2 class="heading-3"><?php echo $heading; ?></h2>
 				<?php echo $body; ?>
 			</div>
@@ -189,13 +187,11 @@
 	<section class="section section-home-text-and-image-2">
 		<div class="section__inner section__inner--inset">
 			<div class="section-home-text-and-image-2__text">
-				<div class="rich-text">
-					<h2 class="heading-3"><?php echo $heading; ?></h2>
-					<?php echo $body; ?>
-				</div>
+				<h2 class="heading-3"><?php echo $heading; ?></h2>
+				<?php echo $body; ?>
 				<?php
 				if ($link) {
-					$link['class_name'] = 'button button--primary section-home-text-and-image-2__link';
+					$link['class_name'] = 'link link--large section-home-text-and-image-2__link';
 					set_query_var('link', $link);
 					get_template_part('template-parts/utilities/link');
 				}

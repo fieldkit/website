@@ -1,5 +1,11 @@
 .section-product-guide {
-  @extend %margins-vertical--margin;
+  padding-bottom: 200px;
+  padding-top: 80px;
+
+  @include mq($from: medium) {
+    padding-bottom: 400px;
+    padding-top: 80px;
+  }
 }
 
 .section-product-guide__header {
@@ -34,7 +40,9 @@
     }
 
     @include mq($from: medium) {
-      grid-template: auto / auto 1fr;
+      grid-template: auto / #{(100% * 3 / 12)} calc(
+          #{(100% * 9 / 12)} - #{$margin-left-medium}
+        );
       grid-template-areas: "aside content";
     }
   }

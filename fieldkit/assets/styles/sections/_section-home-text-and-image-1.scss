@@ -1,8 +1,16 @@
 .section-home-text-and-image-1 {
   @extend %margins-horizontal;
-  @extend %margins-vertical;
 
   background-color: $color-gray-2;
+  margin-top: $margin-top * 3;
+  padding-bottom: $margin-bottom * 3;
+  padding-top: $margin-top * 3;
+
+  @include mq($from: medium) {
+    margin-top: 0;
+    padding-bottom: $margin-bottom * 6;
+    padding-top: $margin-top * 5;
+  }
 
   .section__inner {
     @extend %maximum-width;
@@ -25,6 +33,13 @@
 
   @include mq($from: medium) {
     width: calc(50% - #{$margin-left-medium / 2});
+  }
+
+  p {
+    @extend .heading-5;
+
+    font-weight: 400;
+    margin-top: 1em;
   }
 }
 

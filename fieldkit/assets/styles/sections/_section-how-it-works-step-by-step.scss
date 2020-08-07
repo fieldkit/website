@@ -1,6 +1,18 @@
 .section-how-it-works-step-by-step {
   @extend %margins-horizontal;
-  @extend %margins-vertical--margin;
+
+  padding-bottom: $spacing-3;
+  padding-top: $spacing-2;
+
+  @include mq($from: medium) {
+    padding-bottom: $spacing-medium-3;
+    padding-top: $spacing-medium-2;
+  }
+
+  @include mq($from: large) {
+    padding-bottom: $spacing-large-3;
+    padding-top: $spacing-large-1;
+  }
 
   .section__inner {
     @extend %maximum-width;
@@ -12,7 +24,11 @@
   text-align: center;
 
   @include mq($from: medium) {
-    margin-bottom: 110px;
+    padding-bottom: $spacing-medium-3;
+  }
+
+  @include mq($from: large) {
+    margin-bottom: $spacing-large-3;
   }
 }
 
@@ -36,14 +52,6 @@
 
 .section-how-it-works-step-by-step__item-text {
   grid-area: info;
-
-  .heading-3 {
-    margin-bottom: 18px;
-
-    @include mq($from: medium) {
-      margin-bottom: 23px;
-    }
-  }
 }
 
 .section-how-it-works-step-by-step__item {
@@ -55,7 +63,11 @@
   @include mq($from: medium) {
     grid-template: auto/40% 10% 50%;
     grid-template-areas: "img . info";
-    margin-bottom: 126px;
+    margin-bottom: $spacing-medium-3;
+  }
+
+  @include mq($from: large) {
+    margin-bottom: $spacing-large-3;
   }
 
   &:last-child {

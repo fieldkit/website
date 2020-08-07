@@ -6,10 +6,8 @@ $links = get_sub_field('header_links') ? get_sub_field('header_links') : $header
 <header class="section section-header">
 	<div class="section__inner section__inner--inset">
 		<div class="rich-text">
-			<h2 class="heading-2"><?php echo $heading; ?></h2>
-			<p class="heading-4">
-				<?php echo $body; ?>
-			</p>
+			<h2 class="heading-2 section-header__heading"><?php echo $heading; ?></h2>
+			<?php echo $body; ?>
 		</div>
 		<?php if ($links) : ?>
 			<div class="section-header__links">

@@ -3,6 +3,7 @@
 if (!function_exists('fieldkit_setup')) {
 	function fieldkit_setup()
 	{
+		add_post_type_support('page', 'excerpt');
 		add_theme_support('custom-logo');
 		add_theme_support('html5', array(
 			'caption',
@@ -15,6 +16,7 @@ if (!function_exists('fieldkit_setup')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
+		add_theme_support('wc-product-gallery-zoom');
 		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
 		add_theme_support( 'wc-product-gallery-slider' );
@@ -72,6 +74,13 @@ function fieldkit_upload_mimes($mimes = array())
 }
 add_filter('upload_mimes', 'fieldkit_upload_mimes');
 
+function fieldkit_wp_head()
+{
+	$matomo_snippet = get_field('matomo_snippet', 'option');
+	if ($matomo_snippet) echo $matomo_snippet;
+}
+add_action('wp_head', 'fieldkit_wp_head', 0);
+
 function fieldkit_wpseo_metabox_prio() {
 	return 'low';
 }
@@ -97,32 +106,25 @@ function fieldkit_get_icon($icon_name, $attributes = array())
 	return $html;
 }
 
-/**
- * Remove the breadcrumbs
- */
-add_action( 'init', 'bc_remove_wc_breadcrumbs' );
-function bc_remove_wc_breadcrumbs() {
-    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+// Remove the breadcrumbs
+function fieldkit_remove_wc_breadcrumbs()
+{
+	remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 }
+add_action('init', 'fieldkit_remove_wc_breadcrumbs');
 
-/**
-* Remove related products output
-*/
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// Remove related products output
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
 
-/**
-* Remove category tags
-*/
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+// Remove category tags
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 
-/**
-* Remove product thumbnail link
-*/
-add_filter('woocommerce_single_product_image_thumbnail_html','wc_remove_link_on_thumbnails' );
-
-function wc_remove_link_on_thumbnails( $html ) {
-     return strip_tags( $html,'<div><img>' );
+// Remove product thumbnail link
+function wc_remove_link_on_thumbnails($html)
+{
+	return strip_tags($html, '<div><img>');
 }
+add_filter('woocommerce_single_product_image_thumbnail_html', 'wc_remove_link_on_thumbnails');
 
 function fieldkit_widget() {
     register_sidebar( array(
@@ -132,18 +134,16 @@ function fieldkit_widget() {
 }
 add_action( 'widgets_init', 'fieldkit_widget' );
 
-
-add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
-
-function woo_remove_product_tabs( $tabs ) {
-
+function woo_remove_product_tabs( $tabs )
+{
 	unset( $tabs['reviews'] );
 	unset( $tabs['additional_information'] );
 	return $tabs;
 }
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
-add_filter( 'woocommerce_product_tabs', 'woo_additional_information' );
-function woo_additional_information( $tabs ) {
+function woo_additional_information( $tabs )
+{
 	// Adds the new tab
 	$tabs['custom-additional-information'] = array(
 		'title' 	=> __( 'Additional Information', 'woocommerce' ),
@@ -152,10 +152,13 @@ function woo_additional_information( $tabs ) {
 	);
 	return $tabs;
 }
-function woo_additional_information_content() {
-	if(get_field('body') or get_field('table')){
+add_filter( 'woocommerce_product_tabs', 'woo_additional_information' );
+
+function woo_additional_information_content()
+{
+	if (get_field('body') or get_field('table')) {
 		include(locate_template('template-parts/components/additional-information.php', false, false));
-	}else{
+	} else {
 		echo "<style>li.custom-additional-information_tab{ display:none !important; }</style>";
 	}
 }
