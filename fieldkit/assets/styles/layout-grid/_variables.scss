@@ -1,7 +1,7 @@
 $grid-size: 8px;
 
 $margin-left: 20px;
-$margin-left-medium: 56px;
+$margin-left-medium: 40px;
 $margin-left-large: 80px;
 
 $margin-right: $margin-left;
@@ -9,12 +9,24 @@ $margin-right-medium: $margin-left-medium;
 $margin-right-large: $margin-left-large;
 
 $margin-top: 20px;
-$margin-top-medium: 56px;
+$margin-top-medium: 40px;
 $margin-top-large: 80px;
 
 $margin-bottom: $margin-top;
 $margin-bottom-medium: $margin-top-medium;
 $margin-bottom-large: $margin-top-large;
+
+$spacing-1: 20px;
+$spacing-2: 50px;
+$spacing-3: 80px;
+
+$spacing-medium-1: 40px;
+$spacing-medium-2: 80px;
+$spacing-medium-3: 120px;
+
+$spacing-large-1: 80px;
+$spacing-large-2: 120px;
+$spacing-large-3: 160px;
 
 $maximum-width: 1440px;
 $inset-width: 1080px;
