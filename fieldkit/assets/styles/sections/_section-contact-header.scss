@@ -19,6 +19,19 @@
   }
 }
 
+.rich-text .section-contact-header__body {
+  margin-top: -1em;
+  max-width: 300px;
+  padding-top: 10px;
+  text-align: center;
+
+  @include mq($from: medium) {
+    margin-top: -2.2em;
+    max-width: 565px;
+    padding-top: 0px;
+  }
+}
+
 .section-contact-header__background {
   @extend .section-about-header__background;
 }
@@ -26,4 +39,12 @@
 .section-contact-header__background-mobile img {
   object-fit: contain;
   transform: scale(1);
+}
+
+span.wpcf7-form-control-wrap {
+  textarea {
+    border: solid 1px $color-gray-3;
+    border-radius: 4px;
+    padding: 11px 11px 0px 11px;
+  }
 }
