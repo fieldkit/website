@@ -30,7 +30,7 @@
   margin-top: $margin-top;
 
   @include mq($from: medium) {
-    margin-top: 31px;
+    margin-top: 3em;
   }
 }
 
