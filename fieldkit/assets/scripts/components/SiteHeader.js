@@ -13,7 +13,6 @@ class SiteHeader {
     this.$parentMenuLink = this.$element.find(".menu-item-has-children > a");
 
     this.addListeners();
-    this.handleSearchBarHide();
   }
 
   addListeners() {
@@ -60,15 +59,6 @@ class SiteHeader {
     $body.toggleClass("site-search-open");
     $body.removeClass("site-navigation-open");
     $body.find(".search-form__input").focus();
-  }
-
-  handleSearchBarHide() {
-    const x = window.location.search;
-    const param = x.match(/(?<name>s)/);
-
-    if (param !== null && param[0] === "s") {
-      $(".site-header__control .search-form").hide();
-    }
   }
 }
 
