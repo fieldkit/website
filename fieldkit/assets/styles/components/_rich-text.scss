@@ -153,14 +153,6 @@
 .rich-text--large {
   p {
     @extend .body;
-
-    font-size: 18px;
-    letter-spacing: 0.08px;
-    line-height: normal;
-
-    @include mq($from: medium) {
-      font-size: 24px;
-      letter-spacing: 0.1px;
-    }
+    @extend .body--large;
   }
 }
