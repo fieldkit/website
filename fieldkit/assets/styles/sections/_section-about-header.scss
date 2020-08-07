@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100vw * 729 / 2560;
+  overflow: hidden;
   position: relative;
   z-index: 0;
 
@@ -45,4 +46,9 @@
       transform: none;
     }
   }
+}
+
+.section-about-header__background-mobile img {
+  object-fit: contain;
+  transform: scale(1);
 }

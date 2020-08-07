@@ -10,10 +10,10 @@ $github = $social['github'];
 		<div class="site-footer__left">
 			<div class="site-footer__logo"><?php the_custom_logo(); ?></div>
 			<div class="site-footer__social">
-				<?php if ($twitter) : ?><a href="<?php echo $twitter; ?>" class="icon-button"><?php echo fieldkit_get_icon('twitter'); ?></a><?php endif; ?>
-				<?php if ($instagram) : ?><a href="<?php echo $instagram; ?>" class="icon-button"><?php echo fieldkit_get_icon('instagram'); ?></a><?php endif; ?>
-				<?php if ($facebook) : ?><a href="<?php echo $facebook; ?>" class="icon-button"><?php echo fieldkit_get_icon('facebook'); ?></a><?php endif; ?>
-				<?php if ($github) : ?><a href="<?php echo $github; ?>" class="icon-button"><?php echo fieldkit_get_icon('github'); ?></a><?php endif; ?>
+				<?php if ($twitter) : ?><a href="<?php echo $twitter; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('twitter'); ?></a><?php endif; ?>
+				<?php if ($instagram) : ?><a href="<?php echo $instagram; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('instagram'); ?></a><?php endif; ?>
+				<?php if ($facebook) : ?><a href="<?php echo $facebook; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('facebook'); ?></a><?php endif; ?>
+				<?php if ($github) : ?><a href="<?php echo $github; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('github'); ?></a><?php endif; ?>
 			</div>
 			<?php get_template_part('template-parts/components/mailchimp'); ?>
 		</div>

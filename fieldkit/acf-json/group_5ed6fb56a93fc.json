@@ -154,6 +154,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5f1158b343104",
+                            "label": "Block Id",
+                            "name": "block_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5f052799e593b",
                             "label": "Rich Text",
                             "name": "rich_text",
@@ -196,10 +215,8 @@
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594224273
+    "modified": 1596011825
 }

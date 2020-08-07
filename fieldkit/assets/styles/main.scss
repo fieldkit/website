@@ -6,7 +6,6 @@ License: Attribution-NonCommercial 4.0 International
 License URI: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 Version: 1.0.0
 */
-
 @import "normalize.css/normalize";
 @import "abstracts/variables/colors";
 @import "abstracts/variables/durations";
@@ -29,6 +28,7 @@ Version: 1.0.0
 @import "content/link";
 @import "content/list";
 @import "content/table";
+@import "components/anchor-point";
 @import "components/button";
 @import "components/contact-form-7";
 @import "components/mailchimp";
@@ -86,12 +86,11 @@ Version: 1.0.0
 @import "templates/search";
 @import "templates/sensor-specification";
 @import "templates/single";
+@import "woocommerce/woocommerce";
 @import "woocommerce/archive-product";
-@import "woocommerce/single-product";
 @import "woocommerce/composite-product";
 @import "woocommerce/order-confirmation";
-
-// @import "woocommerce/woocommerce";
+@import "woocommerce/single-product";
 @import "woocommerce/woocommerce-account";
 @import "woocommerce/woocommerce-cart";
 @import "woocommerce/woocommerce-checkout";

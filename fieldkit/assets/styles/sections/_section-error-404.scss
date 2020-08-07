@@ -24,6 +24,19 @@
   }
 }
 
+.section-error-404__text {
+  margin-top: 30px;
+
+  @include mq($from: medium) {
+    margin-top: 50px;
+  }
+}
+
 .section-error-404__link {
-  margin-top: 1em;
+  margin-top: 40px;
+  width: 100%;
+
+  @include mq($from: medium) {
+    width: auto;
+  }
 }
