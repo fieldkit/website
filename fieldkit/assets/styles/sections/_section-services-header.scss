@@ -1,0 +1,32 @@
+.section-services-header {
+  @extend .section-about-header;
+}
+
+.section-services-header__heading {
+  @extend .section-about-header__heading;
+
+  max-width: 300px;
+  padding-top: 40px;
+  text-align: center;
+
+  @include mq($from: medium) {
+    max-width: 565px;
+    padding-top: 0;
+  }
+}
+
+.section-services-header__background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
