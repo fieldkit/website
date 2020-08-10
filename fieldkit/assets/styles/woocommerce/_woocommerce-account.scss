@@ -107,6 +107,10 @@
     input {
       border-bottom: 1px solid $color-gray-3;
       padding-bottom: 5px;
+
+      &:focus {
+        border-bottom: 2px solid $color-secondary-blue;
+      }
     }
 
     .woocommerce-MyAccount-orders {
@@ -175,167 +179,168 @@
       background-color: transparent;
       font-weight: 500;
 
-    .woocommerce-orders-table tbody td {
-      font-size: 14px;
-      line-height: 21px;
-    }
-  }
-
-  .dashboard-portal {
-    ul {
-      align-items: flex-start;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      margin-top: 32px;
-      padding-left: 0px;
-    }
-
-    li {
-      align-items: center;
-      border: 1px solid $color-gray-3;
-      border-radius: 3px;
-      display: flex;
-      flex-direction: column;
-      height: 125px;
-      justify-content: flex-start;
-      margin-bottom: 32px;
-      padding: 20px;
-      text-align: center;
-      width: 100%;
-
-      @include mq($from: small) {
-        margin-right: 42px;
-        width: 140px;
+      .woocommerce-orders-table tbody td {
+        font-size: 14px;
+        line-height: 21px;
       }
     }
 
-    li:last-child {
-      margin-bottom: 0px;
-      margin-right: 0px;
-    }
-
-    li::before {
-      content: none;
-    }
-
-    li img {
-      height: 40px;
-      margin-bottom: 10px;
-      width: 40px;
-    }
-
-    a:hover,
-    a:focus {
-      background-size: 0px;
-      border-bottom: 0px;
-    }
-  }
-
-  .woocommerce-MyAccount-navigation-link {
-    align-items: center;
-    border-top: 1px solid $color-gray-3;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0px;
-
-    &:hover,
-    &:focus {
-      border-bottom: 0px;
-      border-color: $color-gray-3;
-    }
-
-    &:last-child {
-      border-bottom: 1px solid $color-gray-3;
-
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid $color-gray-3;
+    .dashboard-portal {
+      ul {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 32px;
+        padding-left: 0px;
       }
-    }
 
-    &::before {
-      content: none;
-    }
+      li {
+        align-items: center;
+        border: 1px solid $color-gray-3;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        height: 125px;
+        justify-content: flex-start;
+        margin-bottom: 32px;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
 
-    a {
-      font-size: 16px;
-      font-stretch: normal;
-      font-style: normal;
-      font-weight: normal;
-      letter-spacing: normal;
-      line-height: normal;
-      padding: 14.5px 0px;
-      width: 100%;
+        @include mq($from: small) {
+          margin-right: 42px;
+          width: 140px;
+        }
+      }
 
-      &:hover,
-      &:focus {
+      li:last-child {
+        margin-bottom: 0px;
+        margin-right: 0px;
+      }
+
+      li::before {
+        content: none;
+      }
+
+      li img {
+        height: 40px;
+        margin-bottom: 10px;
+        width: 40px;
+      }
+
+      a:hover,
+      a:focus {
         background-size: 0px;
         border-bottom: 0px;
       }
     }
 
-    &.is-active a {
-      color: $color-primary-blue;
-      font-weight: 900;
-    }
+    .woocommerce-MyAccount-navigation-link {
+      align-items: center;
+      border-top: 1px solid $color-gray-3;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 0px;
 
-    img {
-      height: 18px;
-      position: absolute;
-      right: 10px;
-      width: 18px;
-      z-index: -1;
-    }
-  }
-
-  .woocommerce-EditAccountForm {
-    fieldset {
-      margin-top: 60px;
-      padding: 3px;
-    }
-
-    .woocommerce-form-row--first,
-    .woocommerce-form-row--last {
-      @include mq($until: small) {
-        width: 100%;
+      &:hover,
+      &:focus {
+        border-bottom: 0px;
+        border-color: $color-gray-3;
       }
-    }
-  }
-
-  .woocommerce-Addresses {
-    .woocommerce-Address {
-      margin-bottom: 47px;
-      padding-bottom: 47px;
-      position: relative;
 
       &:last-child {
-        margin-bottom: 0px;
+        border-bottom: 1px solid $color-gray-3;
+
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid $color-gray-3;
+        }
       }
 
-      @include mq($from: medium) {
-        margin-bottom: 0px;
-        padding-bottom: 0px;
+      &::before {
+        content: none;
       }
 
-      address {
-        line-height: 22px;
+      a {
+        font-size: 16px;
+        font-stretch: normal;
+        font-style: normal;
+        font-weight: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        padding: 14.5px 0px;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+          background-size: 0px;
+          border-bottom: 0px;
+        }
+      }
+
+      &.is-active a {
+        color: $color-primary-blue;
+        font-weight: 900;
+      }
+
+      img {
+        height: 18px;
+        position: absolute;
+        right: 10px;
+        width: 18px;
+        z-index: -1;
       }
     }
-  }
 
-  .woocommerce-Address-title {
-    h3 {
-      margin-bottom: 11px;
+    .woocommerce-EditAccountForm {
+      fieldset {
+        margin-top: 60px;
+        padding: 3px;
+      }
+
+      .woocommerce-form-row--first,
+      .woocommerce-form-row--last {
+        @include mq($until: small) {
+          width: 100%;
+        }
+      }
     }
 
-    .edit {
-      bottom: 0;
-      left: 0;
-      position: absolute;
+    .woocommerce-Addresses {
+      .woocommerce-Address {
+        margin-bottom: 47px;
+        padding-bottom: 47px;
+        position: relative;
 
-      @include mq($from: medium) {
-        bottom: -50px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        @include mq($from: medium) {
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+        }
+
+        address {
+          line-height: 22px;
+        }
+      }
+    }
+
+    .woocommerce-Address-title {
+      h3 {
+        margin-bottom: 11px;
+      }
+
+      .edit {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+
+        @include mq($from: medium) {
+          bottom: -50px;
+        }
       }
     }
   }
