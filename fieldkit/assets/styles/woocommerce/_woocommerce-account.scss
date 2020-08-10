@@ -287,6 +287,16 @@
     .woocommerce-customer-details--email {
       margin-top: 30px;
     }
+
+    mark {
+      background-color: transparent;
+      font-weight: 500;
+    }
+
+    .woocommerce-orders-table tbody td {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   .dashboard-portal {
@@ -424,6 +434,10 @@
       @include mq($from: medium) {
         margin-bottom: 0px;
         padding-bottom: 0px;
+      }
+
+      address {
+        line-height: 22px;
       }
     }
   }
