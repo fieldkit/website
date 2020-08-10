@@ -84,4 +84,13 @@
       width: 22px;
     }
   }
+
+  .wpcf7 form.invalid .wpcf7-response-output {
+    background: $color-tertary-red;
+    border: none;
+    color: $color-background;
+    font-family: $font-family-base;
+    font-size: 16px;
+    padding: 17px;
+  }
 }
