@@ -47,6 +47,7 @@ include(locate_template('template-parts/blocks/navbar-secondary.php', false, fal
 
 
 $header = get_field('header',$shop_page_id);
+$header['variant'] = "medium";
 if($header){
 	include(locate_template('template-parts/blocks/header.php', false, false));
 }
@@ -62,6 +63,7 @@ $cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
 
 	$header = get_field('header',$cat_id);
+	$header['variant'] = "medium";
 	if($header){
 	include(locate_template('template-parts/blocks/header.php', false, false));
 	}
@@ -71,12 +73,9 @@ $cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 	include(locate_template('template-parts/blocks/product-feed-text-and-image.php', false, false));
 	}
 }
-
-
 ?>
 <div class="woocommerce-products">
 <?php dynamic_sidebar('product-header'); ?>
-
 <?php
 if ( woocommerce_product_loop() ) {
 

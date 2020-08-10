@@ -46,3 +46,23 @@
     }
   }
 }
+
+.archive .section-header--medium {
+  margin-bottom: $margin-top * 4;
+  margin-top: $margin-top * 3;
+
+  .section-header__heading {
+    @extend .heading-2;
+
+    margin-bottom: 13px;
+  }
+
+  .rich-text {
+    @extend .heading-5;
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: center;
+  }
+}

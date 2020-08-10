@@ -22,3 +22,39 @@
 .section-home-callout__link {
   margin-top: 2em;
 }
+
+.section-callout {
+  @extend %margins-horizontal;
+
+  background-color: $color-primary-blue;
+  color: $color-background;
+  padding-bottom: $margin-bottom * 3;
+  padding-top: $margin-top * 3;
+  text-align: center;
+
+  @include mq($from: medium) {
+    padding-bottom: $margin-bottom * 3;
+    padding-top: $margin-top * 3;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+
+    max-width: 640px;
+  }
+
+  .rich-text {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    padding-top: 5px;
+
+    @include mq($from: large) {
+      max-width: 400px;
+    }
+  }
+
+  .section-header__links-item {
+    padding-top: $margin-bottom;
+  }
+}

@@ -2,8 +2,10 @@
 $heading = get_sub_field('heading') ? get_sub_field('heading') : $header['heading'];
 $body = get_sub_field('body') ? get_sub_field('body') : $header['body'];
 $links = get_sub_field('header_links') ? get_sub_field('header_links') : $header['header_links'];
+$variant = $header['variant'];
+
 ?>
-<header class="section section-header">
+<header class="section section-header <?php if ($variant){echo "section-header--" . $variant; }?>">
 	<div class="section__inner section__inner--inset">
 		<div class="rich-text">
 			<h2 class="heading-2 section-header__heading"><?php echo $heading; ?></h2>

@@ -3,10 +3,10 @@ $heading = $call_out['heading'];
 $body = $call_out['body'];
 $links = $call_out['links'];
 ?>
-<header class="section section-home-callout">
+<header class="section section-callout">
 	<div class="section__inner section__inner--inset">
+		<h2 class="heading-2"><?php echo $heading; ?></h2>
 		<div class="rich-text">
-			<h2 class="heading-2"><?php echo $heading; ?></h2>
 			<?php echo $body; ?>
 		</div>
 		<?php if ($links) : ?>
