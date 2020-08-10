@@ -88,12 +88,14 @@
       @extend .body;
     }
 
-    .cart_item .product-total {
+    .cart_item .product-total,
+    thead th.product-total {
       text-align: right;
     }
 
     .cart-subtotal td,
-    .order-total td {
+    .order-total td,
+    .tax-total td {
       text-align: right;
     }
   }
