@@ -29,6 +29,12 @@
       tr {
         border-color: $color-gray-3;
       }
+
+      .cart-subtotal td,
+      .order-total td,
+      .tax-total td {
+        text-align: right;
+      }
     }
 
     .button[name="update_cart"] {

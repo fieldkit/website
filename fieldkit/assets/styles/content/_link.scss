@@ -24,18 +24,11 @@
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-    transition: width ($duration-fast / 2) linear;
+    transition: height $duration-fast linear;
     width: 100%;
 
     @media screen and (prefers-reduced-motion: reduce) {
       transition: none;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    &::after {
-      width: calc(100% - 12px);
     }
   }
 
