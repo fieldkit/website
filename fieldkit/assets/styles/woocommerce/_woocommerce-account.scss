@@ -203,6 +203,16 @@
     }
   }
 
+  .woocommerce-MyAccount-navigation__link {
+    color: $color-primary-dark-blue !important;
+
+    &:hover,
+    &:focus {
+      color: $color-primary-blue !important;
+      font-weight: 900;
+    }
+  }
+
   .woocommerce-MyAccount-content {
     @extend .rich-text;
 
