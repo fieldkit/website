@@ -2009,22 +2009,46 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .section-about-values__item-text {
   font-weight: 900; }
 
+.section-services-header {
+  margin-top: 50px;
+  min-height: auto; }
+  @media (min-width: 50em) {
+    .section-services-header {
+      margin-top: 45px; } }
+  .section-services-header .rich-text--large > p {
+    font-size: 16px;
+    line-height: normal; }
+    @media (min-width: 50em) {
+      .section-services-header .rich-text--large > p {
+        font-size: 24px;
+        line-height: normal; } }
+  .section-services-header .section__inner {
+    padding: 5% 0; }
+    @media (min-width: 50em) {
+      .section-services-header .section__inner {
+        padding: 10% 0; } }
+
 .section-services-header__heading {
-  max-width: 300px;
+  max-width: 335px;
   padding-top: 40px;
   text-align: center; }
   @media (min-width: 50em) {
     .section-services-header__heading {
-      max-width: 565px;
+      max-width: 803px;
       padding-top: 0; } }
 
 .section-services-header__background {
   height: 100%;
-  left: 0;
+  left: 50%;
+  max-width: 460px;
   position: absolute;
   top: 0;
+  transform: translateX(-50%);
   width: 100%;
   z-index: -1; }
+  @media (min-width: 50em) {
+    .section-services-header__background {
+      max-width: 700px; } }
   .section-services-header__background img {
     display: block;
     height: 100%;
@@ -2032,7 +2056,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     width: 100%; }
 
 .section-services-text-grid {
-  padding-top: 40px; }
+  padding-top: 100px; }
   @media (min-width: 50em) {
     .section-services-text-grid {
       padding-top: 80px; } }

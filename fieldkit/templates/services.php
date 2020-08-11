@@ -9,7 +9,7 @@
 	?>
 	<header class="section section-services-header">
 		<div class="section__inner">
-			<div class="rich-text section-services-header__heading">
+			<div class="rich-text rich-text--large section-services-header__heading">
 				<h1 class="heading-2"><?php echo $heading; ?></h1>
 				<?php if ($body) echo $body; ?>
 			</div>
