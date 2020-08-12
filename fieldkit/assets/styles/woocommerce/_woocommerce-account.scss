@@ -203,6 +203,35 @@
     }
   }
 
+  .woocommerce-info--downloads {
+    align-items: center;
+    background-color: #fcfcfc;
+    border: solid 1px #d8dce0;
+    color: $color-primary-dark-blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .woocommerce-Button {
+      background-color: transparent;
+      color: $color-primary-dark-blue;
+      font-size: 16px;
+      min-width: auto;
+      padding: 4px 0;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: $color-primary-blue;
+      }
+    }
+  }
+
   .woocommerce-MyAccount-navigation__link {
     color: $color-primary-dark-blue !important;
 
