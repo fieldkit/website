@@ -3667,6 +3667,7 @@ li.component_option_thumbnail_container {
   align-items: center;
   background-color: #fcfcfc;
   border: solid 1px #d8dce0;
+  color: #2c3e50;
   display: flex;
   justify-content: space-between;
   padding: 1em; }
@@ -3674,6 +3675,8 @@ li.component_option_thumbnail_container {
     display: none; }
   .woocommerce-account .woocommerce-info--downloads .woocommerce-Button {
     background-color: transparent;
+    color: #2c3e50;
+    font-size: 16px;
     min-width: auto;
     padding: 4px 0; }
     .woocommerce-account .woocommerce-info--downloads .woocommerce-Button:hover, .woocommerce-account .woocommerce-info--downloads .woocommerce-Button:focus {

@@ -207,6 +207,7 @@
     align-items: center;
     background-color: #fcfcfc;
     border: solid 1px #d8dce0;
+    color: $color-primary-dark-blue;
     display: flex;
     justify-content: space-between;
     padding: 1em;
@@ -218,6 +219,8 @@
 
     .woocommerce-Button {
       background-color: transparent;
+      color: $color-primary-dark-blue;
+      font-size: 16px;
       min-width: auto;
       padding: 4px 0;
 
