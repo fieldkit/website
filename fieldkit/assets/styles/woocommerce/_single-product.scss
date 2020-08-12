@@ -379,3 +379,11 @@
 .woocommerce .woocommerce-product-gallery__trigger {
   display: none;
 }
+
+.woocommerce div.product div.images.woocommerce-product-gallery {
+  padding: 0;
+
+  @include mq($from: medium) {
+    padding: 0 2em;
+  }
+}
