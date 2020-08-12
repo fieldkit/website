@@ -81,6 +81,16 @@
   @extend .button--primary;
 }
 
+.woocommerce-variation-description a {
+  color: $color-primary-blue;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs {
   display: flex;
   padding: 0;
