@@ -53,10 +53,6 @@ $site-header-breakpoint: 800px;
   }
 }
 
-.site-header__control.site-cart {
-  display: none;
-}
-
 @include mq($from: $site-header-breakpoint) {
   .site-header__control {
     &:first-child {
