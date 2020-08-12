@@ -45,7 +45,7 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	</p>
 
 	<fieldset>
-		<legend><h3 class="heading-4" id="password-change"><?php esc_html_e( 'Password change', 'woocommerce' ); ?></h3></legend>
+		<legend><h3 class="heading-4" id="password-change"><?php esc_html_e( 'Password Change', 'woocommerce' ); ?></h3></legend>
 
 		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 			<label for="password_current"><?php esc_html_e( 'Current Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
