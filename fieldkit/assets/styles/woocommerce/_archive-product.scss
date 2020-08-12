@@ -236,7 +236,8 @@ select {
 
 .woocommerce ul.products li.product .button {
   &.product_type_simple,
-  &.add_to_cart_button {
+  &.add_to_cart_button,
+  &.product_type_variable {
     @extend .button;
     @extend .button--primary;
   }

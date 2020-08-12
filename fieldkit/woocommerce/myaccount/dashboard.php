@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="dashboard-portal">
 	<ul>
 		<li>
-		<?php echo fieldkit_get_icon('cart'); ?>
+		<?php echo fieldkit_get_icon('orders'); ?>
 			<?php
 			printf(
 				__( '
@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 		</li>
 		<li>
-		<?php echo fieldkit_get_icon('cart'); ?>
+		<?php echo fieldkit_get_icon('addresses'); ?>
 			<?php
 			printf(
 				__( '

@@ -21,6 +21,7 @@ class WooCommerceAccount {
 
   addListeners() {
     this.handleLoginRegister();
+    this.handleMyAccount();
   }
 
   initLogin() {
@@ -63,6 +64,12 @@ class WooCommerceAccount {
       this.registerShow();
       this.initRegister();
       $("body").addClass("woocommerce-account--login-register-parent");
+    }
+  }
+
+  handleMyAccount() {
+    if (this.$pathName === "my-account") {
+      $(".woocommerce-MyAccount-content > p").addClass("welcome-msg");
     }
   }
 }
