@@ -82,7 +82,8 @@
   &:focus,
   &:hover {
     background-color: #ffffff;
-    border-color: $color-gray-4;
+    border-color: $color-gray-6;
+    box-shadow: 0 0 2px 0 $color-gray-3;
     color: $color-primary-dark-blue;
     outline: none;
   }
