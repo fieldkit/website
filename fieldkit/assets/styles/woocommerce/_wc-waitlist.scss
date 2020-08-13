@@ -57,10 +57,17 @@
 
   @include mq($from: medium) {
     margin-top: 20px;
+    text-align: left;
   }
 
   .woocommerce_waitlist.button {
+    @extend .button--primary;
+
     width: 100%;
+
+    @include mq($from: medium) {
+      width: unset;
+    }
   }
 }
 
