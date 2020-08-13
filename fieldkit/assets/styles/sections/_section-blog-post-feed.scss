@@ -58,8 +58,6 @@
 
 .post-teaser .post-teaser__title {
   font-weight: 500;
-  margin-bottom: 10px;
-  text-decoration: underline;
 }
 
 .post-teaser a {
@@ -88,6 +86,7 @@
   @extend .heading-5;
 
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .section-blog-post-feed__load-more {
