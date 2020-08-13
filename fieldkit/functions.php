@@ -127,38 +127,16 @@ function wc_remove_link_on_thumbnails($html)
 add_filter('woocommerce_single_product_image_thumbnail_html', 'wc_remove_link_on_thumbnails');
 
 function fieldkit_widget() {
-    register_sidebar( array(
-        'name'          => "Product Header",
-        'id'            => 'product-header',
-    ) );
+    register_sidebar(array(
+        'name' => "Product Header",
+        'id' => 'product-header',
+    ));
 }
-add_action( 'widgets_init', 'fieldkit_widget' );
+add_action('widgets_init', 'fieldkit_widget');
 
-function woo_remove_product_tabs( $tabs )
+function woo_remove_product_tabs($tabs)
 {
-	unset( $tabs['reviews'] );
-	unset( $tabs['additional_information'] );
+	unset($tabs['reviews']);
 	return $tabs;
 }
-add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
-
-function woo_additional_information( $tabs )
-{
-	// Adds the new tab
-	$tabs['custom-additional-information'] = array(
-		'title' 	=> __( 'Additional Information', 'woocommerce' ),
-		'priority' 	=> 50,
-		'callback' 	=> 'woo_additional_information_content'
-	);
-	return $tabs;
-}
-add_filter( 'woocommerce_product_tabs', 'woo_additional_information' );
-
-function woo_additional_information_content()
-{
-	if (get_field('body') or get_field('table')) {
-		include(locate_template('template-parts/components/additional-information.php', false, false));
-	} else {
-		echo "<style>li.custom-additional-information_tab{ display:none !important; }</style>";
-	}
-}
+add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);

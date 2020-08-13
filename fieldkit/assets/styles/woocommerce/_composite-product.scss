@@ -29,6 +29,11 @@
   }
 }
 
+.woocommerce div.product form.cart.composite_form {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 1.618em;
+}
+
 .product-type-composite .composite_form ul.summary_elements {
   display: flex;
   flex-direction: column;
@@ -210,8 +215,9 @@ li.component_option_thumbnail_container {
 
 .composite_form .composite_navigation.paged .prev,
 .composite_form .composite_navigation.paged .next {
-  @extend .heading-4;
+  @extend .heading-5;
 
+  font-size: 20px;
   font-weight: 500;
 }
 
