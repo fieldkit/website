@@ -37,7 +37,8 @@
     outline: none;
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     background-color: $color-gray-3;
     color: #ffffff;
   }
