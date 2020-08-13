@@ -75,7 +75,13 @@ $cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 }
 ?>
 <div class="woocommerce-products">
-<?php dynamic_sidebar('product-header'); ?>
+
+<?php if ( is_active_sidebar( 'product-header' ) ) : ?>
+    <ul id="sidebar">
+        <?php dynamic_sidebar( 'product-header' ); ?>
+    </ul>
+<?php endif; ?>
+
 <?php
 if ( woocommerce_product_loop() ) {
 
