@@ -85,6 +85,12 @@
     }
   }
 
+  .woocommerce.woocommerce--login-register {
+    margin: 0 auto;
+    max-width: 320px;
+    text-align: center;
+  }
+
   .woocommerce {
     .woocommerce-form-login--column-container,
     .woocommerce-form-register--column-container {
@@ -137,17 +143,6 @@
         font-size: 13px;
         line-height: 1.23;
       }
-
-      .login-link,
-      .register-link {
-        display: flex;
-        justify-content: center;
-
-        a {
-          font-size: 14px;
-          font-weight: 500;
-        }
-      }
     }
 
     &.woocommerce--login-register {
@@ -165,6 +160,108 @@
       .woocommerce-error::before,
       .woocommerce-error li::before {
         content: none;
+      }
+
+      .login-link,
+      .register-link {
+        display: flex;
+        justify-content: center;
+
+        a {
+          border-bottom: 2px solid transparent;
+          color: $color-primary-dark-blue !important;
+          font-size: 14px;
+          font-weight: 500;
+          padding-bottom: 2px;
+
+          &:hover,
+          &:focus {
+            border-bottom: 2px solid $color-primary-dark-blue;
+            color: $color-primary-blue;
+          }
+        }
+      }
+    }
+
+    form.login {
+      border: none;
+      border-radius: 0;
+      padding: 0;
+
+      input.woocommerce-Input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $color-gray-3;
+        display: block;
+        padding: 4px 34px 4px 0;
+        position: relative;
+
+        &::placeholder {
+          color: $color-gray-5;
+        }
+
+        &:focus {
+          border-bottom: 2px solid $color-secondary-blue;
+        }
+      }
+
+      .show-password-input {
+        display: none;
+      }
+
+      .form-row-wide:not(:first-child) {
+        margin-top: 40px;
+      }
+
+      .woocommerce-form-login__submit {
+        width: 100%;
+      }
+
+      .lost_password {
+        text-align: right;
+
+        a.link {
+          border-bottom: 2px solid transparent;
+          color: $color-primary-dark-blue !important;
+          font-size: 14px;
+          font-weight: 500;
+          padding-bottom: 2px;
+
+          &:hover,
+          &:focus {
+            border-bottom: 2px solid $color-primary-dark-blue;
+            color: $color-primary-blue;
+          }
+        }
+      }
+
+      .form-row--email,
+      .form-row--password {
+        position: relative;
+
+        &::after {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: "";
+          height: 20px;
+          position: absolute;
+          right: 10px;
+          top: 8px;
+          width: 20px;
+        }
+      }
+
+      .form-row--email {
+        &::after {
+          background-image: url(./assets/icons/icon-email-login.svg);
+        }
+      }
+
+      .form-row--password {
+        &::after {
+          background-image: url(./assets/icons/icon-password-login.svg);
+        }
       }
     }
   }
