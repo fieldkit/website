@@ -43,41 +43,36 @@
 }
 
 .link--large {
+  border-bottom: 2px solid $color-primary-dark-blue;
   font-size: 20px;
   font-weight: 500;
 
-  &::after {
-    height: 2px;
-  }
-
   &:hover,
   &:focus {
-    &::after {
-      height: 3px;
-    }
+    border-bottom: 3px solid $color-primary-dark-blue;
+    margin-bottom: -1px;
   }
 }
 
 .link--small {
+  border-bottom: 1px solid $color-primary-dark-blue;
   font-size: 14px;
   font-weight: 900;
 
-  &::after {
-    height: 1px;
-  }
-
   &:hover,
   &:focus {
-    &::after {
-      height: 2px;
-    }
+    border-bottom: 2px solid $color-primary-dark-blue;
+    margin-bottom: -1px;
   }
 }
 
-.link-blue {
+.link-paragraph {
+  border-bottom: 2px solid $color-primary-dark-blue;
+  display: inline;
+
   &:hover,
   &:focus {
+    border-bottom: 3px solid $color-primary-blue;
     color: $color-primary-blue;
-    text-decoration: underline;
   }
 }
