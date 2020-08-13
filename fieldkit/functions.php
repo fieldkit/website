@@ -16,7 +16,6 @@ if (!function_exists('fieldkit_setup')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
-		add_theme_support('wc-product-gallery-zoom');
 		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
 		add_theme_support( 'wc-product-gallery-slider' );
