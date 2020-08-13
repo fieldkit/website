@@ -1,0 +1,110 @@
+.wcwl-input-group {
+  margin-top: 35px;
+  position: relative;
+
+  .wcwl_email:focus ~ .wcwl_email_label,
+  .wcwl_email:not(:focus):valid ~ .wcwl_email_label {
+    color: #6a6d71;
+    font-size: 11px;
+    font-size: 12px;
+    font-weight: 500;
+    left: 0;
+    line-height: 1.17;
+    opacity: 1;
+    top: -12px;
+  }
+}
+
+.wcwl_email_label {
+  @extend .body;
+
+  color: $color-primary-dark-blue;
+  display: block;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 2px;
+  transition: 0.2s ease all;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.wcwl-input-group input[type="email"].wcwl_email {
+  @extend .body;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-gray-3;
+  color: $color-primary-dark-blue;
+  display: block;
+  padding: 4px 4px 4px 0;
+  position: relative;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-gray-5;
+  }
+}
+
+.wcwl-display .wcwl_control {
+  display: inline-block;
+  margin-top: 37px;
+  text-align: center;
+  width: 100%;
+
+  @include mq($from: medium) {
+    margin-top: 20px;
+  }
+
+  .woocommerce_waitlist.button {
+    width: 100%;
+  }
+}
+
+.wcwl-display {
+  background-color: #f4f5f7;
+  border: solid 1px #cccdcf;
+  border-radius: 1px;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  padding: 1em;
+
+  .wcwl_intro {
+    p {
+      @extend .body;
+
+      font-weight: 500;
+    }
+
+    :first-child {
+      color: #c42c44;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.wcwl_notice.woocommerce-message {
+  background-color: #3f8530;
+  border-radius: 1px;
+
+  p {
+    padding-left: 20px;
+  }
+}
+
+.wcwl_notice.woocommerce-message::before {
+  background: url("./assets/icons/wcwl-icon-check.svg") no-repeat;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 15px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-11px);
+  width: 22px;
+}

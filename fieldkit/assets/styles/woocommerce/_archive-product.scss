@@ -2,6 +2,10 @@
   display: none;
 }
 
+.summary.entry-summary {
+  max-width: 462px;
+}
+
 select {
   @extend .body;
   @extend .body--small;

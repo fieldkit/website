@@ -1,3 +1,7 @@
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
   border-bottom-width: 2px;
 }
+
+.woocommerce-variation-add-to-cart.woocommerce-variation-add-to-cart-disabled {
+  display: none;
+}
