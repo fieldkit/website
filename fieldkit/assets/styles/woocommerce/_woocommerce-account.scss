@@ -203,6 +203,23 @@
     }
   }
 
+  .woocommerce-MyAccount-navigation-link--woocommerce-waitlist {
+    &::after {
+      background-image: url(./assets/icons/wait-list-icon.svg);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-image: url(./assets/icons/wait-list-icon-active.svg);
+    }
+
+    &.is-active {
+      &::after {
+        background-image: url(./assets/icons/wait-list-icon-active.svg);
+      }
+    }
+  }
+
   .woocommerce-info--downloads {
     align-items: center;
     align-items: flex-start;

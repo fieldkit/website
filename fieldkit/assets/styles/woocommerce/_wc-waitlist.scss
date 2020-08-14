@@ -115,3 +115,27 @@
   transform: translateY(-11px);
   width: 22px;
 }
+
+.my_account_titles#wcwl_my_waitlist {
+  font-size: 16px;
+  font-weight: 900;
+
+  @include mq($from: medium) {
+    font-size: 32px;
+  }
+}
+
+.waitlist-single-product {
+  width: 100%;
+
+  .waitlist-title-link {
+    color: $color-primary-dark-blue;
+    pointer-events: none;
+    text-align: left;
+  }
+
+  p,
+  .waitlist-title-link {
+    text-align: left;
+  }
+}
