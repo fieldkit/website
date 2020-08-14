@@ -370,6 +370,10 @@
       font-size: 14px;
       line-height: 21px;
     }
+
+    .account_display_name-note {
+      display: none;
+    }
   }
 
   .dashboard-portal {
@@ -561,5 +565,10 @@
 
   #password-change {
     margin-bottom: 25px;
+  }
+
+  input,
+  textarea {
+    @extend .body;
   }
 }
