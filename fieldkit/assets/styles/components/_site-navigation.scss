@@ -61,11 +61,11 @@ $site-header-breakpoint: 800px;
       font-weight: normal;
       font-weight: 500;
       letter-spacing: 0.08px;
+    }
 
-      &:hover,
-      &:focus {
-        font-weight: 600;
-      }
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid currentColor;
     }
   }
 
@@ -139,7 +139,7 @@ $site-header-breakpoint: 800px;
     display: none;
   }
 
-  .site-navigation .current-menu-item {
-    border-bottom: 1px solid currentColor;
+  .site-navigation .current-menu-item a {
+    font-weight: 600;
   }
 }
