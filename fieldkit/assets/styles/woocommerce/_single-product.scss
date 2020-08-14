@@ -94,6 +94,8 @@
   margin-right: 16px;
 
   input {
+    @extend .body;
+
     background-color: #ffffff;
     border: solid 1px #b7bcd6;
     border-radius: 4px;
