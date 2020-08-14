@@ -205,10 +205,12 @@
 
   .woocommerce-info--downloads {
     align-items: center;
+    align-items: flex-start;
     background-color: #fcfcfc;
     border: solid 1px #d8dce0;
     color: $color-primary-dark-blue;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 1em;
 
@@ -375,6 +377,10 @@
     .woocommerce-orders-table tbody td {
       font-size: 14px;
       line-height: 21px;
+    }
+
+    .account_display_name-note {
+      display: none;
     }
   }
 
@@ -567,5 +573,10 @@
 
   #password-change {
     margin-bottom: 25px;
+  }
+
+  input,
+  textarea {
+    @extend .body;
   }
 }

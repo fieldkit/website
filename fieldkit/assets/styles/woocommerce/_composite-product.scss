@@ -164,10 +164,7 @@
 .summary_elements
   .summary_element_selection.summary_element_data
   .content_product_title {
-  @extend .body;
-  @extend .body--large;
-
-  font-weight: 900;
+  @extend .heading-6;
 }
 
 .summary__details
