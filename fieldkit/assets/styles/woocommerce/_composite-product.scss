@@ -164,10 +164,7 @@
 .summary_elements
   .summary_element_selection.summary_element_data
   .content_product_title {
-  @extend .body;
-  @extend .body--large;
-
-  font-weight: 900;
+  @extend .heading-6;
 }
 
 .summary__details
@@ -264,9 +261,12 @@ li.component_option_thumbnail_container {
   }
 }
 
-.product-type-composite
-  .composite_navigation.paged.bottom
+.product-type-composite .composite_navigation.paged.bottom {
+  border-top: 1px solid rgba($color-gray-3, 0.5);
+  margin-top: 32px;
+
   .composite_navigation_inner {
-  padding: 0;
-  padding-top: 1em;
+    padding: 0;
+    padding-top: 1.5em;
+  }
 }
