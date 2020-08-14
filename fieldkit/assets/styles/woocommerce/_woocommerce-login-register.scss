@@ -263,6 +263,17 @@
           background-image: url(./assets/icons/icon-password-login.svg);
         }
       }
+
+      .woocommerce-form-login__rememberme {
+        font-size: 14px;
+      }
+
+      .rememberme-lostpassword-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 12px;
+      }
     }
   }
 }
