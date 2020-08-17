@@ -270,3 +270,15 @@ li.component_option_thumbnail_container {
     padding-top: 1.5em;
   }
 }
+
+.bundle_wrap.component_wrap {
+  .bundle_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bundle_subtotal {
+    font-weight: 500;
+  }
+}
