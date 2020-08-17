@@ -125,17 +125,71 @@
   }
 }
 
+.waitlist-single-product:last-child hr {
+  background-color: transparent;
+}
+
 .waitlist-single-product {
+  margin-top: 56px;
   width: 100%;
+
+  @include mq($from: medium) {
+    margin-top: 29px;
+  }
 
   .waitlist-title-link {
     color: $color-primary-dark-blue;
+    margin-bottom: 14px;
     pointer-events: none;
     text-align: left;
   }
 
   p,
-  .waitlist-title-link {
-    text-align: left;
+  .waitlist-title-link,
+  .wcwl_remove_product {
+    text-align: left !important;
   }
+
+  .waitlist-title-link {
+    margin-bottom: 14px;
+    margin-top: 27px;
+
+    @include mq($from: medium) {
+      margin-bottom: 17px;
+      margin-top: 30px;
+    }
+  }
+
+  p a.wcwl_remove_product {
+    color: #2c3e50 !important;
+    font-weight: 900 !important;
+    line-height: 21px !important;
+  }
+}
+
+.woocommerce-MyAccount-content
+  .waitlist-user-waitlist-wrapper
+  .waitlist-thumbnail {
+  display: block;
+  margin-bottom: 17px;
+  margin-top: 17px;
+  overflow: hidden;
+  position: relative;
+
+  @include mq($from: medium) {
+    margin-bottom: 14px;
+  }
+}
+
+.woocommerce-MyAccount-content
+  .waitlist-user-waitlist-wrapper
+  .waitlist-thumbnail
+  img {
+  display: block;
+  height: 100%;
+  margin: unset;
+  max-height: 200px;
+  max-width: 300px;
+  object-fit: cover;
+  width: 100%;
 }
