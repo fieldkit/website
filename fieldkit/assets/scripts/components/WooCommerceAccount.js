@@ -5,6 +5,7 @@ class WooCommerceAccount {
     this.$element = $(element);
     this.$loginForm = this.$element.find(".woocommerce-form-login");
     this.$registerForm = this.$element.find(".woocommerce-form-register");
+    this.$inputError = this.$element.find(".woocommerce-error li");
 
     this.$loginFormParent = this.$loginForm.parent();
     this.$registerFormParent = this.$registerForm.parent();
@@ -17,6 +18,7 @@ class WooCommerceAccount {
     );
 
     this.addListeners();
+    this.errorHandle();
   }
 
   addListeners() {
@@ -70,6 +72,15 @@ class WooCommerceAccount {
   handleMyAccount() {
     if (this.$pathName === "my-account") {
       $(".woocommerce-MyAccount-content > p").addClass("welcome-msg");
+    }
+  }
+
+  errorHandle() {
+    for (let index = 0; index < this.$inputError.length; index++) {
+      // console.log(this.$inputError[index].dataset.id);
+      $("#" + this.$inputError[index].dataset.id + "").addClass(
+        "woocommerce-Input--error"
+      );
     }
   }
 }
