@@ -78,7 +78,10 @@
     @extend .heading-5;
   }
 
-  p,
+  p {
+    @extend .body;
+  }
+
   li {
     @extend .body--small;
   }
