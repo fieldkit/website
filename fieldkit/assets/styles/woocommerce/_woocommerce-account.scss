@@ -409,7 +409,7 @@
     }
 
     ul {
-      align-items: flex-start;
+      align-items: stretch;
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -430,12 +430,10 @@
         border-radius: 3px;
         display: flex;
         flex-direction: column;
-        height: 125px;
         justify-content: center;
         margin-bottom: 32px;
         padding: 20px;
         text-align: center;
-        width: 100%;
 
         @include mq($from: small) {
           justify-content: flex-start;
@@ -445,13 +443,14 @@
       }
 
       li:last-child {
-        margin-bottom: 0px;
         margin-right: 0px;
       }
 
-      li img {
+      li svg {
+        fill: $color-primary-dark-blue;
         margin-bottom: 10px;
-        width: 29px;
+        max-height: 40px;
+        width: 100%;
       }
     }
 
@@ -467,6 +466,10 @@
       &:hover,
       &:focus {
         color: $color-primary-blue;
+
+        svg {
+          fill: $color-primary-blue;
+        }
       }
     }
   }
