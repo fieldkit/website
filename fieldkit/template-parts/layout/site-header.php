@@ -42,8 +42,11 @@ $header = get_field('header', 'option');
 			<?php
 			if (has_nav_menu('account') && !is_user_logged_in() ) {
 						wp_nav_menu(array('theme_location' => 'account'));
-					}
+				}
 			?>
+
+
+
 			<?php if ( is_user_logged_in() ): ?>
 			<ul class="my-account-menu">
 				<li>
