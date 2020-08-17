@@ -81,10 +81,14 @@
   padding: 1em;
 
   .wcwl_intro {
+    margin-bottom: 1em;
+
+    .wcwl_heading {
+      font-weight: 500;
+    }
+
     p {
       @extend .body;
-
-      font-weight: 500;
     }
 
     :first-child {
