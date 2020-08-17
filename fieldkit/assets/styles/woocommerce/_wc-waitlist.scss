@@ -47,6 +47,12 @@
   &::placeholder {
     color: $color-gray-5;
   }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
 }
 
 .wcwl-display .wcwl_control {
