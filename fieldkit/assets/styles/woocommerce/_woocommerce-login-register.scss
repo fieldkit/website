@@ -51,11 +51,35 @@
 
 @include mq($from: medium) {
   .side-nav .menu-account-container {
+    background: $color-background;
+    border: 1px solid $color-gray-3;
+    border-radius: 2px;
+    bottom: -20px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.11);
     opacity: 0;
+    padding: 10px 15px;
     position: absolute;
-    transform: translateY(100%);
+    right: (10px + 10px) * -1;
+    // transform: translateY(100%);
     transition: opacity $duration-fast, visibility 0s $duration-fast;
     visibility: hidden;
+    width: 130px;
+
+    &::before {
+      background: $color-background;
+      border-bottom: 1px solid $color-gray-3;
+      border-left: 1px solid $color-gray-3;
+      border-width: 0px 0px 1px 1px;
+      content: "";
+      display: block;
+      height: 15px;
+      position: absolute;
+      right: 20px;
+      top: -9px;
+      transform: rotate(135deg);
+      width: 15px;
+      z-index: 1;
+    }
 
     @media screen and (prefers-reduced-motion: reduce) {
       transition: none;
