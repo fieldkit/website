@@ -19,9 +19,9 @@ $(".woocommerce-ordering--variant").each(
   (index, element) => new SortDropdown(element)
 );
 
-$(".woocommerce-account").each(
-  (index, element) => new WooCommerceAccount(element)
-);
+// $(".woocommerce-account").each(
+//   (index, element) => new WooCommerceAccount(element)
+// );
 
 $(".woocommerce-loop-product__link img").wrap(
   "<div class='wp-post-image--container'></div>"
