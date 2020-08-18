@@ -35,7 +35,6 @@ $site-header-breakpoint: 800px;
     @extend .body;
 
     font-size: 14px;
-    margin-right: 29px;
     text-transform: uppercase;
 
     @include mq($until: $site-header-breakpoint) {
@@ -46,6 +45,7 @@ $site-header-breakpoint: 800px;
 
     @include mq($from: $site-header-breakpoint) {
       display: flex;
+      margin-right: 29px;
 
       &:not(:first-child) {
         margin-left: 1em;
@@ -74,7 +74,7 @@ $site-header-breakpoint: 800px;
     margin-top: 33px;
     padding-top: 33px;
 
-    li a {
+    a {
       @extend .button;
       @extend .button--secondary;
 
