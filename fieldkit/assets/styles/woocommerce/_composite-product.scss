@@ -290,6 +290,10 @@ li.component_option_thumbnail_container {
   }
 }
 
+figure.composited_product_image.woocommerce-product-gallery__image {
+  pointer-events: none;
+}
+
 .bundle_wrap.component_wrap {
   .bundle_inner {
     display: flex;
