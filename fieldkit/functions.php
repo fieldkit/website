@@ -139,3 +139,11 @@ function woo_remove_product_tabs($tabs)
 	return $tabs;
 }
 add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
+
+
+add_action('wp_logout','auto_redirect_after_logout');
+
+function auto_redirect_after_logout(){
+  wp_redirect( home_url() );
+  exit();
+}
