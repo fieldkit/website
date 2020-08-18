@@ -4,11 +4,12 @@
   }
 
   a:not(.button) {
-    color: $color-primary-blue;
+    color: $color-primary-dark-blue;
 
     &:hover,
     &:focus {
-      color: inherit;
+      border-bottom: 1px solid $color-primary-blue;
+      color: $color-primary-blue;
     }
   }
 
