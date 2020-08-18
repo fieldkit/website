@@ -1,8 +1,8 @@
 .section-services-header {
   @extend .section-about-header;
 
-  margin-top: 50px;
-  min-height: auto;
+  margin-top: 30px;
+  min-height: 100vw * 500 / 1560;
 
   @include mq($from: medium) {
     margin-top: 45px;
@@ -17,33 +17,23 @@
       line-height: normal;
     }
   }
-
-  .section__inner {
-    padding: 5% 0;
-
-    @include mq($from: medium) {
-      padding: 10% 0;
-    }
-  }
 }
 
 .section-services-header__heading {
   @extend .section-about-header__heading;
 
   max-width: 335px;
-  padding-top: 40px;
   text-align: center;
 
   @include mq($from: medium) {
     max-width: 803px;
-    padding-top: 0;
   }
 }
 
 .section-services-header__background {
   height: 100%;
   left: 50%;
-  max-width: 460px;
+  max-width: 530px;
   position: absolute;
   top: 0;
   transform: translateX(-50%);
@@ -51,13 +41,17 @@
   z-index: -1;
 
   @include mq($from: medium) {
-    max-width: 700px;
+    max-width: 760px;
   }
 
   img {
     display: block;
     height: 100%;
-    object-fit: cover;
+    object-fit: inherit;
     width: 100%;
+
+    @include mq($from: medium) {
+      object-fit: cover;
+    }
   }
 }
