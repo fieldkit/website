@@ -2,10 +2,6 @@
   display: none;
 }
 
-.summary.entry-summary {
-  max-width: 462px;
-}
-
 select {
   @extend .body;
   @extend .body--small;
@@ -191,7 +187,9 @@ select {
   }
 
   .pre_order_loop {
-    @extend .body;
+    color: $color-primary-dark-blue !important;
+    font-size: 20px;
+    font-weight: 500;
   }
 }
 
