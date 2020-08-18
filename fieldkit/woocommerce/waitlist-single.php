@@ -36,7 +36,7 @@
 		<div class="wcwl-display wcwl_intro">
 
 		<div class="wcwl_intro">
-			<p>Sold Out/Coming Soon</p>
+			<p class="wcwl_heading">Sold Out/Coming Soon</p>
 			<p><?php echo $intro; ?></p>
 		</div>
 
