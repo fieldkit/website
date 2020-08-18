@@ -78,7 +78,10 @@
     @extend .heading-5;
   }
 
-  p,
+  p {
+    @extend .body;
+  }
+
   li {
     @extend .body--small;
   }
@@ -249,6 +252,10 @@ li.component_option_thumbnail_container {
 
 .bundled_product_summary .bundled_item_button .quantity {
   margin-top: 0.7em !important;
+}
+
+.bundled_product_summary {
+  margin-top: 1.618em;
 }
 
 .attribute_options .label {

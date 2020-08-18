@@ -34,31 +34,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 </p>
 
 <div class="dashboard-portal">
+<?php
+$iconorders = '<svg><use xlink:href="'.get_template_directory_uri() . "/assets/icons/sprite.svg#icon-orders".'" /></svg>';
+$iconaddresses = '<svg><use xlink:href="'.get_template_directory_uri() . "/assets/icons/sprite.svg#icon-addresses".'" /></svg>';
+$iconuser = '<svg><use xlink:href="'.get_template_directory_uri() . "/assets/icons/sprite.svg#icon-user".'" /></svg>';
+?>
 	<ul>
 		<li>
-		<?php echo fieldkit_get_icon('orders'); ?>
 			<?php
 			printf(
-				__( '
-				 <a href="%1$s">View recent orders</a>', 'woocommerce' ),
+				__(
+				 '<a href="%1$s">'.$iconorders.' View recent orders</a>', 'woocommerce' ),
 				esc_url( wc_get_endpoint_url( 'orders' )) );
 				?>
 		</li>
 		<li>
-		<?php echo fieldkit_get_icon('addresses'); ?>
 			<?php
 			printf(
 				__( '
-				 <a href="%1$s">Manage Addresses</a>', 'woocommerce' ),
+				 <a href="%1$s">'.$iconaddresses.' Manage Addresses</a>', 'woocommerce' ),
 				esc_url( wc_get_endpoint_url( 'edit-address' ) ));
 				?>
 		</li>
 		<li>
-			<?php echo fieldkit_get_icon('user'); ?>
 			<?php
 			printf(
 				__( '
-				 <a href="%1$s">Edit Account</a>', 'woocommerce' ),
+				 <a href="%1$s">'.$iconuser.' Edit Account</a>', 'woocommerce' ),
 				esc_url( wc_get_endpoint_url( 'edit-account' ) ));
 				?>
 		</li>
