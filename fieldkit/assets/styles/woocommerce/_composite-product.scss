@@ -89,6 +89,16 @@
   .woocommerce-Price-amount.amount {
     @extend .body;
   }
+
+  p > a {
+    color: $color-primary-blue;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
 }
 
 .type-product table.variations {
