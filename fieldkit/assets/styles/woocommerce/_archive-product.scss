@@ -157,6 +157,12 @@ select {
       width: 10px;
     }
   }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .select2-dropdown.select2-dropdown--below {
@@ -284,6 +290,14 @@ select {
   li.current-menu-item {
     a {
       font-weight: 900;
+    }
+  }
+}
+
+.archive {
+  .section-text-and-image__text {
+    .heading-4 {
+      font-weight: 400;
     }
   }
 }
