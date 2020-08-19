@@ -112,10 +112,6 @@
         text-align: center;
       }
 
-      label {
-        display: none;
-      }
-
       input {
         border-bottom: 1px solid $color-gray-3;
         padding-bottom: 5px;
@@ -224,7 +220,6 @@
 
       .lost_password {
         text-align: right;
-        width: 100%;
 
         a.link {
           border-bottom: 1px solid transparent;
@@ -271,10 +266,17 @@
       }
 
       .woocommerce-form-login__rememberme {
+        align-items: center;
+        display: flex;
         font-size: 14px;
+
+        :nth-child(2) {
+          margin-left: 10px;
+        }
       }
 
       .rememberme-lostpassword-container {
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
