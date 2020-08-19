@@ -107,8 +107,11 @@
 .wcwl_notice.woocommerce-message {
   background-color: #3f8530;
   border-radius: 1px;
+  padding: 12px 33px;
 
   p {
+    font-size: 18px;
+    font-weight: 500;
     padding-left: 20px;
   }
 }
