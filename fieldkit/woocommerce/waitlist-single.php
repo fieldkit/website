@@ -28,9 +28,6 @@
 			<div aria-live="polite">
 				<p><?php echo $notice; ?></p>
 			</div>
-			<button type="button" class="wcwl_notice_dismiss">
-				<span class="screen-reader-text"><?php echo $dismiss_notification_text; ?></span>
-			</button>
 		</div>
 
 		<div class="wcwl-display wcwl_intro">
