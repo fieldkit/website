@@ -7,7 +7,7 @@ $image = $pre_footer['image'];
 	<div class="section__inner section__inner--inset">
 	<div class="section-pre-footer__text">
 
-		<div class="rich-text">
+		<div class="rich-text rich-text--large">
 			<?php echo $body; ?>
 		</div>
 		<?php if ($link) : ?>
