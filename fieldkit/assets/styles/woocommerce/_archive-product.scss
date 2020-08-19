@@ -157,6 +157,12 @@ select {
       width: 10px;
     }
   }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .select2-dropdown.select2-dropdown--below {
