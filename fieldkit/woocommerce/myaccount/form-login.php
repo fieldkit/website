@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 		</div>
 	</div>
-<? endif; ?>
+<?php endif; ?>
 
 	<?php if (isset($_GET['action'])=='register')  : ?>
 
