@@ -3,6 +3,7 @@ $body = $pre_footer['body'];
 $link = $pre_footer['link'];
 $image = $pre_footer['image'];
 ?>
+<?php if ($body) : ?>
 <header class="section section-pre-footer">
 	<div class="section__inner section__inner--inset">
 	<div class="section-pre-footer__text">
@@ -28,3 +29,4 @@ $image = $pre_footer['image'];
 			</div>
 	</div>
 </header>
+<?php endif; ?>
