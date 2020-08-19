@@ -40,7 +40,6 @@ if($text_and_image){
 $call_out = get_field('call_out',$shop_page_id);
 if($call_out){
 	include(locate_template('template-parts/blocks/call-out.php', false, false));
-
 }
 
 include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
@@ -59,6 +58,11 @@ $cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 	$text_and_image = get_field('text_and_image',$shop_page_id);
 	if($text_and_image){
 		include(locate_template('template-parts/blocks/text-and-image.php', false, false));
+	}
+
+	$call_out = get_field('call_out',$shop_page_id);
+	if($call_out){
+		include(locate_template('template-parts/blocks/call-out.php', false, false));
 	}
 	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
 
