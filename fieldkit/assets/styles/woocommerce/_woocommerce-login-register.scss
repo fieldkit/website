@@ -95,7 +95,7 @@
     }
   }
 
-  .woocommerce-notices-wrapper {
+  .woocommerce-notices-wrapper:first-child {
     margin-bottom: 32px;
   }
 
@@ -157,7 +157,7 @@
       border-top: 0;
       color: $color-background;
       margin: auto;
-      max-width: 320px;
+      max-width: 100%;
       padding: 17px 16px;
       width: 100%;
     }
