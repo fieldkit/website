@@ -4294,10 +4294,17 @@ figure.composited_product_image.woocommerce-product-gallery__image {
     font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     letter-spacing: 0.1px;
-    padding: 10px;
+    padding: 11px;
     width: 170px; }
     .woocommerce-cart .woocommerce .coupon #coupon_code::placeholder {
       color: #6a6d71; }
+  .woocommerce-cart .woocommerce .coupon .button--coupon {
+    background-color: #ffffff;
+    border: solid 1px #ce596b;
+    border-radius: 3px;
+    color: #ce596b; }
+    .woocommerce-cart .woocommerce .coupon .button--coupon:hover, .woocommerce-cart .woocommerce .coupon .button--coupon:focus {
+      box-shadow: 0 2px 4px 0 #d8dce0; }
 
 .woocommerce-cart .woocommerce .quantity .qty {
   border: 1px solid #d8dce0;

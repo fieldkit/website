@@ -66,11 +66,23 @@
         font-family: $font-family-base;
         font-size: 13px;
         letter-spacing: 0.1px;
-        padding: 10px;
+        padding: 11px;
         width: 170px;
 
         &::placeholder {
           color: $color-gray-5;
+        }
+      }
+
+      .button--coupon {
+        background-color: #ffffff;
+        border: solid 1px $color-primary-red;
+        border-radius: 3px;
+        color: $color-primary-red;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 2px 4px 0 $color-gray-3;
         }
       }
     }
