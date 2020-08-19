@@ -24,9 +24,35 @@
         border-top: 2px solid $color-gray-3;
       }
 
+      .component_container_table_item .product-name > div {
+        padding-left: 30px;
+      }
+
+      .component_table_item .component_table_item_indent {
+        padding-left: 40px;
+
+        dt {
+          letter-spacing: 0.44px;
+        }
+      }
+
+      .bundled_table_item .bundled_table_item_indent {
+        padding-left: 50px;
+
+        a {
+          letter-spacing: 0.39px;
+        }
+      }
+
+      .edit_composite_in_cart_text small {
+        letter-spacing: 0.36px;
+        text-decoration: none;
+      }
+
       .woocommerce-cart-form__cart-item td,
       .woocommerce-cart-form__cart-item a {
         font-weight: 500;
+        letter-spacing: 0.44px;
       }
 
       .actions {

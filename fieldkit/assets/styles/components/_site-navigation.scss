@@ -25,27 +25,29 @@ $site-header-breakpoint: 800px;
 }
 
 .site-navigation {
-  .menu {
+  #menu-header {
     @include mq($from: $site-header-breakpoint) {
       display: flex;
     }
   }
 
-  .menu-item {
+  #menu-header .menu-item {
     @extend .body;
 
     font-size: 14px;
-    margin-right: 29px;
     text-transform: uppercase;
 
     @include mq($until: $site-header-breakpoint) {
       &:not(:first-child) {
-        margin-top: 1em;
+        margin-top: 28px;
       }
     }
+  }
 
+  #menu-header .menu-item {
     @include mq($from: $site-header-breakpoint) {
       display: flex;
+      margin-right: 29px;
 
       &:not(:first-child) {
         margin-left: 1em;
@@ -57,24 +59,26 @@ $site-header-breakpoint: 800px;
     }
 
     a {
-      font-size: 14px;
-      font-weight: normal;
-      font-weight: 500;
-      letter-spacing: 0.08px;
-    }
+      @include mq($from: $site-header-breakpoint) {
+        font-size: 14px;
+        font-weight: normal;
+        font-weight: 500;
+        letter-spacing: 0.08px;
+      }
 
-    &:hover,
-    &:focus {
-      border-bottom: 1px solid currentColor;
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid currentColor;
+      }
     }
   }
 
   .nav-button {
     border-top: 1px solid $color-gray-3;
-    margin-top: 33px;
+    margin-top: 30.5px;
     padding-top: 33px;
 
-    li a {
+    a {
       @extend .button;
       @extend .button--secondary;
 
