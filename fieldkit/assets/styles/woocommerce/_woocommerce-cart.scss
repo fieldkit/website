@@ -1,4 +1,9 @@
 .woocommerce-cart {
+  .section__inner {
+    max-width: 1080px;
+    width: 100%;
+  }
+
   .woocommerce {
     table.shop_table {
       border-bottom: 1px solid $color-gray-3;
@@ -8,7 +13,10 @@
       border-top: 0px;
 
       thead th {
+        color: $color-primary-dark-blue;
+        font-size: 16px;
         font-weight: 500;
+        letter-spacing: 0.44px;
         text-transform: uppercase;
       }
 
@@ -16,9 +24,35 @@
         border-top: 2px solid $color-gray-3;
       }
 
+      .component_container_table_item .product-name > div {
+        padding-left: 30px;
+      }
+
+      .component_table_item .component_table_item_indent {
+        padding-left: 40px;
+
+        dt {
+          letter-spacing: 0.44px;
+        }
+      }
+
+      .bundled_table_item .bundled_table_item_indent {
+        padding-left: 50px;
+
+        a {
+          letter-spacing: 0.39px;
+        }
+      }
+
+      .edit_composite_in_cart_text small {
+        letter-spacing: 0.36px;
+        text-decoration: none;
+      }
+
       .woocommerce-cart-form__cart-item td,
       .woocommerce-cart-form__cart-item a {
         font-weight: 500;
+        letter-spacing: 0.44px;
       }
 
       .actions {
@@ -35,6 +69,16 @@
       .tax-total td {
         text-align: right;
       }
+
+      &.cart {
+        th {
+          padding: 9px 0;
+        }
+
+        td {
+          padding: 25px 0;
+        }
+      }
     }
 
     .button[name="update_cart"] {
@@ -44,6 +88,11 @@
 
       @include mq($from: medium) {
         margin-bottom: 0px;
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 2px 4px 0 $color-gray-3;
       }
     }
 
@@ -57,7 +106,29 @@
       justify-content: space-around;
 
       #coupon_code {
-        padding: 7px;
+        border: 1px solid $color-gray-3;
+        border-radius: 3px;
+        font-family: $font-family-base;
+        font-size: 13px;
+        letter-spacing: 0.1px;
+        padding: 11px;
+        width: 170px;
+
+        &::placeholder {
+          color: $color-gray-5;
+        }
+      }
+
+      .button--coupon {
+        background-color: #ffffff;
+        border: solid 1px $color-primary-red;
+        border-radius: 3px;
+        color: $color-primary-red;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 2px 4px 0 $color-gray-3;
+        }
       }
     }
 
@@ -81,9 +152,16 @@
     }
 
     .cart_totals {
+      width: 100%;
+
+      @include mq($from: medium) {
+        width: 40%;
+      }
+
       h2 {
         font-size: 32px;
         font-weight: 900;
+        margin-bottom: 20px;
       }
 
       tr > * {
@@ -101,6 +179,10 @@
 
       table.shop_table_responsive td {
         background-color: transparent;
+      }
+
+      th {
+        padding: 9px 0;
       }
     }
 
