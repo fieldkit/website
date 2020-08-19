@@ -35,6 +35,10 @@
       .tax-total td {
         text-align: right;
       }
+
+      &.cart td {
+        padding: 25px 0;
+      }
     }
 
     .button[name="update_cart"] {
@@ -57,7 +61,17 @@
       justify-content: space-around;
 
       #coupon_code {
-        padding: 7px;
+        border: 1px solid $color-gray-3;
+        border-radius: 3px;
+        font-family: $font-family-base;
+        font-size: 13px;
+        letter-spacing: 0.1px;
+        padding: 10px;
+        width: 170px;
+
+        &::placeholder {
+          color: $color-gray-5;
+        }
       }
     }
 
