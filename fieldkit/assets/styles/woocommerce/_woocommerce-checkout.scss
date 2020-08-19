@@ -59,6 +59,15 @@
         content: none;
       }
     }
+
+    a.showcoupon:not(.button) {
+      color: $color-background;
+
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid $color-background;
+      }
+    }
   }
 
   .woocommerce-form-login-toggle {
