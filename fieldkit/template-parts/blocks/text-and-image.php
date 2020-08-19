@@ -12,7 +12,7 @@
 	  <div class="section-text-and-image__content">
          <div class="section-text-and-image__text">
             <div class="rich-text">
-			   <h2 class="heading-3"><?php echo $heading; ?></h2>
+			   <h2 class="heading-2"><?php echo $heading; ?></h2>
 			   <p class="heading-4">
 				   <?php echo $body; ?>
 			   </p>

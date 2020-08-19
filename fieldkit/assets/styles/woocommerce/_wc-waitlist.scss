@@ -177,6 +177,11 @@
     color: #2c3e50 !important;
     font-weight: 900 !important;
     line-height: 21px !important;
+
+    &:hover,
+    &:focus {
+      color: $color-primary-blue !important;
+    }
   }
 }
 
