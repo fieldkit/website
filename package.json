@@ -9,11 +9,11 @@
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.2",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "cssnano": "^4.1.10",
-    "eslint": "^7.6.0",
+    "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-compat": "^3.8.0",
     "eslint-plugin-import": "^2.22.0",
@@ -24,7 +24,7 @@
     "postcss-cli": "^7.1.1",
     "postcss-custom-media": "^7.0.8",
     "prettier": "^2.0.5",
-    "standard-version": "^8.0.2",
+    "standard-version": "^9.0.0",
     "stylelint": "^13.6.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-prettier": "^8.0.2",
@@ -35,6 +35,9 @@
     "stylelint-scss": "^3.18.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   },
   "license": "GPL-3.0-or-later",
   "private": true,
