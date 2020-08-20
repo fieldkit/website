@@ -11,7 +11,10 @@
   }
 
   textarea {
-    border-bottom: 1px solid $color-gray-3;
+    border: 1px solid $color-gray-3;
+    border-radius: 4px;
+    height: 60px !important;
+    padding: 11px 11px 0;
   }
 
   .select2-container--open .select2-dropdown {
