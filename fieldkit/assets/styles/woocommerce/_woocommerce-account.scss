@@ -299,22 +299,16 @@
       &:focus {
         border-color: $color-secondary-blue;
         border-width: 2px;
-        margin-bottom: -1px !important;
       }
 
       &.woocommerce-Input--error {
         border-color: $color-tertary-red;
         border-width: 2px;
-        margin-bottom: -1px !important;
       }
 
       &::placeholder {
         color: $color-gray-5;
       }
-    }
-
-    .woocommerce-error {
-      display: none;
     }
 
     .woocommerce-MyAccount-orders {
