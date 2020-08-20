@@ -226,6 +226,10 @@
       margin-top: 3em;
     }
   }
+
+  table.shop_table tfoot td.order_details--payment-method {
+    font-weight: 400;
+  }
 }
 
 .woocommerce .woocommerce-error {
