@@ -226,6 +226,29 @@
       margin-top: 3em;
     }
   }
+
+  .checkout_coupon {
+    button {
+      @extend .button--secondary;
+    }
+
+    .form-row {
+      margin: 0;
+    }
+
+    .form-row-first {
+      width: 50%;
+    }
+
+    input {
+      border: 1px solid #d8dce0;
+      border-radius: 3px;
+      font-family: $font-family-base;
+      font-size: 13px;
+      letter-spacing: 0.1px;
+      padding: 11px;
+    }
+  }
 }
 
 .woocommerce .woocommerce-error {
