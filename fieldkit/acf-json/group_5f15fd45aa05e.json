@@ -39,6 +39,25 @@
             "delay": 0
         },
         {
+            "key": "field_5f47979bd2f61",
+            "label": "Footer",
+            "name": "footer_body",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5f15fd6db4a5f",
             "label": "Table",
             "name": "table",
@@ -72,5 +91,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595276792
+    "modified": 1598527433
 }
