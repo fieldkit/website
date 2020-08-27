@@ -18,7 +18,50 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
-
+$rich_text = get_field('body');
+$rich_text_footer = get_field('footer_body');
 ?>
 
+<?php if($rich_text): ?>
+<div class="rich-text"><?php echo $rich_text; ?></div>
+<?php endif; ?>
+
+
+<?php
+$table = get_field('table');
+if($table):
+?>
+<section class="section section-table--primary">
+	<div class="section__inner">
+		<table class="section-table__table">
+			<?php if (!empty($table['header'])) : ?>
+				<thead>
+					<tr>
+						<?php foreach ($table['header'] as $th) : ?>
+							<th><?php echo $th['c']; ?></th>
+						<?php endforeach; ?>
+					</tr>
+				</thead>
+			<?php endif; ?>
+			<?php if (!empty($table['body'])) : ?>
+				<tbody>
+					<?php foreach ($table['body'] as $tr) : ?>
+						<tr>
+							<?php foreach ($tr as $td) : ?>
+								<td><?php echo $td['c']; ?></td>
+							<?php endforeach; ?>
+						</tr>
+					<?php endforeach; ?>
+					</tbody>
+			<?php endif; ?>
+		</table>
+	</div>
+</section>
+<?php endif; ?>
+
+
 <?php do_action( 'woocommerce_product_additional_information', $product ); ?>
+
+<?php if($rich_text_footer): ?>
+<div class="rich-text"><?php echo $rich_text_footer; ?></div>
+<?php endif; ?>
