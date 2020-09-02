@@ -11,7 +11,10 @@
   }
 
   textarea {
-    border-bottom: 1px solid $color-gray-3;
+    border: 1px solid $color-gray-3;
+    border-radius: 4px;
+    height: 60px !important;
+    padding: 11px 11px 0;
   }
 
   .select2-container--open .select2-dropdown {
@@ -286,5 +289,60 @@
 
   &::before {
     content: none;
+  }
+}
+
+.wc_payment_methods {
+  .wc_payment_method {
+    input[type="radio"] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    input[type="radio"]:checked ~ .check {
+      border: 1px solid #d8dce0;
+    }
+
+    input[type="radio"]:checked ~ .check::before {
+      background: #2c3e50;
+    }
+
+    .check {
+      border: 1px solid #d8dce0;
+      border-radius: 100%;
+      display: block;
+      height: 25px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 25px;
+      z-index: 5;
+
+      &::before {
+        border-radius: 100%;
+        content: "";
+        display: block;
+        height: 15px;
+        left: 4px;
+        margin: auto;
+        position: absolute;
+        top: 4px;
+        width: 15px;
+      }
+    }
+
+    label {
+      cursor: pointer;
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-left: 36px;
+      position: relative;
+    }
+
+    &.payment_method_paypal {
+      margin-top: 10px !important;
+    }
   }
 }
