@@ -296,9 +296,11 @@ select {
 }
 
 .archive {
-  .section-text-and-image__text {
-    .heading-4 {
-      font-weight: 400;
+  .section-product-feed-text-and-image__text {
+    p {
+      font-size: 18px;
+      letter-spacing: 0.08px;
+      line-height: 26px;
     }
   }
 }

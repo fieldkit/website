@@ -114,6 +114,10 @@
   .woocommerce-notices-wrapper {
     @extend %inset-width;
   }
+
+  .ywpo_variable_product_label {
+    display: none;
+  }
 }
 
 .woocommerce div.product .summary__details form.cart .button {

@@ -499,15 +499,15 @@
         },
         {
             "name": "wpackagist-plugin/cf7-conditional-fields",
-            "version": "1.9.9",
+            "version": "1.9.10",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/cf7-conditional-fields/",
-                "reference": "tags/1.9.9"
+                "reference": "tags/1.9.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/cf7-conditional-fields.1.9.9.zip"
+                "url": "https://downloads.wordpress.org/plugin/cf7-conditional-fields.1.9.10.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -517,15 +517,15 @@
         },
         {
             "name": "wpackagist-plugin/classic-editor",
-            "version": "1.5",
+            "version": "1.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/classic-editor/",
-                "reference": "tags/1.5"
+                "reference": "tags/1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.6.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -589,15 +589,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "8.8",
+            "version": "8.8.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/8.8"
+                "reference": "tags/8.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.8.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/jetpack.8.8.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -625,15 +625,15 @@
         },
         {
             "name": "wpackagist-plugin/w3-total-cache",
-            "version": "0.14.3",
+            "version": "0.14.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
-                "reference": "tags/0.14.3"
+                "reference": "tags/0.14.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.14.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.14.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -643,15 +643,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "4.3.1",
+            "version": "4.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/4.3.1"
+                "reference": "tags/4.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.4.3.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.4.4.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -679,15 +679,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce-gateway-stripe",
-            "version": "4.5.0",
+            "version": "4.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
-                "reference": "tags/4.5.0"
+                "reference": "tags/4.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.4.5.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.4.5.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -697,15 +697,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce-services",
-            "version": "1.24.0",
+            "version": "1.24.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce-services/",
-                "reference": "tags/1.24.0"
+                "reference": "tags/1.24.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-services.1.24.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-services.1.24.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -715,15 +715,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce-shipstation-integration",
-            "version": "4.1.37",
+            "version": "4.1.38",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce-shipstation-integration/",
-                "reference": "tags/4.1.37"
+                "reference": "tags/4.1.38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-shipstation-integration.4.1.37.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-shipstation-integration.4.1.38.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -751,15 +751,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "14.7",
+            "version": "14.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/14.7"
+                "reference": "tags/14.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.14.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.14.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
