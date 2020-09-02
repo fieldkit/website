@@ -47,10 +47,6 @@
       }
     }
 
-    .show-password-input {
-      top: 10px;
-    }
-
     h1 {
       font-size: 32px;
       font-stretch: normal;
@@ -217,6 +213,23 @@
     &.is-active {
       &::after {
         background-image: url(./assets/icons/wait-list-icon-active.svg);
+      }
+    }
+  }
+
+  .woocommerce-MyAccount-navigation-link--my-pre-orders {
+    &::after {
+      background-image: url(./assets/icons/pre-order-icon.svg);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-image: url(./assets/icons/pre-order-icon-active.svg);
+    }
+
+    &.is-active {
+      &::after {
+        background-image: url(./assets/icons/pre-order-icon-active.svg);
       }
     }
   }
@@ -598,4 +611,30 @@
   textarea {
     @extend .body;
   }
+}
+
+.fieldkit-required-span.right {
+  float: right;
+}
+
+.woocommerce-edit-account form .form-row .required,
+.fieldkit-required-span {
+  @extend .body;
+
+  color: $color-gray-5;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  transform: translateY(-4px);
+}
+
+.woocommerce form .show-password-input::after,
+.woocommerce-page form .show-password-input::after {
+  background: url("./assets/icons/show_password_icon.svg") no-repeat;
+  content: "";
+  display: block;
+  height: 24px;
+  right: -15px;
+  transform: translateY(-10px);
+  width: 24px;
 }

@@ -16,7 +16,7 @@ $image = $pre_footer['image'];
 
 					<div class="section-pre-footer__links-item">
 						<?php
-						$link['class_name'] = 'button button--primary';
+						$link['class_name'] = 'link link--large';
 						set_query_var('link', $link);
 						get_template_part('template-parts/utilities/link');
 						?>

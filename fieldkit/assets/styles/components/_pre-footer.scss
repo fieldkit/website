@@ -17,7 +17,11 @@
 }
 
 .section-pre-footer__text {
+  margin-top: 32px;
+
   @include mq($from: medium) {
+    margin-top: unset;
+    max-width: 420px;
     width: calc(50% - 28px);
   }
 }
@@ -27,7 +31,10 @@
 }
 
 .section-pre-footer__image {
+  margin-top: 68px;
+
   @include mq($from: medium) {
+    margin-top: 50px;
     width: calc(50% - 28px);
   }
 
