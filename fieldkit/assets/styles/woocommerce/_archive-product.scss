@@ -157,6 +157,12 @@ select {
       width: 10px;
     }
   }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .select2-dropdown.select2-dropdown--below {
@@ -189,6 +195,7 @@ select {
   .pre_order_loop {
     color: $color-primary-dark-blue !important;
     font-size: 20px;
+    font-style: normal;
     font-weight: 500;
   }
 }

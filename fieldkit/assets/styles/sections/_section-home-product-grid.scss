@@ -1,7 +1,6 @@
 .section-home-product-grid {
   @extend %margins-horizontal;
 
-  padding-bottom: 60px;
   padding-top: 60px;
 
   @include mq($from: medium) {
