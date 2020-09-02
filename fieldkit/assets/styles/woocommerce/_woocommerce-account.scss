@@ -217,6 +217,23 @@
     }
   }
 
+  .woocommerce-MyAccount-navigation-link--my-pre-orders {
+    &::after {
+      background-image: url(./assets/icons/pre-order-icon.svg);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-image: url(./assets/icons/pre-order-icon-active.svg);
+    }
+
+    &.is-active {
+      &::after {
+        background-image: url(./assets/icons/pre-order-icon-active.svg);
+      }
+    }
+  }
+
   .woocommerce-info--downloads {
     align-items: center;
     background-color: #fcfcfc;
@@ -596,7 +613,12 @@
   }
 }
 
-.woocommerce-edit-account form .form-row .required {
+.fieldkit-required-span.right {
+  float: right;
+}
+
+.woocommerce-edit-account form .form-row .required,
+.fieldkit-required-span {
   @extend .body;
 
   color: $color-gray-5;
