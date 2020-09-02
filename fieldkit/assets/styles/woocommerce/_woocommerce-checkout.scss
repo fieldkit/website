@@ -11,7 +11,10 @@
   }
 
   textarea {
-    border-bottom: 1px solid $color-gray-3;
+    border: 1px solid $color-gray-3;
+    border-radius: 4px;
+    height: 60px !important;
+    padding: 11px 11px 0;
   }
 
   .select2-container--open .select2-dropdown {
@@ -70,6 +73,17 @@
     }
   }
 
+  .woocommerce-checkout-review-order-table .product-quantity,
+  .woocommerce-checkout-review-order-table .product-name,
+  .woocommerce-checkout-review-order-table .composited_product_quantity {
+    color: #2c3e50;
+    font-size: 16px;
+    font-stretch: normal;
+    font-weight: normal;
+    letter-spacing: 0.44px;
+    line-height: normal;
+  }
+
   .woocommerce-form-login-toggle {
     .woocommerce-info {
       background: $color-primary-dark-blue;
@@ -106,6 +120,13 @@
     .order-total td,
     .tax-total td {
       text-align: right;
+    }
+
+    &.woocommerce-checkout-review-order-table {
+      td {
+        font-weight: 500;
+        letter-spacing: 0.44px;
+      }
     }
   }
 
@@ -206,7 +227,10 @@
   }
 
   .woocommerce-privacy-policy-text p {
+    color: #6a6d71;
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: normal;
   }
 
   .woocommerce-billing-fields .heading-4,
@@ -230,6 +254,29 @@
   table.shop_table tfoot td.order_details--payment-method {
     font-weight: 400;
   }
+  
+  .checkout_coupon {
+    button {
+      @extend .button--secondary;
+    }
+
+    .form-row {
+      margin: 0;
+    }
+
+    .form-row-first {
+      width: 50%;
+    }
+
+    input {
+      border: 1px solid #d8dce0;
+      border-radius: 3px;
+      font-family: $font-family-base;
+      font-size: 13px;
+      letter-spacing: 0.1px;
+      padding: 11px;
+    }
+  }
 }
 
 .woocommerce .woocommerce-error {
@@ -246,5 +293,60 @@
 
   &::before {
     content: none;
+  }
+}
+
+.wc_payment_methods {
+  .wc_payment_method {
+    input[type="radio"] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    input[type="radio"]:checked ~ .check {
+      border: 1px solid #d8dce0;
+    }
+
+    input[type="radio"]:checked ~ .check::before {
+      background: #2c3e50;
+    }
+
+    .check {
+      border: 1px solid #d8dce0;
+      border-radius: 100%;
+      display: block;
+      height: 25px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 25px;
+      z-index: 5;
+
+      &::before {
+        border-radius: 100%;
+        content: "";
+        display: block;
+        height: 15px;
+        left: 4px;
+        margin: auto;
+        position: absolute;
+        top: 4px;
+        width: 15px;
+      }
+    }
+
+    label {
+      cursor: pointer;
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-left: 36px;
+      position: relative;
+    }
+
+    &.payment_method_paypal {
+      margin-top: 10px !important;
+    }
   }
 }

@@ -251,8 +251,9 @@ li.component_option_thumbnail_container {
 .component_message {
   .woocommerce-info {
     border: none;
+    color: $color-primary-dark-blue;
     padding: 1em;
-    text-align: center;
+    text-align: left;
 
     &::before {
       display: none;
