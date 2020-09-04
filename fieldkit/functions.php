@@ -162,4 +162,25 @@ function auto_redirect_after_logout(){
   exit();
 }
 
+// add_action('woocommerce_payment_complete_order_status', 'change_order_object_for_katana', 10, 2);
+add_action('woocommerce_thankyou', 'change_order_object_for_katana', 10, 1);
+function fieldkit_change_order_object_for_katana($order_id) {
+	$logger = wc_get_logger();
+	$logger->add("send-order-debug", "_____________________________________________");
+	$logger->add("send-order-debug", $order_id);
 
+	$order = wc_get_order($order_id);
+
+	foreach ( $order->get_items() as $item_id => $item ) {
+		$product = $item->get_product();
+		$product_type = $product->get_type();
+		$sku = $product->get_sku();
+		if (!$sku && $product_type == "bundle") {
+			wc_delete_order_item($item_id);
+			$logger->add("send-order-debug", "item removed from order");
+		}
+		$logger->add("send-order-debug", "product type: " . json_encode($product_type));
+		$logger->add("send-order-debug", json_encode($sku));
+	}
+	return $order;
+}
