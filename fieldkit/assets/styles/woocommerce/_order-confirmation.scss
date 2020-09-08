@@ -1,7 +1,8 @@
 .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
-  background-color: $color-gray-1;
+  background-color: $color-gray-2;
   display: flex;
   flex-direction: column;
+  padding: 25px 40px 43px;
 }
 
 .woocommerce-order .heading-3 {
@@ -28,21 +29,49 @@
   @extend .body--small;
 
   border: none;
-  border-bottom: 1px solid #d8dce0;
+  border-bottom: 1px solid $color-gray-3;
   float: unset;
-  padding: 0.8em;
+  font-family: $font-family-base;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0;
   text-transform: none;
+
+  &:last-of-type {
+    border-bottom: 1px solid $color-gray-3;
+  }
 
   strong {
     @extend .body;
     @extend .body--small;
 
     color: #2c3e50;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1.31;
+    line-height: 24px;
   }
 
   &::before {
     content: unset;
   }
+}
+
+.woocommerce-order-received {
+  .section__inner {
+    max-width: 750px;
+    width: 100%;
+  }
+}
+
+.woocommerce-order-received table.woocommerce-table--order-details {
+  thead th.product-total {
+    text-align: left !important;
+  }
+}
+
+.woocommerce-order-received table.woocommerce-table--order-details td,
+.woocommerce-order-received
+  table.woocommerce-table--order-details
+  .woocommerce-Price-amount.amount {
+  letter-spacing: 0.44px;
 }

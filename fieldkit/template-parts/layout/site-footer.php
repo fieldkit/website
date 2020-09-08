@@ -1,4 +1,5 @@
 <?php
+$dark_logo_id = get_theme_mod('dark_logo');
 $social = get_field('social', 'option');
 $facebook = $social['facebook'];
 $instagram = $social['instagram'];
@@ -8,7 +9,13 @@ $github = $social['github'];
 <footer class="site-footer">
 	<div class="site-footer__inner">
 		<div class="site-footer__left">
-			<div class="site-footer__logo"><?php the_custom_logo(); ?></div>
+			<?php if ($dark_logo_id) : ?>
+				<div class="site-footer__logo">
+					<a href="<?php echo home_url('/'); ?>">
+						<?php echo wp_get_attachment_image($dark_logo_id, 'full'); ?>
+					</a>
+				</div>
+			<?php endif; ?>
 			<div class="site-footer__social">
 				<?php if ($twitter) : ?><a href="<?php echo $twitter; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('twitter'); ?></a><?php endif; ?>
 				<?php if ($instagram) : ?><a href="<?php echo $instagram; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('instagram'); ?></a><?php endif; ?>
@@ -45,9 +52,3 @@ $github = $social['github'];
 		</div>
 	</div>
 </footer>
-
-
-<?php
-$zoho_desk_snippet = get_field('zoho_desk_asap_snippet','option');
-echo $zoho_desk_snippet;
-?>

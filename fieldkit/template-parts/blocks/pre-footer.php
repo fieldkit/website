@@ -3,11 +3,12 @@ $body = $pre_footer['body'];
 $link = $pre_footer['link'];
 $image = $pre_footer['image'];
 ?>
+<?php if ($body) : ?>
 <header class="section section-pre-footer">
 	<div class="section__inner section__inner--inset">
 	<div class="section-pre-footer__text">
 
-		<div class="rich-text">
+		<div class="rich-text rich-text--large">
 			<?php echo $body; ?>
 		</div>
 		<?php if ($link) : ?>
@@ -28,3 +29,4 @@ $image = $pre_footer['image'];
 			</div>
 	</div>
 </header>
+<?php endif; ?>
