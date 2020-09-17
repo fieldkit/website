@@ -304,3 +304,21 @@ select {
     }
   }
 }
+
+.rendered-dropdown-container--open {
+  z-index: 2;
+}
+
+.fieldkit-sidebar-filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fieldkit-sidebar-filter li:not(:first-child) {
+  margin-top: 10px;
+
+  @include mq($from: medium) {
+    margin-left: 30px;
+    margin-top: 0px;
+  }
+}

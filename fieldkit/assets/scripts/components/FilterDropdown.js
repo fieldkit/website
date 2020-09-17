@@ -6,15 +6,22 @@ class FilterDropdown {
     this.$select = this.$element.find("select");
 
     this.renderDropdown();
+
+
+    this.$renderedDd = this.$element.find(".rendered-dropdown");
+    this.$renderDdContainer = this.$element.find(".rendered-dropdown-container");
     this.addListeners();
-    this.$renderedDd = $(".rendered-dropdown");
-    this.$renderDdContainer = $(".rendered-dropdown-container");
+
+
+    console.log(this.$renderedDd);
   }
 
   addListeners() {
-    $(".rendered-dropdown")
+    this.$renderedDd
       .find("li")
       .on("click", this.handleSelectVariant.bind(this));
+
+
     $(document).click((event) => {
       const $target = $(event.target);
       if (
@@ -49,7 +56,7 @@ class FilterDropdown {
       this.$element.find(".rendered-dropdown").append(renderLI);
 
       if (element.selected) {
-        $(".rendered-dropdown-selected").append(
+        this.$element.find(".rendered-dropdown-selected").append(
           "<span>Filter by: </span>" + element.innerText
         );
       }
@@ -78,9 +85,9 @@ class FilterDropdown {
     if (selectx) {
       console.log(selectx[0]);
       window.location.href =
-        rootURL + pathUrl + "?" + selectx[0] + "&" + x1 + x2;
+        rootURL + pathUrl + "?" + selectx[0] + "&" + x1 + x2 + "#sidebar";
     } else {
-      window.location.href = rootURL + pathUrl + "?" + x1 + x2;
+      window.location.href = rootURL + pathUrl + "?" + x1 + x2 + "#sidebar";
     }
   }
 }
