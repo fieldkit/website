@@ -103,7 +103,8 @@
 }
 
 .teaser-item .teaser-product__excerpt > p,
-.teaser-item .teaser-product__excerpt > p a {
+.teaser-item .teaser-product__excerpt > p a,
+.teaser-item .teaser-product__excerpt > a p {
   color: #2c3e50;
   font-size: 16px;
   font-stretch: normal;
