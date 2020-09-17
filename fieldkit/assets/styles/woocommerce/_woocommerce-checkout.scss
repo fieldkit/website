@@ -84,6 +84,17 @@
     line-height: normal;
   }
 
+  .woocommerce-checkout-review-order-table .component {
+    p,
+    .composited_product_quantity {
+      color: #6a6d71;
+      font-size: 14px;
+      font-weight: normal;
+      letter-spacing: 0.39px;
+      line-height: normal;
+    }
+  }
+
   .woocommerce-form-login-toggle {
     .woocommerce-info {
       background: $color-primary-dark-blue;
@@ -254,7 +265,7 @@
   table.shop_table tfoot td.order_details--payment-method {
     font-weight: 400;
   }
-  
+
   .checkout_coupon {
     button {
       @extend .button--secondary;

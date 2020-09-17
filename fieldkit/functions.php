@@ -126,11 +126,19 @@ add_filter('woocommerce_single_product_image_thumbnail_html', 'wc_remove_link_on
 
 function fieldkit_widget()
 {
-    register_sidebar(array(
-        'id' => 'product-header',
-        'name' => __('Product Header', 'fieldkit'),
-   ));
+    register_sidebar(
+	array(
+        'id' => 'sensors-header',
+        'name' => __('Sensor Type Category', 'fieldkit'),
+	));
+
+	register_sidebar(
+		array(
+			'id' => 'accessories-header',
+			'name' => __('Accessories Category', 'fieldkit'),
+	));
 }
+
 add_action('widgets_init', 'fieldkit_widget');
 
 function woo_remove_product_tabs($tabs)
@@ -186,3 +194,12 @@ function fieldkit_customize_register($wp_customize)
 	));
 }
 add_action('customize_register', 'fieldkit_customize_register');
+
+
+add_action( 'woocommerce_after_add_to_cart_form', 'fieldkit_sku', 5 );
+function fieldkit_sku(){
+	global $product;
+	if($product->get_sku()){
+		echo '<p class="sku">[' . $product->get_sku() .']</p>';
+	}
+}
