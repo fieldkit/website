@@ -2349,6 +2349,9 @@ span.wpcf7-form-control-wrap textarea {
   border-radius: 4px;
   padding: 11px 11px 0px 11px; }
 
+.section-contact-header--secondary {
+  min-height: 20vw; }
+
 .section-definition-list {
   margin-bottom: 20px;
   margin-top: 20px; }
@@ -4817,6 +4820,15 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 
 .wc_payment_methods .wc_payment_method.payment_method_paypal {
   margin-top: 10px !important; }
+
+#ship-to-different-address {
+  margin-bottom: 5px;
+  margin-top: 15px; }
+
+#shipping_method li {
+  padding-left: 0; }
+  #shipping_method li::before {
+    content: unset; }
 
 .woocommerce-account form .reg_password .show-password-input::after {
   color: #2c3e50;
