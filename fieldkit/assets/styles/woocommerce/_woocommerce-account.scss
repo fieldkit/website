@@ -48,21 +48,30 @@
     }
 
     h1 {
-      font-size: 32px;
-      font-stretch: normal;
-      font-style: normal;
+      color: #2c3e50;
+      font-family: $font-family-base;
+      font-size: 24px;
       font-weight: 900;
       letter-spacing: normal;
       line-height: normal;
+
+      @include mq($from: large) {
+        font-size: 32px;
+      }
     }
 
     h3 {
-      font-size: 24px;
+      font-family: $font-family-base;
+      font-size: 18px;
       font-stretch: normal;
       font-style: normal;
       font-weight: 500;
       letter-spacing: normal;
       line-height: normal;
+
+      @include mq($from: large) {
+        font-size: 24px;
+      }
     }
   }
 
@@ -304,6 +313,10 @@
       border-radius: 0;
       border-right: 0;
       border-top: 0;
+
+      @include mq($until: medium) {
+        border-color: transparent;
+      }
 
       .button {
         @extend .button--primary;
@@ -594,6 +607,8 @@
 
     .edit {
       bottom: 0;
+      font-family: $font-family-base;
+      font-weight: 500;
       left: 0;
       position: absolute;
 
@@ -643,4 +658,27 @@
   font-size: 24px;
   font-weight: 500;
   letter-spacing: normal;
+}
+
+table.my_account_orders th,
+table.my_account_orders tr td::before {
+  font-family: $font-family-base;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+table.my_account_orders .woocommerce-orders-table__row {
+  @include mq($until: medium) {
+    background-color: #f4f5f7;
+    border-color: transparent;
+    border-radius: 2px;
+    margin-bottom: 13px;
+  }
+
+  td {
+    @include mq($until: medium) {
+      border-color: transparent;
+    }
+  }
 }
