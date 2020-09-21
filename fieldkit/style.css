@@ -4446,6 +4446,16 @@ figure.composited_product_image.woocommerce-product-gallery__image {
     padding-left: 40px; }
     .woocommerce-cart .woocommerce table.shop_table .component_table_item .component_table_item_indent dt {
       letter-spacing: 0.44px; }
+  .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-price,
+  .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-quantity,
+  .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-subtotal,
+  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-price,
+  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-quantity,
+  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-subtotal,
+  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-price,
+  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-quantity,
+  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-subtotal {
+    visibility: hidden; }
   .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent {
     padding-left: 50px; }
     .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent a {
@@ -4554,6 +4564,18 @@ figure.composited_product_image.woocommerce-product-gallery__image {
   padding: 18px 33px; }
   .woocommerce-cart .woocommerce-info::before {
     display: none; }
+
+.woocommerce-cart .bundled_table_item .variation {
+  color: #6a6d71;
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.39px; }
+
+.woocommerce-cart .bundle_table_item .component dd > * {
+  color: #6a6d71;
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.39px; }
 
 .woocommerce-checkout input {
   border-bottom: 1px solid #d8dce0;
@@ -4830,6 +4852,11 @@ figure.composited_product_image.woocommerce-product-gallery__image {
   text-align: right; }
   #shipping_method li::before {
     content: unset; }
+
+.woocommerce-shipping-destination,
+.woocommerce-shipping-destination > *,
+.woocommerce-shipping-calculator {
+  text-align: right; }
 
 .woocommerce-account form .reg_password .show-password-input::after {
   color: #2c3e50;
