@@ -2054,6 +2054,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .section-services-header__heading {
   max-width: 335px;
+  padding-top: 30px;
   text-align: center; }
   @media (min-width: 50em) {
     .section-services-header__heading {
@@ -2078,7 +2079,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     width: 100%; }
     @media (min-width: 50em) {
       .section-services-header__background img {
-        object-fit: cover; } }
+        object-fit: contain; } }
 
 .section-services-text-grid {
   padding-top: 100px; }
@@ -3649,6 +3650,7 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 
 .woocommerce div.product .summary__details p.price,
 .radio_button_price.price {
+  align-items: baseline;
   display: flex; }
 
 .woocommerce div.product .summary__details p.price,
@@ -4031,6 +4033,9 @@ figure.composited_product_image.woocommerce-product-gallery__image {
   object-fit: cover;
   width: 100%; }
 
+.woocommerce-account .waitlist-products hr {
+  background-color: #d8dce0; }
+
 .woocommerce-account .select2-selection {
   border: 0px;
   border-bottom: 1px solid #d8dce0;
@@ -4069,19 +4074,26 @@ figure.composited_product_image.woocommerce-product-gallery__image {
       .woocommerce-account .woocommerce button.button, .woocommerce-account .woocommerce button#mc-embedded-subscribe, .woocommerce-account .woocommerce ul.products li.product button.button.product_type_simple, .woocommerce-account .woocommerce ul.products li.product button.button.add_to_cart_button, .woocommerce-account .woocommerce ul.products li.product button.button.product_type_variable, .woocommerce-account .woocommerce div.product .summary__details form.cart button.button, .woocommerce-account .woocommerce .related.products ul.products li button.button {
         width: auto; } }
   .woocommerce-account .woocommerce h1 {
-    font-size: 32px;
-    font-stretch: normal;
-    font-style: normal;
+    color: #2c3e50;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
     font-weight: 900;
     letter-spacing: normal;
     line-height: normal; }
+    @media (min-width: 80em) {
+      .woocommerce-account .woocommerce h1 {
+        font-size: 32px; } }
   .woocommerce-account .woocommerce h3 {
-    font-size: 24px;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
     font-stretch: normal;
     font-style: normal;
     font-weight: 500;
     letter-spacing: normal;
     line-height: normal; }
+    @media (min-width: 80em) {
+      .woocommerce-account .woocommerce h3 {
+        font-size: 24px; } }
 
 .woocommerce-account .woocommerce-MyAccount-navigation {
   margin-bottom: 30px;
@@ -4208,6 +4220,9 @@ figure.composited_product_image.woocommerce-product-gallery__image {
     border-radius: 0;
     border-right: 0;
     border-top: 0; }
+    @media (max-width: 49.99em) {
+      .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders {
+        border-color: transparent; } }
     .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders .woocommerce-orders-table__cell-order-actions,
     .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders .woocommerce-orders-table__header-order-actions {
       display: none; }
@@ -4387,6 +4402,8 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 
 .woocommerce-account .woocommerce-Address-title .edit {
   bottom: 0;
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   left: 0;
   position: absolute; }
   @media (min-width: 50em) {
@@ -4421,6 +4438,24 @@ figure.composited_product_image.woocommerce-product-gallery__image {
   font-size: 24px;
   font-weight: 500;
   letter-spacing: normal; }
+
+table.my_account_orders th,
+table.my_account_orders tr td::before {
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.5; }
+
+@media (max-width: 49.99em) {
+  table.my_account_orders .woocommerce-orders-table__row {
+    background-color: #f4f5f7;
+    border-color: transparent;
+    border-radius: 2px;
+    margin-bottom: 13px; } }
+
+@media (max-width: 49.99em) {
+  table.my_account_orders .woocommerce-orders-table__row td {
+    border-color: transparent; } }
 
 .woocommerce-cart .section__inner {
   max-width: 1080px;

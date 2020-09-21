@@ -66,6 +66,7 @@
 
 .woocommerce div.product .summary__details p.price,
 .radio_button_price.price {
+  align-items: baseline;
   display: flex;
 }
 
