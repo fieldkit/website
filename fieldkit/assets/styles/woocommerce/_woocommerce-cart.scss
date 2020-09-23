@@ -246,3 +246,21 @@
     letter-spacing: 0.39px;
   }
 }
+
+.woocommerce-checkout .bundled_table_item {
+  td:first-child {
+    padding-left: 0.9rem;
+
+    @include mq($from: medium) {
+      padding-left: 1.3rem;
+    }
+  }
+
+  dl.variation > dt,
+  dl.variation > dd > * {
+    color: #6a6d71;
+    font-family: $font-family-base;
+    font-size: 14px;
+    letter-spacing: 0.39px;
+  }
+}

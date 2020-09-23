@@ -3513,6 +3513,18 @@ li.component_option_thumbnail_container {
 .component_option_thumbnail .component_option_thumbnail_select {
   min-width: 89px !important; }
 
+.woocommerce .bundle_availability .stock.out-of-stock {
+  background-color: #c42c44;
+  border: none;
+  color: white;
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  padding: 1em;
+  text-align: left; }
+
 .component_message .woocommerce-info {
   border: none;
   color: #2c3e50;
@@ -3608,6 +3620,14 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 .woocommerce-order-received table.woocommerce-table--order-details td,
 .woocommerce-order-received table.woocommerce-table--order-details .woocommerce-Price-amount.amount {
   letter-spacing: 0.44px; }
+
+.woocommerce-order-received table.woocommerce-table--order-details tfoot td {
+  color: #2c3e50;
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.44px;
+  line-height: normal; }
 
 .summary__details .product_title {
   font-weight: 900;
@@ -4607,6 +4627,19 @@ table.my_account_orders tr td::before {
   letter-spacing: 0.39px; }
 
 .woocommerce-cart .bundle_table_item .component dd > * {
+  color: #6a6d71;
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.39px; }
+
+.woocommerce-checkout .bundled_table_item td:first-child {
+  padding-left: 0.9rem; }
+  @media (min-width: 50em) {
+    .woocommerce-checkout .bundled_table_item td:first-child {
+      padding-left: 1.3rem; } }
+
+.woocommerce-checkout .bundled_table_item dl.variation > dt,
+.woocommerce-checkout .bundled_table_item dl.variation > dd > * {
   color: #6a6d71;
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
