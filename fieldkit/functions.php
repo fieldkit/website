@@ -16,11 +16,12 @@ if (!function_exists('fieldkit_setup')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
-		add_theme_support('wc-product-gallery-lightbox');
-		add_theme_support('wc-product-gallery-slider');
-		add_theme_support('wc-product-gallery-zoom');
 		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
+		add_theme_support( 'wc-product-gallery-slider' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+
 	}
 }
 add_action('after_setup_theme', 'fieldkit_setup');
@@ -124,12 +125,11 @@ function wc_remove_link_on_thumbnails($html)
 }
 add_filter('woocommerce_single_product_image_thumbnail_html', 'wc_remove_link_on_thumbnails');
 
-function fieldkit_widget()
-{
+function fieldkit_widget() {
     register_sidebar(array(
+        'name' => "Product Header",
         'id' => 'product-header',
-        'name' => __('Product Header', 'fieldkit'),
-   ));
+    ));
 }
 add_action('widgets_init', 'fieldkit_widget');
 
@@ -140,71 +140,64 @@ function woo_remove_product_tabs($tabs)
 }
 add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
 
-function change_waitlist_message($text)
-{
-	return __('Join the waitlist to be emailed when this product becomes available.', fieldkit);
-}
-add_filter('wcwl_join_waitlist_message_text', 'change_waitlist_message');
 
-function change_waitlist_success_message_text($text)
-{
-	return __('You have been added to the waitlist for this product.', fieldkit);
+add_filter( 'wcwl_join_waitlist_message_text', 'change_waitlist_message' );
+function change_waitlist_message( $text ) {
+return __('Join the waitlist to be emailed when this product becomes available.');
 }
-add_filter('wcwl_join_waitlist_success_message_text', 'change_waitlist_success_message_text');
 
-function change_leave_waitlist_success_message_text($text)
-{
-	return __('You have been removed from the waitlist for this product.', fieldkit);
+add_filter( 'wcwl_join_waitlist_success_message_text', 'change_waitlist_success_message_text' );
+function change_waitlist_success_message_text( $text ) {
+return __('You have been added to the waitlist for this product.');
 }
-add_filter('wcwl_leave_waitlist_success_message_text', 'change_leave_waitlist_success_message_text');
 
-function auto_redirect_after_logout()
-{
-	wp_redirect(home_url());
-	exit();
+add_filter( 'wcwl_leave_waitlist_success_message_text', 'change_leave_waitlist_success_message_text' );
+function change_leave_waitlist_success_message_text( $text ) {
+return __('You have been removed from the waitlist for this product.');
 }
+
 add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_redirect( home_url() );
+  exit();
+}
 
-// add_action('woocommerce_payment_complete_order_status', 'change_order_object_for_katana', 10, 2);
-add_action('woocommerce_thankyou', 'change_order_object_for_katana', 10, 1);
-function fieldkit_change_order_object_for_katana($order_id) {
-	$logger = wc_get_logger();
-	$logger->add("send-order-debug", "_____________________________________________");
-	$logger->add("send-order-debug", $order_id);
-
+add_action('woocommerce_payment_complete_order_status', 'fieldkit_change_order_object_for_katana', 10, 2);
+function fieldkit_change_order_object_for_katana($status, $order_id)
+{
 	$order = wc_get_order($order_id);
-
+	$unique_products_array = array(); // Keeps track of unique products of the order
 	foreach ( $order->get_items() as $item_id => $item ) {
 		$product = $item->get_product();
 		$product_type = $product->get_type();
 		$sku = $product->get_sku();
 		if (!$sku && $product_type == "bundle") {
 			wc_delete_order_item($item_id);
-			$logger->add("send-order-debug", "item removed from order");
+		} else {
+			// If there's a duplicate item, merge them as one item
+			if (isset($unique_products_array[$sku])) {
+				$unique_product_item = $unique_products_array[$sku][0];
+				$unique_product_item_id = $unique_products_array[$sku][1];
+
+				$current_product_quantity = $unique_product_item->get_quantity() + $item->get_quantity();
+				$current_product_subtotal = $unique_product_item->get_subtotal() + $item->get_subtotal();
+				$current_product_total = $unique_product_item->get_total() + $item->get_total();
+
+				$unique_product_item->set_quantity($current_product_quantity);
+				$unique_product_item->set_subtotal($current_product_subtotal);
+				$unique_product_item->set_total($current_product_total);
+
+				wc_update_order_item_meta($unique_product_item_id, '_full_amount', $current_product_full_total);
+				wc_update_order_item_meta($unique_product_item_id, '_full_amount_formatted', wc_price($current_product_full_total));
+
+				wc_delete_order_item($item_id);
+				$unique_product_item->save();
+			} else {
+				$unique_products_array[$sku] = array($item, $item_id);
+				$update_total = true;
+			}
 		}
-		$logger->add("send-order-debug", "product type: " . json_encode($product_type));
-		$logger->add("send-order-debug", json_encode($sku));
 	}
+
 	return $order;
 }
-function fieldkit_customize_register($wp_customize)
-{
-	$wp_customize->add_setting(
-		'dark_logo',
-		array(
-			'default' => '',
-			'theme_supports' => 'custom-logo',
-		)
-	);
-	$wp_customize->add_control(new WP_Customize_Media_Control(
-		$wp_customize,
-		'dark_logo',
-		array(
-			'label' => __('Dark Logo', 'fieldkit'),
-			'priority' => 8,
-			'section' => 'title_tagline',
-			'settings' => 'dark_logo',
-		)
-	));
-}
-add_action('customize_register', 'fieldkit_customize_register');
