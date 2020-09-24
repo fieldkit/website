@@ -80,11 +80,17 @@ $cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 ?>
 <div class="woocommerce-products">
 
-<?php if ( is_active_sidebar( 'product-header' ) ) : ?>
-    <ul id="sidebar">
-        <?php dynamic_sidebar( 'product-header' ); ?>
+<?php if ( is_active_sidebar('sensors-header') ) : ?>
+    <ul id="sidebar" class="fieldkit-sidebar-filter">
+
+		<?php dynamic_sidebar('sensors-header'); ?>
+
+		<?php if ( is_active_sidebar('accessories-header') ) : ?>
+			<?php dynamic_sidebar('accessories-header'); ?>
+		<?php endif; ?>
     </ul>
 <?php endif; ?>
+
 
 <?php
 if ( woocommerce_product_loop() ) {
@@ -133,10 +139,18 @@ if ( woocommerce_product_loop() ) {
 }
 if(is_product_category()){
 
+	$call_out = get_field('pre_footer_callout',$cat_id);
+	$call_out['variant'] = "margins-horizontal";
+	if($call_out){
+		include(locate_template('template-parts/blocks/call-out.php', false, false));
+	}
+
 	$pre_footer = get_field('pre_footer',$cat_id);
 	if($pre_footer){
 		include(locate_template('template-parts/blocks/pre-footer.php', false, false));
 	}
+
+}
 /**
  * Hook: woocommerce_after_main_content.
  *
@@ -151,6 +165,6 @@ do_action( 'woocommerce_after_main_content' );
  */
 
 
-}
+
 
 get_footer( 'shop' );

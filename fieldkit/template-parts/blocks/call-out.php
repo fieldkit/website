@@ -3,6 +3,9 @@ $heading = $call_out['heading'];
 $body = $call_out['body'];
 $links = $call_out['links'];
 ?>
+<?php if( $call_out['variant']): ?>
+<div class="<?php echo $call_out['variant'];?>">
+<?php endif;?>
 <header class="section section-callout">
 	<div class="section__inner section__inner--inset">
 		<h2 class="heading-3"><?php echo $heading; ?></h2>
@@ -25,3 +28,6 @@ $links = $call_out['links'];
 		<?php endif; ?>
 	</div>
 </header>
+<?php if( $call_out['variant']): ?>
+</div>
+<?php endif;?>

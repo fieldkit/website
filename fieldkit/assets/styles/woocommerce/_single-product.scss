@@ -66,6 +66,7 @@
 
 .woocommerce div.product .summary__details p.price,
 .radio_button_price.price {
+  align-items: baseline;
   display: flex;
 }
 
@@ -445,4 +446,9 @@
   color: $color-gray-5;
   font-size: 12px;
   font-weight: 500;
+}
+
+.sku {
+  color: #5a5a5b;
+  font-size: 12px;
 }

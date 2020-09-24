@@ -23,6 +23,7 @@
   @extend .section-about-header__heading;
 
   max-width: 335px;
+  padding-top: 30px;
   text-align: center;
 
   @include mq($from: medium) {
@@ -51,7 +52,7 @@
     width: 100%;
 
     @include mq($from: medium) {
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
