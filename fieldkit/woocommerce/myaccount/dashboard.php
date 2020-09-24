@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-	<h1>Account Dashboard</h1>
-<p>
+<h1>Account Dashboard</h1>
+<p class="body--medium">
 	<?php
 	printf(
 		/* translators: 1: user display name 2: logout url */

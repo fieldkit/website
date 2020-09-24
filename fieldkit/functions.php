@@ -125,12 +125,22 @@ function wc_remove_link_on_thumbnails($html)
 }
 add_filter('woocommerce_single_product_image_thumbnail_html', 'wc_remove_link_on_thumbnails');
 
-function fieldkit_widget() {
-    register_sidebar(array(
-        'name' => "Product Header",
-        'id' => 'product-header',
-    ));
+function fieldkit_widget()
+{
+    register_sidebar(
+	array(
+        'id' => 'sensors-header',
+        'name' => __('Sensor Type Category', 'fieldkit'),
+	));
+
+	register_sidebar(
+		array(
+			'id' => 'accessories-header',
+			'name' => __('Accessories Category', 'fieldkit'),
+	));
+
 }
+
 add_action('widgets_init', 'fieldkit_widget');
 
 function woo_remove_product_tabs($tabs)
@@ -201,3 +211,43 @@ function fieldkit_change_order_object_for_katana($status, $order_id)
 
 	return $order;
 }
+
+
+function fieldkit_customize_register($wp_customize)
+{
+	$wp_customize->add_setting(
+		'dark_logo',
+		array(
+			'default' => '',
+			'theme_supports' => 'custom-logo',
+		)
+	);
+	$wp_customize->add_control(new WP_Customize_Media_Control(
+		$wp_customize,
+		'dark_logo',
+		array(
+			'label' => __('Dark Logo', 'fieldkit'),
+			'priority' => 8,
+			'section' => 'title_tagline',
+			'settings' => 'dark_logo',
+		)
+	));
+}
+add_action('customize_register', 'fieldkit_customize_register');
+
+
+add_action( 'woocommerce_after_add_to_cart_form', 'fieldkit_sku', 5 );
+function fieldkit_sku(){
+	global $product;
+	if($product->get_sku()){
+		echo '<p class="sku">[' . $product->get_sku() .']</p>';
+	}
+}
+
+
+
+add_action( 'woocommerce_payment_complete', 'order_received_empty_cart_action', 10, 1 );
+function order_received_empty_cart_action( $order_id ){
+    WC()->cart->empty_cart();
+}
+

@@ -10,19 +10,18 @@
 	<header class="section section-contact-header">
 		<div class="section__inner">
 			<div class="rich-text">
-				<h1 class="heading-1 section-contact-header__heading">
-				<?php
-				if (is_page('partner-with-us') ){
-					echo $heading;
-				}else{
-					echo get_the_title();
-				}
-				?>
-				</h1>
+			<h1 class="heading-1 section-contact-header__heading">
+				<?php echo get_the_title();?>
+			</h1>
 				<div class="section-contact-header__body">
-					<?php if ($body) echo $body; ?>
+					<?php
+					if (is_page('partner-with-us' && $body ) ){
+						 echo $body;
+					}
+					?>
 				</div>
 			</div>
+
 			<div class="section-contact-header__background hide-mobile">
 				<?php if (is_page('partner-with-us') ):?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-with-us-header.png" alt="">
@@ -43,12 +42,12 @@
 	?>
 	<header class="section section-contact-form">
 		<div class="section__inner">
-			<?php if (!is_page('partner-with-us') ):?>
+
 			<div class="section-contact-form__heading">
 				<h2 class="heading-2"><?php echo $heading; ?></h2>
 				<?php if ($body) echo $body; ?>
 			</div>
-			<?php endif; ?>
+
 			<div class="section-contact-form__required">*Required</div>
 			<?php
 			if ($contact_form_7_shortcode) {
