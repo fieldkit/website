@@ -210,6 +210,28 @@ function fieldkit_change_order_object_for_katana($status, $order_id)
 
 	return $order;
 }
+
+
+function fieldkit_customize_register($wp_customize)
+{
+	$wp_customize->add_setting(
+		'dark_logo',
+		array(
+			'default' => '',
+			'theme_supports' => 'custom-logo',
+		)
+	);
+	$wp_customize->add_control(new WP_Customize_Media_Control(
+		$wp_customize,
+		'dark_logo',
+		array(
+			'label' => __('Dark Logo', 'fieldkit'),
+			'priority' => 8,
+			'section' => 'title_tagline',
+			'settings' => 'dark_logo',
+		)
+	));
+}
 add_action('customize_register', 'fieldkit_customize_register');
 
 
