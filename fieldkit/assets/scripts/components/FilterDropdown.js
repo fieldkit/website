@@ -4,16 +4,14 @@ class FilterDropdown {
   constructor(element) {
     this.$element = $(element);
     this.$select = this.$element.find("select");
+    this.$widgetName = $(this.$element[0][1]).attr("name");
 
     this.renderDropdown();
-
 
     this.$renderedDd = this.$element.find(".rendered-dropdown");
     this.$renderDdContainer = this.$element.find(".rendered-dropdown-container");
     this.addListeners();
 
-
-    console.log(this.$renderedDd);
   }
 
   addListeners() {
@@ -72,7 +70,7 @@ class FilterDropdown {
   handleSelectVariant(event) {
     const value = $(event.target)[0].dataset.value;
 
-    this.handleURL("filter_module=", value);
+    this.handleURL(this.$widgetName + '=', value);
   }
 
   handleURL(x1, x2) {
