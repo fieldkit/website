@@ -16,11 +16,12 @@ if (!function_exists('fieldkit_setup')) {
 		));
 		add_theme_support('post-thumbnails');
 		add_theme_support('title-tag');
-		add_theme_support('wc-product-gallery-lightbox');
-		add_theme_support('wc-product-gallery-slider');
-		add_theme_support('wc-product-gallery-zoom');
 		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
+		add_theme_support( 'wc-product-gallery-slider' );
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+
 	}
 }
 add_action('after_setup_theme', 'fieldkit_setup');
@@ -148,30 +149,44 @@ function woo_remove_product_tabs($tabs)
 }
 add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
 
-function change_waitlist_message($text)
-{
-	return __('Join the waitlist to be emailed when this product becomes available.', fieldkit);
-}
-add_filter('wcwl_join_waitlist_message_text', 'change_waitlist_message');
 
-function change_waitlist_success_message_text($text)
-{
-	return __('You have been added to the waitlist for this product.', fieldkit);
+add_filter( 'wcwl_join_waitlist_message_text', 'change_waitlist_message' );
+function change_waitlist_message( $text ) {
+return __('Join the waitlist to be emailed when this product becomes available.');
 }
-add_filter('wcwl_join_waitlist_success_message_text', 'change_waitlist_success_message_text');
 
-function change_leave_waitlist_success_message_text($text)
-{
-	return __('You have been removed from the waitlist for this product.', fieldkit);
+add_filter( 'wcwl_join_waitlist_success_message_text', 'change_waitlist_success_message_text' );
+function change_waitlist_success_message_text( $text ) {
+return __('You have been added to the waitlist for this product.');
 }
-add_filter('wcwl_leave_waitlist_success_message_text', 'change_leave_waitlist_success_message_text');
 
-function auto_redirect_after_logout()
-{
-	wp_redirect(home_url());
-	exit();
+add_filter( 'wcwl_leave_waitlist_success_message_text', 'change_leave_waitlist_success_message_text' );
+function change_leave_waitlist_success_message_text( $text ) {
+return __('You have been removed from the waitlist for this product.');
 }
+
 add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+  wp_redirect( home_url() );
+  exit();
+}
+
+add_action('woocommerce_payment_complete_order_status', 'fieldkit_change_order_object_for_katana', 10, 2);
+function fieldkit_change_order_object_for_katana($status, $order_id)
+{
+	$order = wc_get_order($order_id);
+	foreach ( $order->get_items() as $item_id => $item ) {
+		$product = $item->get_product();
+		$product_type = $product->get_type();
+		$sku = $product->get_sku();
+		if (!$sku && $product_type == "bundle") {
+			wc_delete_order_item($item_id);
+		}
+	}
+
+	return $order;
+}
+
 
 function fieldkit_customize_register($wp_customize)
 {
