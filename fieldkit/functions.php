@@ -175,36 +175,12 @@ add_action('woocommerce_payment_complete_order_status', 'fieldkit_change_order_o
 function fieldkit_change_order_object_for_katana($status, $order_id)
 {
 	$order = wc_get_order($order_id);
-	$unique_products_array = array(); // Keeps track of unique products of the order
 	foreach ( $order->get_items() as $item_id => $item ) {
 		$product = $item->get_product();
 		$product_type = $product->get_type();
 		$sku = $product->get_sku();
 		if (!$sku && $product_type == "bundle") {
 			wc_delete_order_item($item_id);
-		} else {
-			// If there's a duplicate item, merge them as one item
-			if (isset($unique_products_array[$sku])) {
-				$unique_product_item = $unique_products_array[$sku][0];
-				$unique_product_item_id = $unique_products_array[$sku][1];
-
-				$current_product_quantity = $unique_product_item->get_quantity() + $item->get_quantity();
-				$current_product_subtotal = $unique_product_item->get_subtotal() + $item->get_subtotal();
-				$current_product_total = $unique_product_item->get_total() + $item->get_total();
-
-				$unique_product_item->set_quantity($current_product_quantity);
-				$unique_product_item->set_subtotal($current_product_subtotal);
-				$unique_product_item->set_total($current_product_total);
-
-				wc_update_order_item_meta($unique_product_item_id, '_full_amount', $current_product_full_total);
-				wc_update_order_item_meta($unique_product_item_id, '_full_amount_formatted', wc_price($current_product_full_total));
-
-				wc_delete_order_item($item_id);
-				$unique_product_item->save();
-			} else {
-				$unique_products_array[$sku] = array($item, $item_id);
-				$update_total = true;
-			}
 		}
 	}
 
