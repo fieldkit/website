@@ -62,6 +62,18 @@
 
 .post-teaser a {
   color: $color-primary-dark-blue;
+
+  .post-teaser__title {
+    border-bottom: none;
+  }
+
+  &:hover,
+  &:focus {
+    .post-teaser__title {
+      border-bottom: 3px solid $color-primary-blue;
+      color: $color-primary-blue;
+    }
+  }
 }
 
 .post-teaser__image {

@@ -2226,6 +2226,11 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 
 .post-teaser a {
   color: #2c3e50; }
+  .post-teaser a .post-teaser__title {
+    border-bottom: none; }
+  .post-teaser a:hover .post-teaser__title, .post-teaser a:focus .post-teaser__title {
+    border-bottom: 3px solid #1b80c9;
+    color: #1b80c9; }
 
 .post-teaser__image {
   height: 0;
@@ -3295,8 +3300,7 @@ select {
       top: 0;
       width: 100%; }
   .woocommerce-page ul.products li.product .pre_order_loop {
-    color: #2c3e50 !important;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500; }
 
@@ -3314,6 +3318,9 @@ select {
     float: none;
     margin-right: 0;
     width: 100%; } }
+
+.woocommerce-price-suffix {
+  margin-left: 0.5rem; }
 
 .woocommerce ul.products li.product .price {
   color: #0a67aa;
@@ -3415,6 +3422,9 @@ select {
 
 .product-type-composite .component_options_inner .thumbnail_price {
   margin-top: 0.8em; }
+
+.product-type-composite .details.component_data .bundled_product_title.product_title .item_qty {
+  display: none; }
 
 .product-type-composite .details.component_data p > a {
   color: #1b80c9;
@@ -4369,6 +4379,9 @@ figure.composited_product_image.woocommerce-product-gallery__image {
       border-bottom: 1px solid #d8dce0; }
   .woocommerce-account .woocommerce-MyAccount-navigation-link::before {
     content: none; }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .woocommerce-account .woocommerce-MyAccount-navigation-link a {
+      transition: none; } }
   .woocommerce-account .woocommerce-MyAccount-navigation-link a {
     font-size: 16px;
     font-stretch: normal;
@@ -4376,18 +4389,19 @@ figure.composited_product_image.woocommerce-product-gallery__image {
     font-weight: normal;
     letter-spacing: normal;
     line-height: normal;
-    padding: 14.5px 0px;
-    width: 100%; }
+    margin: 14.5px 0;
+    transition: text-shadow 0.5s; }
     .woocommerce-account .woocommerce-MyAccount-navigation-link a:hover, .woocommerce-account .woocommerce-MyAccount-navigation-link a:focus {
       background-size: 0px;
-      border-bottom: 0px; }
+      border-bottom: 0px;
+      margin-bottom: 13.5px;
+      text-shadow: -0.1px -0.1px 0 #1b80c9, 0.4px -0.1px 0 #1b80c9, -0.1px 0.1px 0 #1b80c9, 0.3px 0.3px 0 #1b80c9; }
     .woocommerce-account .woocommerce-MyAccount-navigation-link a:not(.button):not(#mc-embedded-subscribe) {
       color: #2c3e50; }
     .woocommerce-account .woocommerce-MyAccount-navigation-link a:not(.button):not(#mc-embedded-subscribe):hover, .woocommerce-account .woocommerce-MyAccount-navigation-link a:not(.button):not(#mc-embedded-subscribe):focus {
       color: #1b80c9; }
   .woocommerce-account .woocommerce-MyAccount-navigation-link.is-active a:not(.button):not(#mc-embedded-subscribe) {
-    color: #1b80c9;
-    font-weight: 900; }
+    color: #1b80c9; }
   .woocommerce-account .woocommerce-MyAccount-navigation-link img {
     height: 18px;
     position: absolute;
@@ -4446,7 +4460,6 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 
 .woocommerce form .show-password-input::after,
 .woocommerce-page form .show-password-input::after {
-  background: url("./assets/icons/show_password_icon.svg") no-repeat;
   content: "";
   display: block;
   height: 24px;

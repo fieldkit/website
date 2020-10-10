@@ -193,8 +193,7 @@ select {
   }
 
   .pre_order_loop {
-    color: $color-primary-dark-blue !important;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
   }
@@ -220,6 +219,10 @@ select {
       width: 100%;
     }
   }
+}
+
+.woocommerce-price-suffix {
+  margin-left: 0.5rem;
 }
 
 .woocommerce ul.products li.product .price {

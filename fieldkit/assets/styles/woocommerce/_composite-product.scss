@@ -76,6 +76,10 @@
 .product-type-composite .details.component_data {
   .bundled_product_title.product_title {
     @extend .heading-5;
+
+    .item_qty {
+      display: none;
+    }
   }
 
   p {
