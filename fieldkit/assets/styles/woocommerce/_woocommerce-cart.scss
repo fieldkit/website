@@ -91,23 +91,54 @@
       }
     }
 
-    .button[name="update_cart"] {
+    .button[name="update_cart"],
+    .button[name="calc_shipping"] {
       @extend .button--secondary;
 
       margin-bottom: 10px;
 
       @include mq($from: medium) {
         margin-bottom: 0px;
+        margin-right: 8px;
       }
 
       &:hover,
       &:focus {
         box-shadow: 0 2px 4px 0 $color-gray-3;
       }
+
+      &:disabled {
+        background-color: #d8dce0;
+        border: 1px solid currentColor;
+        border-radius: 3px;
+        color: white;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: normal;
+        opacity: 1;
+        padding: 10px 20px;
+
+        &:hover,
+        &:focus {
+          background-color: #d8dce0;
+          border: 1px solid currentColor;
+          box-shadow: none;
+          color: white;
+          font-size: 18px;
+          font-weight: 900;
+        }
+      }
     }
 
     .button.checkout-button {
       @extend .button--primary;
+
+      border-radius: 3px;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: normal;
+      opacity: 1;
+      padding: 10px 20px;
     }
 
     .coupon {
