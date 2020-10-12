@@ -11,7 +11,7 @@
     @include mq($from: medium) {
       align-items: center;
       flex-direction: row-reverse;
-      justify-content: space-between;
+      justify-content: center;
     }
   }
 }
@@ -34,7 +34,9 @@
   margin-top: 68px;
 
   @include mq($from: medium) {
+    margin-right: 136px;
     margin-top: 50px;
+    max-width: 275px;
     width: calc(50% - 28px);
   }
 
