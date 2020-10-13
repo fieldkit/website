@@ -321,6 +321,12 @@
   display: none;
 }
 
+.summary .pre_order_single-no-auto-format {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
 #display-deposit-product {
   @extend .body;
   @extend .body--small;

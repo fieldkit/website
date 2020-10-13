@@ -192,10 +192,10 @@ select {
     }
   }
 
-  .pre_order_loop {
+  .pre_order_loop,
+  .pre_order_loop-no-auto-format {
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
   }
 }
 
@@ -221,8 +221,13 @@ select {
   }
 }
 
-.woocommerce-price-suffix {
+.summary__details .woocommerce-price-suffix {
   margin-left: 0.5rem;
+}
+
+.summary__details .woocommerce-variation-price .woocommerce-price-suffix,
+.details .woocommerce-price-suffix {
+  margin-left: 0;
 }
 
 .woocommerce ul.products li.product .price {

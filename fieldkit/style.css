@@ -3092,6 +3092,7 @@ span.wpcf7-form-control-wrap textarea {
   .archive .section-header--medium .section-header__heading {
     margin-bottom: 13px; }
   .archive .section-header--medium .rich-text, .archive .section-header--medium .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-header--medium .woocommerce-MyAccount-content {
+    font-size: 24px;
     margin-left: auto;
     margin-right: auto;
     max-width: 600px;
@@ -3306,10 +3307,10 @@ select {
       position: absolute;
       top: 0;
       width: 100%; }
-  .woocommerce-page ul.products li.product .pre_order_loop {
+  .woocommerce-page ul.products li.product .pre_order_loop,
+  .woocommerce-page ul.products li.product .pre_order_loop-no-auto-format {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 500; }
+    font-style: normal; }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
   font-size: 20px;
@@ -3326,8 +3327,12 @@ select {
     margin-right: 0;
     width: 100%; } }
 
-.woocommerce-price-suffix {
+.summary__details .woocommerce-price-suffix {
   margin-left: 0.5rem; }
+
+.summary__details .woocommerce-variation-price .woocommerce-price-suffix,
+.details .woocommerce-price-suffix {
+  margin-left: 0; }
 
 .woocommerce ul.products li.product .price {
   color: #0a67aa;
@@ -3825,6 +3830,11 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 
 .summary .pre_order_single {
   display: none; }
+
+.summary .pre_order_single-no-auto-format {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500; }
 
 #display-deposit-product {
   background-color: #f4f5f7;
@@ -4408,7 +4418,8 @@ figure.composited_product_image.woocommerce-product-gallery__image {
     .woocommerce-account .woocommerce-MyAccount-navigation-link a:not(.button):not(#mc-embedded-subscribe):hover, .woocommerce-account .woocommerce-MyAccount-navigation-link a:not(.button):not(#mc-embedded-subscribe):focus {
       color: #1b80c9; }
   .woocommerce-account .woocommerce-MyAccount-navigation-link.is-active a:not(.button):not(#mc-embedded-subscribe) {
-    color: #1b80c9; }
+    color: #1b80c9;
+    font-weight: 900; }
   .woocommerce-account .woocommerce-MyAccount-navigation-link img {
     height: 18px;
     position: absolute;
@@ -4521,16 +4532,6 @@ table.my_account_orders tr td::before {
     padding-left: 40px; }
     .woocommerce-cart .woocommerce table.shop_table .component_table_item .component_table_item_indent dt {
       letter-spacing: 0.44px; }
-  .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-price,
-  .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-quantity,
-  .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-subtotal,
-  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-price,
-  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-quantity,
-  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-subtotal,
-  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-price,
-  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-quantity,
-  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-subtotal {
-    visibility: hidden; }
   .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent {
     padding-left: 50px; }
     .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent a {
