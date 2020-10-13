@@ -73,8 +73,8 @@
     }
   }
 
-  .woocommerce-checkout-review-order-table .product-quantity,
-  .woocommerce-checkout-review-order-table .product-name,
+  .woocommerce-checkout-review-order-table .cart_item .product-quantity,
+  .woocommerce-checkout-review-order-table .cart-item .product-name,
   .woocommerce-checkout-review-order-table .composited_product_quantity {
     color: #2c3e50;
     font-size: 16px;
@@ -116,6 +116,7 @@
       font-family: $font-family-base;
       font-size: 16px;
       font-weight: 900;
+      padding: 0;
     }
 
     .woocommerce-Price-amount.amount {
@@ -124,13 +125,13 @@
 
     .cart_item .product-total,
     thead th.product-total {
-      text-align: right;
+      text-align: left;
     }
 
     .cart-subtotal td,
     .order-total td,
     .tax-total td {
-      text-align: right;
+      text-align: left;
     }
 
     &.woocommerce-checkout-review-order-table {
@@ -143,6 +144,38 @@
 
   #customer_details {
     margin-bottom: 74px;
+
+    .col-1 {
+      p.form-row:not(.form-row-first):not(.form-row-last) label,
+      p.form-row input[name="billing_address_2"],
+      p.form-row input[name="shipping_address_2"] {
+        margin-top: 20px;
+
+        @include mq($from: medium) {
+          margin-top: 26px;
+        }
+      }
+    }
+
+    .col-1 .woocommerce-shipping-fields {
+      margin-top: 54px;
+
+      @include mq($from: medium) {
+        margin-top: 67px;
+      }
+    }
+
+    .col-2 #order_review_heading {
+      margin-bottom: 20px;
+
+      @include mq($from: medium) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .col-2 .woocommerce-checkout-review-order-table td {
+      padding: 9px 0px;
+    }
 
     .form-row .required {
       color: $color-gray-5;
@@ -213,6 +246,7 @@
     }
 
     div.form-row {
+      margin-top: 50px;
       padding: unset;
     }
 
@@ -356,28 +390,8 @@
       position: relative;
     }
 
-    &:not(:first-child) {
-      margin-top: 15px !important;
+    &.payment_method_paypal {
+      margin-top: 10px !important;
     }
   }
-}
-
-#ship-to-different-address {
-  margin-bottom: 5px;
-  margin-top: 15px;
-}
-
-#shipping_method li {
-  padding-left: 0;
-  text-align: right;
-
-  &::before {
-    content: unset;
-  }
-}
-
-.woocommerce-shipping-destination,
-.woocommerce-shipping-destination > *,
-.woocommerce-shipping-calculator {
-  text-align: right;
 }

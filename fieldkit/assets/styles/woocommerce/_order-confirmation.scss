@@ -84,3 +84,23 @@
   letter-spacing: 0.44px;
   line-height: normal;
 }
+
+.woocommerce-order-details .woocommerce-table--order-details tbody td {
+  padding: 9px 0px;
+}
+
+.woocommerce-order-details .woocommerce-order-details__title {
+  margin-bottom: 20px;
+
+  @include mq($from: medium) {
+    margin-bottom: 30px;
+  }
+}
+
+.woocommerce-customer-details .woocommerce-column__title {
+  margin-bottom: 20px;
+
+  @include mq($from: medium) {
+    margin-bottom: 30px;
+  }
+}

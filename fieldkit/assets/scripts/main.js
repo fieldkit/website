@@ -7,6 +7,7 @@ import TextInputContainer from "./components/TextInputContainer";
 import SortDropdown from "./components/SortDropdown";
 import WooCommerceAccount from "./components/WooCommerceAccount";
 import FilterDropdown from "./components/FilterDropdown";
+
 $(".site-header").each((index, element) => new SiteHeader(element));
 $(".load-more").each((index, element) => new LoadMore(element));
 $(".text-input-container").each(
