@@ -342,27 +342,38 @@
   }
 }
 
-.wc_payment_methods {
-  .wc_payment_method {
+.wc_payment_methods,
+#fieldkit-shipping-methods {
+  .wc_payment_method,
+  #shipping_method {
     input[type="radio"] {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      left: -1000px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
       position: absolute;
-      visibility: hidden;
+      width: 1px;
+      z-index: -1000;
     }
 
-    input[type="radio"]:checked ~ .check {
+    input[type="radio"]:checked ~ label .check {
       border: 1px solid #d8dce0;
     }
 
-    input[type="radio"]:checked ~ .check::before {
+    input[type="radio"]:checked ~ label .check::before {
       background: #2c3e50;
     }
 
     .check {
       border: 1px solid #d8dce0;
       border-radius: 100%;
+      cursor: pointer;
       display: block;
       height: 25px;
-      left: 0;
+      left: -36px;
       position: absolute;
       top: 0;
       width: 25px;
@@ -391,7 +402,7 @@
       position: relative;
     }
 
-    &.payment_method_paypal {
+    &:not(:first-of-type) {
       margin-top: 10px !important;
     }
   }

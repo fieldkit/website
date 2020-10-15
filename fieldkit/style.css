@@ -818,11 +818,11 @@ body.overflow-hidden {
     border-bottom: 3px solid #1b80c9;
     color: #1b80c9; }
 
-.list-item, .rich-text ul li, .woocommerce-account .woocommerce-MyAccount-content ul li, .woocommerce div.product .woocommerce-tabs .panel li {
+.wc-list-item, .rich-text ul li, .woocommerce-account .woocommerce-MyAccount-content ul li, .woocommerce div.product .woocommerce-tabs .panel li {
   list-style: none;
   padding-left: 36px;
   position: relative; }
-  .list-item::before, .rich-text ul li::before, .woocommerce-account .woocommerce-MyAccount-content ul li::before, .woocommerce div.product .woocommerce-tabs .panel li::before {
+  .wc-list-item::before, .rich-text ul li::before, .woocommerce-account .woocommerce-MyAccount-content ul li::before, .woocommerce div.product .woocommerce-tabs .panel li::before {
     background-color: currentColor;
     border-radius: 50%;
     content: "";
@@ -834,10 +834,15 @@ body.overflow-hidden {
     transform: translate(-50%, -50%);
     width: 6px; }
 
-.list-item--ordered, .rich-text ol li, .woocommerce-account .woocommerce-MyAccount-content ol li {
+.wc-list-item--ordered, .rich-text ol li, .woocommerce-account .woocommerce-MyAccount-content ol li {
   list-style-type: decimal;
   margin-left: 30px;
   padding-left: 8px; }
+
+#shipping_method li {
+  padding-left: 0; }
+  #shipping_method li::before {
+    content: unset; }
 
 table {
   border: none; }
@@ -1001,7 +1006,7 @@ span.wpcf7-list-item {
   height: auto;
   max-width: 260px; }
 
-.wpcf7 input[type="checkbox"] {
+.section-contact-form input[type="checkbox"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -1013,7 +1018,7 @@ span.wpcf7-list-item {
   width: 1px;
   z-index: -1000; }
 
-.wpcf7 input[type="checkbox"] + .wpcf7-list-item-label {
+.section-contact-form input[type="checkbox"] + .wpcf7-list-item-label {
   background-position: 0 0;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -1024,10 +1029,10 @@ span.wpcf7-list-item {
   padding-left: 34px;
   vertical-align: middle; }
 
-.wpcf7 input[type="checkbox"]:checked + .wpcf7-list-item-label {
+.section-contact-form input[type="checkbox"]:checked + .wpcf7-list-item-label {
   background-position: 0 -20px; }
 
-.wpcf7 .wpcf7-list-item-label {
+.section-contact-form .wpcf7-list-item-label {
   background-image: url("assets/icons/css-checkbox.png");
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -4781,6 +4786,21 @@ table.my_account_orders tr td::before {
   font-size: 14px;
   letter-spacing: 0.39px; }
 
+td#fieldkit-shipping-methods {
+  padding: 28px 0;
+  width: 100%; }
+
+ul#shipping_method {
+  margin-bottom: 35px; }
+
+#fieldkit-shipping-methods__label {
+  color: #2c3e50;
+  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.31;
+  margin-bottom: 22px; }
+
 .woocommerce-checkout input {
   border-bottom: 1px solid #d8dce0;
   padding-bottom: 5px; }
@@ -4870,6 +4890,7 @@ table.my_account_orders tr td::before {
     font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 900;
+    max-width: 60%;
     padding: 0; }
   .woocommerce-checkout table.shop_table .cart_item .product-total,
   .woocommerce-checkout table.shop_table thead th.product-total {
@@ -5027,27 +5048,51 @@ table.my_account_orders tr td::before {
   .woocommerce .woocommerce-error::before {
     content: none; }
 
-.wc_payment_methods .wc_payment_method input[type="radio"] {
+.wc_payment_methods .wc_payment_method input[type="radio"],
+.wc_payment_methods #shipping_method input[type="radio"],
+#fieldkit-shipping-methods .wc_payment_method input[type="radio"],
+#fieldkit-shipping-methods #shipping_method input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  left: -1000px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  visibility: hidden; }
+  width: 1px;
+  z-index: -1000; }
 
-.wc_payment_methods .wc_payment_method input[type="radio"]:checked ~ .check {
+.wc_payment_methods .wc_payment_method input[type="radio"]:checked ~ label .check,
+.wc_payment_methods #shipping_method input[type="radio"]:checked ~ label .check,
+#fieldkit-shipping-methods .wc_payment_method input[type="radio"]:checked ~ label .check,
+#fieldkit-shipping-methods #shipping_method input[type="radio"]:checked ~ label .check {
   border: 1px solid #d8dce0; }
 
-.wc_payment_methods .wc_payment_method input[type="radio"]:checked ~ .check::before {
+.wc_payment_methods .wc_payment_method input[type="radio"]:checked ~ label .check::before,
+.wc_payment_methods #shipping_method input[type="radio"]:checked ~ label .check::before,
+#fieldkit-shipping-methods .wc_payment_method input[type="radio"]:checked ~ label .check::before,
+#fieldkit-shipping-methods #shipping_method input[type="radio"]:checked ~ label .check::before {
   background: #2c3e50; }
 
-.wc_payment_methods .wc_payment_method .check {
+.wc_payment_methods .wc_payment_method .check,
+.wc_payment_methods #shipping_method .check,
+#fieldkit-shipping-methods .wc_payment_method .check,
+#fieldkit-shipping-methods #shipping_method .check {
   border: 1px solid #d8dce0;
   border-radius: 100%;
+  cursor: pointer;
   display: block;
   height: 25px;
-  left: 0;
+  left: -36px;
   position: absolute;
   top: 0;
   width: 25px;
   z-index: 5; }
-  .wc_payment_methods .wc_payment_method .check::before {
+  .wc_payment_methods .wc_payment_method .check::before,
+  .wc_payment_methods #shipping_method .check::before,
+  #fieldkit-shipping-methods .wc_payment_method .check::before,
+  #fieldkit-shipping-methods #shipping_method .check::before {
     border-radius: 100%;
     content: "";
     display: block;
@@ -5058,7 +5103,10 @@ table.my_account_orders tr td::before {
     top: 4px;
     width: 15px; }
 
-.wc_payment_methods .wc_payment_method label {
+.wc_payment_methods .wc_payment_method label,
+.wc_payment_methods #shipping_method label,
+#fieldkit-shipping-methods .wc_payment_method label,
+#fieldkit-shipping-methods #shipping_method label {
   cursor: pointer;
   display: block;
   font-size: 16px;
@@ -5067,7 +5115,10 @@ table.my_account_orders tr td::before {
   margin-left: 36px;
   position: relative; }
 
-.wc_payment_methods .wc_payment_method.payment_method_paypal {
+.wc_payment_methods .wc_payment_method:not(:first-of-type),
+.wc_payment_methods #shipping_method:not(:first-of-type),
+#fieldkit-shipping-methods .wc_payment_method:not(:first-of-type),
+#fieldkit-shipping-methods #shipping_method:not(:first-of-type) {
   margin-top: 10px !important; }
 
 .woocommerce-account form .reg_password .show-password-input::after {

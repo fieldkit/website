@@ -2,7 +2,7 @@
   @extend .body;
 }
 
-.list-item {
+.wc-list-item {
   list-style: none;
   padding-left: 36px;
   position: relative;
@@ -21,8 +21,16 @@
   }
 }
 
-.list-item--ordered {
+.wc-list-item--ordered {
   list-style-type: decimal;
   margin-left: 30px;
   padding-left: 8px;
+}
+
+#shipping_method li {
+  padding-left: 0;
+
+  &::before {
+    content: unset;
+  }
 }

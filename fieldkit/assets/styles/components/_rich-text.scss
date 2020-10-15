@@ -86,11 +86,11 @@
   }
 
   ol li {
-    @extend .list-item--ordered;
+    @extend .wc-list-item--ordered;
   }
 
   ul li {
-    @extend .list-item;
+    @extend .wc-list-item;
   }
 
   blockquote {
