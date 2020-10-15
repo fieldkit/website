@@ -3300,7 +3300,6 @@ select {
   text-align: center; }
   .woocommerce-page ul.products li.product a.woocommerce-LoopProduct-link.woocommerce-loop-product__link .wp-post-image--container {
     background: white;
-    border: 1px solid #d8dce0;
     height: 0;
     overflow: hidden;
     padding-top: 52.46332%;
@@ -5114,6 +5113,16 @@ ul#shipping_method {
   line-height: 26px;
   margin-left: 36px;
   position: relative; }
+
+.wc_payment_methods .wc_payment_method #wc-stripe-cc-form label,
+.wc_payment_methods .wc_payment_method .woocommerce-SavedPaymentMethods-saveNew label,
+.wc_payment_methods #shipping_method #wc-stripe-cc-form label,
+.wc_payment_methods #shipping_method .woocommerce-SavedPaymentMethods-saveNew label,
+#fieldkit-shipping-methods .wc_payment_method #wc-stripe-cc-form label,
+#fieldkit-shipping-methods .wc_payment_method .woocommerce-SavedPaymentMethods-saveNew label,
+#fieldkit-shipping-methods #shipping_method #wc-stripe-cc-form label,
+#fieldkit-shipping-methods #shipping_method .woocommerce-SavedPaymentMethods-saveNew label {
+  margin-left: 0; }
 
 .wc_payment_methods .wc_payment_method:not(:first-of-type),
 .wc_payment_methods #shipping_method:not(:first-of-type),

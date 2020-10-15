@@ -402,6 +402,13 @@
       position: relative;
     }
 
+    #wc-stripe-cc-form,
+    .woocommerce-SavedPaymentMethods-saveNew {
+      label {
+        margin-left: 0;
+      }
+    }
+
     &:not(:first-of-type) {
       margin-top: 10px !important;
     }
