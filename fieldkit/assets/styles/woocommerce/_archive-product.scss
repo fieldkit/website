@@ -257,6 +257,20 @@ select {
     @extend .button;
     @extend .button--primary;
   }
+
+  &.added {
+    background-color: #c24654;
+  }
+
+  &.added::after,
+  &.loading::after {
+    content: unset;
+  }
+
+  &.loading {
+    background-color: #c24654;
+    opacity: 0.5;
+  }
 }
 
 .section-navbar--secondary {
