@@ -132,7 +132,8 @@
 
   &:hover,
   &:focus {
-    color: inherit;
+    border-bottom: 1px solid $color-primary-blue;
+    color: $color-primary-blue;
   }
 }
 
@@ -317,14 +318,16 @@
   border-top-color: $color-primary-blue;
 }
 
-.summary .pre_order_single {
-  display: none;
-}
-
+.summary .pre_order_single,
 .summary .pre_order_single-no-auto-format {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
+}
+
+.summary .woocommerce-variation-availability .pre_order_single,
+.summary .woocommerce-variation-availability .pre_order_single-no-auto-format {
+  margin-top: 10px;
 }
 
 #display-deposit-product {

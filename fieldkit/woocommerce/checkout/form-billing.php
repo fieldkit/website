@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php else : ?>
 
-		<h3 class="heading-4"><?php esc_html_e( 'Shipping Details', 'woocommerce' ); ?>&nbsp;<span class="fieldkit-required-span right">*Required</span></h3>
+		<h3 class="heading-4"><?php esc_html_e( 'Billing Details', 'woocommerce' ); ?>&nbsp;<span class="fieldkit-required-span right">*Required</span></h3>
 
 	<?php endif; ?>
 
