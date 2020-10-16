@@ -296,13 +296,43 @@
   }
 }
 
+.cart_totals.calculated_shipping .shop_table td {
+  &::before {
+    @include mq($until: medium) {
+      color: #2c3e50;
+      font-family: $font-family-base;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.39px;
+      line-height: 1.31;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+  }
+}
+
 td#fieldkit-shipping-methods {
   padding: 28px 0;
+  text-align: left;
   width: 100%;
+
+  &::before {
+    content: unset;
+  }
+
+  .woocommerce-shipping-destination {
+    margin-top: 25px;
+    text-align: left;
+
+    @include mq($from: medium) {
+      margin-top: 35px;
+    }
+  }
 }
 
 ul#shipping_method {
   margin-bottom: 35px;
+  text-align: left;
 }
 
 #fieldkit-shipping-methods__label {
@@ -310,6 +340,12 @@ ul#shipping_method {
   font-family: $font-family-base;
   font-size: 16px;
   font-weight: 500;
+  letter-spacing: 0.39px;
   line-height: 1.31;
   margin-bottom: 22px;
+  text-align: left;
+
+  @include mq($from: large) {
+    letter-spacing: normal;
+  }
 }

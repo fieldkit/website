@@ -4785,20 +4785,46 @@ table.my_account_orders tr td::before {
   font-size: 14px;
   letter-spacing: 0.39px; }
 
+@media (max-width: 49.99em) {
+  .cart_totals.calculated_shipping .shop_table td::before {
+    color: #2c3e50;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.39px;
+    line-height: 1.31;
+    margin-bottom: 22px;
+    text-align: left; } }
+
 td#fieldkit-shipping-methods {
   padding: 28px 0;
+  text-align: left;
   width: 100%; }
+  td#fieldkit-shipping-methods::before {
+    content: unset; }
+  td#fieldkit-shipping-methods .woocommerce-shipping-destination {
+    margin-top: 25px;
+    text-align: left; }
+    @media (min-width: 50em) {
+      td#fieldkit-shipping-methods .woocommerce-shipping-destination {
+        margin-top: 35px; } }
 
 ul#shipping_method {
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  text-align: left; }
 
 #fieldkit-shipping-methods__label {
   color: #2c3e50;
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
+  letter-spacing: 0.39px;
   line-height: 1.31;
-  margin-bottom: 22px; }
+  margin-bottom: 22px;
+  text-align: left; }
+  @media (min-width: 80em) {
+    #fieldkit-shipping-methods__label {
+      letter-spacing: normal; } }
 
 .woocommerce-checkout input {
   border-bottom: 1px solid #d8dce0;
