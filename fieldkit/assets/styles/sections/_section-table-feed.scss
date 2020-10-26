@@ -65,13 +65,13 @@
   }
 }
 
+.woocommerce table.shop_attributes tr:nth-child(even) th {
+  background: transparent;
+}
+
 .woocommerce table.shop_attributes {
   max-width: 970px;
   width: 100%;
-
-  .woocommerce table.shop_attributes tr:nth-child(even) th {
-    background: transparent;
-  }
 
   th,
   td {
@@ -101,5 +101,26 @@
     font-style: normal;
     font-weight: 300;
     line-height: 1.5;
+  }
+}
+
+.woocommerce-product-attributes {
+  margin-top: 3em !important;
+
+  th p,
+  td p {
+    font-family: $font-family-base;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 300 !important;
+    line-height: 1.5 !important;
+  }
+}
+
+.woocommerce-Tabs-panel--additional_information .section-table--primary {
+  margin-top: 3em !important;
+
+  .section__inner {
+    margin-left: unset;
   }
 }

@@ -123,6 +123,23 @@
       }
     }
 
+    .woocommerce-MyAccount-navigation-link--payment-methods {
+      &::after {
+        background-image: url(./assets/icons/payment-method.svg);
+      }
+
+      &:hover::after,
+      &:focus::after {
+        background-image: url(./assets/icons/payment-method-selected.svg);
+      }
+
+      &.is-active {
+        &::after {
+          background-image: url(./assets/icons/payment-method-selected.svg);
+        }
+      }
+    }
+
     .woocommerce-MyAccount-navigation-link--orders {
       &::after {
         background-image: url(./assets/icons/orders.svg);

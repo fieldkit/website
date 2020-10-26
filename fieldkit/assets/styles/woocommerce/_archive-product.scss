@@ -169,21 +169,32 @@ select {
   border-color: $color-gray-3;
 }
 
+.woocommerce-page ul.products {
+  @include mq($from: medium) {
+    margin-left: -2.5%;
+    margin-right: -2.5%;
+  }
+}
+
 .woocommerce-page ul.products li.product {
-  text-align: center;
+  @include mq($from: medium) {
+    float: unset;
+    margin: 0 1% 2.992em 1%;
+    text-align: center;
+  }
 
   a.woocommerce-LoopProduct-link.woocommerce-loop-product__link {
     .wp-post-image--container {
       background: white;
       height: 0;
       overflow: hidden;
-      padding-top: 591.44px / 1127.34px * 100%;
+      padding-top: 691.44px / 1127.34px * 100%;
       position: relative;
 
       img {
         height: 100%;
         left: 0;
-        object-fit: fill;
+        // object-fit: cover;
         position: absolute;
         top: 0;
         width: 100%;
