@@ -36,15 +36,15 @@
         }
       }
 
-      // .component_table_item,
-      // .bundled_table_item,
-      // .bundle_table_item {
-      //   .product-price,
-      //   .product-quantity,
-      //   .product-subtotal {
-      //     visibility: hidden;
-      //   }
-      // }
+      .component_table_item,
+      .bundled_table_item,
+      .bundle_table_item {
+        .product-price,
+        .product-quantity,
+        .product-subtotal {
+          visibility: hidden;
+        }
+      }
 
       .bundled_table_item .bundled_table_item_indent {
         padding-left: 50px;

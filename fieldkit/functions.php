@@ -231,6 +231,8 @@ function fieldkit_loop_product_thumbnail() {
     echo $product ? $product->get_image( $image_size ) : '';
 }
 
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+
 
 // add_action( 'woocommerce_payment_complete', 'order_received_empty_cart_action', 10, 1 );
 // function order_received_empty_cart_action( $order_id ){

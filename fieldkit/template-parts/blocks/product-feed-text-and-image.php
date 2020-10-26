@@ -3,7 +3,7 @@
 	$body = $product_feed_text_and_image['body'];
 	$image = $product_feed_text_and_image['image'];
 ?>
-
+<?php if($body): ?>
 <section class="section section-product-feed-text-and-image">
    <div class="section__inner section__inner--inset">
 	  <div class="section-product-feed-text-and-image__content">
@@ -18,3 +18,4 @@
       </div>
    </div>
 </section>
+<?php endif; ?>
