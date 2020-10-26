@@ -214,9 +214,27 @@ add_action('customize_register', 'fieldkit_customize_register');
 add_action( 'woocommerce_after_add_to_cart_form', 'fieldkit_sku', 5 );
 function fieldkit_sku(){
 	global $product;
-	if($product->get_sku()){
-		echo '<p class="sku">[' . $product->get_sku() .']</p>';
+
+	if($product->get_children()){
+
+		echo '<p class="sku">';
+
+		if( $product->get_sku()){
+			echo '[' . $product->get_sku() .'] ';
+		}
+
+		foreach ($product->get_children() as $key => $value) {
+			if(wc_get_product( $value )->get_sku()){
+				echo '[' . 	wc_get_product( $value )->get_sku() .'] ';
+			}
+		}
+		echo '</p>';
+	}else{
+		if( $product->get_sku()){
+			echo '<p class="sku">[' . $product->get_sku() .']</p>';
+		}
 	}
+
 }
 
 
