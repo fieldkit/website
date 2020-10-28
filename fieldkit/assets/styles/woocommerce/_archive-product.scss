@@ -179,7 +179,7 @@ select {
 .woocommerce-page ul.products li.product {
   @include mq($from: medium) {
     float: unset;
-    margin: 0 1% 2.992em 1%;
+    margin: 0 2% 2.992em 2%;
     text-align: center;
   }
 
@@ -188,7 +188,7 @@ select {
       background: white;
       height: 0;
       overflow: hidden;
-      padding-top: 591.44px / 1127.34px * 100%;
+      padding-top: 62.5%;
       position: relative;
 
       img {
@@ -214,6 +214,12 @@ select {
   font-weight: 500;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+.woocommerce ul.products.columns-3 {
+  li.product {
+    width: 29%;
+  }
 }
 
 .woocommerce ul.products.columns-3 {
