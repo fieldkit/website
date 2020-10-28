@@ -59,8 +59,19 @@
         text-decoration: none;
       }
 
+      thead .product-thumbnail {
+        display: none;
+      }
+
+      .woocommerce-cart-form__cart-item {
+        td.product-thumbnail {
+          display: none;
+        }
+      }
+
       .woocommerce-cart-form__cart-item td,
       .woocommerce-cart-form__cart-item a {
+        background-color: transparent;
         font-weight: 500;
         letter-spacing: 0.44px;
       }
@@ -174,7 +185,7 @@
     }
 
     .quantity .qty {
-      -moz-appearance: textfield;
+      appearance: textfield;
       border: 1px solid $color-gray-3;
       border-radius: 2px;
       font-size: 14px;
@@ -187,7 +198,7 @@
 
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
+        appearance: none;
         margin: 0;
       }
     }
@@ -296,6 +307,25 @@
   }
 }
 
+.woocommerce-cart .bundled_table_item {
+  td:first-child {
+    padding-left: 0.9rem;
+
+    @include mq($from: medium) {
+      padding-left: 1.3rem;
+    }
+  }
+
+  dl.variation > dt,
+  dl.variation > dd > * {
+    color: #6a6d71;
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.39px;
+  }
+}
+
 .cart_totals.calculated_shipping .shop_table td {
   &::before {
     @include mq($until: medium) {
@@ -335,13 +365,25 @@ ul#shipping_method {
   text-align: left;
 }
 
-#fieldkit-shipping-methods__label {
+.woocommerce-cart #fieldkit-shipping-methods__label {
   color: #2c3e50;
   font-family: $font-family-base;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.39px;
   line-height: 1.31;
+  margin-bottom: 22px;
+  text-align: left;
+
+  @include mq($from: large) {
+    letter-spacing: normal;
+  }
+}
+
+.woocommerce-checkout #fieldkit-shipping-methods__label {
+  font-family: $font-family-base;
+  font-size: 16px;
+  font-weight: 700;
   margin-bottom: 22px;
   text-align: left;
 

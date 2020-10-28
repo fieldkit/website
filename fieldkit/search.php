@@ -37,9 +37,7 @@
 									the_post();
 									if (get_post_type() !== $current_post_type) continue;
 								?>
-									<li class="teaser-item">
 										<?php get_template_part('template-parts/components/teaser', get_post_type()); ?>
-									</li>
 								<?php
 								endwhile;
 								rewind_posts();

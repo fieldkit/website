@@ -188,13 +188,13 @@ select {
       background: white;
       height: 0;
       overflow: hidden;
-      padding-top: 691.44px / 1127.34px * 100%;
+      padding-top: 591.44px / 1127.34px * 100%;
       position: relative;
 
       img {
         height: 100%;
         left: 0;
-        // object-fit: cover;
+        object-fit: cover;
         position: absolute;
         top: 0;
         width: 100%;
@@ -344,6 +344,13 @@ select {
 .fieldkit-sidebar-filter {
   display: flex;
   flex-wrap: wrap;
+
+  li.widget {
+    @include mq($until: medium) {
+      margin-bottom: 38px;
+      width: 100%;
+    }
+  }
 }
 
 .fieldkit-sidebar-filter li:not(:first-child) {

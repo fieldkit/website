@@ -39,7 +39,9 @@ class FilterDropdown {
       "<div class='rendered-dropdown-container'>" +
       "<div class='rendered-dropdown-selected'></div>" +
       "<ul class='rendered-dropdown'></ul>" +
-      "<div>";
+      "</div>" +
+      "<div class='' id='product-filter-reset'><button class='button-link' id='reset-filter'>Clear Filter</button></div>";
+
     this.$element.append(renderUL);
     this.$element[0].childNodes[0].childNodes.forEach((element, i) => {
       const elmSelected = element.selected ? "class='selected'" : "";
@@ -52,13 +54,15 @@ class FilterDropdown {
         element.innerText +
         "</li>";
       this.$element.find(".rendered-dropdown").append(renderLI);
-
       if (element.selected) {
+        const spanLabel = element.innerText.substring(0, 4) == 'Any ' ? 'All ' + element.innerText.slice(4) : element.innerText;
         this.$element.find(".rendered-dropdown-selected").append(
-          "<span>Filter by: </span>" + element.innerText
+          "<span>Filter by: </span>" + spanLabel
         );
       }
     });
+
+    $("#reset-filter").on("click", this.handleReset.bind(this));
 
     $(".rendered-dropdown-container").on("click", this.handleSelect.bind(this));
   }
@@ -71,6 +75,13 @@ class FilterDropdown {
     const value = $(event.target)[0].dataset.value;
 
     this.handleURL(this.$widgetName + '=', value);
+  }
+
+  handleReset(e) {
+    e.preventDefault();
+    const rootURL = window.location.origin;
+    const pathUrl = window.location.pathname;
+    window.location.href = rootURL + pathUrl + "#sidebar";
   }
 
   handleURL(x1, x2) {

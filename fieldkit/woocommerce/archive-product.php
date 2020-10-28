@@ -80,16 +80,19 @@ $cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 ?>
 <div class="woocommerce-products">
 
-<?php if ( is_active_sidebar('sensors-header') ) : ?>
-    <ul id="sidebar" class="fieldkit-sidebar-filter">
+	<ul id="sidebar" class="fieldkit-sidebar-filter">
 
-		<?php dynamic_sidebar('sensors-header'); ?>
+		<?php if ( is_active_sidebar('sensors-header')) : ?>
+			<?php if ( $cat_id === 'term_41' || !is_product_category()) : ?>
+			<?php dynamic_sidebar('sensors-header'); ?>
+		<?php endif; ?>
 
-		<?php if ( is_active_sidebar('accessories-header') ) : ?>
+		<?php endif; ?>
+
+		<?php if ( is_active_sidebar('accessories-header') && $cat_id === 'term_38' ) : ?>
 			<?php dynamic_sidebar('accessories-header'); ?>
 		<?php endif; ?>
     </ul>
-<?php endif; ?>
 
 
 <?php

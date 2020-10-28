@@ -6,6 +6,26 @@
   }
 }
 
+#product-filter-reset {
+  position: absolute;
+  top: 100%;
+  transform: translateY(70%);
+
+  @include mq($from: medium) {
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .button-link {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+}
+
 .rendered-dropdown-container {
   background: $color-background;
   border: 1px solid $color-gray-3;

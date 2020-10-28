@@ -1,8 +1,8 @@
 <?php
 global $product;
-
+if($product->get_catalog_visibility() !== 'hidden'):
 ?>
-
+<li class="teaser-item">
 <div class="teaser teaser-product">
     <a class="teaser-product__link" href="<?php echo get_permalink(); ?>">
         <div class="teaser-product__image">
@@ -44,3 +44,5 @@ global $product;
 		<?php endif; ?>
     </a>
 </div>
+</li>
+<?php endif; ?>
