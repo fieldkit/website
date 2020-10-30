@@ -95,12 +95,12 @@
   }
 
   p > a {
-    color: $color-primary-blue;
+    color: $color-primary-dark-blue;
     font-weight: 700;
 
     &:hover,
     &:focus {
-      color: inherit;
+      color: $color-primary-blue;
     }
   }
 }

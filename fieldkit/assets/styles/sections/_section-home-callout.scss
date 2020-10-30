@@ -61,4 +61,19 @@
 
 .archive .section-callout .rich-text {
   max-width: unset;
+
+  * {
+    color: white !important;
+  }
+
+  a {
+    border-bottom: 1px solid white !important;
+    color: white !important;
+    font-weight: 400 !important;
+  }
+
+  a:hover,
+  a:focus {
+    border-bottom: 1px solid white !important;
+  }
 }
