@@ -11,7 +11,7 @@
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
     "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.1",
     "cssnano": "^4.1.10",
     "eslint": "^7.8.1",
     "eslint-config-prettier": "^6.11.0",
