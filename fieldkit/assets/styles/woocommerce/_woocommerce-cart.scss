@@ -40,10 +40,14 @@
       .bundled_table_item,
       .bundle_table_item {
         .product-price,
-        .product-quantity,
+        // .product-quantity,
         .product-subtotal {
           visibility: hidden;
         }
+      }
+
+      .bundle_table_item .product-quantity {
+        visibility: hidden;
       }
 
       .bundled_table_item .bundled_table_item_indent {
@@ -62,9 +66,8 @@
       // thead .product-thumbnail {
       //   display: none;
       // }
-
-      .woocommerce-cart-form__cart-item.component_table_item,
-      .woocommerce-cart-form__cart-item.bundled_table_item {
+      // .woocommerce-cart-form__cart-item.bundled_table_item
+      .woocommerce-cart-form__cart-item.bundle_table_item {
         td.product-thumbnail {
           opacity: 0;
         }
@@ -397,4 +400,10 @@ ul#shipping_method {
   @include mq($from: large) {
     letter-spacing: normal;
   }
+}
+
+#add_payment_method table.cart img,
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
+  width: 60px;
 }

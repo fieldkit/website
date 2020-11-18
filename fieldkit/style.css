@@ -1260,6 +1260,14 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
     height: auto;
     width: 100%; }
 
+.archive .section-callout {
+  margin-bottom: 60px; }
+
+@media (max-width: 49.99em) {
+  .archive .margins-horizontal {
+    padding-left: 0;
+    padding-right: 0; } }
+
 .rich-text > *:not(:first-child), .woocommerce-account .woocommerce-MyAccount-content > *:not(:first-child) {
   margin-top: 1em; }
 
@@ -3471,6 +3479,17 @@ select {
       margin-left: 30px;
       margin-top: 0px; } }
 
+.archive .section-callout {
+  margin-bottom: 60px; }
+  @media (max-width: 49.99em) {
+    .archive .section-callout {
+      margin-bottom: 0px; } }
+
+@media (max-width: 49.99em) {
+  .archive .margins-horizontal {
+    padding-left: 0;
+    padding-right: 0; } }
+
 .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element {
   background-color: #f4f5f7;
   color: #2c3e50; }
@@ -4023,6 +4042,10 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 .sku {
   color: #5a5a5b;
   font-size: 12px; }
+
+.component_ordering,
+.component_filters {
+  display: none; }
 
 .wcwl-input-group {
   margin-top: 35px;
@@ -4634,14 +4657,13 @@ table.my_account_orders tr td::before {
     .woocommerce-cart .woocommerce table.shop_table .component_table_item .component_table_item_indent dt {
       letter-spacing: 0.44px; }
   .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-price,
-  .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-quantity,
   .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-subtotal,
   .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-price,
-  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-quantity,
   .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-subtotal,
   .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-price,
-  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-quantity,
   .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-subtotal {
+    visibility: hidden; }
+  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-quantity {
     visibility: hidden; }
   .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent {
     padding-left: 50px; }
@@ -4650,8 +4672,7 @@ table.my_account_orders tr td::before {
   .woocommerce-cart .woocommerce table.shop_table .edit_composite_in_cart_text small {
     letter-spacing: 0.36px;
     text-decoration: none; }
-  .woocommerce-cart .woocommerce table.shop_table .woocommerce-cart-form__cart-item.component_table_item td.product-thumbnail,
-  .woocommerce-cart .woocommerce table.shop_table .woocommerce-cart-form__cart-item.bundled_table_item td.product-thumbnail {
+  .woocommerce-cart .woocommerce table.shop_table .woocommerce-cart-form__cart-item.bundle_table_item td.product-thumbnail {
     opacity: 0; }
   .woocommerce-cart .woocommerce table.shop_table .woocommerce-cart-form__cart-item a img {
     width: 60px; }
@@ -4947,6 +4968,11 @@ ul#shipping_method {
   @media (min-width: 80em) {
     .woocommerce-checkout #fieldkit-shipping-methods__label {
       letter-spacing: normal; } }
+
+#add_payment_method table.cart img,
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img {
+  width: 60px; }
 
 .woocommerce-checkout input {
   border-bottom: 1px solid #d8dce0;

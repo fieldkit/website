@@ -367,3 +367,18 @@ select {
     margin-top: 0px;
   }
 }
+
+.archive .section-callout {
+  margin-bottom: 60px;
+
+  @include mq($until: medium) {
+    margin-bottom: 0px;
+  }
+}
+
+.archive .margins-horizontal {
+  @include mq($until: medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
