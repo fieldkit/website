@@ -369,11 +369,19 @@ select {
 }
 
 .archive .section-callout {
-  margin-bottom: 60px;
+  margin-bottom: 0px !important;
+}
 
-  @include mq($until: medium) {
-    margin-bottom: 0px;
+.archive .margins-horizontal .section-callout {
+  margin-bottom: 0px !important;
+
+  @include mq($from: medium) {
+    margin-bottom: 60px !important;
   }
+}
+
+.archive .section-callout .button--primary {
+  color: #2c3e50;
 }
 
 .archive .margins-horizontal {

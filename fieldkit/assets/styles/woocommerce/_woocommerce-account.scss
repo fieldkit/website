@@ -709,3 +709,7 @@ table.my_account_orders .woocommerce-orders-table__row {
     }
   }
 }
+
+.woocommerce .shop_table.account-payment-methods-table {
+  border: none;
+}

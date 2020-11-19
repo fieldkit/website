@@ -5,3 +5,10 @@
 .woocommerce-variation-add-to-cart.woocommerce-variation-add-to-cart-enabled {
   margin-top: 20px;
 }
+
+.woocommerce-cart-form table,
+.woocommerce-cart-form tbody {
+  @include mq($until: medium) {
+    display: block;
+  }
+}

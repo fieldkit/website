@@ -90,7 +90,6 @@ Version: 1.0.0
 @import "templates/sensor-specification";
 @import "templates/single";
 @import "woocommerce/woocommerce";
-@import "woocommerce/archive-product";
 @import "woocommerce/composite-product";
 @import "woocommerce/order-confirmation";
 @import "woocommerce/single-product";
@@ -99,3 +98,4 @@ Version: 1.0.0
 @import "woocommerce/woocommerce-cart";
 @import "woocommerce/woocommerce-checkout";
 @import "woocommerce/woocommerce-login-register";
+@import "woocommerce/_archive-product";

@@ -29,6 +29,8 @@
 							? __('Blog Posts')
 							: $current_post_type_object->label;
 					?>
+					<?php if ($occurrences[$current_post_type] > 1):?>
+						<?php var_dump($occurrences); ?>
 						<div class="search-results__group">
 							<h2 class="heading-3 search-results__group-label"><?php echo $label; ?></h2>
 							<ul class="search-results__teaser-list teaser-list teaser-list--<?php echo $current_post_type; ?>">
@@ -44,6 +46,9 @@
 								?>
 							</ul>
 						</div>
+
+					<?php endif; ?>
+
 					<?php endforeach; ?>
 				</div>
 			</div>
@@ -55,7 +60,16 @@
 					<?php get_search_form(); ?>
 				</header>
 				<div class="section__main search-no-results__main">
-					<h1 class="heading-5 search-no-results__heading"><?php echo sprintf(__('No Results for <span>"%s"</span>'), get_search_query()) ?></h1>
+					<h1 class="heading-5 search-no-results__heading"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h1>
+					<div class="rich-text text-image-layout--centered">
+						<h2 class="heading-2">Sorry, No Results Found </h2>
+						<h4 class="heading-4">Maybe let’s try a different term</h4>
+						<img class="img no-results-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/speech-bubbles.png" alt="">
+						<ul>
+							<li>Make sure your search terms are spelled correctly</li>
+							<li>Replace abbrevations with the whole word</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 	<?php endif; ?>

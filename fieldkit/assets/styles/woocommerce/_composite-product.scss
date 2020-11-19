@@ -248,6 +248,21 @@ li.component_option_thumbnail_container {
   margin-bottom: 1em !important;
 }
 
+.component .component_description {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1em;
+  }
+}
+
+.component .component_description p {
+  line-height: 22px;
+}
+
 .component_option_thumbnail .component_option_thumbnail_select {
   min-width: 89px !important;
 }

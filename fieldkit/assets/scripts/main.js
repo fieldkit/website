@@ -31,3 +31,20 @@ $(".woocommerce-loop-product__link img").wrap(
 $("form.woocommerce-widget-layered-nav-dropdown").each(
   (index, element) => new FilterDropdown(element)
 );
+
+
+if ($('.woocommerce-MyAccount-navigation-link--my-pre-orders').length > 0) {
+  $('.woocommerce-MyAccount-navigation-link--my-pre-orders').find('a').text('Pre-Orders');
+  if ($('.woocommerce-MyAccount-navigation-link--my-pre-orders.is-active')) {
+    $('.woocommerce-MyAccount-content').find('h1:first').text('Pre-Orders')
+
+  }
+}
+
+
+if ($('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist').length > 0) {
+  $('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist').find('a').text('Waitlists');
+  if ($('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist.is-active')) {
+    $('.woocommerce-MyAccount-content').find('h2:first').text('Waitlists');
+  }
+}
