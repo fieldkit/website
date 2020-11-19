@@ -3540,6 +3540,14 @@ figure.composited_product_image.woocommerce-product-gallery__image {
   letter-spacing: 0.44px;
   line-height: normal; }
 
+.woocommerce-order-received .woocommerce-table--order-details .woocommerce-table__line-item .woocommerce-table__product-name {
+  font-weight: 600 !important; }
+
+.woocommerce-order-received .woocommerce-table--order-details .woocommerce-table__line-item div,
+.woocommerce-order-received .woocommerce-table--order-details .woocommerce-table__line-item strong,
+.woocommerce-order-received .woocommerce-table--order-details .woocommerce-table__line-item span {
+  font-weight: 400 !important; }
+
 .woocommerce-order-details .woocommerce-table--order-details tbody td {
   padding: 9px 0px; }
 

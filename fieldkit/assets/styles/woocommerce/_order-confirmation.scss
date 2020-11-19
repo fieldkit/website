@@ -85,6 +85,20 @@
   line-height: normal;
 }
 
+.woocommerce-order-received
+  .woocommerce-table--order-details
+  .woocommerce-table__line-item {
+  .woocommerce-table__product-name {
+    font-weight: 600 !important;
+  }
+
+  div,
+  strong,
+  span {
+    font-weight: 400 !important;
+  }
+}
+
 .woocommerce-order-details .woocommerce-table--order-details tbody td {
   padding: 9px 0px;
 }
