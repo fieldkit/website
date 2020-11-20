@@ -30,7 +30,6 @@
 							: $current_post_type_object->label;
 					?>
 					<?php if ($occurrences[$current_post_type] > 1):?>
-						<?php var_dump($occurrences); ?>
 						<div class="search-results__group">
 							<h2 class="heading-3 search-results__group-label"><?php echo $label; ?></h2>
 							<ul class="search-results__teaser-list teaser-list teaser-list--<?php echo $current_post_type; ?>">
