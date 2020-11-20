@@ -5,7 +5,6 @@ import LoadMore from "./components/LoadMore";
 import SiteHeader from "./components/SiteHeader";
 import TextInputContainer from "./components/TextInputContainer";
 import SortDropdown from "./components/SortDropdown";
-import WooCommerceAccount from "./components/WooCommerceAccount";
 import FilterDropdown from "./components/FilterDropdown";
 
 $(".site-header").each((index, element) => new SiteHeader(element));
@@ -47,4 +46,20 @@ if ($('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist').length > 0
   if ($('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist.is-active')) {
     $('.woocommerce-MyAccount-content').find('h2:first').text('Waitlists');
   }
+}
+
+if ($('.product-template-default select').length > 0) {
+  $('.product-template-default select').on('change', (event) => {
+    const $el = $(event.currentTarget);
+    const $variationOptions = $el.children('.attached');
+    const $selectedOption = $variationOptions.filter((index, item) => {
+      return $(item).val() == $el.val()
+    });
+
+    if ($variationOptions.index($selectedOption) >= 0) {
+      const selectedindex = $variationOptions.index($selectedOption);
+      $('.sku span').hide();
+      $(`.sku span#sku-child-${selectedindex}`).show();
+    }
+  });
 }

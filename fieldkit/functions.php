@@ -225,7 +225,7 @@ function fieldkit_sku(){
 
 		foreach ($product->get_children() as $key => $value) {
 			if(wc_get_product( $value )->get_sku()){
-				echo '[' . 	wc_get_product( $value )->get_sku() .'] ';
+				echo '<span id=sku-child-'. $key .'>[' . 	wc_get_product( $value )->get_sku() .']</span> ';
 			}
 		}
 		echo '</p>';
