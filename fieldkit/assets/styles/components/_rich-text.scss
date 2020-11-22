@@ -3,7 +3,7 @@
     margin-top: 1em;
   }
 
-  a:not(.button) {
+  a:not(.button):not(.woocommerce-error):not(.woocommerce-info) {
     color: $color-primary-dark-blue;
 
     &:hover,

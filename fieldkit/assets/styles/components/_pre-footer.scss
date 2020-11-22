@@ -44,16 +44,11 @@
     display: block;
     height: auto;
     width: 100%;
-  }
-}
 
-.archive .section-callout {
-  margin-bottom: 60px;
-}
-
-.archive .margins-horizontal {
-  @include mq($until: medium) {
-    padding-left: 0;
-    padding-right: 0;
+    @include mq($until: medium) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 190px;
+    }
   }
 }

@@ -12,3 +12,32 @@
     display: block;
   }
 }
+
+/*eslint-disable */
+
+.woocommerce-info--downloads a.button {
+  border-bottom: 1px solid #2c3e50;
+  color: #2c3e50 !important;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid #2c3e50 !important;
+  }
+}
+
+.woocommerce-info a,
+.woocommerce-info li a,
+.woocommerce-NoticeGroup a,
+.woocommerce-NoticeGroup li a,
+.woocommerce-error a,
+.woocommerce-error li a {
+  border-bottom: 1px solid $color-background;
+  color: $color-background !important;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $color-background !important;
+  }
+}
+
+/*eslint-enable */

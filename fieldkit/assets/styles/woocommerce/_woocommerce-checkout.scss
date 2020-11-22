@@ -64,12 +64,8 @@
     }
 
     a.showcoupon:not(.button) {
+      border-bottom: 1px solid $color-background;
       color: $color-background;
-
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid $color-background;
-      }
     }
   }
 
