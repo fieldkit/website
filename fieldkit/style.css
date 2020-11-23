@@ -570,9 +570,10 @@ body.overflow-hidden {
   font-style: italic; }
 
 .body, .blockquote, .text-label, .text-input, .wpcf7 input[type="email"],
-.wpcf7 input[type="text"], .wpcf7 textarea, .textarea-input, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ol, .woocommerce-account .woocommerce-MyAccount-content ol,
+.wpcf7 input[type="text"], .wpcf7 textarea, .textarea-input, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ol, .woocommerce-account .woocommerce-MyAccount-content ol, .woocommerce-terms-and-conditions ol,
 .rich-text ul,
-.woocommerce-account .woocommerce-MyAccount-content ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption, .rich-text--small p, .rich-text--large p, .site-navigation #menu-header .menu-item, .site-footer__right-column .menu-item a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount, .product-type-composite .details.component_data p, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
+.woocommerce-account .woocommerce-MyAccount-content ul,
+.woocommerce-terms-and-conditions ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .woocommerce-terms-and-conditions p, .rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption, .woocommerce-terms-and-conditions figcaption, .rich-text--small p, .rich-text--large p, .site-navigation #menu-header .menu-item, .site-footer__right-column .menu-item a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount, .product-type-composite .details.component_data p, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
 .bundled_product_summary span.bundled_item_price_quantity, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount, .summary__details .summary_elements .summary_element_content .content_product_meta, .attribute_options .label label, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce div.product .summary__details form.cart div.quantity input, .woocommerce div.product .woocommerce-tabs .panel p, .woocommerce-message, #display-deposit-product, .wcwl_email_label, .wcwl-input-group input.wcwl_email[type="email"], .wcwl-display .wcwl_intro p, .woocommerce-account input,
 .woocommerce-account textarea, .woocommerce-edit-account form .form-row .required,
 .fieldkit-required-span, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount, .woocommerce-checkout .woocommerce-billing-fields label, .woocommerce-account .woocommerce.woocommerce--login-register input,
@@ -583,14 +584,14 @@ body.overflow-hidden {
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .wpcf7 textarea a, .textarea-input a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ol a, .woocommerce-account .woocommerce-MyAccount-content ol a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .rich-text figcaption a, .woocommerce-account .woocommerce-MyAccount-content figcaption a, .rich-text--small p a, .rich-text--large p a, .site-navigation #menu-header .menu-item a, .site-footer__right-column .menu-item a a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount a, .product-type-composite .details.component_data p a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .attribute_options .label label a, .woocommerce ul.order_details li a, .woocommerce div.product .summary__details form.cart div.quantity input a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-message a, #display-deposit-product a, .wcwl_email_label a, .wcwl-input-group input.wcwl_email[type="email"] a, .wcwl-display .wcwl_intro p a, .woocommerce-account input a, .woocommerce-account textarea a, .woocommerce-edit-account form .form-row .required a, .fieldkit-required-span a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a, .woocommerce-account .woocommerce.woocommerce--login-register input a, .woocommerce-account .woocommerce.woocommerce--login-register textarea a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce ul.products li.product .price .from a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .wpcf7 textarea a, .textarea-input a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ol a, .woocommerce-account .woocommerce-MyAccount-content ol a, .woocommerce-terms-and-conditions ol a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .woocommerce-terms-and-conditions ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .woocommerce-terms-and-conditions p a, .rich-text figcaption a, .woocommerce-account .woocommerce-MyAccount-content figcaption a, .woocommerce-terms-and-conditions figcaption a, .rich-text--small p a, .rich-text--large p a, .site-navigation #menu-header .menu-item a, .site-footer__right-column .menu-item a a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount a, .product-type-composite .details.component_data p a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .attribute_options .label label a, .woocommerce ul.order_details li a, .woocommerce div.product .summary__details form.cart div.quantity input a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-message a, #display-deposit-product a, .wcwl_email_label a, .wcwl-input-group input.wcwl_email[type="email"] a, .wcwl-display .wcwl_intro p a, .woocommerce-account input a, .woocommerce-account textarea a, .woocommerce-edit-account form .form-row .required a, .fieldkit-required-span a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a, .woocommerce-account .woocommerce.woocommerce--login-register input a, .woocommerce-account .woocommerce.woocommerce--login-register textarea a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce ul.products li.product .price .from a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
     font-weight: bold;
     line-height: inherit; }
 
-.body--small, .menu-product-guide-sidebar-container li, .rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption, .rich-text--small p, .product-type-composite .details.component_data li, .bundled_product_summary .bundled_product_optional_checkbox,
+.body--small, .menu-product-guide-sidebar-container li, .rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption, .woocommerce-terms-and-conditions figcaption, .rich-text--small p, .product-type-composite .details.component_data li, .bundled_product_summary .bundled_product_optional_checkbox,
 .bundled_product_summary span.bundled_item_price_quantity, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount, .summary__details .summary_elements .summary_element_content .content_product_meta, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, #display-deposit-product, .woocommerce-checkout .woocommerce-billing-fields label, select, select option {
   font-size: 14px;
   letter-spacing: 0;
@@ -659,9 +660,10 @@ body.overflow-hidden {
   .textarea-input::placeholder, .mc-field-group input[type="email"]::placeholder, .search-form input::placeholder {
     color: #6a6d71; }
 
-.heading-1, .wpcf7-form h1, .rich-text h1, .woocommerce-account .woocommerce-MyAccount-content h1,
+.heading-1, .wpcf7-form h1, .rich-text h1, .woocommerce-account .woocommerce-MyAccount-content h1, .woocommerce-terms-and-conditions h1,
 .rich-text .heading-1,
-.woocommerce-account .woocommerce-MyAccount-content .heading-1, .woocommerce div.product .woocommerce-tabs .panel h1,
+.woocommerce-account .woocommerce-MyAccount-content .heading-1,
+.woocommerce-terms-and-conditions .heading-1, .woocommerce div.product .woocommerce-tabs .panel h1,
 .woocommerce div.product .woocommerce-tabs .panel .heading-1 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 26px;
@@ -669,15 +671,17 @@ body.overflow-hidden {
   font-weight: bold;
   line-height: normal; }
   @media (min-width: 50em) {
-    .heading-1, .wpcf7-form h1, .rich-text h1, .woocommerce-account .woocommerce-MyAccount-content h1,
+    .heading-1, .wpcf7-form h1, .rich-text h1, .woocommerce-account .woocommerce-MyAccount-content h1, .woocommerce-terms-and-conditions h1,
     .rich-text .heading-1,
-    .woocommerce-account .woocommerce-MyAccount-content .heading-1, .woocommerce div.product .woocommerce-tabs .panel h1,
+    .woocommerce-account .woocommerce-MyAccount-content .heading-1,
+    .woocommerce-terms-and-conditions .heading-1, .woocommerce div.product .woocommerce-tabs .panel h1,
     .woocommerce div.product .woocommerce-tabs .panel .heading-1 {
       font-size: 40px; } }
 
-.heading-2, .wpcf7-form h2, .rich-text h2, .woocommerce-account .woocommerce-MyAccount-content h2,
+.heading-2, .wpcf7-form h2, .rich-text h2, .woocommerce-account .woocommerce-MyAccount-content h2, .woocommerce-terms-and-conditions h2,
 .rich-text .heading-2,
-.woocommerce-account .woocommerce-MyAccount-content .heading-2, .archive .section-header--medium .section-header__heading, .woocommerce div.product .woocommerce-tabs .panel h2,
+.woocommerce-account .woocommerce-MyAccount-content .heading-2,
+.woocommerce-terms-and-conditions .heading-2, .archive .section-header--medium .section-header__heading, .woocommerce div.product .woocommerce-tabs .panel h2,
 .woocommerce div.product .woocommerce-tabs .panel .heading-2 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
@@ -685,15 +689,17 @@ body.overflow-hidden {
   font-weight: bold;
   line-height: normal; }
   @media (min-width: 50em) {
-    .heading-2, .wpcf7-form h2, .rich-text h2, .woocommerce-account .woocommerce-MyAccount-content h2,
+    .heading-2, .wpcf7-form h2, .rich-text h2, .woocommerce-account .woocommerce-MyAccount-content h2, .woocommerce-terms-and-conditions h2,
     .rich-text .heading-2,
-    .woocommerce-account .woocommerce-MyAccount-content .heading-2, .archive .section-header--medium .section-header__heading, .woocommerce div.product .woocommerce-tabs .panel h2,
+    .woocommerce-account .woocommerce-MyAccount-content .heading-2,
+    .woocommerce-terms-and-conditions .heading-2, .archive .section-header--medium .section-header__heading, .woocommerce div.product .woocommerce-tabs .panel h2,
     .woocommerce div.product .woocommerce-tabs .panel .heading-2 {
       font-size: 36px; } }
 
-.heading-3, .wpcf7-form h3, .rich-text h3, .woocommerce-account .woocommerce-MyAccount-content h3,
+.heading-3, .wpcf7-form h3, .rich-text h3, .woocommerce-account .woocommerce-MyAccount-content h3, .woocommerce-terms-and-conditions h3,
 .rich-text .heading-3,
-.woocommerce-account .woocommerce-MyAccount-content .heading-3, .summary__details .product_title, .woocommerce div.product .woocommerce-tabs .panel h3,
+.woocommerce-account .woocommerce-MyAccount-content .heading-3,
+.woocommerce-terms-and-conditions .heading-3, .summary__details .product_title, .woocommerce div.product .woocommerce-tabs .panel h3,
 .woocommerce div.product .woocommerce-tabs .panel .heading-3 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
@@ -701,15 +707,17 @@ body.overflow-hidden {
   font-weight: bold;
   line-height: normal; }
   @media (min-width: 50em) {
-    .heading-3, .wpcf7-form h3, .rich-text h3, .woocommerce-account .woocommerce-MyAccount-content h3,
+    .heading-3, .wpcf7-form h3, .rich-text h3, .woocommerce-account .woocommerce-MyAccount-content h3, .woocommerce-terms-and-conditions h3,
     .rich-text .heading-3,
-    .woocommerce-account .woocommerce-MyAccount-content .heading-3, .summary__details .product_title, .woocommerce div.product .woocommerce-tabs .panel h3,
+    .woocommerce-account .woocommerce-MyAccount-content .heading-3,
+    .woocommerce-terms-and-conditions .heading-3, .summary__details .product_title, .woocommerce div.product .woocommerce-tabs .panel h3,
     .woocommerce div.product .woocommerce-tabs .panel .heading-3 {
       font-size: 32px; } }
 
-.heading-4, .wpcf7-form h4, .rich-text h4, .woocommerce-account .woocommerce-MyAccount-content h4,
+.heading-4, .wpcf7-form h4, .rich-text h4, .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-terms-and-conditions h4,
 .rich-text .heading-4,
-.woocommerce-account .woocommerce-MyAccount-content .heading-4, .woocommerce .woocommerce-order-details__title, .summary__details .woocommerce-Price-amount,
+.woocommerce-account .woocommerce-MyAccount-content .heading-4,
+.woocommerce-terms-and-conditions .heading-4, .woocommerce .woocommerce-order-details__title, .summary__details .woocommerce-Price-amount,
 .summary__details span.from, .woocommerce ul.component_option_radio_buttons_container li.component_option_radio_button_container .radio_button_description .price > *, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs .panel h4,
 .woocommerce div.product .woocommerce-tabs .panel .heading-4 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -718,16 +726,18 @@ body.overflow-hidden {
   font-weight: 500;
   line-height: normal; }
   @media (min-width: 50em) {
-    .heading-4, .wpcf7-form h4, .rich-text h4, .woocommerce-account .woocommerce-MyAccount-content h4,
+    .heading-4, .wpcf7-form h4, .rich-text h4, .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-terms-and-conditions h4,
     .rich-text .heading-4,
-    .woocommerce-account .woocommerce-MyAccount-content .heading-4, .woocommerce .woocommerce-order-details__title, .summary__details .woocommerce-Price-amount,
+    .woocommerce-account .woocommerce-MyAccount-content .heading-4,
+    .woocommerce-terms-and-conditions .heading-4, .woocommerce .woocommerce-order-details__title, .summary__details .woocommerce-Price-amount,
     .summary__details span.from, .woocommerce ul.component_option_radio_buttons_container li.component_option_radio_button_container .radio_button_description .price > *, .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs .panel h4,
     .woocommerce div.product .woocommerce-tabs .panel .heading-4 {
       font-size: 24px; } }
 
-.heading-5, .wpcf7-form h5, .rich-text h5, .woocommerce-account .woocommerce-MyAccount-content h5,
+.heading-5, .wpcf7-form h5, .rich-text h5, .woocommerce-account .woocommerce-MyAccount-content h5, .woocommerce-terms-and-conditions h5,
 .rich-text .heading-5,
-.woocommerce-account .woocommerce-MyAccount-content .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .post-teaser__date, .section-home-text-and-image-1__text p, .section-home-text-and-image-2__text p, .archive .section-header--medium .rich-text, .archive .section-header--medium .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-header--medium .woocommerce-MyAccount-content, .product-type-composite .details.component_data .bundled_product_title.product_title, .composite_form .composite_navigation.paged .prev,
+.woocommerce-account .woocommerce-MyAccount-content .heading-5,
+.woocommerce-terms-and-conditions .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .woocommerce-terms-and-conditions blockquote, .post-teaser__date, .section-home-text-and-image-1__text p, .section-home-text-and-image-2__text p, .archive .section-header--medium .rich-text, .archive .section-header--medium .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-header--medium .woocommerce-MyAccount-content, .archive .section-header--medium .woocommerce-terms-and-conditions, .product-type-composite .details.component_data .bundled_product_title.product_title, .composite_form .composite_navigation.paged .prev,
 .composite_form .composite_navigation.paged .next, .woocommerce div.product .woocommerce-tabs .panel h5,
 .woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -736,16 +746,18 @@ body.overflow-hidden {
   font-weight: 400;
   line-height: normal; }
   @media (min-width: 50em) {
-    .heading-5, .wpcf7-form h5, .rich-text h5, .woocommerce-account .woocommerce-MyAccount-content h5,
+    .heading-5, .wpcf7-form h5, .rich-text h5, .woocommerce-account .woocommerce-MyAccount-content h5, .woocommerce-terms-and-conditions h5,
     .rich-text .heading-5,
-    .woocommerce-account .woocommerce-MyAccount-content .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .post-teaser__date, .section-home-text-and-image-1__text p, .section-home-text-and-image-2__text p, .archive .section-header--medium .rich-text, .archive .section-header--medium .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-header--medium .woocommerce-MyAccount-content, .product-type-composite .details.component_data .bundled_product_title.product_title, .composite_form .composite_navigation.paged .prev,
+    .woocommerce-account .woocommerce-MyAccount-content .heading-5,
+    .woocommerce-terms-and-conditions .heading-5, .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .woocommerce-terms-and-conditions blockquote, .post-teaser__date, .section-home-text-and-image-1__text p, .section-home-text-and-image-2__text p, .archive .section-header--medium .rich-text, .archive .section-header--medium .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-header--medium .woocommerce-MyAccount-content, .archive .section-header--medium .woocommerce-terms-and-conditions, .product-type-composite .details.component_data .bundled_product_title.product_title, .composite_form .composite_navigation.paged .prev,
     .composite_form .composite_navigation.paged .next, .woocommerce div.product .woocommerce-tabs .panel h5,
     .woocommerce div.product .woocommerce-tabs .panel .heading-5, .woocommerce div.product .woocommerce-tabs .panel blockquote, .woocommerce .related.products ul.products li .woocommerce-loop-product__title {
       font-size: 24px; } }
 
-.heading-6, .wpcf7-form h6, .rich-text h6, .woocommerce-account .woocommerce-MyAccount-content h6,
+.heading-6, .wpcf7-form h6, .rich-text h6, .woocommerce-account .woocommerce-MyAccount-content h6, .woocommerce-terms-and-conditions h6,
 .rich-text .heading-6,
-.woocommerce-account .woocommerce-MyAccount-content .heading-6, .summary_elements .summary_element_selection.summary_element_data .content_product_title, .woocommerce div.product .woocommerce-tabs .panel h6,
+.woocommerce-account .woocommerce-MyAccount-content .heading-6,
+.woocommerce-terms-and-conditions .heading-6, .summary_elements .summary_element_selection.summary_element_data .content_product_title, .woocommerce div.product .woocommerce-tabs .panel h6,
 .woocommerce div.product .woocommerce-tabs .panel .heading-6 {
   font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -753,9 +765,10 @@ body.overflow-hidden {
   font-weight: 500;
   line-height: normal; }
   @media (min-width: 50em) {
-    .heading-6, .wpcf7-form h6, .rich-text h6, .woocommerce-account .woocommerce-MyAccount-content h6,
+    .heading-6, .wpcf7-form h6, .rich-text h6, .woocommerce-account .woocommerce-MyAccount-content h6, .woocommerce-terms-and-conditions h6,
     .rich-text .heading-6,
-    .woocommerce-account .woocommerce-MyAccount-content .heading-6, .summary_elements .summary_element_selection.summary_element_data .content_product_title, .woocommerce div.product .woocommerce-tabs .panel h6,
+    .woocommerce-account .woocommerce-MyAccount-content .heading-6,
+    .woocommerce-terms-and-conditions .heading-6, .summary_elements .summary_element_selection.summary_element_data .content_product_title, .woocommerce div.product .woocommerce-tabs .panel h6,
     .woocommerce div.product .woocommerce-tabs .panel .heading-6 {
       font-size: 20px; } }
 
@@ -818,11 +831,11 @@ body.overflow-hidden {
     border-bottom: 3px solid #1b80c9;
     color: #1b80c9; }
 
-.wc-list-item, .rich-text ul li, .woocommerce-account .woocommerce-MyAccount-content ul li, .woocommerce div.product .woocommerce-tabs .panel li {
+.wc-list-item, .rich-text ul li, .woocommerce-account .woocommerce-MyAccount-content ul li, .woocommerce-terms-and-conditions ul li, .woocommerce div.product .woocommerce-tabs .panel li {
   list-style: none;
   padding-left: 36px;
   position: relative; }
-  .wc-list-item::before, .rich-text ul li::before, .woocommerce-account .woocommerce-MyAccount-content ul li::before, .woocommerce div.product .woocommerce-tabs .panel li::before {
+  .wc-list-item::before, .rich-text ul li::before, .woocommerce-account .woocommerce-MyAccount-content ul li::before, .woocommerce-terms-and-conditions ul li::before, .woocommerce div.product .woocommerce-tabs .panel li::before {
     background-color: currentColor;
     border-radius: 50%;
     content: "";
@@ -834,7 +847,7 @@ body.overflow-hidden {
     transform: translate(-50%, -50%);
     width: 6px; }
 
-.wc-list-item--ordered, .rich-text ol li, .woocommerce-account .woocommerce-MyAccount-content ol li {
+.wc-list-item--ordered, .rich-text ol li, .woocommerce-account .woocommerce-MyAccount-content ol li, .woocommerce-terms-and-conditions ol li {
   list-style-type: decimal;
   margin-left: 30px;
   padding-left: 8px; }
@@ -1265,46 +1278,58 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
         margin-right: auto;
         max-width: 190px; } }
 
-.rich-text > *:not(:first-child), .woocommerce-account .woocommerce-MyAccount-content > *:not(:first-child) {
+.rich-text > *:not(:first-child), .woocommerce-account .woocommerce-MyAccount-content > *:not(:first-child), .woocommerce-terms-and-conditions > *:not(:first-child) {
   margin-top: 1em; }
 
-.rich-text a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info), .woocommerce-account .woocommerce-MyAccount-content a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info) {
+.rich-text a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info), .woocommerce-account .woocommerce-MyAccount-content a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info), .woocommerce-terms-and-conditions a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info) {
   color: #2c3e50; }
-  .rich-text a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):hover, .woocommerce-account .woocommerce-MyAccount-content a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):hover, .rich-text a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):focus, .woocommerce-account .woocommerce-MyAccount-content a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):focus {
+  .rich-text a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):hover, .woocommerce-account .woocommerce-MyAccount-content a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):hover, .woocommerce-terms-and-conditions a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):hover, .rich-text a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):focus, .woocommerce-account .woocommerce-MyAccount-content a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):focus, .woocommerce-terms-and-conditions a:not(.button):not(#mc-embedded-subscribe):not(.woocommerce-error):not(.woocommerce-info):focus {
     border-bottom: 1px solid #1b80c9;
     color: #1b80c9; }
 
-.rich-text ol, .woocommerce-account .woocommerce-MyAccount-content ol,
+.rich-text ol, .woocommerce-account .woocommerce-MyAccount-content ol, .woocommerce-terms-and-conditions ol,
 .rich-text ul,
-.woocommerce-account .woocommerce-MyAccount-content ul {
+.woocommerce-account .woocommerce-MyAccount-content ul,
+.woocommerce-terms-and-conditions ul {
   list-style-position: outside; }
 
-.rich-text h1 a:hover, .woocommerce-account .woocommerce-MyAccount-content h1 a:hover,
+.rich-text h1 a:hover, .woocommerce-account .woocommerce-MyAccount-content h1 a:hover, .woocommerce-terms-and-conditions h1 a:hover,
 .rich-text h1 a:focus,
 .woocommerce-account .woocommerce-MyAccount-content h1 a:focus,
+.woocommerce-terms-and-conditions h1 a:focus,
 .rich-text h2 a:hover,
 .woocommerce-account .woocommerce-MyAccount-content h2 a:hover,
+.woocommerce-terms-and-conditions h2 a:hover,
 .rich-text h2 a:focus,
 .woocommerce-account .woocommerce-MyAccount-content h2 a:focus,
+.woocommerce-terms-and-conditions h2 a:focus,
 .rich-text h3 a:hover,
 .woocommerce-account .woocommerce-MyAccount-content h3 a:hover,
+.woocommerce-terms-and-conditions h3 a:hover,
 .rich-text h3 a:focus,
 .woocommerce-account .woocommerce-MyAccount-content h3 a:focus,
+.woocommerce-terms-and-conditions h3 a:focus,
 .rich-text h4 a:hover,
 .woocommerce-account .woocommerce-MyAccount-content h4 a:hover,
+.woocommerce-terms-and-conditions h4 a:hover,
 .rich-text h4 a:focus,
 .woocommerce-account .woocommerce-MyAccount-content h4 a:focus,
+.woocommerce-terms-and-conditions h4 a:focus,
 .rich-text h5 a:hover,
 .woocommerce-account .woocommerce-MyAccount-content h5 a:hover,
+.woocommerce-terms-and-conditions h5 a:hover,
 .rich-text h5 a:focus,
 .woocommerce-account .woocommerce-MyAccount-content h5 a:focus,
+.woocommerce-terms-and-conditions h5 a:focus,
 .rich-text h6 a:hover,
 .woocommerce-account .woocommerce-MyAccount-content h6 a:hover,
+.woocommerce-terms-and-conditions h6 a:hover,
 .rich-text h6 a:focus,
-.woocommerce-account .woocommerce-MyAccount-content h6 a:focus {
+.woocommerce-account .woocommerce-MyAccount-content h6 a:focus,
+.woocommerce-terms-and-conditions h6 a:focus {
   text-decoration: underline; }
 
-.rich-text hr, .woocommerce-account .woocommerce-MyAccount-content hr {
+.rich-text hr, .woocommerce-account .woocommerce-MyAccount-content hr, .woocommerce-terms-and-conditions hr {
   background-color: #cccdcf;
   border: none;
   display: block;
@@ -1313,40 +1338,41 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   margin-top: 2em;
   width: 100%; }
 
-.rich-text .list-style-none::before, .woocommerce-account .woocommerce-MyAccount-content .list-style-none::before {
+.rich-text .list-style-none::before, .woocommerce-account .woocommerce-MyAccount-content .list-style-none::before, .woocommerce-terms-and-conditions .list-style-none::before {
   width: 0px; }
 
-.rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote {
+.rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .woocommerce-terms-and-conditions blockquote {
   border-left: 5px solid #1b80c9;
   margin-left: 0;
   padding: 4px 33px 4px; }
   @media (min-width: 50em) {
-    .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote {
+    .rich-text blockquote, .woocommerce-account .woocommerce-MyAccount-content blockquote, .woocommerce-terms-and-conditions blockquote {
       margin-left: 20px; } }
-  .rich-text blockquote > *, .woocommerce-account .woocommerce-MyAccount-content blockquote > * {
+  .rich-text blockquote > *, .woocommerce-account .woocommerce-MyAccount-content blockquote > *, .woocommerce-terms-and-conditions blockquote > * {
     font-size: 20px;
     font-weight: 500; }
-    .rich-text blockquote > *:not(:first-child), .woocommerce-account .woocommerce-MyAccount-content blockquote > *:not(:first-child) {
+    .rich-text blockquote > *:not(:first-child), .woocommerce-account .woocommerce-MyAccount-content blockquote > *:not(:first-child), .woocommerce-terms-and-conditions blockquote > *:not(:first-child) {
       color: #6a6d71;
       font-size: 16px;
       font-weight: 400;
       margin-top: 11px; }
 
-.rich-text video, .woocommerce-account .woocommerce-MyAccount-content video,
+.rich-text video, .woocommerce-account .woocommerce-MyAccount-content video, .woocommerce-terms-and-conditions video,
 .rich-text iframe,
-.woocommerce-account .woocommerce-MyAccount-content iframe {
+.woocommerce-account .woocommerce-MyAccount-content iframe,
+.woocommerce-terms-and-conditions iframe {
   max-width: 100%; }
 
-.rich-text img, .woocommerce-account .woocommerce-MyAccount-content img {
+.rich-text img, .woocommerce-account .woocommerce-MyAccount-content img, .woocommerce-terms-and-conditions img {
   display: block;
   height: auto;
   max-width: 100%;
   width: auto; }
 
-.rich-text figure, .woocommerce-account .woocommerce-MyAccount-content figure {
+.rich-text figure, .woocommerce-account .woocommerce-MyAccount-content figure, .woocommerce-terms-and-conditions figure {
   max-width: 100%; }
 
-.rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption {
+.rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption, .woocommerce-terms-and-conditions figcaption {
   color: #5a5a5b;
   font-size: 14px;
   font-weight: 500;
@@ -1473,6 +1499,11 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .site-navigation .current-menu-item a {
     font-weight: 600; } }
 
+/*eslint-disable*/
+.menu-header-container .current_page_item a {
+  font-weight: bold !important; }
+
+/*eslint-enable*/
 .site-search,
 .side-nav {
   position: relative;
@@ -1590,7 +1621,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   @media (min-width: 50em) {
     .search-no-results__main .text-image-layout--centered {
       height: 90vh; } }
-  .search-no-results__main .text-image-layout--centered .heading-4, .search-no-results__main .text-image-layout--centered .wpcf7-form h4, .wpcf7-form .search-no-results__main .text-image-layout--centered h4, .search-no-results__main .text-image-layout--centered .rich-text h4, .rich-text .search-no-results__main .text-image-layout--centered h4, .search-no-results__main .text-image-layout--centered .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-account .woocommerce-MyAccount-content .search-no-results__main .text-image-layout--centered h4, .search-no-results__main .text-image-layout--centered .woocommerce .woocommerce-order-details__title, .woocommerce .search-no-results__main .text-image-layout--centered .woocommerce-order-details__title, .search-no-results__main .text-image-layout--centered .summary__details .woocommerce-Price-amount, .summary__details .search-no-results__main .text-image-layout--centered .woocommerce-Price-amount,
+  .search-no-results__main .text-image-layout--centered .heading-4, .search-no-results__main .text-image-layout--centered .wpcf7-form h4, .wpcf7-form .search-no-results__main .text-image-layout--centered h4, .search-no-results__main .text-image-layout--centered .rich-text h4, .rich-text .search-no-results__main .text-image-layout--centered h4, .search-no-results__main .text-image-layout--centered .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-account .woocommerce-MyAccount-content .search-no-results__main .text-image-layout--centered h4, .search-no-results__main .text-image-layout--centered .woocommerce-terms-and-conditions h4, .woocommerce-terms-and-conditions .search-no-results__main .text-image-layout--centered h4, .search-no-results__main .text-image-layout--centered .woocommerce .woocommerce-order-details__title, .woocommerce .search-no-results__main .text-image-layout--centered .woocommerce-order-details__title, .search-no-results__main .text-image-layout--centered .summary__details .woocommerce-Price-amount, .summary__details .search-no-results__main .text-image-layout--centered .woocommerce-Price-amount,
   .search-no-results__main .text-image-layout--centered .summary__details span.from, .summary__details .search-no-results__main .text-image-layout--centered span.from, .search-no-results__main .text-image-layout--centered .woocommerce ul.component_option_radio_buttons_container li.component_option_radio_button_container .radio_button_description .price > *, .woocommerce ul.component_option_radio_buttons_container li.component_option_radio_button_container .radio_button_description .search-no-results__main .text-image-layout--centered .price > *, .search-no-results__main .text-image-layout--centered .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs ul.tabs li .search-no-results__main .text-image-layout--centered a, .search-no-results__main .text-image-layout--centered .woocommerce div.product .woocommerce-tabs .panel h4, .woocommerce div.product .woocommerce-tabs .panel .search-no-results__main .text-image-layout--centered h4,
   .search-no-results__main .text-image-layout--centered .woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce div.product .woocommerce-tabs .panel .search-no-results__main .text-image-layout--centered .heading-4 {
     font-weight: 300;
@@ -2401,13 +2432,13 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
   .section-contact-header__heading :first-child {
     margin-bottom: 20px; }
 
-.rich-text .section-contact-header__body, .woocommerce-account .woocommerce-MyAccount-content .section-contact-header__body {
+.rich-text .section-contact-header__body, .woocommerce-account .woocommerce-MyAccount-content .section-contact-header__body, .woocommerce-terms-and-conditions .section-contact-header__body {
   margin-top: -1em;
   max-width: 300px;
   padding-top: 10px;
   text-align: center; }
   @media (min-width: 50em) {
-    .rich-text .section-contact-header__body, .woocommerce-account .woocommerce-MyAccount-content .section-contact-header__body {
+    .rich-text .section-contact-header__body, .woocommerce-account .woocommerce-MyAccount-content .section-contact-header__body, .woocommerce-terms-and-conditions .section-contact-header__body {
       margin-top: -2.2em;
       max-width: 565px;
       padding-top: 0px; } }
@@ -2440,7 +2471,7 @@ span.wpcf7-form-control-wrap textarea {
   .section-definition-list__item:not(:first-child) {
     margin-top: 25px; }
 
-.rich-text .section-definition-list__item-text-name, .woocommerce-account .woocommerce-MyAccount-content .section-definition-list__item-text-name {
+.rich-text .section-definition-list__item-text-name, .woocommerce-account .woocommerce-MyAccount-content .section-definition-list__item-text-name, .woocommerce-terms-and-conditions .section-definition-list__item-text-name {
   font-size: 20px;
   font-weight: 700; }
 
@@ -2512,29 +2543,30 @@ span.wpcf7-form-control-wrap textarea {
       padding-top: 60px; } }
   .section-callout .section__inner {
     max-width: 640px; }
-  .section-callout .rich-text, .section-callout .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .section-callout .woocommerce-MyAccount-content {
+  .section-callout .rich-text, .section-callout .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .section-callout .woocommerce-MyAccount-content, .section-callout .woocommerce-terms-and-conditions {
     margin-left: auto;
     margin-right: auto;
     max-width: 300px;
     padding-top: 5px; }
     @media (min-width: 80em) {
-      .section-callout .rich-text, .section-callout .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .section-callout .woocommerce-MyAccount-content {
+      .section-callout .rich-text, .section-callout .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .section-callout .woocommerce-MyAccount-content, .section-callout .woocommerce-terms-and-conditions {
         max-width: 400px; } }
   .section-callout .section-header__links-item {
     padding-top: 20px; }
 
-.archive .section-callout .rich-text, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content {
+.archive .section-callout .rich-text, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content, .archive .section-callout .woocommerce-terms-and-conditions {
   max-width: unset; }
-  .archive .section-callout .rich-text *, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content *, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content * {
+  .archive .section-callout .rich-text *, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content *, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content *, .archive .section-callout .woocommerce-terms-and-conditions * {
     color: white !important; }
-  .archive .section-callout .rich-text a, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content a, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content a {
+  .archive .section-callout .rich-text a, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content a, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content a, .archive .section-callout .woocommerce-terms-and-conditions a {
     border-bottom: 1px solid white !important;
     color: white !important;
     font-weight: 400 !important; }
-  .archive .section-callout .rich-text a:hover, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content a:hover, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content a:hover,
+  .archive .section-callout .rich-text a:hover, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content a:hover, .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content a:hover, .archive .section-callout .woocommerce-terms-and-conditions a:hover,
   .archive .section-callout .rich-text a:focus,
   .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content a:focus,
-  .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content a:focus {
+  .woocommerce-account .archive .section-callout .woocommerce-MyAccount-content a:focus,
+  .archive .section-callout .woocommerce-terms-and-conditions a:focus {
     border-bottom: 1px solid white !important; }
 
 .section-home-hero {
@@ -2561,7 +2593,7 @@ span.wpcf7-form-control-wrap textarea {
   .section-home-hero__text, .section-text-and-image__text {
     width: calc(50% - 20px); } }
 
-.section-home-hero__text .rich-text > *:last-child, .section-text-and-image__text .rich-text > *:last-child, .section-home-hero__text .woocommerce-account .woocommerce-MyAccount-content > *:last-child, .woocommerce-account .section-home-hero__text .woocommerce-MyAccount-content > *:last-child, .section-text-and-image__text .woocommerce-account .woocommerce-MyAccount-content > *:last-child, .woocommerce-account .section-text-and-image__text .woocommerce-MyAccount-content > *:last-child {
+.section-home-hero__text .rich-text > *:last-child, .section-text-and-image__text .rich-text > *:last-child, .section-home-hero__text .woocommerce-account .woocommerce-MyAccount-content > *:last-child, .woocommerce-account .section-home-hero__text .woocommerce-MyAccount-content > *:last-child, .section-text-and-image__text .woocommerce-account .woocommerce-MyAccount-content > *:last-child, .woocommerce-account .section-text-and-image__text .woocommerce-MyAccount-content > *:last-child, .section-home-hero__text .woocommerce-terms-and-conditions > *:last-child, .section-text-and-image__text .woocommerce-terms-and-conditions > *:last-child {
   margin-bottom: 1em; }
 
 .section-home-hero__link {
@@ -2900,7 +2932,7 @@ span.wpcf7-form-control-wrap textarea {
   display: flex;
   font-size: 18px;
   font-weight: 500; }
-  .rich-text > .section-how-it-works-step-by-step__item-time:not(:first-child), .woocommerce-account .woocommerce-MyAccount-content > .section-how-it-works-step-by-step__item-time:not(:first-child) {
+  .rich-text > .section-how-it-works-step-by-step__item-time:not(:first-child), .woocommerce-account .woocommerce-MyAccount-content > .section-how-it-works-step-by-step__item-time:not(:first-child), .woocommerce-terms-and-conditions > .section-how-it-works-step-by-step__item-time:not(:first-child) {
     margin-bottom: 0.5em;
     margin-top: 0.5em; }
   .section-how-it-works-step-by-step__item-time img {
@@ -3180,7 +3212,7 @@ span.wpcf7-form-control-wrap textarea {
   margin-top: 60px; }
   .archive .section-header--medium .section-header__heading {
     margin-bottom: 13px; }
-  .archive .section-header--medium .rich-text, .archive .section-header--medium .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-header--medium .woocommerce-MyAccount-content {
+  .archive .section-header--medium .rich-text, .archive .section-header--medium .woocommerce-account .woocommerce-MyAccount-content, .woocommerce-account .archive .section-header--medium .woocommerce-MyAccount-content, .archive .section-header--medium .woocommerce-terms-and-conditions {
     font-size: 24px;
     margin-left: auto;
     margin-right: auto;
@@ -3514,7 +3546,7 @@ figure.composited_product_image.woocommerce-product-gallery__image {
   flex-direction: column;
   padding: 25px 40px 43px; }
 
-.woocommerce-order .heading-3, .woocommerce-order .wpcf7-form h3, .wpcf7-form .woocommerce-order h3, .woocommerce-order .rich-text h3, .rich-text .woocommerce-order h3, .woocommerce-order .woocommerce-account .woocommerce-MyAccount-content h3, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-order h3, .woocommerce-order .summary__details .product_title, .summary__details .woocommerce-order .product_title, .woocommerce-order .woocommerce div.product .woocommerce-tabs .panel h3, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-order h3,
+.woocommerce-order .heading-3, .woocommerce-order .wpcf7-form h3, .wpcf7-form .woocommerce-order h3, .woocommerce-order .rich-text h3, .rich-text .woocommerce-order h3, .woocommerce-order .woocommerce-account .woocommerce-MyAccount-content h3, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-order h3, .woocommerce-order .woocommerce-terms-and-conditions h3, .woocommerce-terms-and-conditions .woocommerce-order h3, .woocommerce-order .summary__details .product_title, .summary__details .woocommerce-order .product_title, .woocommerce-order .woocommerce div.product .woocommerce-tabs .panel h3, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-order h3,
 .woocommerce-order .woocommerce div.product .woocommerce-tabs .panel .heading-3, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-order .heading-3 {
   text-align: center; }
 
@@ -3989,6 +4021,7 @@ figure.composited_product_image.woocommerce-product-gallery__image {
   .waitlist-single-product .waitlist-title-link {
     color: #2c3e50;
     margin-bottom: 14px;
+    max-width: fit-content;
     pointer-events: none;
     text-align: left; }
   .waitlist-single-product p,
@@ -4030,6 +4063,11 @@ figure.composited_product_image.woocommerce-product-gallery__image {
 
 .woocommerce-account .waitlist-products hr {
   background-color: #d8dce0; }
+
+.waitlist-single-product a:hover .waitlist-title-link,
+.waitlist-single-product a:focus .waitlist-title-link {
+  border-bottom: 1px solid #1b80c9;
+  color: #1b80c9; }
 
 .woocommerce-account .select2-selection {
   border: 0px;
@@ -4381,6 +4419,11 @@ figure.composited_product_image.woocommerce-product-gallery__image {
     width: 18px;
     z-index: -1; }
 
+.woocommerce-account .woocommerce-EditAccountForm p label {
+  color: #6a6d71;
+  font-size: 12px;
+  font-weight: 500; }
+
 .woocommerce-account .woocommerce-EditAccountForm fieldset {
   margin-top: 60px;
   padding: 3px; }
@@ -4683,7 +4726,8 @@ table.my_account_orders tr td::before {
     font-weight: 900;
     margin-bottom: 20px; }
   .woocommerce-cart .woocommerce .cart_totals tr > * {
-    font-weight: 500; }
+    font-weight: 500;
+    letter-spacing: 0.44px; }
   .woocommerce-cart .woocommerce .cart_totals strong {
     font-weight: 500; }
   .woocommerce-cart .woocommerce .cart_totals [data-title="Subtotal"],
@@ -4993,7 +5037,7 @@ ul#shipping_method {
   font-weight: 500;
   letter-spacing: normal; }
 
-.woocommerce-checkout .woocommerce-billing-fields .heading-4, .woocommerce-checkout .woocommerce-billing-fields .wpcf7-form h4, .wpcf7-form .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .rich-text h4, .rich-text .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .woocommerce .woocommerce-order-details__title, .woocommerce .woocommerce-checkout .woocommerce-billing-fields .woocommerce-order-details__title, .woocommerce-checkout .woocommerce-billing-fields .summary__details .woocommerce-Price-amount, .summary__details .woocommerce-checkout .woocommerce-billing-fields .woocommerce-Price-amount,
+.woocommerce-checkout .woocommerce-billing-fields .heading-4, .woocommerce-checkout .woocommerce-billing-fields .wpcf7-form h4, .wpcf7-form .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .rich-text h4, .rich-text .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .woocommerce-account .woocommerce-MyAccount-content h4, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .woocommerce-terms-and-conditions h4, .woocommerce-terms-and-conditions .woocommerce-checkout .woocommerce-billing-fields h4, .woocommerce-checkout .woocommerce-billing-fields .woocommerce .woocommerce-order-details__title, .woocommerce .woocommerce-checkout .woocommerce-billing-fields .woocommerce-order-details__title, .woocommerce-checkout .woocommerce-billing-fields .summary__details .woocommerce-Price-amount, .summary__details .woocommerce-checkout .woocommerce-billing-fields .woocommerce-Price-amount,
 .woocommerce-checkout .woocommerce-billing-fields .summary__details span.from, .summary__details .woocommerce-checkout .woocommerce-billing-fields span.from, .woocommerce-checkout .woocommerce-billing-fields .woocommerce ul.component_option_radio_buttons_container li.component_option_radio_button_container .radio_button_description .price > *, .woocommerce ul.component_option_radio_buttons_container li.component_option_radio_button_container .radio_button_description .woocommerce-checkout .woocommerce-billing-fields .price > *, .woocommerce-checkout .woocommerce-billing-fields .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce div.product .woocommerce-tabs ul.tabs li .woocommerce-checkout .woocommerce-billing-fields a, .woocommerce-checkout .woocommerce-billing-fields .woocommerce div.product .woocommerce-tabs .panel h4, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-checkout .woocommerce-billing-fields h4,
 .woocommerce-checkout .woocommerce-billing-fields .woocommerce div.product .woocommerce-tabs .panel .heading-4, .woocommerce div.product .woocommerce-tabs .panel .woocommerce-checkout .woocommerce-billing-fields .heading-4,
 .woocommerce-checkout .heading-4,
@@ -5003,6 +5047,8 @@ ul#shipping_method {
 .rich-text .woocommerce-checkout h4,
 .woocommerce-checkout .woocommerce-account .woocommerce-MyAccount-content h4,
 .woocommerce-account .woocommerce-MyAccount-content .woocommerce-checkout h4,
+.woocommerce-checkout .woocommerce-terms-and-conditions h4,
+.woocommerce-terms-and-conditions .woocommerce-checkout h4,
 .woocommerce-checkout .woocommerce .woocommerce-order-details__title,
 .woocommerce .woocommerce-checkout .woocommerce-order-details__title,
 .woocommerce-checkout .summary__details .woocommerce-Price-amount,

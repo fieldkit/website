@@ -410,3 +410,7 @@
     }
   }
 }
+
+.woocommerce-terms-and-conditions {
+  @extend .rich-text;
+}

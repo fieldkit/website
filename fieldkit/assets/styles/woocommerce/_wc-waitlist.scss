@@ -153,6 +153,7 @@
   .waitlist-title-link {
     color: $color-primary-dark-blue;
     margin-bottom: 14px;
+    max-width: fit-content;
     pointer-events: none;
     text-align: left;
   }
@@ -214,4 +215,10 @@
 
 .woocommerce-account .waitlist-products hr {
   background-color: #d8dce0;
+}
+
+.waitlist-single-product a:hover .waitlist-title-link,
+.waitlist-single-product a:focus .waitlist-title-link {
+  border-bottom: 1px solid #1b80c9;
+  color: #1b80c9;
 }

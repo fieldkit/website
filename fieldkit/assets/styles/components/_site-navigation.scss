@@ -147,3 +147,12 @@ $site-header-breakpoint: 800px;
     font-weight: 600;
   }
 }
+
+/*eslint-disable*/
+.menu-header-container {
+  .current_page_item a {
+    font-weight: bold !important;
+  }
+}
+
+/*eslint-enable*/

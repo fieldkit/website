@@ -593,6 +593,12 @@
   }
 
   .woocommerce-EditAccountForm {
+    p label {
+      color: #6a6d71;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
     fieldset {
       margin-top: 60px;
       padding: 3px;
