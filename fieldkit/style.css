@@ -3330,6 +3330,25 @@ span.wpcf7-form-control-wrap textarea {
     border-bottom: 1px solid #ffffff !important; }
 
 /*eslint-enable */
+.woocommerce-lost-password .section-default-content__rich-text .woocommerce {
+  display: flex;
+  flex-direction: column; }
+
+.woocommerce-lost-password .section-default-content__rich-text .woocommerce h2:first-of-type {
+  margin-bottom: 12px; }
+
+.woocommerce-lost-password .section-default-content__rich-text .woocommerce form.woocommerce-ResetPassword h2:first-of-type {
+  margin-bottom: 12px; }
+
+.woocommerce-lost-password .section-default-content__rich-text .woocommerce form.woocommerce-ResetPassword input[type="text"] {
+  border-bottom: 1px solid #d8dce0;
+  padding-bottom: 5px; }
+  .woocommerce-lost-password .section-default-content__rich-text .woocommerce form.woocommerce-ResetPassword input[type="text"]:first-of-type {
+    margin-top: 20px; }
+
+.woocommerce-lost-password .section-default-content__rich-text .woocommerce form.woocommerce-ResetPassword button[type="submit"] {
+  margin-top: 15px; }
+
 .product-type-composite .composite_form .composite_pagination ul.pagination_elements li.pagination_element {
   background-color: #f4f5f7;
   color: #2c3e50; }
@@ -5574,7 +5593,9 @@ select {
       margin-bottom: 60px !important; } }
 
 .archive .section-callout .button--primary, .archive .section-callout #mc-embedded-subscribe, .archive .section-callout .section-contact-form .wpcf7 input[type="submit"], .section-contact-form .wpcf7 .archive .section-callout input[type="submit"], .archive .section-callout .woocommerce div.product .summary__details form.cart .button, .woocommerce div.product .summary__details form.cart .archive .section-callout .button, .archive .section-callout .woocommerce .related.products ul.products li .button, .woocommerce .related.products ul.products li .archive .section-callout .button, .archive .section-callout .wcwl-display .wcwl_control .woocommerce_waitlist.button, .wcwl-display .wcwl_control .archive .section-callout .woocommerce_waitlist.button, .archive .section-callout .wcwl-display .wcwl_control .site-navigation .nav-button a.woocommerce_waitlist, .wcwl-display .wcwl_control .site-navigation .nav-button .archive .section-callout a.woocommerce_waitlist, .archive .section-callout .site-navigation .nav-button .wcwl-display .wcwl_control a.woocommerce_waitlist, .site-navigation .nav-button .wcwl-display .wcwl_control .archive .section-callout a.woocommerce_waitlist, .archive .section-callout .woocommerce-account .woocommerce button.button, .woocommerce-account .woocommerce .archive .section-callout button.button, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders .button, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders .archive .section-callout .button, .archive .section-callout .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders .site-navigation .nav-button a, .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders .site-navigation .nav-button .archive .section-callout a, .archive .section-callout .site-navigation .nav-button .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders a, .site-navigation .nav-button .woocommerce-account .woocommerce-MyAccount-content .woocommerce-MyAccount-orders .archive .section-callout a, .archive .section-callout .woocommerce-cart .woocommerce .button.checkout-button, .woocommerce-cart .woocommerce .archive .section-callout .button.checkout-button, .archive .section-callout .woocommerce-cart .woocommerce .site-navigation .nav-button a.checkout-button, .woocommerce-cart .woocommerce .site-navigation .nav-button .archive .section-callout a.checkout-button, .archive .section-callout .site-navigation .nav-button .woocommerce-cart .woocommerce a.checkout-button, .site-navigation .nav-button .woocommerce-cart .woocommerce .archive .section-callout a.checkout-button, .archive .section-callout .woocommerce-cart .woocommerce .return-to-shop a, .woocommerce-cart .woocommerce .return-to-shop .archive .section-callout a, .archive .section-callout .woocommerce-checkout #payment button#place_order, .woocommerce-checkout #payment .archive .section-callout button#place_order, .archive .section-callout .woocommerce ul.products li.product .button.product_type_simple, .woocommerce ul.products li.product .archive .section-callout .button.product_type_simple, .archive .section-callout .woocommerce ul.products li.product .button.add_to_cart_button, .woocommerce ul.products li.product .archive .section-callout .button.add_to_cart_button, .archive .section-callout .woocommerce ul.products li.product .button.product_type_variable, .woocommerce ul.products li.product .archive .section-callout .button.product_type_variable {
-  color: #2c3e50; }
+  color: #2c3e50;
+  line-height: 24px;
+  padding: 10px 20px; }
 
 @media (max-width: 49.99em) {
   .archive .margins-horizontal {

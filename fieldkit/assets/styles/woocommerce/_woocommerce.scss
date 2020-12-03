@@ -41,3 +41,33 @@
 }
 
 /*eslint-enable */
+
+.woocommerce-lost-password .section-default-content__rich-text {
+  .woocommerce {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .woocommerce h2:first-of-type {
+    margin-bottom: 12px;
+  }
+
+  .woocommerce form.woocommerce-ResetPassword {
+    h2:first-of-type {
+      margin-bottom: 12px;
+    }
+
+    input[type="text"] {
+      border-bottom: 1px solid #d8dce0;
+      padding-bottom: 5px;
+
+      &:first-of-type {
+        margin-top: 20px;
+      }
+    }
+
+    button[type="submit"] {
+      margin-top: 15px;
+    }
+  }
+}
