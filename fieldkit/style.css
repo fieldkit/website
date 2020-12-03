@@ -4545,12 +4545,25 @@ table.my_account_orders tr td::before {
     text-transform: uppercase; }
   .woocommerce-cart .woocommerce table.shop_table tr:first-child td {
     border-top: 2px solid #d8dce0; }
+  @media (max-width: 49.99em) {
+    .woocommerce-cart .woocommerce table.shop_table.cart td.product-remove {
+      padding: 0px; } }
+  @media (max-width: 49.99em) {
+    .woocommerce-cart .woocommerce table.shop_table.cart td.product-remove a.remove {
+      margin-bottom: 12px; } }
   .woocommerce-cart .woocommerce table.shop_table .component_container_table_item .product-name > div {
     padding-left: 30px; }
   .woocommerce-cart .woocommerce table.shop_table .component_table_item .component_table_item_indent {
-    padding-left: 30px; }
+    float: right; }
+    @media (min-width: 50em) {
+      .woocommerce-cart .woocommerce table.shop_table .component_table_item .component_table_item_indent {
+        float: unset;
+        padding-left: 30px; } }
     .woocommerce-cart .woocommerce table.shop_table .component_table_item .component_table_item_indent dt {
       letter-spacing: 0.44px; }
+  @media (max-width: 49.99em) {
+    .woocommerce-cart .woocommerce table.shop_table.cart .component_table_item td.product-subtotal {
+      padding: 0; } }
   .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-price,
   .woocommerce-cart .woocommerce table.shop_table .component_table_item .product-subtotal,
   .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-price,
@@ -4558,10 +4571,35 @@ table.my_account_orders tr td::before {
   .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-price,
   .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-subtotal {
     visibility: hidden; }
-  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-quantity {
+  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-quantity,
+  .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-price,
+  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-price,
+  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-subtotal {
     visibility: hidden; }
+    @media (max-width: 49.99em) {
+      .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-quantity,
+      .woocommerce-cart .woocommerce table.shop_table .bundle_table_item .product-price,
+      .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-price,
+      .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-subtotal {
+        display: none;
+        padding: 0; } }
+  @media (max-width: 49.99em) {
+    .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .product-subtotal {
+      padding: 0px 0px 10px 0px; } }
+  .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled-product-name.bundled_table_item_indent {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    @media (max-width: 49.99em) {
+      .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled-product-name.bundled_table_item_indent a {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%; } }
   .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent {
-    padding-left: 50px; }
+    padding-left: 0px; }
+    @media (min-width: 50em) {
+      .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent {
+        padding-left: 50px; } }
     .woocommerce-cart .woocommerce table.shop_table .bundled_table_item .bundled_table_item_indent a {
       letter-spacing: 0.39px; }
   .woocommerce-cart .woocommerce table.shop_table .edit_composite_in_cart_text small {
