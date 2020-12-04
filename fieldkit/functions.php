@@ -251,22 +251,15 @@ function fieldkit_loop_product_thumbnail() {
 
 add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
-// add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'fk_disable_shipping_calc_on_cart', 99 );
-// 	function fk_disable_shipping_calc_on_cart( $show_shipping ) {
-// 		if( is_cart() ) {
-// 			return false;
-// 		}
-// 		return $show_shipping;
-// 	}
+add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'fk_disable_shipping_calc_on_cart', 99 );
+function fk_disable_shipping_calc_on_cart( $show_shipping ) {
+	if( is_cart() ) {
+		return false;
+	}
+	return $show_shipping;
+}
 
 add_filter( 'woocommerce_shipping_calculator_enable_state', '__return_false' );
 add_filter( 'woocommerce_shipping_calculator_enable_city', '__return_false' );
 add_filter( 'woocommerce_shipping_calculator_enable_postcode', '__return_false' );
-
 add_filter( 'woocommerce_shipping_chosen_method', '__return_false', 99);
-
-add_filter('woocommerce_shipping_packages', function ($r) {
-	$cs = WC()->session->get( 'chosen_shipping_methods' );
-	error_log('chosen shipping: ' . print_r($cs, true));
-	return $r;
-});

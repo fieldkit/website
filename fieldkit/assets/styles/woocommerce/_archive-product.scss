@@ -267,8 +267,13 @@ select {
   }
 }
 
+.woocommerce div.product p.stock.out-of-stock {
+  color: #c24654;
+}
+
 .woocommerce ul.products li.product .button {
   &.product_type_simple,
+  &.product_type_composite,
   &.add_to_cart_button,
   &.product_type_variable {
     @extend .button;
