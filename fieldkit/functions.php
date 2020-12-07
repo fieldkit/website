@@ -183,10 +183,11 @@ function fieldkit_change_order_object_for_katana($status, $order_id)
 			wc_delete_order_item($item_id);
 		}
 	}
-
-	return $order;
+	if ($order && 'cod' === $order->get_payment_method()) {
+		$status = 'completed';
+	}
+	return $status;
 }
-
 
 function fieldkit_customize_register($wp_customize)
 {
