@@ -3535,11 +3535,36 @@ li.component_option_thumbnail_container {
     font-weight: 500;
     line-height: 1.17; }
 
-.attribute_options .value select {
-  border: unset !important;
-  border-bottom: solid 1px #d8dce0 !important;
-  border-radius: 0;
-  padding: 10px 40px 2px 0 !important; }
+.attribute_options .label {
+  margin-top: 1em; }
+
+.attribute_options .value {
+  margin-bottom: 1em;
+  position: relative; }
+  .attribute_options .value select {
+    border: unset !important;
+    border-bottom: solid 1px #d8dce0 !important;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 22px;
+    min-width: 85% !important;
+    padding: 10px 40px 2px 0 !important; }
+  .attribute_options .value::before {
+    background-color: transparent;
+    border-bottom: 1px solid #2c3e50;
+    border-left: 1px solid #2c3e50;
+    border-width: 0px 0px 1px 1px;
+    content: "";
+    display: block;
+    height: 10px;
+    position: absolute;
+    right: 14%;
+    top: 20px;
+    transform: translateY(-70%) rotate(-45deg);
+    width: 10px; }
+    @media (min-width: 50em) {
+      .attribute_options .value::before {
+        right: 18%; } }
 
 .product-type-composite .composite_navigation.paged.bottom {
   border-top: 1px solid rgba(216, 220, 224, 0.5);
@@ -5565,7 +5590,8 @@ select {
     text-decoration: none; }
 
 .woocommerce div.product p.stock.out-of-stock {
-  color: #c24654; }
+  color: #c24654;
+  margin-top: 1em; }
 
 .woocommerce ul.products li.product .button.added, .woocommerce ul.products li.product .added#mc-embedded-subscribe, .woocommerce ul.products li.product .site-navigation .nav-button a.added, .site-navigation .nav-button .woocommerce ul.products li.product a.added, .woocommerce ul.products li.product .section-contact-form .wpcf7 input.added[type="submit"], .section-contact-form .wpcf7 .woocommerce ul.products li.product input.added[type="submit"], .woocommerce-cart .woocommerce ul.products li.product .return-to-shop a.added, .woocommerce-cart .woocommerce .return-to-shop ul.products li.product a.added {
   background-color: #c24654; }
