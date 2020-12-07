@@ -258,8 +258,16 @@ function fk_disable_shipping_calc_on_cart( $show_shipping ) {
 	}
 	return $show_shipping;
 }
-
+//shipping
 add_filter( 'woocommerce_shipping_calculator_enable_state', '__return_false' );
 add_filter( 'woocommerce_shipping_calculator_enable_city', '__return_false' );
 add_filter( 'woocommerce_shipping_calculator_enable_postcode', '__return_false' );
 add_filter( 'woocommerce_shipping_chosen_method', '__return_false', 99);
+
+//cart
+add_filter( 'woocommerce_persistent_cart_enabled', '__return_false' );
+add_action( 'woocommerce_thankyou', 'order_received_empty_cart_action', 10, 1 );
+function order_received_empty_cart_action( $order_id ){
+	WC()->cart->empty_cart(true);
+	WC()->session->set('cart', array());
+}
