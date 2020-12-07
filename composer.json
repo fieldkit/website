@@ -27,7 +27,7 @@
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
         "require": {
           "composer/installers": "^1.4",
-          "ffraenz/private-composer-installer": "^3.0"
+          "ffraenz/private-composer-installer": "^5.0"
         },
         "type": "wordpress-plugin",
         "version": "5.8.12"
