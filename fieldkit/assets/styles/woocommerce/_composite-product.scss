@@ -314,12 +314,41 @@ li.component_option_thumbnail_container {
   }
 }
 
+.attribute_options .label {
+  margin-top: 1em;
+}
+
 .attribute_options .value {
   select {
     border: unset !important;
     border-bottom: solid 1px #d8dce0 !important;
     border-radius: 0;
+    font-size: 16px;
+    line-height: 22px;
+    min-width: 85% !important;
     padding: 10px 40px 2px 0 !important;
+  }
+
+  margin-bottom: 1em;
+  position: relative;
+
+  &::before {
+    background-color: transparent;
+    border-bottom: 1px solid $color-primary-dark-blue;
+    border-left: 1px solid $color-primary-dark-blue;
+    border-width: 0px 0px 1px 1px;
+    content: "";
+    display: block;
+    height: 10px;
+    position: absolute;
+    right: 14%;
+    top: 20px;
+    transform: translateY(-70%) rotate(-45deg);
+    width: 10px;
+
+    @include mq($from: medium) {
+      right: 18%;
+    }
   }
 }
 
