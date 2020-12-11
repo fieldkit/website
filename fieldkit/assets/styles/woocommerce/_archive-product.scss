@@ -272,6 +272,10 @@ select {
   margin-top: 1em;
 }
 
+.woocommerce .bundle_availability .stock.out-of-stock {
+  color: white !important;
+}
+
 .woocommerce ul.products li.product .button {
   &.product_type_simple,
   &.product_type_composite,
