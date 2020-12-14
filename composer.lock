@@ -902,15 +902,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce",
-            "version": "4.7.1",
+            "version": "4.8.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce/",
-                "reference": "tags/4.7.1"
+                "reference": "tags/4.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce.4.7.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.4.8.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -956,15 +956,15 @@
         },
         {
             "name": "wpackagist-plugin/woocommerce-services",
-            "version": "1.25.3",
+            "version": "1.25.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/woocommerce-services/",
-                "reference": "tags/1.25.3"
+                "reference": "tags/1.25.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/woocommerce-services.1.25.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-services.1.25.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1046,15 +1046,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-smushit",
-            "version": "3.7.3",
+            "version": "3.8.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-smushit/",
-                "reference": "tags/3.7.3"
+                "reference": "tags/3.8.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-smushit.3.7.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-smushit.3.8.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
