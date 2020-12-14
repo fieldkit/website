@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/bryanwagman/fieldkit-website/compare/v0.1.1...v0.1.2) (2020-12-08)
+
+
+### Features
+
+* prod variation select sku ([cc29aa2](https://github.com/bryanwagman/fieldkit-website/commit/cc29aa2ee8dc237ce517bde17b1f97a5d8f6f603))
+* sku variable product ([0ba3175](https://github.com/bryanwagman/fieldkit-website/commit/0ba3175da46c7f82d93e4320a2eb30344265c7dc))
+
+
+### Bug Fixes
+
+* resolve error with order status not updating ([a140a92](https://github.com/bryanwagman/fieldkit-website/commit/a140a929fef95f27dfddcc362c8b7d3d4f18124b))
+
 ### 0.1.1 (2020-09-29)
 
 
