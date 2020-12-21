@@ -6,6 +6,21 @@
   margin-top: 20px;
 }
 
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+  /* stylelint-disable */
+    margin: 2em 0 0 0;
+  /* stylelint-enable */
+}
+
+.woocommerce-min-max-quantities-error-cart-link.button {
+   /* stylelint-disable */
+  color: $color-tertiary-red !important;
+  @include mq($until: medium) {
+    float: unset;
+    margin-top: 1em;
+  }
+}
+
 .woocommerce-cart-form table,
 .woocommerce-cart-form tbody {
   @include mq($until: medium) {
