@@ -344,6 +344,10 @@ select {
 }
 
 .archive {
+  .content-area {
+    width: 100%;
+  }
+
   .section-product-feed-text-and-image__text {
     p {
       font-size: 18px;

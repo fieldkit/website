@@ -5317,6 +5317,9 @@ ul#shipping_method {
 #fieldkit-shipping-methods #shipping_method:not(:first-of-type) {
   margin-top: 10px !important; }
 
+.woocommerce-SavedPaymentMethods.wc-saved-payment-methods {
+  margin-top: 1em; }
+
 .woocommerce-account form .reg_password .show-password-input::after {
   color: #2c3e50;
   content: "Show";
@@ -5682,6 +5685,9 @@ select {
 
 #menu-product-feed-navigation li.current-menu-item a {
   font-weight: 900; }
+
+.archive .content-area {
+  width: 100%; }
 
 .archive .section-product-feed-text-and-image__text p {
   font-size: 18px;
