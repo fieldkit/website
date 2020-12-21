@@ -1048,10 +1048,10 @@ span.wpcf7-list-item {
 .section-contact-form .wpcf7-list-item-label {
   background-image: url("assets/icons/css-checkbox.png");
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: none;
+  user-select: none;
+  user-select: none;
+  user-select: none;
   user-select: none; }
 
 span.wpcf7-not-valid-tip {
@@ -3295,6 +3295,19 @@ span.wpcf7-form-control-wrap textarea {
 
 .woocommerce-variation-add-to-cart.woocommerce-variation-add-to-cart-enabled {
   margin-top: 20px; }
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+  /* stylelint-disable */
+  margin: 2em 0 0 0;
+  /* stylelint-enable */ }
+
+.woocommerce-min-max-quantities-error-cart-link.button, .woocommerce-min-max-quantities-error-cart-link#mc-embedded-subscribe, .site-navigation .nav-button a.woocommerce-min-max-quantities-error-cart-link, .section-contact-form .wpcf7 input.woocommerce-min-max-quantities-error-cart-link[type="submit"], .woocommerce div.product .summary__details form.cart .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce .related.products ul.products li .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce-cart .woocommerce .return-to-shop a.woocommerce-min-max-quantities-error-cart-link, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_simple, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_composite, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.add_to_cart_button, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_variable {
+  /* stylelint-disable */
+  color: #c42c44 !important; }
+  @media (max-width: 49.99em) {
+    .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce-min-max-quantities-error-cart-link#mc-embedded-subscribe, .site-navigation .nav-button a.woocommerce-min-max-quantities-error-cart-link, .section-contact-form .wpcf7 input.woocommerce-min-max-quantities-error-cart-link[type="submit"], .woocommerce div.product .summary__details form.cart .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce .related.products ul.products li .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce-cart .woocommerce .return-to-shop a.woocommerce-min-max-quantities-error-cart-link, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_simple, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_composite, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.add_to_cart_button, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_variable {
+      float: unset;
+      margin-top: 1em; } }
 
 @media (max-width: 49.99em) {
   .woocommerce-cart-form table,
