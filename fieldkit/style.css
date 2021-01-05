@@ -3298,7 +3298,7 @@ span.wpcf7-form-control-wrap textarea {
 
 .woocommerce-error, .woocommerce-info, .woocommerce-message {
   /* stylelint-disable */
-  margin: 2em 0 0 0;
+  margin: 1.5em 0 1.5em 0;
   /* stylelint-enable */ }
 
 .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce-min-max-quantities-error-cart-link#mc-embedded-subscribe, .site-navigation .nav-button a.woocommerce-min-max-quantities-error-cart-link, .section-contact-form .wpcf7 input.woocommerce-min-max-quantities-error-cart-link[type="submit"], .woocommerce div.product .summary__details form.cart .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce .related.products ul.products li .woocommerce-min-max-quantities-error-cart-link.button, .woocommerce-cart .woocommerce .return-to-shop a.woocommerce-min-max-quantities-error-cart-link, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_simple, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_composite, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.add_to_cart_button, .woocommerce ul.products li.product .woocommerce-min-max-quantities-error-cart-link.button.product_type_variable {
@@ -5193,9 +5193,18 @@ ul#shipping_method {
   background: #c42c44;
   border-top: none; }
   .woocommerce .woocommerce-error li {
-    color: #ffffff; }
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap; }
     .woocommerce .woocommerce-error li::before {
       content: none; }
+    .woocommerce .woocommerce-error li a {
+      margin-top: 1em; }
+      @media (min-width: 50em) {
+        .woocommerce .woocommerce-error li a {
+          margin-left: 1em;
+          margin-top: unset; } }
   .woocommerce .woocommerce-error::before {
     content: none; }
 
@@ -5331,7 +5340,8 @@ ul#shipping_method {
   margin-top: 10px !important; }
 
 .woocommerce-SavedPaymentMethods.wc-saved-payment-methods {
-  margin-top: 1em; }
+  margin-top: 1em;
+  padding-top: 1em; }
 
 .woocommerce-account form .reg_password .show-password-input::after {
   color: #2c3e50;
