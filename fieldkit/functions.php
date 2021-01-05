@@ -272,3 +272,25 @@ function order_received_empty_cart_action( $order_id ){
 	WC()->cart->empty_cart(true);
 	WC()->session->set('cart', array());
 }
+
+//yith preorder
+if ( class_exists( 'YITH_Pre_Order_Premium' ) ) {
+	remove_filter( 'woocommerce_get_stock_html', array( YITH_Pre_Order_Premium::instance()->frontend, 'show_date_on_single_product' ), 99 );
+	add_filter( 'woocommerce_get_stock_html', 'show_date_on_single_product_custom', 99, 3 );
+
+	function show_date_on_single_product_custom( $availability_html, $availability, $product = false ) {
+	 global $sitepress;
+	 if (!$product){
+		$product = YITH_Pre_Order_Premium::instance()->frontend->_product_from_availability;
+	 }
+	 $id          = $product->get_id();
+	 $id          = $sitepress ? yit_wpml_object_id( $id, 'product', true, $sitepress->get_default_language() ) : $id;
+	 $pre_order  = new YITH_Pre_Order_Product( $id );
+	 $is_preorder = $pre_order->get_pre_order_status();
+
+	 if ( 'yes' == $is_preorder )
+   	{
+	 return $availability_html . YITH_Pre_Order_Premium::instance()->frontend->availability_date( $id );   }
+	 return $availability_html;
+	}
+}

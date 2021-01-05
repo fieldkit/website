@@ -326,10 +326,22 @@
   border-top: none;
 
   li {
+    align-items: center;
     color: $color-background;
+    display: flex;
+    flex-wrap: wrap;
 
     &::before {
       content: none;
+    }
+
+    a {
+      margin-top: 1em;
+
+      @include mq($from: medium) {
+        margin-left: 1em;
+        margin-top: unset;
+      }
     }
   }
 
@@ -457,4 +469,5 @@
 
 .woocommerce-SavedPaymentMethods.wc-saved-payment-methods {
   margin-top: 1em;
+  padding-top: 1em;
 }
