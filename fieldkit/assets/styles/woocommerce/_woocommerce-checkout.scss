@@ -339,7 +339,7 @@
       margin-top: 1em;
 
       @include mq($from: medium) {
-        margin-left: 1em;
+        margin-left: auto;
         margin-top: unset;
       }
     }
