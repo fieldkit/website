@@ -29,7 +29,9 @@
 }
 
 /*eslint-disable */
-
+label[for=payment_method_stripe]{
+padding-bottom: 25px;
+}
 .woocommerce-info--downloads a.button {
   border-bottom: 1px solid #2c3e50;
   color: #2c3e50 !important;
