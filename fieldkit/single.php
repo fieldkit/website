@@ -38,7 +38,7 @@
 							</a>
 						</li>
 						<li class="social-share-menu-item">
-							<a href="https://twitter.com/home?status=<?php echo urlencode(get_the_permalink()); ?>" target="_blank" title="<?php echo __('Twitter', 'rocnation'); ?>">
+							<a href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_the_permalink()); ?>" target="_blank" title="<?php echo __('Twitter', 'rocnation'); ?>">
 								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
 									<path fill="#FFFFFF" d="M18,1.7c-0.7,0.3-1.4,0.5-2.1,0.6c0.8-0.5,1.4-1.2,1.6-2C16.8,0.7,16,1,15.2,1.2C14.5,0.5,13.5,0,12.5,0c-2,0-3.7,1.7-3.7,3.7c0,0.3,0,0.6,0.1,0.8C5.8,4.4,3.1,2.9,1.3,0.7C0.9,1.2,0.8,1.9,0.8,2.5c0,1.3,0.7,2.4,1.6,3.1c-0.6,0-1.2-0.2-1.7-0.5c0,0,0,0,0,0c0,1.8,1.3,3.3,3,3.6C3.4,8.9,3,8.9,2.7,8.9c-0.2,0-0.5,0-0.7-0.1c0.5,1.5,1.8,2.5,3.5,2.6c-1.3,1-2.9,1.6-4.6,1.6C0.6,13,0.3,13,0,13c1.6,1.1,3.6,1.7,5.7,1.7c6.8,0,10.5-5.6,10.5-10.5c0-0.2,0-0.3,0-0.5C16.9,3.1,17.5,2.5,18,1.7z"/>
 								</svg>
