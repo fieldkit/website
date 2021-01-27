@@ -10,6 +10,10 @@ update wp_options set option_value = 'http://www.fieldkit.test/' where option_na
 # command below from recursing into the oauth objects.
 update wp_options set option_value = replace(option_value, 'staging.fieldkit.org', 'www.fieldkit.test') where option_value like '%staging.fieldkit.org%';
 
+delete from wp_options where option_name in ('fk_sso_checkout_login_url');
+
+insert into wp_options (option_name, option_value) values ('fk_sso_checkout_login_url', 'https://auth.fkdev.org/auth/realms/fkdev/protocol/openid-connect/auth?client_id=fkdev-wordpress&scope=openid%20microprofile-jwt&redirect_uri=https%3A%2F%2Fwww.fieldkit.test%2Fcheckout&response_type=code');
+
 EOF
 
 # Notice we're using the domain w/o a schema (https/http) this ensures
