@@ -10,9 +10,10 @@ update wp_options set option_value = 'http://www.fieldkit.test/' where option_na
 # command below from recursing into the oauth objects.
 update wp_options set option_value = replace(option_value, 'staging.fieldkit.org', 'www.fieldkit.test') where option_value like '%staging.fieldkit.org%';
 
-delete from wp_options where option_name in ('fk_sso_checkout_login_url');
+delete from wp_options where option_name in ('fk_sso_checkout_login_url', 'fk_sso_settings_url');
 
 insert into wp_options (option_name, option_value) values ('fk_sso_checkout_login_url', 'https://auth.fkdev.org/auth/realms/fkdev/protocol/openid-connect/auth?client_id=fkdev-wordpress&scope=openid%20microprofile-jwt&redirect_uri=https%3A%2F%2Fwww.fieldkit.test%2Fcheckout&response_type=code');
+insert into wp_options (option_name, option_value) values ('fk_sso_settings_url', 'https://auth.fkdev.org/auth/realms/fkdev/account/');
 
 EOF
 
@@ -26,9 +27,14 @@ docker run -it --rm \
 	wordpress:cli search-replace 'staging.fieldkit.org' 'www.fieldkit.test' \
 	--recurse-objects --skip-tables=wp_users
 
-# Helpful to tweak things w/o SSO:
+true || docker run -it --rm \
+	--volumes-from fieldkit-wordpress \
+	--network container:fieldkit-wordpress \
+	wordpress:cli user delete 513
 
+# Helpful to tweak things w/o SSO:
 docker run -it --rm \
 	--volumes-from fieldkit-wordpress \
 	--network container:fieldkit-wordpress \
-	wordpress:cli user create admin admin@conservify.org --role=administrator
+	wordpress:cli user create admin admin@conservify.worg \
+	--role=administrator --user_pass=asdfasdfasdf || true

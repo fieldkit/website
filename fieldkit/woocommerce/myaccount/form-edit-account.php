@@ -17,10 +17,14 @@
 
 defined( 'ABSPATH' ) || exit;
 
-do_action( 'woocommerce_before_edit_account_form' ); ?>
+do_action( 'woocommerce_before_edit_account_form' );
+
+$settings_url = get_option( 'fk_sso_settings_url', '' );
+
+?>
+
 <h1>Account Details&nbsp;<span class="fieldkit-required-span right">*Required</span></label></h1>
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
-
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 
 	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
@@ -44,6 +48,20 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" />
 	</p>
 
+    <?php
+    if ($settings_url != '') {
+    ?>
+	<fieldset>
+		<legend><h3 class="heading-4" id="password-change"><?php esc_html_e( 'Account Security', 'woocommerce' ); ?></h3></legend>
+
+        <p>
+            <a href="<?php echo $settings_url ?>" class="">Securty Dashboard</a>
+        </p>
+	</fieldset>
+    <?php
+    } else {
+    ?>
+
 	<fieldset>
 		<legend><h3 class="heading-4" id="password-change"><?php esc_html_e( 'Password Change', 'woocommerce' ); ?></h3></legend>
 
@@ -60,6 +78,11 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />
 		</p>
 	</fieldset>
+
+    <?php
+    }
+    ?>
+
 	<div class="clear"></div>
 
 	<?php do_action( 'woocommerce_edit_account_form' ); ?>
