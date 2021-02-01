@@ -65,8 +65,9 @@
 						<h4 class="heading-4">Maybe let’s try a different term</h4>
 						<img class="img no-results-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/speech-bubbles.png" alt="">
 						<ul>
-							<li>Make sure your search terms are spelled correctly</li>
+							<li>Check that your search terms are spelled correctly</li>
 							<li>Replace abbrevations with the whole word</li>
+							<li>Try a similar but different term</li>
 						</ul>
 					</div>
 				</div>
