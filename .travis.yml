@@ -1,0 +1,18 @@
+deploy:
+  - provider: script
+    script: bash scripts/deploy.sh $SFTP_KEY_STAGING $SFTP_USER_STAGING $SFTP_ADDRESS_STAGING
+    on:
+      branch: master
+  - provider: script
+    script: bash scripts/deploy.sh $SFTP_KEY_PRODUCTION $SFTP_USER_PRODUCTION $SFTP_ADDRESS_PRODUCTION
+    on:
+      tags: true
+branches:
+  only:
+    - master
+language: node_js
+notifications:
+  slack:
+    rooms:
+      - $SLACK_ROOM_DESCRIPT
+script: npm run build
