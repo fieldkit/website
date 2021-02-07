@@ -272,6 +272,11 @@ select {
   margin-top: 1em;
 }
 
+.woocommerce div.product p.stock.in-stock {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
 .woocommerce .bundle_availability .stock.out-of-stock {
   color: white !important;
 }

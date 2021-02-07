@@ -1,0 +1,30 @@
+before_deploy:
+  - zip -r fieldkit.zip fieldkit
+branches:
+  only:
+    - master
+    - development
+deploy:
+  - api_key: $GITHUB_OAUTH_TOKEN
+    file: fieldkit.zip
+    on:
+      tags: true
+    provider: releases
+    skip_cleanup: true
+  - on:
+      tags: true
+    provider: script
+    script: bash scripts/deploy.sh production
+  - on:
+      branch: master
+    provider: script
+    script: bash scripts/deploy.sh staging
+  - on:
+      branch: development
+    provider: script
+    script: bash scripts/deploy.sh development
+language: node_js
+notifications:
+  slack:
+    secure: Ptmg5hudykrkStL2gfkhZbFJAmFWSUd6E0/E0d5p177emK2/1MInF9gJWpqz/accfiLUpm3cTvhtcYIItJIW7f08OQgnxpt8qOjqCC3mM/BQ1EKlOPHU79TGQGdh5BT41yTrk4GYgiDzep2Pq89gIcFd4rmZH39L0moe/rY2XaePpiFje+g0XuDOYfLVaQOQCfaEwtCaaPWw+wjmtW1kiHQzgJYz/AflYKgnf3TmWOSVaflvuFj+H/xJs42Wr2rPvWxNYvPnG2vxpiY3iLNJxNsFgBNFGBuFegoQQshRY2NSazg7r0AF2m17IMmCxyGUSxX34nIJBAR/O2aL3McEEO3qNITgeZJ7+cH/KI4lAX/Azh0ehyPEwJf8+6cbNJUXyr2JO9zYZTBOFNXbIyV3MP5HZsv8kDQeWJmxw5ACxt20eWMgvhpJAqVLeyff2Qx33ky0futzKbxUL9YxDzwNOMgkexuJ/zfK7Tkx3cPc6LLxvbF42MkpVkKQWn/cySt84HK7Gl6YbALCFtb7MMqImtYOYB5yI77LsTwPgo0fL4lTZQmOMv9IyEyc8Y298BQD7cOPLOc4c4+KkG0oI2EcJoLOhXZBPA5ujyXP7wvZ56ePfkAsMYDZrOO0PV/qqf0WPQYyvvnETSofbHWNspjRxOi35Q/hhI3+zjDHpBWUSS0=
+script: npm run build

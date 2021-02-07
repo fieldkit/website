@@ -21,7 +21,6 @@ services:
     restart: always
     volumes:
       - ./certs:/etc/nginx/certs:delegated,ro
-      - ./configs/my_proxy.conf:/etc/nginx/conf.d/my_proxy.conf:delegated,ro
       - /var/run/docker.sock:/tmp/docker.sock:ro
   wordpress:
     container_name: fieldkit-wordpress
@@ -33,11 +32,9 @@ services:
       - WORDPRESS_DB_NAME=wordpress
       - WORDPRESS_DB_PASSWORD=wordpress
       - WORDPRESS_DB_USER=wordpress
-      # - WORDPRESS_DEBUG=0
     image: wordpress:5.4
     restart: always
     volumes:
-      - ./configs/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:delegated,ro
       - ./fieldkit:/var/www/html/wp-content/themes/fieldkit:cached
       - ./wordpress/wp-content/plugins:/var/www/html/wp-content/plugins:cached
       - ./wordpress/wp-content/uploads:/var/www/html/wp-content/uploads:delegated

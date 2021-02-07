@@ -1,19 +1,27 @@
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
   border-bottom-width: 2px;
 }
+.woocommerce a.button.wc-backward {
+  @extend .button--primary;
+  &:first-child {
+    margin-top: 1em;
+  }
+}
 
 .woocommerce-variation-add-to-cart.woocommerce-variation-add-to-cart-enabled {
   margin-top: 20px;
 }
 
-.woocommerce-error, .woocommerce-info, .woocommerce-message {
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
   /* stylelint-disable */
-    margin: 1.5em 0 1.5em 0;
+  margin: 1.5em 0 1.5em 0;
   /* stylelint-enable */
 }
 
 .woocommerce-min-max-quantities-error-cart-link.button {
-   /* stylelint-disable */
+  /* stylelint-disable */
   color: $color-tertiary-red !important;
   @include mq($until: medium) {
     float: unset;
@@ -29,7 +37,23 @@
 }
 
 /*eslint-disable */
-
+.woocommerce-account
+  .woocommerce-MyAccount-content
+  ul
+  li.woocommerce-PaymentMethod {
+  padding-left: 0;
+  &::before {
+    width: 0;
+  }
+}
+.woocommerce-account label[for="payment_method_stripe"] {
+  img {
+    display: inline-block;
+  }
+}
+label[for="payment_method_stripe"] {
+  padding-bottom: 25px;
+}
 .woocommerce-info--downloads a.button {
   border-bottom: 1px solid #2c3e50;
   color: #2c3e50 !important;
@@ -55,7 +79,19 @@
   }
 }
 
+.woocommerce a.remove:hover {
+  color: red !important;
+  border-bottom: unset !important;
+  text-shadow: -0.1px -0.1px 0 rgba($color: #000000, $alpha: 0.3),
+    0.4px -0.1px 0 rgba($color: #000000, $alpha: 0.3),
+    -0.1px 0.1px 0 rgba($color: #000000, $alpha: 0.3),
+    0.6px 0.6px 0 rgba($color: #000000, $alpha: 0.3);
+}
 /*eslint-enable */
+.woocommerce a.added_to_cart {
+  margin-left: 0.5em;
+  padding-bottom: 0.5em;
+}
 
 .woocommerce-lost-password .section-default-content__rich-text {
   .woocommerce {
