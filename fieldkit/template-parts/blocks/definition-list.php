@@ -17,10 +17,11 @@ $items = get_sub_field('items');
 			<?php
 			foreach ($items as $item) :
 				$image = $item["image"];
+				$row_id = $item["row_id"];
 				$name = $item["name"];
 				$definition = $item["definition"];
 			?>
-				<div class="section-definition-list__item" id="<?php echo (str_replace(' ', '-', strtolower($name)))?>">
+				<div class="section-definition-list__item"<?php if ($row_id) : ?> id="<?php echo (str_replace(' ', '-', strtolower($row_id)))?>"<?php endif; ?>>
 					<?php if ($image) : ?>
 						<div class="section-definition-list__item-image">
 							<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
