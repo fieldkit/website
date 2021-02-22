@@ -26,10 +26,16 @@ $items = get_sub_field('items');
 							<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
 						</div>
 					<?php endif; ?>
+					<?php if ($name || $definition) : ?>
 					<div class="section-definition-list__item-text rich-text">
-						<h3 class="section-definition-list__item-text-name heading-5"><?php echo $name; ?></h3>
-						<?php echo $definition; ?>
+						<?php if ($name) : ?>
+							<h3 class="section-definition-list__item-text-name heading-5"><?php echo $name; ?></h3>
+						<?php endif; ?>
+						<?php if ($definition) : ?>
+							<?php echo $definition; ?>
+						<?php endif; ?>
 					</div>
+					<?php endif; ?>
 				</div>
 			<?php endforeach; ?>
 		</div>
