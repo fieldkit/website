@@ -104,6 +104,25 @@
                                     "mime_types": ""
                                 },
                                 {
+                                    "key": "field_60331836ad665",
+                                    "label": "Row Id",
+                                    "name": "row_id",
+                                    "type": "text",
+                                    "instructions": "(e.g. this-is-row)",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
                                     "key": "field_5f05280ecf819",
                                     "label": "Name",
                                     "name": "name",
@@ -218,5 +237,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1613958754
+    "modified": 1613966600
 }
