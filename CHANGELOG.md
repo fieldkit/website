@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/fieldkit/website/compare/v0.1.3...v0.1.4) (2021-02-22)
+
+
+### Bug Fixes
+
+* add htmlspecialchars and field note ([a4c4528](https://github.com/fieldkit/website/commit/a4c452849b66672f3fbd2037da247bc923f5ef0f))
+* add id name on row ([4db2ac3](https://github.com/fieldkit/website/commit/4db2ac31437f9a14285c43de7c82d692884eade3))
+* adding field for row id ([55d5a14](https://github.com/fieldkit/website/commit/55d5a14bb2473eaedf390336bdd8cbd8d3a56788))
+* remove required field ([d003808](https://github.com/fieldkit/website/commit/d003808489f5d7122f65f23f82806fde1809bfac))
+* remove special characters ([c446808](https://github.com/fieldkit/website/commit/c44680878b0d1a3dc250ad6ddc1b88cd24be9d8e))
+
 ### [0.1.3](https://github.com/fieldkit/website/compare/v0.1.2...v0.1.3) (2021-02-04)
 
 ### [0.1.2](https://github.com/bryanwagman/fieldkit-website/compare/v0.1.1...v0.1.2) (2020-12-08)
