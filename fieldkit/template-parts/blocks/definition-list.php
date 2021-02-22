@@ -20,7 +20,7 @@ $items = get_sub_field('items');
 				$name = $item["name"];
 				$definition = $item["definition"];
 			?>
-				<div class="section-definition-list__item">
+				<div class="section-definition-list__item" id="<?php echo (str_replace(' ', '-', strtolower($name)))?>">
 					<?php if ($image) : ?>
 						<div class="section-definition-list__item-image">
 							<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
