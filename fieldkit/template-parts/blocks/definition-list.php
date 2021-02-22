@@ -20,11 +20,8 @@ $items = get_sub_field('items');
 				$row_id = $item["row_id"];
 				$name = $item["name"];
 				$definition = $item["definition"];
-
-				$row_id_string = str_replace(' ', '-', strtolower($row_id));
-				$row_id_string = preg_replace('/[^A-Za-z0-9\-]/', '', $row_id_string);
 			?>
-				<div class="section-definition-list__item"<?php if ($row_id) : ?> id="<?php echo $row_id_string; ?>"<?php endif; ?>>
+				<div class="section-definition-list__item"<?php if ($row_id) : ?> id="<?php echo htmlspecialchars($row_id); ?>"<?php endif; ?>>
 					<?php if ($image) : ?>
 						<div class="section-definition-list__item-image">
 							<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>

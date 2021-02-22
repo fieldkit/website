@@ -108,7 +108,7 @@
                                     "label": "Row Id",
                                     "name": "row_id",
                                     "type": "text",
-                                    "instructions": "",
+                                    "instructions": "(e.g. this-is-row)",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -237,5 +237,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1613961313
+    "modified": 1613966600
 }
