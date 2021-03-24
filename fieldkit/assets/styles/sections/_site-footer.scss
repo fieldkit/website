@@ -9,10 +9,16 @@ $site-header-breakpoint: 800px;
   @include mq($until: $site-header-breakpoint) {
     text-align: center;
   }
+}
 
-  #mc_embed_signup {
-    margin-top: $margin-top * 2;
-  }
+.site-footer__newsletter {
+  align-items: center;
+  border-bottom: 1px solid $color-gray-3;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 .site-footer__inner {
@@ -48,12 +54,7 @@ $site-header-breakpoint: 800px;
 
 .site-footer__social {
   display: flex;
-  justify-content: center;
-  margin-top: $margin-top;
-
-  @include mq($from: $site-header-breakpoint) {
-    justify-content: flex-start;
-  }
+  flex-direction: column;
 
   .icon-button:not(:first-child) {
     margin-left: 24px;
@@ -64,6 +65,38 @@ $site-header-breakpoint: 800px;
     height: 24px;
     object-fit: contain;
     width: 24px;
+  }
+
+  .site-footer__social-heading {
+    font-weight: bold;
+  }
+
+  .site-footer__social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    @include mq($from: $site-header-breakpoint) {
+      justify-content: flex-start;
+    }
+  }
+
+  .site-footer__download-app {
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .app-icon:not(:first-child) {
+    margin-left: 24px;
+  }
+
+  .app-icon img {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    width: 130px;
   }
 }
 
