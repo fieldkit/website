@@ -1,5 +1,6 @@
 import "lazysizes";
 import $ from "jquery";
+import "magnific-popup";
 import ContactForm from "./components/ContactForm";
 import LoadMore from "./components/LoadMore";
 import SiteHeader from "./components/SiteHeader";
@@ -63,3 +64,21 @@ if ($('.product-template-default select').length > 0) {
     }
   });
 }
+
+$('.mp-lightbox').magnificPopup({
+  type: 'image',
+  closeOnContentClick: false,
+  mainClass: 'mfp-img-mobile',
+  fixedContentPos: true,
+  image: {
+    verticalFit: true,
+  },
+  callbacks: {
+    open: function() {
+        $('body').addClass('overflow-hidden');
+    },
+    close: function() {
+        $('body').removeClass('overflow-hidden');
+    },
+  }
+});
