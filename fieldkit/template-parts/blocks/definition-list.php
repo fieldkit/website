@@ -23,9 +23,11 @@ $items = get_sub_field('items');
 			?>
 				<div class="section-definition-list__item"<?php if ($row_id) : ?> id="<?php echo htmlspecialchars($row_id); ?>"<?php endif; ?>>
 					<?php if ($image) : ?>
-						<div class="section-definition-list__item-image">
-							<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
-						</div>
+						<a href="<?php echo $image['url']; ?>" class="mp-lightbox">
+							<div class="section-definition-list__item-image">
+								<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+							</div>
+						</a>
 					<?php endif; ?>
 					<?php if ($name || $definition) : ?>
 					<div class="section-definition-list__item-text rich-text">
