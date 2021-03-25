@@ -573,7 +573,7 @@ body.overflow-hidden {
 .wpcf7 input[type="text"], .wpcf7 textarea, .textarea-input, .mc-field-group input[type="email"], .search-form input, .list, .rich-text ol, .woocommerce-account .woocommerce-MyAccount-content ol, .woocommerce-terms-and-conditions ol,
 .rich-text ul,
 .woocommerce-account .woocommerce-MyAccount-content ul,
-.woocommerce-terms-and-conditions ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .woocommerce-terms-and-conditions p, .rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption, .woocommerce-terms-and-conditions figcaption, .rich-text--small p, .rich-text--large p, .site-navigation #menu-header .menu-item, .site-footer__right-column .menu-item a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount, .product-type-composite .details.component_data p, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
+.woocommerce-terms-and-conditions ul, .woocommerce div.product .woocommerce-tabs .panel ul, td, .wpcf7-list-item-label, .menu-product-guide-sidebar-container li, .rich-text p, .woocommerce-account .woocommerce-MyAccount-content p, .woocommerce-terms-and-conditions p, .rich-text figcaption, .woocommerce-account .woocommerce-MyAccount-content figcaption, .woocommerce-terms-and-conditions figcaption, .rich-text--small p, .rich-text--large p, .site-navigation #menu-header .menu-item, .site-footer__right-column .menu-item a, .section-rich-text.section-callout-block blockquote > *, .section-rich-text.section-callout-block blockquote::before, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount, .product-type-composite .details.component_data p, .product-type-composite .details.component_data .woocommerce-Price-amount.amount, .bundled_product_summary .bundled_product_optional_checkbox,
 .bundled_product_summary span.bundled_item_price_quantity, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount, .summary__details .summary_elements .summary_element_content .content_product_meta, .attribute_options .label label, .woocommerce ul.order_details li, .woocommerce ul.order_details li strong, .woocommerce div.product .summary__details form.cart div.quantity input, .woocommerce div.product .woocommerce-tabs .panel p, .woocommerce-message, #display-deposit-product, .wcwl_email_label, .wcwl-input-group input.wcwl_email[type="email"], .wcwl-display .wcwl_intro p, .woocommerce-account input,
 .woocommerce-account textarea, .woocommerce-edit-account form .form-row .required,
 .fieldkit-required-span, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount, .woocommerce-checkout .woocommerce-billing-fields label, .woocommerce-account .woocommerce.woocommerce--login-register input,
@@ -584,7 +584,7 @@ body.overflow-hidden {
   font-weight: 400;
   letter-spacing: 0.1px;
   line-height: 22px; }
-  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .wpcf7 textarea a, .textarea-input a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ol a, .woocommerce-account .woocommerce-MyAccount-content ol a, .woocommerce-terms-and-conditions ol a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .woocommerce-terms-and-conditions ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .woocommerce-terms-and-conditions p a, .rich-text figcaption a, .woocommerce-account .woocommerce-MyAccount-content figcaption a, .woocommerce-terms-and-conditions figcaption a, .rich-text--small p a, .rich-text--large p a, .site-navigation #menu-header .menu-item a, .site-footer__right-column .menu-item a a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount a, .product-type-composite .details.component_data p a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .attribute_options .label label a, .woocommerce ul.order_details li a, .woocommerce div.product .summary__details form.cart div.quantity input a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-message a, #display-deposit-product a, .wcwl_email_label a, .wcwl-input-group input.wcwl_email[type="email"] a, .wcwl-display .wcwl_intro p a, .woocommerce-account input a, .woocommerce-account textarea a, .woocommerce-edit-account form .form-row .required a, .fieldkit-required-span a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a, .woocommerce-account .woocommerce.woocommerce--login-register input a, .woocommerce-account .woocommerce.woocommerce--login-register textarea a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce ul.products li.product .price .from a {
+  .body a, .blockquote a, .text-label a, .text-input a, .wpcf7 input[type="email"] a, .wpcf7 input[type="text"] a, .wpcf7 textarea a, .textarea-input a, .mc-field-group input[type="email"] a, .search-form input a, .list a, .rich-text ol a, .woocommerce-account .woocommerce-MyAccount-content ol a, .woocommerce-terms-and-conditions ol a, .rich-text ul a, .woocommerce-account .woocommerce-MyAccount-content ul a, .woocommerce-terms-and-conditions ul a, .woocommerce div.product .woocommerce-tabs .panel ul a, td a, .wpcf7-list-item-label a, .menu-product-guide-sidebar-container li a, .rich-text p a, .woocommerce-account .woocommerce-MyAccount-content p a, .woocommerce-terms-and-conditions p a, .rich-text figcaption a, .woocommerce-account .woocommerce-MyAccount-content figcaption a, .woocommerce-terms-and-conditions figcaption a, .rich-text--small p a, .rich-text--large p a, .site-navigation #menu-header .menu-item a, .site-footer__right-column .menu-item a a, .section-rich-text.section-callout-block blockquote > * a, .section-rich-text.section-callout-block blockquote::before a, .product-type-composite .component_options_inner .woocommerce-Price-amount.amount a, .product-type-composite .details.component_data p a, .product-type-composite .details.component_data .woocommerce-Price-amount.amount a, .bundled_product_summary .bundled_product_optional_checkbox a, .bundled_product_summary span.bundled_item_price_quantity a, .summary__details .summary_elements .summary_element_price.summary_element_data .woocommerce-Price-amount a, .summary__details .summary_elements .summary_element_content .content_product_meta a, .attribute_options .label label a, .woocommerce ul.order_details li a, .woocommerce div.product .summary__details form.cart div.quantity input a, .woocommerce div.product .woocommerce-tabs .panel p a, .woocommerce-message a, #display-deposit-product a, .wcwl_email_label a, .wcwl-input-group input.wcwl_email[type="email"] a, .wcwl-display .wcwl_intro p a, .woocommerce-account input a, .woocommerce-account textarea a, .woocommerce-edit-account form .form-row .required a, .fieldkit-required-span a, .woocommerce-checkout table.shop_table .woocommerce-Price-amount.amount a, .woocommerce-checkout .woocommerce-billing-fields label a, .woocommerce-account .woocommerce.woocommerce--login-register input a, .woocommerce-account .woocommerce.woocommerce--login-register textarea a, select a, select option a, .woocommerce .woocommerce-result-count a, .woocommerce ul.products li.product .price a, .woocommerce ul.products li.product .price .from a {
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
@@ -2473,6 +2473,70 @@ span.wpcf7-form-control-wrap textarea {
   border-color: #ffffff;
   color: #2c3e50;
   margin-top: 2em; }
+
+.section-rich-text.section-callout-block blockquote {
+  margin-left: 0;
+  padding: 16px 18px 18px;
+  position: relative; }
+
+.section-rich-text.section-callout-block blockquote > * {
+  font-weight: inherit; }
+
+.section-rich-text.section-callout-block blockquote::before {
+  color: #2c3e50;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  margin-left: 30px; }
+
+.section-rich-text.section-callout-block blockquote::after {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  display: inline-block;
+  left: 18px;
+  position: absolute; }
+
+.section-rich-text.callout-quick-tip blockquote {
+  background-color: rgba(160, 219, 225, 0.2);
+  border-left: 5px solid #52b5e4; }
+
+.section-rich-text.callout-quick-tip blockquote::before {
+  content: "Quick Tip"; }
+
+.section-rich-text.callout-quick-tip blockquote::after {
+  background-image: url("assets/icons/quick-tip.svg");
+  height: 18px;
+  top: 20px;
+  width: 18px; }
+
+.section-rich-text.callout-important-note blockquote {
+  background-color: rgba(243, 172, 78, 0.15);
+  border-left: 5px solid #f3ac4e; }
+
+.section-rich-text.callout-important-note blockquote::before {
+  content: "Important Note"; }
+
+.section-rich-text.callout-important-note blockquote::after {
+  background-image: url("assets/icons/important-note.svg");
+  height: 18px;
+  top: 22px;
+  width: 18px; }
+
+.section-rich-text.callout-warning blockquote {
+  background-color: rgba(244, 142, 132, 0.1);
+  border-left: 5px solid #ce596b; }
+
+.section-rich-text.callout-warning blockquote::before {
+  content: "Warning"; }
+
+.section-rich-text.callout-warning blockquote::after {
+  background-image: url("assets/icons/important-note.svg");
+  height: 18px;
+  top: 22px;
+  width: 18px; }
 
 .section-definition-list {
   margin-bottom: 20px;

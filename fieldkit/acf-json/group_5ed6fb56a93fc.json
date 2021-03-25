@@ -214,6 +214,80 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_605c279e3c668": {
+                    "key": "layout_605c279e3c668",
+                    "name": "call_outs",
+                    "label": "Call Outs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_605c284a3c66b",
+                            "label": "Type",
+                            "name": "callout_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Quick Tip": "Quick Tip",
+                                "Important Note": "Important Note",
+                                "Warning": "Warning"
+                            },
+                            "default_value": "Quick Tip",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_605c27ad3c669",
+                            "label": "Block Id",
+                            "name": "callout_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_605c28263c66a",
+                            "label": "Rich Text",
+                            "name": "rich_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_605c03a72cc80": {
                     "key": "layout_605c03a72cc80",
                     "name": "cta_block",
@@ -315,5 +389,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1616643382
+    "modified": 1616653254
 }
