@@ -11,6 +11,7 @@
   @include mq($from: medium) {
     align-items: flex-start;
     flex-direction: row;
+    justify-content: center;
   }
 }
 
@@ -18,6 +19,8 @@
   @extend .textarea-input;
 
   background-color: #ffffff;
+  color: #7e8083;
+  font-size: 13px;
   margin-bottom: 11px;
   width: 100%;
 
@@ -26,6 +29,7 @@
     border-right: none;
     border-top-right-radius: 0;
     margin-bottom: 0;
+    min-width: 200px;
   }
 
   @include mq($from: large) {
