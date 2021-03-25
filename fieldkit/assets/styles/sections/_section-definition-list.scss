@@ -48,3 +48,95 @@
     width: 100%;
   }
 }
+
+body {
+  .mfp-wrap {
+    height: 100%;
+    max-height: 100%;
+
+    @media (min-width: 1268px) {
+      height: 100%;
+      max-height: 100%;
+    }
+
+    .mfp-image-holder {
+      .mfp-close {
+        color: #ffffff;
+        cursor: pointer;
+        filter: alpha(opacity=65);
+        font-family: Arial, Baskerville, monospace;
+        font-size: 28px;
+        font-style: normal;
+        height: 44px;
+        line-height: 44px;
+        opacity: 0.65;
+        padding: 0 0 18px 10px;
+        padding-right: 6px;
+        position: absolute;
+        right: -6px;
+        right: 0;
+        text-align: right;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        width: 100%;
+        width: 44px;
+      }
+
+      button.mfp-close {
+        appearance: none;
+        background: 0 0;
+        border: 0;
+        box-shadow: none;
+        cursor: pointer;
+        display: block;
+        outline: 0;
+        overflow: visible;
+        padding: 0;
+        z-index: 1046;
+      }
+    }
+  }
+}
+
+.mfp-container {
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  padding: 0 8px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+img.mfp-img {
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 40px 0;
+  width: auto;
+}
+
+.mfp-content {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  z-index: 1045;
+}
+
+.mfp-bg {
+  background: #0b0b0b;
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1042;
+}

@@ -1,0 +1,90 @@
+.section-rich-text {
+  &.section-callout-block {
+    blockquote {
+      margin-left: 0;
+      padding: 16px 18px 18px;
+      position: relative;
+    }
+
+    blockquote > * {
+      @extend .body;
+
+      font-weight: inherit;
+    }
+
+    blockquote::before {
+      @extend .body;
+
+      color: $color-primary-dark-blue;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 18px;
+      margin-left: 30px;
+    }
+
+    blockquote::after {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: "";
+      display: inline-block;
+      left: 18px;
+      position: absolute;
+    }
+  }
+
+  &.callout-quick-tip {
+    blockquote {
+      background-color: rgba(160, 219, 225, 0.2);
+      border-left: 5px solid #52b5e4;
+    }
+
+    blockquote::before {
+      content: "Quick Tip";
+    }
+
+    blockquote::after {
+      background-image: url("assets/icons/quick-tip.svg");
+      height: 18px;
+      top: 20px;
+      width: 18px;
+    }
+  }
+
+  &.callout-important-note {
+    blockquote {
+      background-color: rgba(243, 172, 78, 0.15);
+      border-left: 5px solid #f3ac4e;
+    }
+
+    blockquote::before {
+      content: "Important Note";
+    }
+
+    blockquote::after {
+      background-image: url("assets/icons/important-note.svg");
+      height: 18px;
+      top: 22px;
+      width: 18px;
+    }
+  }
+
+  &.callout-warning {
+    blockquote {
+      background-color: rgba(244, 142, 132, 0.1);
+      border-left: 5px solid #ce596b;
+    }
+
+    blockquote::before {
+      content: "Warning";
+    }
+
+    blockquote::after {
+      background-image: url("assets/icons/important-note.svg");
+      height: 18px;
+      top: 22px;
+      width: 18px;
+    }
+  }
+}
