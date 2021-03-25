@@ -1,0 +1,27 @@
+.section-cta-block {
+  @extend %margins-horizontal;
+
+  color: $color-background;
+  margin-top: 0;
+  padding-bottom: $margin-bottom * 3;
+  padding-top: $margin-top * 3;
+  text-align: center;
+
+  @include mq($from: medium) {
+    margin-top: 30px;
+    padding-bottom: $margin-bottom * 2;
+    padding-top: $margin-top * 2;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+
+    max-width: 640px;
+  }
+}
+
+.section-cta-block__link {
+  border-color: $color-background;
+  color: $color-primary-dark-blue;
+  margin-top: 2em;
+}
