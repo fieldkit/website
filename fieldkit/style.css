@@ -2601,12 +2601,14 @@ span.wpcf7-form-control-wrap textarea {
     width: 100%; }
 
 body .mfp-wrap {
+  backface-visibility: hidden;
   height: 100%;
-  max-height: 100%; }
-  @media (min-width: 1268px) {
-    body .mfp-wrap {
-      height: 100%;
-      max-height: 100%; } }
+  left: 0;
+  outline: 0 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1043; }
   body .mfp-wrap .mfp-image-holder .mfp-close {
     color: #ffffff;
     cursor: pointer;
@@ -2641,7 +2643,9 @@ body .mfp-wrap {
     z-index: 1046; }
 
 .mfp-container {
+  align-items: center;
   box-sizing: border-box;
+  display: flex;
   height: 100%;
   left: 0;
   padding: 0 8px;

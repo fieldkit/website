@@ -51,13 +51,14 @@
 
 body {
   .mfp-wrap {
+    backface-visibility: hidden;
     height: 100%;
-    max-height: 100%;
-
-    @media (min-width: 1268px) {
-      height: 100%;
-      max-height: 100%;
-    }
+    left: 0;
+    outline: 0 !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1043;
 
     .mfp-image-holder {
       .mfp-close {
@@ -100,7 +101,9 @@ body {
 }
 
 .mfp-container {
+  align-items: center;
   box-sizing: border-box;
+  display: flex;
   height: 100%;
   left: 0;
   padding: 0 8px;

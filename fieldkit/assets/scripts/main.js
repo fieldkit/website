@@ -65,20 +65,26 @@ if ($('.product-template-default select').length > 0) {
   });
 }
 
-$('.mp-lightbox').magnificPopup({
-  type: 'image',
-  closeOnContentClick: false,
-  mainClass: 'mfp-img-mobile',
-  fixedContentPos: true,
-  image: {
-    verticalFit: true,
-  },
-  callbacks: {
-    open: function() {
-        $('body').addClass('overflow-hidden');
+$(".mp-lightbox").on("click", () => {
+  $('body').magnificPopup({
+    delegate: "a.mp-lightbox",
+    type: 'image',
+    closeOnContentClick: false,
+    mainClass: 'mfp-img-mobile',
+    fixedContentPos: true,
+    preloader: false,
+    image: {
+      verticalFit: true,
     },
-    close: function() {
-        $('body').removeClass('overflow-hidden');
-    },
-  }
+    callbacks: {
+      open: function() {
+          $('body').addClass('overflow-hidden');
+      },
+      close: function() {
+          $('body').removeClass('overflow-hidden');
+      },
+    }
+  });
 });
+
+
