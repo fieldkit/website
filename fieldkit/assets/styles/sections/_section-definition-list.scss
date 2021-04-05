@@ -7,6 +7,14 @@
   .section__inner {
     @extend %inset-width;
   }
+
+  .mp-lightbox {
+    pointer-events: none;
+
+    @media screen and (min-width: 480px) {
+      pointer-events: auto;
+    }
+  }
 }
 
 .section-definition-list__header {
@@ -74,8 +82,7 @@ body {
         padding: 0 0 18px 10px;
         padding-right: 6px;
         position: absolute;
-        right: -6px;
-        right: 0;
+        right: -14px;
         text-align: right;
         text-align: center;
         text-decoration: none;
