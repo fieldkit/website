@@ -13,7 +13,7 @@ $background_color = get_sub_field('background_color');
 		</div>
 		<?php
 		if ($link) {
-			$link['class_name'] = 'button button--secondary section-cta-block__link';
+			$link['class_name'] = 'button button--tertiary section-cta-block__link';
 			set_query_var('link', $link);
 			get_template_part('template-parts/utilities/link');
 		}

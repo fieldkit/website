@@ -9,6 +9,7 @@
     blockquote > * {
       @extend .body;
 
+      color: inherit;
       font-weight: inherit;
     }
 
@@ -47,8 +48,12 @@
     blockquote::after {
       background-image: url("assets/icons/quick-tip.svg");
       height: 18px;
-      top: 20px;
+      top: 16px;
       width: 18px;
+
+      @include mq($from: medium) {
+        top: 20px;
+      }
     }
   }
 
@@ -65,8 +70,12 @@
     blockquote::after {
       background-image: url("assets/icons/important-note.svg");
       height: 18px;
-      top: 22px;
+      top: 16px;
       width: 18px;
+
+      @include mq($from: medium) {
+        top: 22px;
+      }
     }
   }
 
@@ -83,8 +92,12 @@
     blockquote::after {
       background-image: url("assets/icons/warning.svg");
       height: 18px;
-      top: 22px;
+      top: 16px;
       width: 22px;
+
+      @include mq($from: medium) {
+        top: 22px;
+      }
     }
   }
 }

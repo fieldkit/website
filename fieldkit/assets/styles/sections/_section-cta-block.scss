@@ -18,10 +18,21 @@
 
     max-width: 640px;
   }
+
+  .rich-text > *:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.section-product-guide__content .section.section-cta-block {
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .section-cta-block__link {
-  border-color: $color-background;
-  color: $color-primary-dark-blue;
-  margin-top: 2em;
+  margin-top: 28px;
+
+  @include mq($from: medium) {
+    margin-top: 20px;
+  }
 }
