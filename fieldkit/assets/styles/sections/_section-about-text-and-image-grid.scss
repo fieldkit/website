@@ -8,6 +8,10 @@
   .section__inner {
     @extend %maximum-width;
   }
+
+  &.section-fk-platform-text-and-image-grid {
+    border-bottom: none;
+  }
 }
 
 .section-about-text-and-image-grid__header {
