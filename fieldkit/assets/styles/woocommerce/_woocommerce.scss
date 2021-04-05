@@ -89,8 +89,13 @@ label[for="payment_method_stripe"] {
 }
 /*eslint-enable */
 .woocommerce a.added_to_cart {
-  margin-left: 0.5em;
+  margin-left: 0;
   padding-bottom: 0.5em;
+  text-align: center;
+
+  @media (min-width: 49.99em) {
+    margin-left: 0.5em;
+  }
 }
 
 .woocommerce-lost-password .section-default-content__rich-text {
