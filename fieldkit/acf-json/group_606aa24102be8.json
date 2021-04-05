@@ -253,7 +253,7 @@
         },
         {
             "key": "field_606aa3fc8957d",
-            "label": "services_callout",
+            "label": "",
             "name": "fieldkit_platform_callout",
             "type": "group",
             "instructions": "",
@@ -339,5 +339,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617604714
+    "modified": 1617605928
 }
