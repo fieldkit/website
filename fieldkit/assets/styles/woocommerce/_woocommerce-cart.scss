@@ -156,6 +156,12 @@
         text-align: right;
       }
 
+      .cart-subtotal th,
+      .order-total th,
+      .tax-total th {
+        text-transform: uppercase;
+      }
+
       &.cart {
         th {
           padding: 9px 0;
