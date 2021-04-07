@@ -5,6 +5,7 @@
 
   a:not(.button):not(.woocommerce-error):not(.woocommerce-info):not(.mp-lightbox) {
     color: $color-primary-dark-blue;
+    font-weight: 900;
 
     &:hover,
     &:focus {
