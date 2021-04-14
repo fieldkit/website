@@ -11,7 +11,9 @@ $app_store = $download_app['app_store'];
 $google_play = $download_app['google_play'];
 ?>
 <footer class="site-footer">
+	<?php if(is_product_category() || is_shop()) : ?>
 	<button class="scroll-to-top" aria-label="scroll to top"></button>
+	<?php endif; ?>
 	<div class="site-footer__newsletter">
 			<?php get_template_part('template-parts/components/mailchimp'); ?>
 		</div>
