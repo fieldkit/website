@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/fieldkit/website/compare/v0.1.4...v0.1.5) (2021-04-14)
+
+
+### Features
+
+* back to top ([09f3032](https://github.com/fieldkit/website/commit/09f3032ac474c6c3b80993099bdcbf607de0c260))
+* callouts block ([6fa5dda](https://github.com/fieldkit/website/commit/6fa5ddac233a482c22c2cf786819da48ad47c4f1))
+* cta-block ([1d3809e](https://github.com/fieldkit/website/commit/1d3809e9dbf4e2edffad35cf7efc16e7001a174b))
+* fk platform template ([dd36ad7](https://github.com/fieldkit/website/commit/dd36ad71d04f0fb0c5133778c6797f570c8f47fd))
+* magnific popup ([6acfb16](https://github.com/fieldkit/website/commit/6acfb16a02f77076271127c1c0e3cb03a0c4dbac))
+
+
+### Bug Fixes
+
+* about header max width ([550e5e1](https://github.com/fieldkit/website/commit/550e5e1b4e499e063737b7e4fb4c2ee0c198ddbd))
+* acf title update ([f9750a2](https://github.com/fieldkit/website/commit/f9750a2b5fbb6ab0a4c4559e56eb0ab5e3da3bd7))
+* back to top products only ([05fdc9b](https://github.com/fieldkit/website/commit/05fdc9bf516428a3040650576f69e924c0f2f256))
+* callouts style updates ([97a03be](https://github.com/fieldkit/website/commit/97a03bece7c129cf964524bc1268e0a34c322242))
+* cart total th ([25dc7c9](https://github.com/fieldkit/website/commit/25dc7c9958c49d05c30d4d2d112f382d42db866b))
+* cta block style updates ([7fa7cec](https://github.com/fieldkit/website/commit/7fa7cec98512f7e7e28970f35bce74c60f522613))
+* loading error ([0c42d0e](https://github.com/fieldkit/website/commit/0c42d0e03fd636018597c6eebf787a6570f3fbcf))
+* product guide font sizes ([fb9c0f8](https://github.com/fieldkit/website/commit/fb9c0f8ffc8aacce276709c1f88e22104cf8d217))
+* products footer callout ([f3c7ecc](https://github.com/fieldkit/website/commit/f3c7ecc774780c045c3f0109ac32384fe2f7f18d))
+* quote line height ([5b08de5](https://github.com/fieldkit/website/commit/5b08de5941d7893d6283523070ddac111c7fc7fd))
+* removing acf field label ([a21765d](https://github.com/fieldkit/website/commit/a21765ddcf7841da39e1e2cf69d022d0330080c2))
+* restructure footer ([ccfc299](https://github.com/fieldkit/website/commit/ccfc29910c04c4579dc154dff01386add182e515))
+* rich text link ([7c6ae99](https://github.com/fieldkit/website/commit/7c6ae993faffcd325680d48b35ad9f0f313a41d7))
+* update warning icon ([84469b8](https://github.com/fieldkit/website/commit/84469b8cc886e78e4f51e6593ed012ca5bc1f697))
+* view cart link ([7fe62a5](https://github.com/fieldkit/website/commit/7fe62a572c19f4db5157705b6ea0ae1075dfad63))
+
 ### [0.1.4](https://github.com/fieldkit/website/compare/v0.1.3...v0.1.4) (2021-02-22)
 
 
