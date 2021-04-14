@@ -1,0 +1,13 @@
+.scroll-to-top {
+  background-image: url("assets/icons/back-to-top.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 95px;
+  display: none;
+  height: 72px;
+  position: fixed;
+  right: 15px;
+  width: 72px;
+  z-index: 3;
+}

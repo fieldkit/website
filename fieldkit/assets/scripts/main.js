@@ -7,12 +7,14 @@ import SiteHeader from "./components/SiteHeader";
 import TextInputContainer from "./components/TextInputContainer";
 import SortDropdown from "./components/SortDropdown";
 import FilterDropdown from "./components/FilterDropdown";
+import ScrollToTop from "./components/ScrollToTop";
 
 $(".site-header").each((index, element) => new SiteHeader(element));
 $(".load-more").each((index, element) => new LoadMore(element));
 $(".text-input-container").each(
   (index, element) => new TextInputContainer(element)
 );
+$(".scroll-to-top").each((index, element) => new ScrollToTop(element));
 
 $(".section-contact-form").each((index, element) => new ContactForm(element));
 
