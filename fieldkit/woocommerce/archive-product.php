@@ -50,6 +50,7 @@ $header['variant'] = "medium";
 if($header){
 	include(locate_template('template-parts/blocks/header.php', false, false));
 }
+
 }else{
 
 global $post;
@@ -152,7 +153,13 @@ if(is_product_category()){
 	if($pre_footer){
 		include(locate_template('template-parts/blocks/pre-footer.php', false, false));
 	}
+}
 
+if(!is_product_category() || is_product_category()){
+	$footer_call_out = get_field('footer_call_out',$shop_page_id);
+	if($footer_call_out){
+		include(locate_template('template-parts/blocks/footer-call-out.php', false, false));
+	}
 }
 /**
  * Hook: woocommerce_after_main_content.
