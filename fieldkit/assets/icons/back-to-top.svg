@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+    <defs>
+        <filter id="eon4iooova" width="149.1%" height="149.1%" x="-24.5%" y="-24.5%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g filter="url(#eon4iooova)" transform="translate(-1358 -1375) translate(1363 1378)">
+                <rect width="55" height="55" fill="#CE596B" rx="13"/>
+                <path fill="#FFF" fill-rule="nonzero" d="M27.5 19l12.955 12.955c.727.727.727 1.906 0 2.633-.69.689-1.784.725-2.515.109l-.119-.109L27.5 24.268l-10.321 10.32c-.69.689-1.784.725-2.515.109l-.119-.109c-.689-.689-.725-1.783-.108-2.515l.108-.118L27.5 19z"/>
+            </g>
+        </g>
+    </g>
+</svg>
