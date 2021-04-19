@@ -11,6 +11,8 @@
       width: 100%;
 
       tr {
+        border-color: $color-gray-3;
+
         &:nth-child(1) {
           td {
             color: $color-primary-dark-blue;
