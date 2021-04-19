@@ -294,3 +294,29 @@ if ( class_exists( 'YITH_Pre_Order_Premium' ) ) {
 	 return $availability_html;
 	}
 }
+
+// this is for subpages (product guide subpages)
+function mv_is_subpage( $page = null )
+{
+    global $post;
+    if ( ! is_page() )
+        return false;
+    if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
+        return false;
+    if ( ! isset( $page ) ) {
+        return true;
+    } else {
+        if ( is_int( $page ) ) {
+            if ( $post->post_parent == $page )
+                return true;
+        } else if ( is_string( $page ) ) {
+            $parent = get_ancestors( $post->ID, 'page' );
+            if ( empty( $parent ) )
+                return false;
+            $parent = get_post( $parent[0] );
+            if ( $parent->post_name == $page )
+                return true;
+        }
+        return false;
+    }
+}
