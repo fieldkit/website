@@ -11,7 +11,7 @@ $app_store = $download_app['app_store'];
 $google_play = $download_app['google_play'];
 ?>
 <footer class="site-footer">
-	<?php if(is_product_category() || is_shop()) : ?>
+	<?php if(is_page('product-guide') || mv_is_subpage('product-guide')) : ?>
 	<button class="scroll-to-top" aria-label="scroll to top"></button>
 	<?php endif; ?>
 	<div class="site-footer__newsletter">

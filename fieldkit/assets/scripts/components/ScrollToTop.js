@@ -21,9 +21,9 @@ class ScrollToTop {
 
   checkScroll() {
     const scrollTop = $window.scrollTop();
-    const isScrollingDown = scrollTop > this.lastScrollTop;
+    // const isScrollingDown = scrollTop > this.lastScrollTop;
 
-    if (isScrollingDown || scrollTop <= 0) {
+    if (scrollTop <= 200) {
       this.$element.fadeOut(FADE_DURATION);
     } else {
       this.$element.fadeIn(FADE_DURATION);
