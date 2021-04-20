@@ -89,4 +89,6 @@ $(".mp-lightbox").on("click", () => {
   });
 });
 
-
+if ($(".rendered-dropdown").find("li").first().hasClass('selected')) {
+  $('#product-filter-reset').hide();
+}
