@@ -190,5 +190,7 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/composer,linux,macos,node,windows
 
 certs/
+fieldkit/assets/scripts/main.bundle.js
+fieldkit/style.css
 tmp/
 wordpress/
