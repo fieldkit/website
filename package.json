@@ -56,5 +56,5 @@
     "watch:scripts": "webpack --mode=development --watch",
     "watch:styles": "node-sass --include-path node_modules/ --watch fieldkit/assets/styles/main.scss fieldkit/style.css"
   },
-  "version": "0.1.5"
+  "version": "0.1.6"
 }

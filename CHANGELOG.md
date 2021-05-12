@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/fieldkit/website/compare/v0.1.5...v0.1.6) (2021-05-12)
+
+
+### Bug Fixes
+
+* back to top on product guide pages ([6d3ea8e](https://github.com/fieldkit/website/commit/6d3ea8e3cdb1f32a763928a5a194b882600b7e40))
+* callout quote ([23c2bf0](https://github.com/fieldkit/website/commit/23c2bf0a70f307ea6ccddb571b8d87014289a233))
+* clear filter ([d8db3a8](https://github.com/fieldkit/website/commit/d8db3a8e1a923ede678ea84435e9b6863c63cd9e))
+* footer spacing ([bef680e](https://github.com/fieldkit/website/commit/bef680e808055a228ae615c90a4e63c2d1a51a34))
+* product guide quote ([bd85f5e](https://github.com/fieldkit/website/commit/bd85f5ea1582d819b209dd6b1bfe64eadeb3a78a))
+* rich text table ([8ec1d5d](https://github.com/fieldkit/website/commit/8ec1d5dab262819a48f05f3270081e79d159fb51))
+* table border color ([6ca1cc0](https://github.com/fieldkit/website/commit/6ca1cc06144c030da39afca250ddb40819cfa2e9))
+* table on default pages ([ce562eb](https://github.com/fieldkit/website/commit/ce562eb7afa5ef9f6d15784e19f06b59add46d76))
+
 ### [0.1.5](https://github.com/fieldkit/website/compare/v0.1.4...v0.1.5) (2021-04-14)
 
 
