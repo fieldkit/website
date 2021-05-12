@@ -27,7 +27,7 @@ $site-header-breakpoint: 800px;
 
   @include mq($from: $site-header-breakpoint) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
