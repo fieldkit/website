@@ -91,7 +91,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.39px;
         a {
           @include mq($until: medium) {
             display: flex;
@@ -109,6 +111,8 @@
         }
 
         a {
+          font-size: 14px;
+          font-weight: 500;
           letter-spacing: 0.39px;
         }
       }
@@ -169,6 +173,12 @@
 
         td {
           padding: 25px 0;
+        }
+        td.product-name .component-Core > p {
+          color: #2c3e50;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: .39px;
         }
       }
     }
