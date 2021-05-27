@@ -1,4 +1,33 @@
 .page-template-support {
+  .section-about-header {
+    .section__inner {
+      flex-direction: row;
+      text-align: center;
+    }
+  }
+
+  .section-about-header__body {
+    max-width: 280px;
+
+    @include mq($from: medium) {
+      max-width: 700px;
+    }
+  }
+
+  .section-about-header__heading {
+    position: inherit;
+    top: inherit;
+  }
+
+  .section-about-header__text {
+    position: relative;
+    top: -0.5em;
+
+    @include mq($from: medium) {
+      top: -1em;
+    }
+  }
+
   .section-cta-block {
     background-color: #1b80c9;
     margin-top: 20px;

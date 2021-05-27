@@ -4,11 +4,17 @@
 	<?php
 	$support_header = get_field('support_header');
 	$heading = $support_header['heading'];
+	$body = $support_header['body'];
 	$background_image = $support_header['background_image'];
 	?>
 	<header class="section section-about-header">
 		<div class="section__inner">
-			<h1 class="heading-1 section-about-header__heading"><?php echo $heading; ?></h1>
+			<div class="section-about-header__text">
+				<h1 class="heading-1 section-about-header__heading"><?php echo $heading; ?></h1>
+				<div class="section-about-header__body rich-text">
+					<?php echo $body; ?>
+				</div>
+			</div>
 			<div class="section-about-header__background hide-mobile">
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
 			</div>
