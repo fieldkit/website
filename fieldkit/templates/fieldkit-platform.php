@@ -55,22 +55,28 @@
 	$fieldkit_platform_callout = get_field('fieldkit_platform_callout');
 	$heading = $fieldkit_platform_callout['heading'];
 	$body = $fieldkit_platform_callout['body'];
-	$link = $fieldkit_platform_callout['link'];
+	$item = $fieldkit_platform_callout['item'];
 	?>
+	<?php if($heading || $body || $row) : ?>
 	<section class="section section-services-callout">
 		<div class="section__inner section__inner--inset">
+			<?php if($heading || $body) : ?>
 			<div class="rich-text rich-text--large">
+				<?php if($heading) : ?>
 				<h2 class="heading-3"><?php echo $heading; ?></h2>
+				<?php endif; ?>
 				<?php if ($body) echo $body; ?>
 			</div>
+			<?php endif; ?>
 			<?php
-			if ($link) {
-				$link['class_name'] = 'button button--primary section-services-callout__link';
-				set_query_var('link', $link);
-				get_template_part('template-parts/utilities/link');
-			}
-			?>
+			foreach ($item as $row) :
+			$links = $row['link']; ?>
+				<?php if($links) : ?>
+				<a class="button button--primary section-services-callout__link" href="<?php echo $links['url']; ?>" target="<?php echo $links['target']; ?>"><?php echo $links['title']; ?></a>
+				<?php endif; ?>
+			<?php endforeach; ?>
 		</div>
 	</section>
+	<?php endif; ?>
 </main>
 <?php get_footer(); ?>
