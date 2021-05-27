@@ -1,0 +1,88 @@
+.section-card-grid {
+  @extend %margins-horizontal;
+
+  margin-top: 47px;
+
+  @include mq($from: medium) {
+    margin-top: 40px;
+  }
+
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
+
+.card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.card-item {
+  margin-bottom: 20px;
+  width: 100%;
+
+  @include mq($from: medium) {
+    margin-bottom: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+  }
+
+  &:hover .card-heading,
+  &:focus .card-heading {
+    color: $color-primary-blue;
+  }
+}
+
+.card {
+  border: 1px solid #d8dce0;
+  border-radius: 4px;
+  display: flex;
+  padding-bottom: 29px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 29px;
+
+  @include mq($from: medium) {
+    padding-bottom: 44px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 44px;
+  }
+}
+
+.card-image {
+  position: relative;
+  width: 10%;
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 53px;
+    width: 100%;
+
+    @include mq($from: medium) {
+      max-width: 40px;
+    }
+  }
+}
+
+.card-text {
+  padding-left: 18px;
+  width: 90%;
+
+  @include mq($from: medium) {
+    padding-left: 21px;
+  }
+}
+
+.card-heading {
+  margin-bottom: 12px;
+
+  .heading-6 {
+    font-weight: 900;
+  }
+}

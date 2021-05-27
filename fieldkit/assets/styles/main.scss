@@ -81,6 +81,7 @@ Version: 1.0.0
 @import "sections/section-text-and-image";
 @import "sections/section-header";
 @import "sections/section-image";
+@import "sections/section-card-grid";
 @import "templates/404";
 @import "templates/about";
 @import "templates/blog-listing";
@@ -92,6 +93,7 @@ Version: 1.0.0
 @import "templates/search";
 @import "templates/sensor-specification";
 @import "templates/single";
+@import "templates/support";
 @import "woocommerce/woocommerce";
 @import "woocommerce/composite-product";
 @import "woocommerce/order-confirmation";
