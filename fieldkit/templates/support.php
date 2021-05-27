@@ -11,9 +11,11 @@
 		<div class="section__inner">
 			<div class="section-about-header__text">
 				<h1 class="heading-1 section-about-header__heading"><?php echo $heading; ?></h1>
+				<?php if($body) : ?>
 				<div class="section-about-header__body rich-text">
 					<?php echo $body; ?>
 				</div>
+				<?php endif; ?>
 			</div>
 			<div class="section-about-header__background hide-mobile">
 				<?php echo wp_get_attachment_image($background_image['ID'], 'full'); ?>
