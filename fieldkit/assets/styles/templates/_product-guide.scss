@@ -75,13 +75,13 @@
     width: 100%;
   }
 
-  // .rich-text p {
-  //   font-size: 17px;
+  p {
+    font-size: 17px;
 
-  //   @include mq($from: medium) {
-  //     font-size: 16px;
-  //   }
-  // }
+    @include mq($from: medium) {
+      font-size: 16px;
+    }
+  }
 
   blockquote {
     p {

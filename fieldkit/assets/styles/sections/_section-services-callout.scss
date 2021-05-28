@@ -24,4 +24,8 @@
   @extend .button;
 
   margin-top: 2em;
+
+  &:nth-last-of-type(1) {
+    margin-left: 18px;
+  }
 }

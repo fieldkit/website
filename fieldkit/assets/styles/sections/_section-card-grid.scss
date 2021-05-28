@@ -31,9 +31,11 @@
     width: 50%;
   }
 
-  &:hover .card-heading,
-  &:focus .card-heading {
-    color: $color-primary-blue;
+  a {
+    &:hover .card-heading,
+    &:focus .card-heading {
+      color: $color-primary-blue;
+    }
   }
 }
 

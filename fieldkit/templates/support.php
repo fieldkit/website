@@ -39,21 +39,28 @@
 					$heading = $card_item['heading'];
 					$body = $card_item['body'];
 					$icon = $card_item['icon'];
+					$link = $card_item['link'];
 				?>
 				<div class="card-item">
-					<div class="card">
-						<div class="card-image">
-							<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
-						</div>
-						<div class="card-text">
-							<div class="card-heading">
-								<h3 class="heading-6"><?php echo $heading; ?></h3>
+					<?php if($link) : ?>
+					<a href="<?php echo $link['url'];?>" target="<?php echo $link['target'];?>">
+					<?php endif; ?>
+						<div class="card">
+							<div class="card-image">
+								<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
 							</div>
-							<div class="card-body rich-text">
-								<?php echo $body; ?>
+							<div class="card-text">
+								<div class="card-heading">
+									<h3 class="heading-6"><?php echo $heading; ?></h3>
+								</div>
+								<div class="card-body rich-text">
+									<?php echo $body; ?>
+								</div>
 							</div>
 						</div>
-					</div>
+					<?php if($link) : ?>
+					</a>
+					<?php endif; ?>
 				</div>
 				<?php endforeach; ?>
 			</div>
