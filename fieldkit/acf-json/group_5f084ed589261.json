@@ -359,7 +359,7 @@
                     "name": "heading",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -426,5 +426,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1618383866
+    "modified": 1622164257
 }
