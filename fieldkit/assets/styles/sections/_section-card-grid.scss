@@ -4,7 +4,7 @@
   margin-top: 47px;
 
   @include mq($from: medium) {
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .section__inner {
@@ -29,6 +29,11 @@
     padding-left: 10px;
     padding-right: 10px;
     width: 50%;
+  }
+
+  &:hover .card,
+  &:focus .card {
+    box-shadow: 0 2px 4px 0 #d8dce0;
   }
 
   a {
