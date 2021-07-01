@@ -62,7 +62,7 @@
 					<h1 class="heading-5 search-no-results__heading"><?php echo sprintf(__('Search Results for <span>"%s"</span>'), get_search_query()) ?></h1>
 					<div class="rich-text text-image-layout--centered">
 						<h2 class="heading-2">Sorry, No Results Found </h2>
-						<h4 class="heading-4">Maybe let’s try a different term</h4>
+						<h4 class="heading-4">Here's a few suggestions</h4>
 						<img class="img no-results-img" src="<?php echo get_template_directory_uri(); ?>/assets/images/speech-bubbles.png" alt="">
 						<ul>
 							<li>Check that your search terms are spelled correctly</li>
