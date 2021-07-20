@@ -194,3 +194,5 @@ fieldkit/assets/scripts/main.bundle.js
 fieldkit/style.css
 tmp/
 wordpress/
+configs/
+docker-compose.yml

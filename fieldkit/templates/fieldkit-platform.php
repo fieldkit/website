@@ -1,6 +1,6 @@
 <?php /* Template Name: Fieldkit Platform */ ?>
 <?php get_header(); ?>
-<main class="site-main">
+<main class="site-main page-template-fk-platform">
 	<?php
 	$fieldkit_platform_header = get_field('fieldkit_platform_header');
 	$heading = $fieldkit_platform_header['heading'];
@@ -17,6 +17,39 @@
 			</div>
 		</div>
 	</header>
+
+	<?php
+	$fieldkit_platform_block = get_field('fieldkit_platform_block');
+	$heading = $fieldkit_platform_block['heading'];
+	$body = $fieldkit_platform_block['body'];
+	$icon = $fieldkit_platform_block['icon'];
+	$link = $fieldkit_platform_block['link'];
+	?>
+	<?php if($heading || $body || $icon || $link) : ?>
+	<section class="section section-cta-block">
+	<div class="section__inner section__inner--inset">
+		<div class="section-cta-block__container">
+			<div class="section-cta-block__icon">
+				<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
+			</div>
+			<div class="section-cta-block__body rich-text rich-text--large">
+				<?php if($heading) : ?>
+					<h2 class="heading-3"><?php echo $heading; ?></h2>
+				<?php endif; ?>
+				<?php if ($body) echo $body; ?>
+				<?php
+				if ($link) {
+					$link['class_name'] = 'button button--tertiary section-cta-block__link';
+					set_query_var('link', $link);
+					get_template_part('template-parts/utilities/link');
+				}
+				?>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<?php endif; ?>
 
 	<?php
 	$fieldkit_platform_text_and_image_grid = get_field('fieldkit_platform_text_and_image_grid');
