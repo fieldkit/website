@@ -309,6 +309,14 @@
   width: auto;
 }
 
+.woocommerce table.shop_attributes {
+  tr:first-child th {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    text-transform: inherit !important;
+  }
+}
+
 .woocommerce .related.products {
   text-align: center;
 }
