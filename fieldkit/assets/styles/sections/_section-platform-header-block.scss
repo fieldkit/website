@@ -1,0 +1,18 @@
+.section-fk-platform-header-block {
+  @extend %margins-horizontal;
+  @extend %margins-vertical;
+
+  .section__inner {
+    @extend %maximum-width;
+  }
+}
+
+.section-fk-platform-header-block__header {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+
+  @include mq($from: medium) {
+    max-width: 820px;
+  }
+}

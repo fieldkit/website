@@ -19,6 +19,22 @@
 	</header>
 
 	<?php
+	$fieldkit_platform_header_block = get_field('fieldkit_platform_header_block');
+	$header_block_heading = $fieldkit_platform_header_block['heading'];
+	$header_block_body = $fieldkit_platform_header_block['body'];
+	?>
+	<?php if($header_block_heading || $header_block_body) : ?>
+	<section class="section section-fk-platform-header-block">
+		<div class="section__inner">
+			<header class="section-fk-platform-header-block__header rich-text rich-text--large">
+				<?php if($header_block_heading) : ?><h2 class="heading-2"><?php echo $header_block_heading; ?></h2><?php endif; ?>
+				<?php if($header_block_body) : ?><?php echo $header_block_body; ?><?php endif; ?>
+			</header>
+		</div>
+	</section>
+	<?php endif; ?>
+
+	<?php
 	$fieldkit_platform_block = get_field('fieldkit_platform_block');
 	$heading = $fieldkit_platform_block['heading'];
 	$body = $fieldkit_platform_block['body'];
@@ -27,28 +43,27 @@
 	?>
 	<?php if($heading || $body || $icon || $link) : ?>
 	<section class="section section-cta-block">
-	<div class="section__inner section__inner--inset">
-		<div class="section-cta-block__container">
-			<div class="section-cta-block__icon">
-				<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
-			</div>
-			<div class="section-cta-block__body rich-text rich-text--large">
-				<?php if($heading) : ?>
-					<h2 class="heading-3"><?php echo $heading; ?></h2>
-				<?php endif; ?>
-				<?php if ($body) echo $body; ?>
-				<?php
-				if ($link) {
-					$link['class_name'] = 'button button--tertiary section-cta-block__link';
-					set_query_var('link', $link);
-					get_template_part('template-parts/utilities/link');
-				}
-				?>
+		<div class="section__inner section__inner--inset">
+			<div class="section-cta-block__container">
+				<div class="section-cta-block__icon">
+					<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
+				</div>
+				<div class="section-cta-block__body rich-text rich-text--large">
+					<?php if($heading) : ?>
+						<h2 class="heading-3"><?php echo $heading; ?></h2>
+					<?php endif; ?>
+					<?php if ($body) echo $body; ?>
+					<?php
+					if ($link) {
+						$link['class_name'] = 'button button--tertiary section-cta-block__link';
+						set_query_var('link', $link);
+						get_template_part('template-parts/utilities/link');
+					}
+					?>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
-
+	</section>
 	<?php endif; ?>
 
 	<?php
@@ -59,10 +74,12 @@
 	?>
 	<section class="section section-about-text-and-image-grid section-fk-platform-text-and-image-grid">
 		<div class="section__inner">
+			<?php if($header_heading || $header_body) : ?>
 			<header class="section-about-text-and-image-grid__header rich-text rich-text--large">
-				<h2 class="heading-2"><?php echo $header_heading; ?></h2>
-				<?php echo $header_body; ?>
+				<?php if($header_heading) : ?><h2 class="heading-2"><?php echo $header_heading; ?></h2><?php endif; ?>
+				<?php if($header_body) : ?><?php echo $header_body; ?><?php endif; ?>
 			</header>
+			<?php endif; ?>
 			<ul class="section-about-text-and-image-grid__list">
 				<?php
 				foreach($items as $item) :
