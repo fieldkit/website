@@ -433,7 +433,9 @@
       font-weight: 500;
     }
 
-    .woocommerce-orders-table tbody td {
+    .woocommerce-orders-table tbody td,
+    .wc-item-meta li,
+    .wc-item-meta li p {
       font-size: 14px;
       line-height: 21px;
     }
@@ -701,6 +703,7 @@ table.account-payment-methods-table th {
   font-weight: 900;
   line-height: 1.5;
 }
+
 table.account-payment-methods-table tr td {
   font-family: $font-family-base;
   font-size: 14px;

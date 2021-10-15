@@ -140,11 +140,7 @@
 }
 
 .search-no-results__main .text-image-layout--centered {
-  height: 70vh;
-
-  @include mq($from: medium) {
-    height: 90vh;
-  }
+  padding: 100px 0 20px;
 
   .heading-4 {
     font-weight: 300;
