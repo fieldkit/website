@@ -51,7 +51,7 @@
     "wpackagist-plugin/w3-total-cache": "^0.14.2",
     "wpackagist-plugin/woocommerce": "^4.1",
     "wpackagist-plugin/woocommerce-gateway-paypal-express-checkout": "^2.0",
-    "wpackagist-plugin/woocommerce-gateway-stripe": "^4.3",
+    "wpackagist-plugin/woocommerce-gateway-stripe": "^6.1",
     "wpackagist-plugin/woocommerce-services": "^1.23",
     "wpackagist-plugin/woocommerce-shipstation-integration": "^4.1",
     "wpackagist-plugin/wordfence": "^7.4",
