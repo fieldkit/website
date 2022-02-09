@@ -49,7 +49,7 @@
     "wpackagist-plugin/jetpack": "^8.5",
     "wpackagist-plugin/redirection": "^4.3",
     "wpackagist-plugin/w3-total-cache": "^0.14.2",
-    "wpackagist-plugin/woocommerce": "^4.1",
+    "wpackagist-plugin/woocommerce": "^6.2",
     "wpackagist-plugin/woocommerce-gateway-paypal-express-checkout": "^2.0",
     "wpackagist-plugin/woocommerce-gateway-stripe": "^4.3",
     "wpackagist-plugin/woocommerce-services": "^1.23",
