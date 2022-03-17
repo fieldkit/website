@@ -20,6 +20,7 @@ $google_play = $download_app['google_play'];
 	<div class="site-footer__inner">
 
 		<div class="site-footer__left">
+			<div class="site-footer__logo"><?php the_custom_logo(); ?></div>
 			<div class="site-footer__social">
 				<?php if ($twitter || $instagram || $facebook || $github) :?>
 				<h2 class="body site-footer__social-heading">Connect with Us</h2>
