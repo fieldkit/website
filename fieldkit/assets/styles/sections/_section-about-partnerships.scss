@@ -41,6 +41,12 @@
     text-align: right;
     width: calc(100% * (4 / 12));
   }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .section-about-featured-partnership-text {
