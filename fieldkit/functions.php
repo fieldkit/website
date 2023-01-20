@@ -320,3 +320,46 @@ function mv_is_subpage( $page = null )
         return false;
     }
 }
+
+// translates hard-coded texts on the site
+function translateText($text){
+	$locale = apply_filters( 'wpml_current_language', NULL );
+	$translations = array(
+		"Read More" => array(
+			"es" => "Lee Mas"
+		),
+		"Load More Posts" => array(
+			"es" => "Cargar más Entradas"
+		),
+		"Sign up to receive updates about FieldKit" => array(
+			'es' => "Regístrese para recibir actualizaciones sobre FieldKit"
+		),
+		"Add your email" => array(
+			'es' => "Agrega tu correo electrónico"
+		),
+		"Sign Up" => array(
+			'es' => "Regístrate"
+		),
+		"Product Guide" => array(
+			'es' => "Guía de Producto"
+		),
+		"Log In to Your Account" => array(
+			'es' => "Ingrese a su cuenta"
+		),
+		"Log In to Your Account" => array(
+			'es' => "Dirección de correo electrónico"
+		),
+		"Create Your Account" => array(
+			'es' => "Crea tu cuenta"
+		),
+		"Create an Account" => array(
+			'es' => "Crea tu cuenta"
+		),
+	);
+	if($locale == 'en'){
+			return $text;
+	}
+	else{
+		return $translations[$text][$locale];
+	}
+}

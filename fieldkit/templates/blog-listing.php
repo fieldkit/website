@@ -22,7 +22,7 @@
 	$date = get_the_date('', $featured_post->ID);
 	$excerpt = get_the_excerpt($featured_post->ID);
 	$link = [
-		title => 'Read More',
+		title => translateText("Read More"),
 		url => get_permalink($featured_post->ID),
 	];
 	$permalink = get_permalink($featured_post->ID);
@@ -95,7 +95,7 @@
 				</ul>
 				<?php if ($latest_posts->found_posts > 3) : ?>
 					<div class="section-blog-post-feed__load-more">
-						<button class="link link--large action-load-more">Load More Posts</button>
+						<button class="link link--large action-load-more"><?= translateText("Load More Posts") ?></button>
 					</div>
 				<?php endif; ?>
 			</div>

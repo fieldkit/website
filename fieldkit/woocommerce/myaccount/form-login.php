@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="u-column1 col-1 woocommerce-form--account-container">
 
-		<h2 class="heading-4"><?php esc_html_e( 'Log In to Your Account', 'woocommerce' ); ?></h2>
+		<h2 class="heading-4"><?php esc_html_e( translateText('Log In to Your Account'), 'woocommerce' ); ?></h2>
 
 		<form class="woocommerce-form woocommerce-form-login login " method="post">
 
@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="u-column2 col-2 woocommerce-form--account-container">
 
-		<h2 class="heading-4"><?php esc_html_e( 'Create Your Account', 'woocommerce' ); ?></h2>
+		<h2 class="heading-4"><?php esc_html_e( translateText('Create Your Account'), 'woocommerce' ); ?></h2>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
@@ -82,7 +82,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide form-row--email">
-				<label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+				<label for="reg_email"><?php esc_html_e( translateText('Email address'), 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 				<input type="email" class="woocommerce-Input woocommerce-Input--text input-text" placeholder="Email Address" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
 			</p>
 
@@ -103,7 +103,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<p class="woocommerce-form-row form-row">
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Create Account', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
+				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( translateText('Create Account'), 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
 			</p>
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>

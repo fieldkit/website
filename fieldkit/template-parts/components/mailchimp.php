@@ -1,11 +1,11 @@
 <div id="mc_embed_signup">
 	<form action="https://fieldkit.us4.list-manage.com/subscribe/post?u=5522cf83a6424e24be70f4654&id=16a57f11db" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-		<label for="mce-EMAIL" class="heading-4">Sign up to receive updates about FieldKit</label>
+		<label for="mce-EMAIL" class="heading-4"><?= translateText("Sign up to receive updates about FieldKit") ?></label>
 		<div id="mc_embed_signup_scroll">
 			<div class="mc-field-group">
-				<input type="email" value="" placeholder="Add your email" name="EMAIL" class="required email" id="mce-EMAIL">
+				<input type="email" value="" placeholder="<?= translateText("Add your email") ?>" name="EMAIL" class="required email" id="mce-EMAIL">
 			</div>
-			<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">Sign Up</button>
+			<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"><?= translateText("Sign Up") ?></button>
 		</div>
 		<div id="mce-responses" class="clear">
 			<div class="response" id="mce-error-response" style="display:none"></div>

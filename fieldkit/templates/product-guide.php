@@ -4,7 +4,7 @@
 	<article class="section section-product-guide">
 		<header class="section-product-guide__header">
 			<div class="section__inner">
-				<h1 class="heading-1">Product Guide</h1>
+				<h1 class="heading-1"><?= translateText("Product Guide") ?></h1>
 			</div>
 		</header>
 		<div class="section-product-guide-container">
