@@ -83,34 +83,32 @@ $header = get_field('header', 'option');
 			</div>
 			</button>
 			<?php
-// Retrieve language information
-$languages = icl_get_languages();
+				$languages = icl_get_languages();
 
-// Get the current language
-$current_language = ICL_LANGUAGE_CODE;
+				// Get the current language
+				$current_language = ICL_LANGUAGE_CODE;
 
-// Generate language switcher links
-$language_switcher = '<ul class="language-switcher">';
-foreach ($languages as $language) {
-    if ($language['language_code'] === $current_language) {
-        // Display the current language
-        $language_switcher .= '<li class="current-language">';
-        $language_switcher .= esc_html($language['native_name']);
-        $language_switcher .= '</li>';
-    } else {
-        // Display other language switcher links
-        $language_switcher .= '<li>';
-        $language_switcher .= '<a href="' . esc_url($language['url']) . '">' . esc_html($language['native_name']) . '</a>';
-        $language_switcher .= '</li>';
-    }
-}
-$language_switcher .= '</ul>';
+				// Generate language switcher links
+				$language_switcher = '<ul class="language-switcher">';
+				foreach ($languages as $language) {
+					if ($language['language_code'] === $current_language) {
+						// Display the current language
+						$language_switcher .= '<li class="current-language">';
+						$language_switcher .= esc_html($language['native_name']);
+						$language_switcher .= '</li>';
+					} else {
+						// Display other language switcher links
+						$language_switcher .= '<li>';
+						$language_switcher .= '<a href="' . esc_url($language['url']) . '">' . esc_html($language['native_name']) . '</a>';
+						$language_switcher .= '</li>';
+					}
+				}
+				$language_switcher .= '</ul>';
 
-// Output the language switcher
-echo $language_switcher;
-?>
-
-</div>
+				// Output the language switcher
+				echo $language_switcher;
+				?>
+			</div>
 		</div>
 	</div>
 </header>
