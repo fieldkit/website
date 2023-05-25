@@ -200,6 +200,12 @@
   }
 }
 
+.site-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .site-language ul {
   background: $color-background;
   bottom: 20px * -1;
@@ -223,5 +229,25 @@
     @media screen and (prefers-reduced-motion: reduce) {
       transition: none;
     }
+  }
+}
+
+.site-language__arrow-up {
+  display: none;
+  width: 9px;
+  height: 4px;
+
+  .site-language-open & {
+    display: inline-block;
+  }
+}
+
+.site-language__arrow-down {
+  display: inline-block;
+  width: 9px;
+  height: 4px;
+
+  .site-language-open & {
+    display: none;
   }
 }

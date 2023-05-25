@@ -75,6 +75,12 @@ $header = get_field('header', 'option');
 			<div class="site-header__control site-language">
 			<button type="button" class="action-toggle-language">
 			<?php echo fieldkit_get_icon('icon-globe'); ?>
+			<div class="site-language__arrow-down">
+				<?php echo fieldkit_get_icon('icon-ArrowDown'); ?>
+			</div>
+			<div class="site-language__arrow-up">
+				<?php echo fieldkit_get_icon('icon-ArrowUp'); ?>
+			</div>
 			</button>
 			<?php
 // Retrieve language information

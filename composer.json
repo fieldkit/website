@@ -1,6 +1,10 @@
 {
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "ffraenz/private-composer-installer": true,
+      "composer/installers": true
+    }
   },
   "extra": {
     "installer-paths": {
