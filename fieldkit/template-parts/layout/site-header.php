@@ -76,10 +76,10 @@ $header = get_field('header', 'option');
 			<button type="button" class="action-toggle-language">
 			<?php echo fieldkit_get_icon('icon-globe'); ?>
 			<div class="site-language__arrow-down">
-				<?php echo fieldkit_get_icon('icon-ArrowDown'); ?>
+				<?php echo fieldkit_get_icon('icon-arrow-down'); ?>
 			</div>
 			<div class="site-language__arrow-up">
-				<?php echo fieldkit_get_icon('icon-ArrowUp'); ?>
+				<?php echo fieldkit_get_icon('icon-arrow-up'); ?>
 			</div>
 			</button>
 			<?php
