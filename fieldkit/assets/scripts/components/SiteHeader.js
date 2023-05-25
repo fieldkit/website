@@ -2,6 +2,7 @@ import $ from "jquery";
 
 const $actionToggleNavigation = $(".action-toggle-navigation");
 const $actionToggleSearch = $(".action-toggle-search");
+const $actionToggleLanguage = $(".action-toggle-language");
 const $body = $("body");
 const $document = $(document);
 const $actionToggleLoginRegister = $(".action-toggle-account");
@@ -21,6 +22,7 @@ class SiteHeader {
     $document.on("keydown", (event) => this.handleKeyControl(event));
     $actionToggleNavigation.click(() => this.toggleNavigation());
     $actionToggleSearch.click(() => this.toggleSearch());
+    $actionToggleLanguage.click(() => this.toggleLanguageSwitcher());
     this.$parentMenuLink.click(this.handleClickParentMenuLink.bind(this));
     $actionToggleLoginRegister.click(() => this.toggleLoginRegisterMenu());
   }
@@ -32,6 +34,12 @@ class SiteHeader {
       !$target.closest(".site-search").length
     ) {
       $body.removeClass("site-search-open");
+    }
+    if (
+      !$target.closest(".action-toggle-language").length &&
+      !$target.closest(".language-nav").length
+    ) {
+      $body.removeClass("site-language-open");
     }
     if (
       !$target.closest(".action-toggle-account").length &&
@@ -62,10 +70,19 @@ class SiteHeader {
     $body.toggleClass("site-navigation-open");
     $body.removeClass("site-search-open");
     $body.removeClass("site-login-register-open");
+    $body.removeClass("language-nav-open");
   }
 
   toggleSearch() {
     $body.toggleClass("site-search-open");
+    $body.removeClass("site-navigation-open");
+    $body.removeClass("site-login-register-open");
+    $body.removeClass("site-language-open");
+  }
+
+  toggleLanguageSwitcher() {
+    $body.toggleClass("site-language-open");
+    $body.removeClass("site-search-open");
     $body.removeClass("site-navigation-open");
     $body.removeClass("site-login-register-open");
   }
@@ -74,6 +91,7 @@ class SiteHeader {
     $body.toggleClass("site-login-register-open");
     $body.removeClass("site-navigation-open");
     $body.removeClass("site-search-open");
+    $body.removeClass("site-language-open");
   }
 }
 
