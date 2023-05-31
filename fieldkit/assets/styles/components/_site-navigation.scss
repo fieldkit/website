@@ -25,13 +25,13 @@ $site-header-breakpoint: 800px;
 }
 
 .site-navigation {
-  #menu-header {
+  .menu {
     @include mq($from: $site-header-breakpoint) {
       display: flex;
     }
   }
 
-  #menu-header .menu-item {
+  .menu .menu-item {
     @extend .body;
 
     font-size: 14px;
@@ -44,7 +44,7 @@ $site-header-breakpoint: 800px;
     }
   }
 
-  #menu-header .menu-item {
+  .menu .menu-item {
     @include mq($from: $site-header-breakpoint) {
       display: flex;
       margin-right: 29px;
