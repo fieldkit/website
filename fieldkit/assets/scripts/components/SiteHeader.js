@@ -3,6 +3,7 @@ import $ from "jquery";
 const $actionToggleNavigation = $(".action-toggle-navigation");
 const $actionToggleSearch = $(".action-toggle-search");
 const $actionToggleLanguage = $(".action-toggle-language");
+const $actionToggleLanguageMobile = $(".action-toggle-language-switcher");
 const $body = $("body");
 const $document = $(document);
 const $actionToggleLoginRegister = $(".action-toggle-account");
@@ -25,6 +26,9 @@ class SiteHeader {
     $actionToggleLanguage.click(() => this.toggleLanguageSwitcher());
     this.$parentMenuLink.click(this.handleClickParentMenuLink.bind(this));
     $actionToggleLoginRegister.click(() => this.toggleLoginRegisterMenu());
+    $actionToggleLanguageMobile.click(() =>
+      $body.toggleClass("site-language-switcher-menu-open")
+    );
   }
 
   handleClickDocument(event) {

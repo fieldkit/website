@@ -1,4 +1,4 @@
-$site-header-breakpoint: 800px;
+$site-header-breakpoint: 1080px;
 
 .site-navigation-toggle {
   img {
@@ -145,6 +145,11 @@ $site-header-breakpoint: 800px;
     border-top: 1px solid $color-gray-3;
     margin-top: 30.5px;
     padding-top: 33px;
+    display: block;
+
+    @include mq($from: $site-header-breakpoint) {
+      display: none;
+    }
 
     a {
       @extend .button;
@@ -171,7 +176,7 @@ $site-header-breakpoint: 800px;
     opacity: 0;
     padding-left: $margin-left-medium;
     padding-right: $margin-right-medium;
-    padding-top: 56px + $margin-top * 2;
+    padding-top: $margin-top * 2;
     position: absolute;
     top: 0;
     transition: opacity $duration-fast, visibility 0s $duration-fast;
@@ -187,6 +192,7 @@ $site-header-breakpoint: 800px;
       opacity: 1;
       transition: opacity $duration-fast, visibility 0s;
       visibility: visible;
+      overflow-y: auto;
 
       @media screen and (prefers-reduced-motion: reduce) {
         transition: none;

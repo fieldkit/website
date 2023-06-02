@@ -200,10 +200,15 @@
   }
 }
 
-.site-language {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.site-language,
+.site-account {
+  display: none;
+
+  @include mq($from: 1080px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .site-language ul {
