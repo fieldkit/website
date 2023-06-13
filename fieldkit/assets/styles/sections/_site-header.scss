@@ -101,12 +101,16 @@ $site-header-breakpoint: 1080px;
 }
 
 .action-toggle-language-switcher {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  flex-direction: row;
-  padding: 13px 16px;
   border: solid 2px $color-gray-2;
+  width: 100%;
+  @extend %margins-horizontal;
+
+  .site-language-switcher-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 13px 0px;
+  }
 
   p {
     font-family: $font-family-avenir;

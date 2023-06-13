@@ -14,18 +14,19 @@ $header = get_field('header', 'option');
 					<button type="button" class="action-toggle-navigation site-navigation-close"></button>
 					<div class="site-language-switcher">
 						<button type="button" class="action-toggle-language-switcher">
-							<div class="icon-globe">
-								<?php echo fieldkit_get_icon('icon-globe'); ?>
-							</div>
-							<p>Language</p>
-							<div class="site-language-switcher__arrow-down">
-								<?php echo fieldkit_get_icon('icon-arrow-down'); ?>
-							</div>
-							<div class="site-language-switcher__arrow-up">
-								<?php echo fieldkit_get_icon('icon-arrow-up'); ?>
+							<div class="site-language-switcher-button">
+								<div class="icon-globe">
+									<?php echo fieldkit_get_icon('icon-globe'); ?>
+								</div>
+								<p>Language</p>
+								<div class="site-language-switcher__arrow-down">
+									<?php echo fieldkit_get_icon('icon-arrow-down'); ?>
+								</div>
+								<div class="site-language-switcher__arrow-up">
+									<?php echo fieldkit_get_icon('icon-arrow-up'); ?>
+								</div>
 							</div>
 						</button>
-
 						<?php
 						$languages = icl_get_languages();
 
