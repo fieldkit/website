@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-?><div class="details component_data <?php echo esc_attr( $classes ); ?>" <?php echo $legacy_attributes ?>><?php
+?><div class="details component_data <?php echo esc_attr( $classes ); ?>"><?php
 
 	/**
 	 * 'woocommerce_composited_product_details' hook.

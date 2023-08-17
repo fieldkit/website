@@ -1,7 +1,7 @@
 <?php
 if ($link) :
 	$class_name = $link['class_name'];
-	$tag = $link['tag'] ? $link['tag'] : 'a';
+	$tag = isset($link['tag']) ? $link['tag'] : 'a';
 	$target = $link['target'];
 	$title = $link['title'];
 	$url = $link['url'];
@@ -10,7 +10,7 @@ if ($link) :
 		<?php if ($class_name) : ?>
 			class="<?php echo $class_name; ?>"
 		<?php endif; ?>
-		<?php if ($link['download']) : ?>
+		<?php if (isset($link['download'])) : ?>
 			download
 		<?php endif; ?>
 		<?php if ($url) : ?>
