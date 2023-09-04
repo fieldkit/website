@@ -39,10 +39,10 @@
 					$heading = $card_item['heading'];
 					$body = $card_item['body'];
 					$icon = $card_item['icon'];
-					$link = $card_item['link'];
+					$link = $card_item['support_link'];
 				?>
 				<div class="card-item">
-					<?php if($link) : ?>
+					<?php if (isset($link['url'])) : ?>
 					<a href="<?php echo $link['url'];?>" target="<?php echo $link['target'];?>">
 					<?php endif; ?>
 						<div class="card">
@@ -58,7 +58,7 @@
 								</div>
 							</div>
 						</div>
-					<?php if($link) : ?>
+					<?php if(isset($link['url'])) : ?>
 					</a>
 					<?php endif; ?>
 				</div>
