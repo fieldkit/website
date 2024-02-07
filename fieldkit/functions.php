@@ -273,27 +273,6 @@ function order_received_empty_cart_action( $order_id ){
 	WC()->session->set('cart', array());
 }
 
-//yith preorder
-if ( class_exists( 'YITH_Pre_Order_Premium' ) ) {
-	remove_filter( 'woocommerce_get_stock_html', array( YITH_Pre_Order_Premium::instance()->frontend, 'show_date_on_single_product' ), 99 );
-	add_filter( 'woocommerce_get_stock_html', 'show_date_on_single_product_custom', 99, 3 );
-
-	function show_date_on_single_product_custom( $availability_html, $availability, $product = false ) {
-	 global $sitepress;
-	 if (!$product){
-		$product = YITH_Pre_Order_Premium::instance()->frontend->_product_from_availability;
-	 }
-	 $id          = $product->get_id();
-	 $id          = $sitepress ? yit_wpml_object_id( $id, 'product', true, $sitepress->get_default_language() ) : $id;
-	 $pre_order  = new YITH_Pre_Order_Product( $id );
-	 $is_preorder = $pre_order->get_pre_order_status();
-
-	 if ( 'yes' == $is_preorder )
-   	{
-	 return $availability_html . YITH_Pre_Order_Premium::instance()->frontend->availability_date( $id );   }
-	 return $availability_html;
-	}
-}
 
 // this is for subpages (product guide subpages)
 function mv_is_subpage( $page = null )
@@ -320,3 +299,48 @@ function mv_is_subpage( $page = null )
         return false;
     }
 }
+
+
+/**
+ * Disable WooCommerce resize for SVG images. WooCommerce 6
+ */
+// add_filter( 'wp_get_attachment_image_src', 'fix_wp_get_attachment_image_svg', 10, 4 );
+
+// function fix_wp_get_attachment_image_svg( $image, $attachment_id, $size, $icon ) {
+//     // Check if WooCommerce is enabled
+//     if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+
+//         if ( ! is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+//             $attachment = get_post( $attachment_id );
+//             $mime_type = $attachment->post_mime_type; // Get the attachment mime_type
+
+//             if ( $mime_type === 'image/svg+xml' ) {
+//                 return false;
+//             }
+//         }
+//     }
+
+//     return $image;
+// }
+
+
+
+//yith preorder DEPRECATED
+// if ( class_exists( 'YITH_Pre_Order_Premium' ) ) {
+// 	remove_filter( 'woocommerce_get_stock_html', array( YITH_Pre_Order_Premium::instance()->frontend, 'show_date_on_single_product' ), 99 );
+// 	add_filter( 'woocommerce_get_stock_html', 'show_date_on_single_product_custom', 99, 3 );
+
+// 	function show_date_on_single_product_custom( $availability_html, $availability, $product = false ) {
+// 	 global $sitepress;
+
+// 	 if (!$product){
+// 		$product = YITH_Pre_Order_Premium::instance()->frontend->product_from_availability;
+// 	 }
+
+// 	 $id          = $sitepress ? yit_wpml_object_id($product->get_id(), 'product', true, $sitepress->get_default_language() ) : $product->get_id();
+
+// 	 if ( YITH_Pre_Order()::is_pre_order_active( $id ) ) {
+// 	 return $availability_html . YITH_Pre_Order_Premium::instance()->frontend->print_availability_date( $id );   }
+// 	 return $availability_html;
+// 	}
+// }

@@ -30,7 +30,14 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 $shop_page_id = wc_get_page_id( 'shop' );
+global $post;
+$terms = get_the_terms($post->ID, 'product_cat');
 
+if ($terms && !is_wp_error($terms)) {
+	$cat_id = 'term_' . $terms[0]->term_id;
+} else {
+	$cat_id = ''; // Handle case when no category is assigned
+}
 if(!is_product_category()){
 $text_and_image = get_field('text_and_image',$shop_page_id);
 if($text_and_image){
@@ -53,8 +60,7 @@ if($header){
 
 }else{
 
-global $post;
-$cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
+
 
 	$text_and_image = get_field('text_and_image',$shop_page_id);
 	if($text_and_image){
@@ -98,7 +104,6 @@ $cat_id = 'term_'.get_the_terms( $post->ID, 'product_cat' )[0]->term_id;
 
 <?php
 if ( woocommerce_product_loop() ) {
-
 
 	/**
 	 * Hook: woocommerce_before_shop_loop.
