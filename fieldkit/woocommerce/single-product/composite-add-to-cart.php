@@ -9,7 +9,7 @@
  * When this occurs the version of the template file will be bumped and the readme will list any important changes.
  *
  * @since    1.0.0
- * @version  8.8.0
+ * @version  8.10.4
  */
 
 // Exit if accessed directly.
