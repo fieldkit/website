@@ -53,8 +53,8 @@ include(locate_template('template-parts/blocks/navbar-secondary.php', false, fal
 
 
 $header = get_field('header',$shop_page_id);
-$header['variant'] = "medium";
-if($header){
+if (is_array($header)) {
+	$header['variant'] = "medium";
 	include(locate_template('template-parts/blocks/header.php', false, false));
 }
 
@@ -74,9 +74,9 @@ if($header){
 	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
 
 	$header = get_field('header',$cat_id);
-	$header['variant'] = "medium";
-	if($header){
-	include(locate_template('template-parts/blocks/header.php', false, false));
+	if (is_array($header)) {
+		$header['variant'] = "medium";
+		include(locate_template('template-parts/blocks/header.php', false, false));
 	}
 
 	$product_feed_text_and_image = get_field('product_feed_text_and_image',$cat_id);
