@@ -22,8 +22,8 @@
 	$date = get_the_date('', $featured_post->ID);
 	$excerpt = get_the_excerpt($featured_post->ID);
 	$link = [
-		title => 'Read More',
-		url => get_permalink($featured_post->ID),
+		'title' => 'Read More',
+		'url' => get_permalink($featured_post->ID),
 	];
 	$permalink = get_permalink($featured_post->ID);
 	?>
