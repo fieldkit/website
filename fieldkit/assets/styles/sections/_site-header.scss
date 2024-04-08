@@ -96,13 +96,18 @@ $site-header-breakpoint: 1080px;
     flex-direction: column;
     padding: 13px 0px;
     background: $color-gray-2;
+
+    li a:hover{
+      text-shadow: .1px .1px 0 currentColor,.4px .1px 0 currentColor,.1px .1px 0 currentColor,.3px .3px 0 currentColor;
+    }
   }
 }
 
 .action-toggle-language-switcher {
   border: solid 2px $color-gray-2;
   width: 100%;
-  @extend %margins-horizontal;
+  padding-left: 16px;
+  padding-right: 16px;
 
   .site-language-switcher-button {
     display: flex;

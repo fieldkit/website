@@ -31,7 +31,8 @@ $site-header-breakpoint: 1080px;
     }
   }
 
-  .menu .menu-item {
+ .menu-header-container .menu .menu-item,
+ .menu-header-spanish-container .menu .menu-item {
     @extend .body;
 
     font-size: 14px;
@@ -41,6 +42,15 @@ $site-header-breakpoint: 1080px;
       &:not(:first-child) {
         margin-top: 28px;
       }
+    }
+  }
+
+  .menu-header-container .sub-menu .menu-item,
+  .menu-header-spanish-container .sub-menu .menu-item{
+    font-weight: 500;
+    text-transform: uppercase;
+    @include mq($until: $site-header-breakpoint) {
+      text-transform: capitalize;
     }
   }
 
@@ -104,7 +114,7 @@ $site-header-breakpoint: 1080px;
       }
 
       .menu-item a {
-        font-weight: 400 !important;
+        font-weight: 500;
       }
       .current-menu-item a {
         font-weight: bold !important;
@@ -162,8 +172,9 @@ $site-header-breakpoint: 1080px;
   .nav-button {
     border-top: 1px solid $color-gray-3;
     margin-top: 30.5px;
-    padding-top: 33px;
-
+    padding-top: 24px;
+    margin-left: 34px;
+    margin-right: 34px;
     display: block;
 
     @include mq($from: $site-header-breakpoint) {
@@ -215,9 +226,10 @@ $site-header-breakpoint: 1080px;
         transition: none;
       }
     }
-    .menu li > a {
-      padding-left: 34px;
-      padding-right: 34px;
+    .menu-header-container > .menu li > a,
+    .menu-header-spanish-container > .menu li > a {
+      margin-left: 34px;
+      margin-right: 34px;
     }
   }
 
@@ -239,7 +251,8 @@ $site-header-breakpoint: 1080px;
 }
 
 /*eslint-disable*/
-.menu-header-container {
+.menu-header-container,
+.menu-header-spanish-container {
   .current_page_item a {
     font-weight: bold !important;
   }
