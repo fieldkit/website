@@ -23,7 +23,7 @@ $google_play = $download_app['google_play'];
 			<div class="site-footer__logo"><?php the_custom_logo(); ?></div>
 			<div class="site-footer__social">
 				<?php if ($twitter || $instagram || $facebook || $github) :?>
-				<h2 class="body site-footer__social-heading">Connect with Us</h2>
+				<h2 class="body site-footer__social-heading"><?php esc_html_e( 'Connect with Us', 'fieldkit' ); ?></h2>
 				<div class="site-footer__social-icons">
 					<?php if ($twitter) : ?><a href="<?php echo $twitter; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('twitter'); ?></a><?php endif; ?>
 					<?php if ($instagram) : ?><a href="<?php echo $instagram; ?>" class="icon-button" target="_blank"><?php echo fieldkit_get_icon('instagram'); ?></a><?php endif; ?>
@@ -33,7 +33,7 @@ $google_play = $download_app['google_play'];
 				</div>
 				<?php endif; ?>
 				<?php if ($app_store || $google_play) :?>
-				<h2 class="body site-footer__social-heading">Download the App</h2>
+				<h2 class="body site-footer__social-heading"><?php esc_html_e( 'Download the App', 'fieldkit' ); ?></h2>
 				<div class="site-footer__download-app">
 					<?php if ($app_store) : ?><a href="<?php echo $app_store; ?>" class="app-icon" target="_blank"><?php echo fieldkit_get_icon('app_store'); ?></a><?php endif; ?>
 					<?php if ($google_play) : ?><a href="<?php echo $google_play; ?>" class="app-icon" target="_blank"><?php echo fieldkit_get_icon('google_play'); ?></a><?php endif; ?>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * My Account Dashboard
  *
@@ -17,7 +18,7 @@
  * @version     4.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly
 }
 ?>
@@ -27,67 +28,82 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	printf(
 		/* translators: 1: user display name 2: logout url */
-		__( 'Welcome, %1$s!', 'woocommerce' ),
-		esc_html( $current_user->display_name )
+		__('Welcome, %1$s!', 'woocommerce'),
+		esc_html($current_user->display_name)
 	);
 	?>
 </p>
 
 <div class="dashboard-portal">
-<?php
-$iconorders = '<svg><use xlink:href="'.get_template_directory_uri() . "/assets/icons/sprite.svg#icon-orders".'" /></svg>';
-$iconaddresses = '<svg><use xlink:href="'.get_template_directory_uri() . "/assets/icons/sprite.svg#icon-addresses".'" /></svg>';
-$iconuser = '<svg><use xlink:href="'.get_template_directory_uri() . "/assets/icons/sprite.svg#icon-user".'" /></svg>';
-?>
+	<?php
+	$iconorders = '<svg><use xlink:href="' . get_template_directory_uri() . "/assets/icons/sprite.svg#icon-orders" . '" /></svg>';
+	$iconaddresses = '<svg><use xlink:href="' . get_template_directory_uri() . "/assets/icons/sprite.svg#icon-addresses" . '" /></svg>';
+	$iconuser = '<svg><use xlink:href="' . get_template_directory_uri() . "/assets/icons/sprite.svg#icon-user" . '" /></svg>';
+	?>
 	<ul>
 		<li>
 			<?php
 			printf(
 				__(
-				 '<a href="%1$s">'.$iconorders.' View recent orders</a>', 'woocommerce' ),
-				esc_url( wc_get_endpoint_url( 'orders' )) );
-				?>
+					'<a href="%1$s">%2$s %3$s</a>',
+					'woocommerce'
+				),
+				esc_url(wc_get_endpoint_url('orders')),
+				$iconorders,
+				esc_html__('View recent orders', 'fieldkit')
+			);
+			?>
 		</li>
 		<li>
 			<?php
 			printf(
-				__( '
-				 <a href="%1$s">'.$iconaddresses.' Manage Addresses</a>', 'woocommerce' ),
-				esc_url( wc_get_endpoint_url( 'edit-address' ) ));
-				?>
+				__(
+					'<a href="%1$s">%2$s %3$s</a>',
+					'woocommerce'
+				),
+				esc_url(wc_get_endpoint_url('edit-address')),
+				$iconaddresses,
+				esc_html__('Manage Addresses', 'fieldkit')
+			);
+			?>
 		</li>
 		<li>
 			<?php
 			printf(
-				__( '
-				 <a href="%1$s">'.$iconuser.' Edit Account</a>', 'woocommerce' ),
-				esc_url( wc_get_endpoint_url( 'edit-account' ) ));
-				?>
+				__(
+					'<a href="%1$s">%2$s %3$s</a>',
+					'woocommerce'
+				),
+				esc_url(wc_get_endpoint_url('edit-account')),
+				$iconuser,
+				esc_html__('Edit Account', 'fieldkit')
+			);
+			?>
 		</li>
 
 	</ul>
 </div>
 
 <?php
-	/**
-	 * My Account dashboard.
-	 *
-	 * @since 2.6.0
-	 */
-	do_action( 'woocommerce_account_dashboard' );
+/**
+ * My Account dashboard.
+ *
+ * @since 2.6.0
+ */
+do_action('woocommerce_account_dashboard');
 
-	/**
-	 * Deprecated woocommerce_before_my_account action.
-	 *
-	 * @deprecated 2.6.0
-	 */
-	do_action( 'woocommerce_before_my_account' );
+/**
+ * Deprecated woocommerce_before_my_account action.
+ *
+ * @deprecated 2.6.0
+ */
+do_action('woocommerce_before_my_account');
 
-	/**
-	 * Deprecated woocommerce_after_my_account action.
-	 *
-	 * @deprecated 2.6.0
-	 */
-	do_action( 'woocommerce_after_my_account' );
+/**
+ * Deprecated woocommerce_after_my_account action.
+ *
+ * @deprecated 2.6.0
+ */
+do_action('woocommerce_after_my_account');
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

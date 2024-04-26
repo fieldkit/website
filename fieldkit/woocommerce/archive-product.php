@@ -53,8 +53,8 @@ include(locate_template('template-parts/blocks/navbar-secondary.php', false, fal
 
 
 $header = get_field('header',$shop_page_id);
-$header['variant'] = "medium";
 if($header){
+	$header['variant'] = "medium";
 	include(locate_template('template-parts/blocks/header.php', false, false));
 }
 
@@ -74,8 +74,8 @@ if($header){
 	include(locate_template('template-parts/blocks/navbar-secondary.php', false, false));
 
 	$header = get_field('header',$cat_id);
-	$header['variant'] = "medium";
 	if($header){
+	$header['variant'] = "medium";
 	include(locate_template('template-parts/blocks/header.php', false, false));
 	}
 
@@ -149,8 +149,8 @@ if ( woocommerce_product_loop() ) {
 if(is_product_category()){
 
 	$call_out = get_field('pre_footer_callout',$cat_id);
-	$call_out['variant'] = "margins-horizontal";
 	if($call_out){
+		$call_out['variant'] = "margins-horizontal";
 		include(locate_template('template-parts/blocks/call-out.php', false, false));
 	}
 

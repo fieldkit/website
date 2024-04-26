@@ -22,7 +22,7 @@ do_action( 'woocommerce_before_lost_password_form' );
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
 
-	<h2>Lost your password?</h2><?php // @codingStandardsIgnoreLine ?>
+	<h2><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></h2><?php // @codingStandardsIgnoreLine ?>
 
 	<p><?php echo apply_filters( 'woocommerce_lost_password_message', esc_html__( 'Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
 
