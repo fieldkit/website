@@ -25,7 +25,15 @@
 				?>
 			</div>
 			<div class="section-home-hero__image">
-				<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+				<?php
+$image_id = $image['ID'];
+$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+$image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
+?>
+<img src="<?php echo esc_url(wp_get_attachment_image_url($image_id, 'full')); ?>"
+     srcset="<?php echo esc_attr($image_sizes); ?>"
+     sizes="(max-width: 600px) 100vw, 50vw"
+     alt="<?php echo esc_attr($image_alt); ?>">
 			</div>
 		</div>
 		<div class="section-home-hero__background">

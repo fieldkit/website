@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="redirection-link">
 		<?php
-			echo '<a href="' . wc_get_page_permalink( 'myaccount' ) . '?action=register"> Create an account </a>';
+			echo '<a href="' . wc_get_page_permalink( 'myaccount' ) . '?action=register">' . <?php esc_html_e( 'Create an account', 'fieldkit' ); ?> .'</a>';
 		?>
 		</div>
 	</div>

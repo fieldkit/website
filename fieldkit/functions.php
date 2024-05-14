@@ -150,21 +150,6 @@ function woo_remove_product_tabs($tabs)
 add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
 
 
-add_filter( 'wcwl_join_waitlist_message_text', 'change_waitlist_message' );
-function change_waitlist_message( $text ) {
-return __('Join the waitlist to be emailed when this product becomes available.');
-}
-
-add_filter( 'wcwl_join_waitlist_success_message_text', 'change_waitlist_success_message_text' );
-function change_waitlist_success_message_text( $text ) {
-return __('You have been added to the waitlist for this product.');
-}
-
-add_filter( 'wcwl_leave_waitlist_success_message_text', 'change_leave_waitlist_success_message_text' );
-function change_leave_waitlist_success_message_text( $text ) {
-return __('You have been removed from the waitlist for this product.');
-}
-
 add_action('wp_logout','auto_redirect_after_logout');
 function auto_redirect_after_logout(){
   wp_redirect( home_url() );

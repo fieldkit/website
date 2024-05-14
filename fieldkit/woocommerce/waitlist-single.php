@@ -33,7 +33,7 @@
 		<div class="wcwl-display wcwl_intro">
 
 		<div class="wcwl_intro">
-			<p class="wcwl_heading">Sold Out/Coming Soon</p>
+			<p class="wcwl_heading"><?php esc_html_e('Sold Out/Coming Soon', 'fieldkit'); ?></p>
 			<p><?php echo $intro; ?></p>
 		</div>
 
@@ -47,8 +47,8 @@
 
 		<div class="wcwl_email_elements">
 			<div class="wcwl-input-group">
-				<input type="email" value="<?php echo $user_email; ?>" id="wcwl_email_<?php echo $product_id; ?>" name="wcwl_email" placeholder="Enter Your Email" class="wcwl_email" required/>
-				<label for="wcwl_email_<?php echo $product_id; ?>" class="wcwl_email_label">Enter Your Email</label>
+				<input type="email" value="<?php echo $user_email; ?>" id="wcwl_email_<?php echo $product_id; ?>" name="wcwl_email" placeholder="<?php esc_html_e('Enter Your Email', 'fieldkit'); ?>" class="wcwl_email" required/>
+				<label for="wcwl_email_<?php echo $product_id; ?>" class="wcwl_email_label"><?php esc_html_e('Enter Your Email', 'fieldkit'); ?></label>
 			</div>
 		<?php if ( 'join' === $context && ( 'true' === $is_archive || is_shop() || is_product_category() ) ) {
 			$context          = __( 'confirm', 'woocommerce-waitlist' );
