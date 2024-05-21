@@ -285,6 +285,27 @@ function mv_is_subpage( $page = null )
     }
 }
 
+function fieldkit_custom_wc_registration_errors($errors, $username, $email) {
+    if (empty($username) || empty($email)) {
+        $errors->add('registration_error', __('Please provide both username and email.', 'fieldkit'));
+    } else {
+        $errors->add('registration_error', __('Registration failed. Please try again.', 'fieldkit'));
+    }
+    return $errors;
+}
+add_filter('woocommerce_registration_errors', 'fieldkit_custom_wc_registration_errors', 10, 3);
+
+// For WordPress registration page
+function fieldkit_custom_wp_registration_errors($errors, $sanitized_user_login, $user_email) {
+    if (empty($sanitized_user_login) || empty($user_email)) {
+        $errors->add('registration_error', __('Please provide both username and email.', 'fieldkit'));
+    } else {
+        $errors->add('registration_error', __('Registration failed. Please try again.', 'fieldkit'));
+    }
+    return $errors;
+}
+add_filter('registration_errors', 'fieldkit_custom_wp_registration_errors', 10, 3);
+
 
 /**
  * Disable WooCommerce resize for SVG images. WooCommerce 6
