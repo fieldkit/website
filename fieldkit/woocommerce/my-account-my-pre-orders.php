@@ -8,81 +8,81 @@
  * http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-$columns = apply_filters( 'ywpo_my_pre_orders_columns', array(
-    esc_html__( 'Product', 'yith-pre-order-for-woocommerce' ),
-    esc_html__( 'Order', 'yith-pre-order-for-woocommerce' ),
-    esc_html__( 'Price', 'yith-pre-order-for-woocommerce' )
-) );
+$columns = apply_filters('ywpo_my_pre_orders_columns', array(
+	esc_html__('Product', 'yith-pre-order-for-woocommerce'),
+	esc_html__('Order', 'yith-pre-order-for-woocommerce'),
+	esc_html__('Price', 'yith-pre-order-for-woocommerce')
+));
 
 ?>
-	<div class="woocommerce-notices-wrapper"></div>
-	<h1>My Pre-Orders</h1>
-    <table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
-		<thead>
+<div class="woocommerce-notices-wrapper" id="primary"></div>
+<h1>My Pre-Orders</h1>
+<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
+	<thead>
 
 
-        <tr class="woocommerce-orders-table__row">
-            <?php foreach ( $columns as $column ) : ?>
-                <th data-title="<?php echo esc_attr( $column ); ?>"><?php echo $column; ?></th>
-            <?php endforeach; ?>
+		<tr class="woocommerce-orders-table__row">
+			<?php foreach ($columns as $column) : ?>
+				<th data-title="<?php echo esc_attr($column); ?>"><?php echo $column; ?></th>
+			<?php endforeach; ?>
 		</tr>
-		</thead>
-		<tbody>
-        <?php
-        if ( $all_customer_order_ids ) {
-            foreach ( $all_customer_order_ids as $order_id ) {
-                $order = wc_get_order( $order_id );
-                $items = $order->get_items();
-                foreach ( $items as $item_id => $item ) {
-	                $product = $item->get_product();
-	                if ( ! $product ) {
-		                continue;
-	                }
-	                $item_is_pre_order = ! empty( $item['ywpo_item_preorder'] ) ? $item['ywpo_item_preorder'] : '';
-                    if ( apply_filters( 'ywpo_my_pre_orders_show_row', 'yes' == $item_is_pre_order, $item ) ) {
-                        $is_visible        = $product->is_visible();
-                        $product_permalink = $is_visible ? $product->get_permalink() : '';
-                        ?>
-                        <tr class="woocommerce-orders-table__row">
-                            <td data-title="<?php echo esc_attr("Product"); ?>">
-                                <a href="<?php echo $product_permalink; ?>"><?php echo $product->get_title(); ?></a>
-                                <?php
-                                if ( $order instanceof WC_Data ) {
-	                                wc_display_item_meta( $item );
-	                                wc_display_item_downloads( $item);
-                                } else {
-	                                $order->display_item_meta( $item );
-	                                $order->display_item_downloads( $item );
-                                }
-                                ?>
-                            </td>
-                            <td data-title="<?php echo esc_attr("Order"); ?>">
-                                <a href="<?php echo esc_url( $order->get_view_order_url() ); ?>"><?php
-                                    echo esc_html_x( '#', 'hash before order number', 'yith-pre-order-for-woocommerce' )
-                                         . $order->get_order_number(); ?></a>
-                            </td>
-                            <td data-title="<?php echo esc_attr("Subtotal"); ?>">
-                                <?php echo $order->get_formatted_line_subtotal( $item ); ?>
+	</thead>
+	<tbody>
+		<?php
+		if ($all_customer_order_ids) {
+			foreach ($all_customer_order_ids as $order_id) {
+				$order = wc_get_order($order_id);
+				$items = $order->get_items();
+				foreach ($items as $item_id => $item) {
+					$product = $item->get_product();
+					if (! $product) {
+						continue;
+					}
+					$item_is_pre_order = ! empty($item['ywpo_item_preorder']) ? $item['ywpo_item_preorder'] : '';
+					if (apply_filters('ywpo_my_pre_orders_show_row', 'yes' == $item_is_pre_order, $item)) {
+						$is_visible        = $product->is_visible();
+						$product_permalink = $is_visible ? $product->get_permalink() : '';
+		?>
+						<tr class="woocommerce-orders-table__row">
+							<td data-title="<?php echo esc_attr("Product"); ?>">
+								<a href="<?php echo $product_permalink; ?>"><?php echo $product->get_title(); ?></a>
+								<?php
+								if ($order instanceof WC_Data) {
+									wc_display_item_meta($item);
+									wc_display_item_downloads($item);
+								} else {
+									$order->display_item_meta($item);
+									$order->display_item_downloads($item);
+								}
+								?>
 							</td>
-	                        <?php
-	                        do_action( 'ywpo_my_pre_orders_extra_columns', $item );
+							<td data-title="<?php echo esc_attr("Order"); ?>">
+								<a href="<?php echo esc_url($order->get_view_order_url()); ?>"><?php
+																								echo esc_html_x('#', 'hash before order number', 'yith-pre-order-for-woocommerce')
+																									. $order->get_order_number(); ?></a>
+							</td>
+							<td data-title="<?php echo esc_attr("Subtotal"); ?>">
+								<?php echo $order->get_formatted_line_subtotal($item); ?>
+							</td>
+							<?php
+							do_action('ywpo_my_pre_orders_extra_columns', $item);
 							?>
-                        </tr>
-                        <?php
-                    }
-                }
-            }
-        } else {
-            ?>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <?php
-        }
-        ?>
-		</tbody>
-    </table>
+						</tr>
+			<?php
+					}
+				}
+			}
+		} else {
+			?>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		<?php
+		}
+		?>
+	</tbody>
+</table>
 <?php
