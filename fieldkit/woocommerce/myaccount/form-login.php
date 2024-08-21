@@ -24,7 +24,7 @@ if (! defined('ABSPATH')) {
 	<?php do_action('woocommerce_before_customer_login_form'); ?>
 	<?php if (!isset($_GET['action'])) : ?>
 
-		<div class="u-column1 col-1 woocommerce-form--account-container" id="primary">
+		<div class="u-column1 col-1 woocommerce-form--account-container">
 
 			<h2 class="heading-4"><?php esc_html_e('Log In to Your Account', 'woocommerce'); ?></h2>
 
@@ -66,7 +66,7 @@ if (! defined('ABSPATH')) {
 
 	<?php if (isset($_GET['action']) == 'register') : ?>
 
-		<div class="u-column2 col-2 woocommerce-form--account-container" id="primary">
+		<div class="u-column2 col-2 woocommerce-form--account-container">
 
 			<h2 class="heading-4"><?php esc_html_e('Create Your Account', 'woocommerce'); ?></h2>
 
