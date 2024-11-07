@@ -26,14 +26,15 @@
 			</div>
 			<div class="section-home-hero__image">
 				<?php
-$image_id = $image['ID'];
-$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
-$image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
-?>
-<img src="<?php echo esc_url(wp_get_attachment_image_url($image_id, 'full')); ?>"
-     srcset="<?php echo esc_attr($image_sizes); ?>"
-     sizes="(max-width: 600px) 100vw, 50vw"
-     alt="<?php echo esc_attr($image_alt); ?>">
+				$image_id = $image['ID'];
+				$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+				$image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
+				?>
+				<img src="<?php echo esc_url(wp_get_attachment_image_url($image_id, 'full')); ?>"
+					srcset="<?php echo esc_attr($image_sizes); ?>"
+					sizes="(max-width: 600px) 100vw, 50vw"
+					class="lazyload"
+					alt="<?php echo esc_attr($image_alt); ?>">
 			</div>
 		</div>
 		<div class="section-home-hero__background">
@@ -50,10 +51,13 @@ $image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
 		<div class="section__inner">
 			<ul class="section-home-icon-grid__list">
 				<?php
-				foreach($items as $item) :
+				foreach ($items as $item) :
 					$icon = $item['icon'];
 					$heading = $item['heading'];
 					$body = $item['body'];
+					$icon_id = $icon['ID'];
+					$icon_alt = get_post_meta($icon_id, '_wp_attachment_image_alt', true);
+					$icon_sizes = wp_get_attachment_image_srcset($icon_id, 'full');
 				?>
 					<li class="section-home-icon-grid__item">
 						<div class="section-home-icon-grid__item-icon">
@@ -74,7 +78,11 @@ $image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
 					<li class="section-home-icon-grid__last-item">
 						<div class="section-home-icon-grid__last-item-inner">
 							<div class="section-home-icon-grid__last-item-top">
-								<?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
+								<img src="<?php echo esc_url(wp_get_attachment_image_url($icon_id, 'full')); ?>"
+									srcset="<?php echo esc_attr($icon_sizes); ?>"
+									sizes="(max-width: 600px) 100vw, 50vw"
+									class="lazyload"
+									alt="<?php echo esc_attr($image_alt); ?>">
 								<h2 class="heading-5 section-home-icon-grid__last-item-heading"><?php echo $heading; ?></h2>
 							</div>
 							<?php
@@ -93,50 +101,54 @@ $image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
 
 	<?php
 	$home_product_grid = get_field('home_product_grid');
-	$items = $home_product_grid['items'];
-	?>
-	<section class="section section-home-product-grid">
-		<div class="section__inner">
-			<ul class="section-home-product-grid__list">
-				<?php
-				foreach($items as $post) :
-					setup_postdata($post);
-					$image = [
-						'ID' => get_post_thumbnail_id()
-					];
-					$heading = get_the_title();
-					$body = get_the_excerpt();
-					$link = [
-						title => 'Learn More',
-						url => get_the_permalink(),
-					];
-				?>
-					<li class="section-home-product-grid__item">
-						<div class="section-home-product-grid__item-image">
-							<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
-						</div>
-						<div class="section-home-product-grid__item-text">
-							<div class="rich-text">
-								<h2 class="heading-6"><?php echo $heading; ?></h2>
-								<p><?php echo $body; ?></p>
-							</div>
-							<?php
-							if ($link) {
-								$link['class_name'] = 'button button--primary section-home-product-grid__item-link';
-								set_query_var('link', $link);
-								get_template_part('template-parts/utilities/link');
-							}
-							?>
-						</div>
-					</li>
-				<?php
-				endforeach;
-				wp_reset_postdata();
-				?>
-			<ul>
-		</div>
-	</section>
 
+	?>
+	<?php if (isset($home_product_grid['items']) && $home_product_grid['items'] !== ''): ?>
+		<?php
+		$items = $home_product_grid['items'];
+		?>
+		<section class="section section-home-product-grid">
+			<div class="section__inner">
+				<ul class="section-home-product-grid__list">
+					<?php
+					foreach ($items as $post) :
+						setup_postdata($post);
+						$image = [
+							'ID' => get_post_thumbnail_id()
+						];
+						$heading = get_the_title();
+						$body = get_the_excerpt();
+						$link = [
+							'title' => 'Learn More',
+							'url' => get_the_permalink(),
+						];
+					?>
+						<li class="section-home-product-grid__item">
+							<div class="section-home-product-grid__item-image">
+								<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+							</div>
+							<div class="section-home-product-grid__item-text">
+								<div class="rich-text">
+									<h2 class="heading-6"><?php echo $heading; ?></h2>
+									<p><?php echo $body; ?></p>
+								</div>
+								<?php
+								if ($link) {
+									$link['class_name'] = 'button button--primary section-home-product-grid__item-link';
+									set_query_var('link', $link);
+									get_template_part('template-parts/utilities/link');
+								}
+								?>
+							</div>
+						</li>
+					<?php
+					endforeach;
+					wp_reset_postdata();
+					?>
+				</ul>
+			</div>
+		</section>
+	<?php endif; ?>
 	<?php
 	$home_text_and_image_1 = get_field('home_text_and_image_1');
 	$heading = $home_text_and_image_1['heading'];
@@ -191,6 +203,10 @@ $image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
 	$body = $home_text_and_image_2['body'];
 	$link = $home_text_and_image_2['link'];
 	$image = $home_text_and_image_2['image'];
+
+	$home_image_id = $image['ID'];
+	$home_image_alt = get_post_meta($home_image_id, '_wp_attachment_image_alt', true);
+	$home_image_sizes = wp_get_attachment_image_srcset($home_image_id, 'full');
 	?>
 	<section class="section section-home-text-and-image-2">
 		<div class="section__inner section__inner--inset">
@@ -206,7 +222,11 @@ $image_sizes = wp_get_attachment_image_srcset($image_id, 'full');
 				?>
 			</div>
 			<div class="section-home-text-and-image-2__image">
-				<?php echo wp_get_attachment_image($image['ID'], 'full'); ?>
+				<img src="<?php echo esc_url(wp_get_attachment_image_url($home_image_id, 'full')); ?>"
+					srcset="<?php echo esc_attr($icon_sizes); ?>"
+					sizes="(max-width: 600px) 100vw, 50vw"
+					class="lazyload"
+					alt="<?php echo esc_attr($image_alt); ?>">
 			</div>
 		</div>
 	</section>
