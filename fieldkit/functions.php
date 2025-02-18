@@ -18,10 +18,9 @@ if (!function_exists('fieldkit_setup')) {
 		add_theme_support('title-tag');
 		add_theme_support('woocommerce');
 		load_theme_textdomain('fieldkit');
-		add_theme_support( 'wc-product-gallery-slider' );
-		add_theme_support( 'wc-product-gallery-zoom' );
-		add_theme_support( 'wc-product-gallery-lightbox' );
-
+		add_theme_support('wc-product-gallery-slider');
+		add_theme_support('wc-product-gallery-zoom');
+		add_theme_support('wc-product-gallery-lightbox');
 	}
 }
 add_action('after_setup_theme', 'fieldkit_setup');
@@ -80,7 +79,8 @@ function fieldkit_wp_head()
 }
 add_action('wp_head', 'fieldkit_wp_head', 0);
 
-function fieldkit_wpseo_metabox_prio() {
+function fieldkit_wpseo_metabox_prio()
+{
 	return 'low';
 }
 add_filter('wpseo_metabox_prio', 'fieldkit_wpseo_metabox_prio');
@@ -127,17 +127,19 @@ add_filter('woocommerce_single_product_image_thumbnail_html', 'wc_remove_link_on
 
 function fieldkit_widget()
 {
-    register_sidebar(
-	array(
-        'id' => 'sensors-header',
-        'name' => __('Sensor Type Category', 'fieldkit'),
-	));
+	register_sidebar(
+		array(
+			'id' => 'sensors-header',
+			'name' => __('Sensor Type Category', 'fieldkit'),
+		)
+	);
 
 	register_sidebar(
 		array(
 			'id' => 'accessories-header',
 			'name' => __('Accessories Category', 'fieldkit'),
-	));
+		)
+	);
 }
 
 add_action('widgets_init', 'fieldkit_widget');
@@ -150,17 +152,18 @@ function woo_remove_product_tabs($tabs)
 add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
 
 
-add_action('wp_logout','auto_redirect_after_logout');
-function auto_redirect_after_logout(){
-  wp_redirect( home_url() );
-  exit();
+add_action('wp_logout', 'auto_redirect_after_logout');
+function auto_redirect_after_logout()
+{
+	wp_redirect(home_url());
+	exit();
 }
 
 add_action('woocommerce_payment_complete_order_status', 'fieldkit_change_order_object_for_katana', 10, 2);
 function fieldkit_change_order_object_for_katana($status, $order_id)
 {
 	$order = wc_get_order($order_id);
-	foreach ( $order->get_items() as $item_id => $item ) {
+	foreach ($order->get_items() as $item_id => $item) {
 		$product = $item->get_product();
 		$product_type = $product->get_type();
 		$sku = $product->get_sku();
@@ -197,112 +200,117 @@ function fieldkit_customize_register($wp_customize)
 add_action('customize_register', 'fieldkit_customize_register');
 
 
-add_action( 'woocommerce_after_add_to_cart_form', 'fieldkit_sku', 5 );
-function fieldkit_sku(){
+add_action('woocommerce_after_add_to_cart_form', 'fieldkit_sku', 5);
+function fieldkit_sku()
+{
 	global $product;
 
-	if($product->get_children()){
+	if ($product->get_children()) {
 
 		echo '<p class="sku">';
 
-		if( $product->get_sku()){
-			echo '[' . $product->get_sku() .'] ';
+		if ($product->get_sku()) {
+			echo '[' . $product->get_sku() . '] ';
 		}
 
 		foreach ($product->get_children() as $key => $value) {
-			if(wc_get_product( $value )->get_sku()){
-				echo '<span id=sku-child-'. $key .'>[' . 	wc_get_product( $value )->get_sku() .']</span> ';
+			if (wc_get_product($value)->get_sku()) {
+				echo '<span id="sku-child-' . $key . '" data-value="' . wc_get_product($value)->get_sku() . '">[' . wc_get_product($value)->get_sku() . ']</span>';
 			}
 		}
 		echo '</p>';
-	}else{
-		if( $product->get_sku()){
-			echo '<p class="sku">[' . $product->get_sku() .']</p>';
+	} else {
+		if ($product->get_sku()) {
+			echo '<p class="sku">[' . $product->get_sku() . ']</p>';
 		}
 	}
-
 }
 
 
-remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
-add_action( 'woocommerce_before_shop_loop_item_title', 'fieldkit_loop_product_thumbnail', 10 );
-function fieldkit_loop_product_thumbnail() {
-    global $product;
-    $size = "full";
+remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+add_action('woocommerce_before_shop_loop_item_title', 'fieldkit_loop_product_thumbnail', 10);
+function fieldkit_loop_product_thumbnail()
+{
+	global $product;
+	$size = "full";
 
-    $image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
+	$image_size = apply_filters('single_product_archive_thumbnail_size', $size);
 
-    echo $product ? $product->get_image( $image_size ) : '';
+	echo $product ? $product->get_image($image_size) : '';
 }
 
-add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+add_filter('woocommerce_enable_order_notes_field', '__return_false');
 
-add_filter( 'woocommerce_cart_ready_to_calc_shipping', 'fk_disable_shipping_calc_on_cart', 99 );
-function fk_disable_shipping_calc_on_cart( $show_shipping ) {
-	if( is_cart() ) {
+add_filter('woocommerce_cart_ready_to_calc_shipping', 'fk_disable_shipping_calc_on_cart', 99);
+function fk_disable_shipping_calc_on_cart($show_shipping)
+{
+	if (is_cart()) {
 		return false;
 	}
 	return $show_shipping;
 }
 //shipping
-add_filter( 'woocommerce_shipping_calculator_enable_state', '__return_false' );
-add_filter( 'woocommerce_shipping_calculator_enable_city', '__return_false' );
-add_filter( 'woocommerce_shipping_calculator_enable_postcode', '__return_false' );
-add_filter( 'woocommerce_shipping_chosen_method', '__return_false', 99);
+add_filter('woocommerce_shipping_calculator_enable_state', '__return_false');
+add_filter('woocommerce_shipping_calculator_enable_city', '__return_false');
+add_filter('woocommerce_shipping_calculator_enable_postcode', '__return_false');
+add_filter('woocommerce_shipping_chosen_method', '__return_false', 99);
 
 //cart
-add_filter( 'woocommerce_persistent_cart_enabled', '__return_false' );
-add_action( 'woocommerce_thankyou', 'order_received_empty_cart_action', 10, 1 );
-function order_received_empty_cart_action( $order_id ){
+add_filter('woocommerce_persistent_cart_enabled', '__return_false');
+add_action('woocommerce_thankyou', 'order_received_empty_cart_action', 10, 1);
+function order_received_empty_cart_action($order_id)
+{
 	WC()->cart->empty_cart(true);
 	WC()->session->set('cart', array());
 }
 
 
 // this is for subpages (product guide subpages)
-function mv_is_subpage( $page = null )
+function mv_is_subpage($page = null)
 {
-    global $post;
-    if ( ! is_page() )
-        return false;
-    if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
-        return false;
-    if ( ! isset( $page ) ) {
-        return true;
-    } else {
-        if ( is_int( $page ) ) {
-            if ( $post->post_parent == $page )
-                return true;
-        } else if ( is_string( $page ) ) {
-            $parent = get_ancestors( $post->ID, 'page' );
-            if ( empty( $parent ) )
-                return false;
-            $parent = get_post( $parent[0] );
-            if ( $parent->post_name == $page )
-                return true;
-        }
-        return false;
-    }
+	global $post;
+	if (! is_page())
+		return false;
+	if (! isset($post->post_parent) or $post->post_parent <= 0)
+		return false;
+	if (! isset($page)) {
+		return true;
+	} else {
+		if (is_int($page)) {
+			if ($post->post_parent == $page)
+				return true;
+		} else if (is_string($page)) {
+			$parent = get_ancestors($post->ID, 'page');
+			if (empty($parent))
+				return false;
+			$parent = get_post($parent[0]);
+			if ($parent->post_name == $page)
+				return true;
+		}
+		return false;
+	}
 }
 
-function fieldkit_custom_wc_registration_errors($errors, $username, $email) {
-    if (empty($username) || empty($email)) {
-        $errors->add('registration_error', __('Please provide both username and email.', 'fieldkit'));
-    } else {
-        $errors->add('registration_error', __('Registration failed. Please try again.', 'fieldkit'));
-    }
-    return $errors;
+function fieldkit_custom_wc_registration_errors($errors, $username, $email)
+{
+	if (empty($username) || empty($email)) {
+		$errors->add('registration_error', __('Please provide both username and email.', 'fieldkit'));
+	} else {
+		$errors->add('registration_error', __('Registration failed. Please try again.', 'fieldkit'));
+	}
+	return $errors;
 }
 add_filter('woocommerce_registration_errors', 'fieldkit_custom_wc_registration_errors', 10, 3);
 
 // For WordPress registration page
-function fieldkit_custom_wp_registration_errors($errors, $sanitized_user_login, $user_email) {
-    if (empty($sanitized_user_login) || empty($user_email)) {
-        $errors->add('registration_error', __('Please provide both username and email.', 'fieldkit'));
-    } else {
-        $errors->add('registration_error', __('Registration failed. Please try again.', 'fieldkit'));
-    }
-    return $errors;
+function fieldkit_custom_wp_registration_errors($errors, $sanitized_user_login, $user_email)
+{
+	if (empty($sanitized_user_login) || empty($user_email)) {
+		$errors->add('registration_error', __('Please provide both username and email.', 'fieldkit'));
+	} else {
+		$errors->add('registration_error', __('Registration failed. Please try again.', 'fieldkit'));
+	}
+	return $errors;
 }
 add_filter('registration_errors', 'fieldkit_custom_wp_registration_errors', 10, 3);
 

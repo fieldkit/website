@@ -108,18 +108,20 @@
 .type-product table.variations {
   tr td {
     display: block;
+    width: 100%;
   }
 
-  a.reset_variations {
+  a.reset_variations,
+  button.reset_variations {
     align-items: center;
     display: flex;
-    margin-top: 7px;
-  }
+    margin-top: 17px;
 
-  a::before {
-    content: url("assets/icons/reset.svg");
-    line-height: 0;
-    margin-right: 6px;
+    &::before {
+      content: url("assets/icons/reset.svg");
+      line-height: 0;
+      margin-right: 6px;
+    }
   }
 }
 

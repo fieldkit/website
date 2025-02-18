@@ -1,13 +1,14 @@
 import "lazysizes";
-import $ from "jquery";
 import "magnific-popup";
+
+import $ from "jquery";
 import ContactForm from "./components/ContactForm";
-import LoadMore from "./components/LoadMore";
-import SiteHeader from "./components/SiteHeader";
-import TextInputContainer from "./components/TextInputContainer";
-import SortDropdown from "./components/SortDropdown";
 import FilterDropdown from "./components/FilterDropdown";
+import LoadMore from "./components/LoadMore";
 import ScrollToTop from "./components/ScrollToTop";
+import SiteHeader from "./components/SiteHeader";
+import SortDropdown from "./components/SortDropdown";
+import TextInputContainer from "./components/TextInputContainer";
 
 $(".site-header").each((index, element) => new SiteHeader(element));
 $(".load-more").each((index, element) => new LoadMore(element));
@@ -45,24 +46,42 @@ if ($('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist').length > 0
     $('.woocommerce-MyAccount-content').find('h2:first').text('Waitlists');
   }
 }
-
-if ($('.product-template-default select').length > 0) {
-  $('.sku span').hide();
-
-  $('.reset_variations').on('click', () => $('.sku span').hide());
-  $('.product-template-default select').on('change', (event) => {
-    const $el = $(event.currentTarget);
-    const $variationOptions = $el.children('.attached');
-    const $selectedOption = $variationOptions.filter((index, item) => {
-      return $(item).val() == $el.val()
+if ($(".product-template-default select").length > 0) {
+  $(".sku span").hide();
+  $(".variations_form").on("change", ".variations select", function () {
+    $(".sku span").hide();
+    let selectedAttributes = {};
+    // Get selected variation attributes
+    $(".variations_form select").each(function () {
+      let attributeName = $(this).attr("name");
+      let selectedValue = $(this).val();
+      selectedAttributes[attributeName] = selectedValue;
     });
 
-    if ($variationOptions.index($selectedOption) >= 0) {
-      const selectedindex = $variationOptions.index($selectedOption);
-      $('.sku span').hide();
-      $(`.sku span#sku-child-${selectedindex}`).show();
-    } else {
-      $('.sku span').hide();
+    // Loop through available variations to find the matching one
+    let selectedVariation = null;
+    $.each(
+      $(".variations_form").data("product_variations"),
+      function (index, variation) {
+        let isMatch = true;
+        // Check if the variation matches the selected options
+        $.each(selectedAttributes, function (attributeName, selectedValue) {
+          if (variation.attributes[attributeName] !== selectedValue) {
+            isMatch = false;
+            return false; // Break the loop if mismatch is found
+          }
+        });
+
+        if (isMatch) {
+          selectedVariation = variation; // If we find a match, save the variation
+          return false; // Stop looping once the variation is found
+        }
+      }
+    );
+    // If a matching variation is found, display its SKU
+    if (selectedVariation) {
+      let sku = selectedVariation.sku;
+      $(`.sku span[data-value='${sku}']`).show();
     }
   });
 }
@@ -79,11 +98,11 @@ $(".mp-lightbox").on("click", () => {
       verticalFit: true,
     },
     callbacks: {
-      open: function() {
-          $('body').addClass('overflow-hidden');
+      open: function () {
+        $('body').addClass('overflow-hidden');
       },
-      close: function() {
-          $('body').removeClass('overflow-hidden');
+      close: function () {
+        $('body').removeClass('overflow-hidden');
       },
     }
   });
