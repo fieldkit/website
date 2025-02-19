@@ -43,8 +43,8 @@ export default {
         severity: "warning"
       }
     ],
-    "declaration-property-value-no-unknown": false, // disabling to allow custom properties
     "declaration-no-important": null, // modifying to null to allow !important
+    "declaration-property-value-no-unknown": false, // disabling to allow custom properties
     // "max-nesting-depth": [
     //   2,
     //   {
