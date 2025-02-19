@@ -53,5 +53,5 @@
     "watch:styles": "sass --load-path=node_modules --watch fieldkit/assets/styles/main.scss fieldkit/style.css",
     "prepare": "husky"
   },
-  "version": "0.1.7"
+  "version": "0.1.8"
 }
