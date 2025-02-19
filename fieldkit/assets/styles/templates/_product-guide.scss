@@ -40,8 +40,8 @@
     }
 
     @include mq($from: medium) {
-      grid-template: auto / #{(100% * 3 / 12)} calc(
-          #{(100% * 9 / 12)} - #{$margin-left-medium}
+      grid-template: auto / #{100% * 3 / 12} calc(
+          #{100% * 9 / 12} - #{$margin-left-medium}
         );
       grid-template-areas: "aside content";
     }

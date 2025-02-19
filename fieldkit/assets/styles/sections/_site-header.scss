@@ -69,7 +69,6 @@ $site-header-breakpoint: 1080px;
 }
 
 .site-language-switcher {
-
   margin-bottom: 28px;
 
   @include mq($from: $site-header-breakpoint) {
@@ -97,8 +96,12 @@ $site-header-breakpoint: 1080px;
     padding: 13px 0px;
     background: $color-gray-2;
 
-    li a:hover{
-      text-shadow: .1px .1px 0 currentColor,.4px .1px 0 currentColor,.1px .1px 0 currentColor,.3px .3px 0 currentColor;
+    li a:hover {
+      text-shadow:
+        0.1px 0.1px 0 currentColor,
+        0.4px 0.1px 0 currentColor,
+        0.1px 0.1px 0 currentColor,
+        0.3px 0.3px 0 currentColor;
     }
   }
 }
@@ -129,7 +132,6 @@ $site-header-breakpoint: 1080px;
     height: 16px;
   }
 }
-
 
 .site-language-switcher__arrow-up {
   display: none;

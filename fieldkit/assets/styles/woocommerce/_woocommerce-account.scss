@@ -565,8 +565,10 @@
         background-size: 0px;
         border-bottom: 0px;
         margin-bottom: 13.5px;
-        text-shadow: -0.1px -0.1px 0 $color-primary-blue,
-          0.4px -0.1px 0 $color-primary-blue, -0.1px 0.1px 0 $color-primary-blue,
+        text-shadow:
+          -0.1px -0.1px 0 $color-primary-blue,
+          0.4px -0.1px 0 $color-primary-blue,
+          -0.1px 0.1px 0 $color-primary-blue,
           0.3px 0.3px 0 $color-primary-blue;
       }
 
@@ -680,7 +682,6 @@
 
 .woocommerce form .show-password-input::after,
 .woocommerce-page form .show-password-input::after {
-  // background: url("./assets/icons/show_password_icon.svg") no-repeat;
   content: "";
   display: block;
   height: 24px;

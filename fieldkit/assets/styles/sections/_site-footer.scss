@@ -103,18 +103,6 @@ $site-header-breakpoint: 800px;
   }
 }
 
-// .site-footer__menu-column {
-//   .wpb_content_element p {
-//     margin-bottom: 8px;
-//     margin-top: 8px;
-//   }
-
-//   .wpb_content_element a {
-//     color: inherit;
-//     font-weight: normal;
-//   }
-// }
-
 .site-footer__right {
   @include mq($from: $site-header-breakpoint) {
     display: flex;

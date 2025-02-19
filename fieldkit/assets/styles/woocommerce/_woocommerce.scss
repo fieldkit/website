@@ -1,8 +1,10 @@
 .woocommerce div.product .woocommerce-tabs ul.tabs::before {
   border-bottom-width: 2px;
 }
+
 .woocommerce a.button.wc-backward {
   @extend .button--primary;
+
   &:first-child {
     margin-top: 1em;
   }
