@@ -32,18 +32,18 @@ $("form.woocommerce-widget-layered-nav-dropdown").each(
 );
 
 
-if ($('.woocommerce-MyAccount-navigation-link--my-pre-orders').length > 0) {
-  $('.woocommerce-MyAccount-navigation-link--my-pre-orders').find('a').text('Pre-Orders');
-  if ($('.woocommerce-MyAccount-navigation-link--my-pre-orders').hasClass('is-active')) {
-    $('.woocommerce-MyAccount-content').find('h1:first').text('Pre-Orders')
+if ($(".woocommerce-MyAccount-navigation-link--my-pre-orders").length > 0) {
+  $(".woocommerce-MyAccount-navigation-link--my-pre-orders").find("a").text("Pre-Orders");
+  if ($(".woocommerce-MyAccount-navigation-link--my-pre-orders").hasClass("is-active")) {
+    $(".woocommerce-MyAccount-content").find("h1:first").text("Pre-Orders");
   }
 }
 
 
-if ($('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist').length > 0) {
-  $('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist').find('a').text('Waitlists');
-  if ($('.woocommerce-MyAccount-navigation-link--woocommerce-waitlist').hasClass('is-active')) {
-    $('.woocommerce-MyAccount-content').find('h2:first').text('Waitlists');
+if ($(".woocommerce-MyAccount-navigation-link--woocommerce-waitlist").length > 0) {
+  $(".woocommerce-MyAccount-navigation-link--woocommerce-waitlist").find("a").text("Waitlists");
+  if ($(".woocommerce-MyAccount-navigation-link--woocommerce-waitlist").hasClass("is-active")) {
+    $(".woocommerce-MyAccount-content").find("h2:first").text("Waitlists");
   }
 }
 if ($(".product-template-default select").length > 0) {
@@ -87,27 +87,27 @@ if ($(".product-template-default select").length > 0) {
 }
 
 $(".mp-lightbox").on("click", () => {
-  $('body').magnificPopup({
-    delegate: "a.mp-lightbox",
-    type: 'image',
+  $("body").magnificPopup({
+    callbacks: {
+      close: function () {
+        $("body").removeClass("overflow-hidden");
+      },
+      open: function () {
+        $("body").addClass("overflow-hidden");
+      },
+    },
     closeOnContentClick: false,
-    mainClass: 'mfp-img-mobile',
+    delegate: "a.mp-lightbox",
     fixedContentPos: true,
-    preloader: false,
     image: {
       verticalFit: true,
     },
-    callbacks: {
-      open: function () {
-        $('body').addClass('overflow-hidden');
-      },
-      close: function () {
-        $('body').removeClass('overflow-hidden');
-      },
-    }
+    mainClass: "mfp-img-mobile",
+    preloader: false,
+    type: "image",
   });
 });
 
-if ($(".rendered-dropdown").find("li").first().hasClass('selected')) {
-  $('#product-filter-reset').hide();
+if ($(".rendered-dropdown").find("li").first().hasClass("selected")) {
+  $("#product-filter-reset").hide();
 }

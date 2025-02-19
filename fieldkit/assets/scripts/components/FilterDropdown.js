@@ -55,7 +55,7 @@ class FilterDropdown {
         "</li>";
       this.$element.find(".rendered-dropdown").append(renderLI);
       if (element.selected) {
-        const spanLabel = element.innerText.substring(0, 4) == 'Any ' ? 'All ' + element.innerText.slice(4) : element.innerText;
+        const spanLabel = element.innerText.substring(0, 4) === "Any " ? "All " + element.innerText.slice(4) : element.innerText;
         this.$element.find(".rendered-dropdown-selected").append(
           "<span>Filter by: </span>" + spanLabel
         );
@@ -74,7 +74,7 @@ class FilterDropdown {
   handleSelectVariant(event) {
     const value = $(event.target)[0].dataset.value;
 
-    this.handleURL(this.$widgetName + '=', value);
+    this.handleURL(this.$widgetName + "=", value);
   }
 
   handleReset(e) {
@@ -92,7 +92,6 @@ class FilterDropdown {
 
     const selectx = x.match(/(?<name>orderby=)(?<value>[a-zA-Z0-9_-]+)/);
     if (selectx) {
-      console.log(selectx[0]);
       window.location.href =
         rootURL + pathUrl + "?" + selectx[0] + "&" + x1 + x2 + "#sidebar";
     } else {

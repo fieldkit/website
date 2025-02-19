@@ -1,51 +1,43 @@
 {
   "dependencies": {
-    "jquery": "^3.6.0",
+    "jquery": "^3.7.1",
     "lazysizes": "^5.3.2",
-    "magnific-popup": "^1.1.0",
+    "magnific-popup": "^1.2.0",
     "normalize.css": "^8.0.1",
-    "sass-mq": "^5.0.1"
+    "sass-mq": "^6.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2",
-    "@babel/preset-env": "^7.14.2",
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
-    "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.1.0",
-    "cssnano": "^4.1.11",
-    "eslint": "^7.26.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-compat": "^3.9.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "husky": "^4.3.8",
-    "node-sass": "^4.14.1",
-    "postcss-cli": "^7.1.2",
-    "postcss-custom-media": "^7.0.8",
-    "prettier": "^2.3.0",
-    "standard-version": "^9.3.0",
-    "stylelint": "^13.13.1",
-    "stylelint-a11y": "^1.2.3",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.2.0",
-    "stylelint-scss": "^3.19.0",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "cssnano": "^7.0.6",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-compat": "^6.0.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-promise": "^7.2.1",
+    "husky": "^9.1.7",
+    "postcss-cli": "^11.0.0",
+    "postcss-custom-media": "^11.0.5",
+    "prettier": "^3.5.1",
+    "standard-version": "^9.5.0",
+    "stylelint": "^16.14.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "22.14.0"
   },
   "license": "GPL-3.0-or-later",
   "private": true,
   "scripts": {
     "build": "npm run build:scripts && npm run build:styles",
     "build:scripts": "webpack --mode=production",
-    "build:styles": "node-sass --include-path node_modules/ fieldkit/assets/styles/main.scss fieldkit/style.css",
+    "build:styles": "sass --load-path=node_modules fieldkit/assets/styles/main.scss fieldkit/style.css",
     "commit": "git-cz",
     "lint": "npm run lint:scripts && npm run lint:styles",
     "lint:scripts": "eslint .",
@@ -54,7 +46,9 @@
     "release": "standard-version",
     "watch": "npm run watch:scripts & npm run watch:styles",
     "watch:scripts": "webpack --mode=development --watch",
-    "watch:styles": "node-sass --include-path node_modules/ --watch fieldkit/assets/styles/main.scss fieldkit/style.css"
+    "watch:styles": "sass --load-path=node_modules --watch fieldkit/assets/styles/main.scss fieldkit/style.css",
+    "prepare": "husky"
   },
+  "type": "module",
   "version": "0.1.7"
 }
