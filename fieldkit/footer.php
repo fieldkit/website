@@ -5,5 +5,6 @@
 			?>
 		</div>
 		<?php wp_footer(); ?>
+		<?php get_template_part('template-parts/layout/klaviyo-popup'); ?>
 	</body>
 </html>

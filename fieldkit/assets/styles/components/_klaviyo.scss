@@ -1,0 +1,18 @@
+#fieldkit_newsletter_heading {
+  margin-bottom: 20px;
+}
+
+#klaviyo_signup {
+  @extend .button;
+  @extend .button--primary;
+
+  background-color: #ce596b;
+  border: none;
+  color: #fff;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+
+  @include mq($from: large) {
+    min-width: 160px;
+  }
+}

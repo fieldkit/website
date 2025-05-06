@@ -16,7 +16,7 @@ $google_play = $download_app['google_play'];
 		<button class="scroll-to-top" aria-label="scroll to top"></button>
 	<?php endif; ?>
 	<div class="site-footer__newsletter">
-		<?php get_template_part('template-parts/components/mailchimp'); ?>
+		<?php get_template_part('template-parts/components/klaviyo'); ?>
 	</div>
 	<div class="site-footer__inner">
 

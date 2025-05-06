@@ -4,11 +4,18 @@ import "magnific-popup";
 import $ from "jquery";
 import ContactForm from "./components/ContactForm";
 import FilterDropdown from "./components/FilterDropdown";
+import KlaviyoPopup from "./components/Klaviyo";
 import LoadMore from "./components/LoadMore";
 import ScrollToTop from "./components/ScrollToTop";
 import SiteHeader from "./components/SiteHeader";
 import SortDropdown from "./components/SortDropdown";
 import TextInputContainer from "./components/TextInputContainer";
+
+$(document).ready(function () {
+  if ($("#fieldkit_klaviyo_integration").length && $("#klaviyo_popup").length) {
+    new KlaviyoPopup("#fieldkit_klaviyo_integration");
+  }
+});
 
 $(".site-header").each((index, element) => new SiteHeader(element));
 $(".load-more").each((index, element) => new LoadMore(element));
