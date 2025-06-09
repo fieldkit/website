@@ -254,6 +254,34 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_6847045257633",
+            "label": "Footer Settings - Newsletter Page",
+            "name": "footer_settings_-_newsletter_page",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "post_type": [
+                "page"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_651c677aa93da",
             "label": "Manual Translation",
             "name": "manual_translation",
@@ -342,5 +370,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1730983760
+    "modified": 1749485021
 }

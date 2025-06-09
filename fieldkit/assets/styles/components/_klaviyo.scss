@@ -16,3 +16,10 @@
     min-width: 160px;
   }
 }
+
+.klaviyo-form {
+  margin-top: 25px;
+  @include mq($from: large) {
+    margin-top: 0;
+  }
+}

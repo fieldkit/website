@@ -10,20 +10,20 @@
 	<header class="section section-contact-header">
 		<div class="section__inner">
 			<div class="rich-text">
-			<h1 class="heading-1 section-contact-header__heading">
-				<?php echo get_the_title();?>
-			</h1>
+				<h1 class="heading-1 section-contact-header__heading">
+					<?php echo get_the_title(); ?>
+				</h1>
 				<div class="section-contact-header__body">
 					<?php
-					if (is_page('partner-with-us' && $body ) ){
-						 echo $body;
+					if (is_page('partner-with-us' && $body)) {
+						echo $body;
 					}
 					?>
 				</div>
 			</div>
 
 			<div class="section-contact-header__background hide-mobile">
-				<?php if (is_page('partner-with-us') ):?>
+				<?php if (is_page('partner-with-us')): ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/partner-with-us-header.png" alt="">
 				<?php else : ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact_Header-scaled.png" alt="">
