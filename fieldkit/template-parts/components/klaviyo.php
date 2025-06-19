@@ -6,7 +6,7 @@
 	$newsletter_page_id = get_field('footer_settings_-_newsletter_page', 'option');
 	$newsletter_page_url = $newsletter_page_id ? get_permalink($newsletter_page_id) : '#';
 	?>
-	<a href="<?php echo esc_url($newsletter_page_url); ?>" id="klaviyo_signup" class="button" role="button" name="subscribe">
+	<a href="<?php echo esc_url($newsletter_page_url); ?>" id="klaviyo_signup" class="button" role="button" name="subscribe" target="_blank" rel="noopener noreferrer">
 		<?php esc_html_e('Sign up', 'fieldkit'); ?>
 	</a>
 </section>
