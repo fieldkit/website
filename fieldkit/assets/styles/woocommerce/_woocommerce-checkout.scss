@@ -1,3 +1,9 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../components/button";
+@use "../content/body";
+@use "../components/rich-text";
+
 .woocommerce-checkout {
   input {
     border-bottom: 1px solid $color-gray-3;
@@ -148,7 +154,7 @@
       p.form-row input[name="shipping_address_2"] {
         margin-top: 20px;
 
-        @include mq($from: medium) {
+        @include mq.viewport-medium {
           margin-top: 26px;
         }
       }
@@ -157,7 +163,7 @@
     .col-1 .woocommerce-shipping-fields {
       margin-top: 54px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin-top: 67px;
       }
     }
@@ -165,7 +171,7 @@
     .col-2 #order_review_heading {
       margin-bottom: 20px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin-bottom: 30px;
       }
     }
@@ -217,7 +223,7 @@
       margin: -10px 0 0 0.5em;
       max-width: 90px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin: -10px 0 0 0.5em;
       }
     }
@@ -248,7 +254,7 @@
     }
 
     .place-order {
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin-top: 4em;
         padding: unset;
       }
@@ -288,7 +294,7 @@
   }
 
   .col-2 {
-    @include mq($until: medium) {
+    @media (max-width: mq.$medium) {
       margin-top: 3em;
     }
   }
@@ -338,7 +344,7 @@
     a {
       margin-top: 1em;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin-left: auto;
         margin-top: unset;
       }

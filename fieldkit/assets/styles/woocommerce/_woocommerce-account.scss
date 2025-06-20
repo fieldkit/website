@@ -1,3 +1,12 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../content/body";
+@use "../content/heading";
+@use "../components/button";
+@use "../components/rich-text";
+@use "sass:math";
+
 .woocommerce-account {
   .select2-selection {
     border: 0px;
@@ -31,7 +40,7 @@
     flex-direction: column;
     margin-bottom: 130px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       flex-direction: row;
       margin-bottom: 100px;
     }
@@ -42,7 +51,7 @@
       margin-top: 40px;
       width: 100%;
 
-      @include mq($from: small) {
+      @include mq.viewport-small {
         width: auto;
       }
     }
@@ -55,7 +64,7 @@
       letter-spacing: normal;
       line-height: normal;
 
-      @include mq($from: large) {
+      @include mq.viewport-large {
         font-size: 32px;
       }
     }
@@ -69,7 +78,7 @@
       letter-spacing: normal;
       line-height: normal;
 
-      @include mq($from: large) {
+      @include mq.viewport-large {
         font-size: 24px;
       }
     }
@@ -80,10 +89,10 @@
     max-width: 100%;
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin-bottom: 0px;
       margin-right: 107px;
-      max-width: calc(#{(100% * 4 / 12)} - 53.5px);
+      max-width: calc(#{math.div(100% * 4, 12)} - 53.5px);
     }
 
     ul {
@@ -308,8 +317,8 @@
     max-width: 100%;
     width: 100%;
 
-    @include mq($from: medium) {
-      max-width: calc(#{(100% * 8 / 12)} - 53.5px);
+    @include mq.viewport-medium {
+      max-width: calc(#{math.div(100% * 8, 12)} - 53.5px);
     }
 
     > *:first-child {
@@ -331,7 +340,7 @@
       border-right: 0;
       border-top: 0;
 
-      @include mq($until: medium) {
+      @media (max-width: mq.$medium) {
         border-color: transparent;
       }
 
@@ -448,7 +457,7 @@
   .dashboard-portal {
     margin-top: 48px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin-top: 56px;
     }
 
@@ -460,7 +469,7 @@
       margin-top: 48px;
       padding-left: 0px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin-top: 56px;
       }
 
@@ -479,7 +488,7 @@
         padding: 20px;
         text-align: center;
 
-        @include mq($from: small) {
+        @include mq.viewport-small {
           justify-content: flex-start;
           margin-right: 42px;
           width: 140px;
@@ -565,8 +574,10 @@
         background-size: 0px;
         border-bottom: 0px;
         margin-bottom: 13.5px;
-        text-shadow: -0.1px -0.1px 0 $color-primary-blue,
-          0.4px -0.1px 0 $color-primary-blue, -0.1px 0.1px 0 $color-primary-blue,
+        text-shadow:
+          -0.1px -0.1px 0 $color-primary-blue,
+          0.4px -0.1px 0 $color-primary-blue,
+          -0.1px 0.1px 0 $color-primary-blue,
           0.3px 0.3px 0 $color-primary-blue;
       }
 
@@ -608,7 +619,7 @@
 
     .woocommerce-form-row--first,
     .woocommerce-form-row--last {
-      @include mq($until: small) {
+      @media (max-width: mq.$small) {
         width: 100%;
       }
     }
@@ -624,7 +635,7 @@
         margin-bottom: 0px;
       }
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin-bottom: 0px;
         padding-bottom: 0px;
       }
@@ -647,7 +658,7 @@
       left: 0;
       position: absolute;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         bottom: -50px;
       }
     }
@@ -710,7 +721,7 @@ table.account-payment-methods-table tr td {
 }
 
 table.my_account_orders .woocommerce-orders-table__row {
-  @include mq($until: medium) {
+  @media (max-width: mq.$medium) {
     background-color: #f4f5f7;
     border-color: transparent;
     border-radius: 2px;
@@ -718,7 +729,7 @@ table.my_account_orders .woocommerce-orders-table__row {
   }
 
   td {
-    @include mq($until: medium) {
+    @media (max-width: mq.$medium) {
       border-color: transparent;
     }
   }

@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "./section-about-header";
+
 .section-contact-header {
   @extend .section-about-header;
 }
@@ -9,7 +13,7 @@
   padding-top: 40px;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     max-width: 565px;
     padding-top: 0;
   }
@@ -25,7 +29,7 @@
   padding-top: 10px;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: -2.2em;
     max-width: 565px;
     padding-top: 0px;

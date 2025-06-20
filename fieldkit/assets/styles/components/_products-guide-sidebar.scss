@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../content/body";
+
 .menu-product-guide-sidebar-container,
 .menu-product-guide-sidebar-spanish-container {
   ul {
@@ -19,7 +23,7 @@
     padding-left: 14px;
     position: relative;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       font-size: 14px;
     }
 

@@ -1,3 +1,10 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/inset-width";
+@use "../layout-grid/variables" as *;
+
 .section-definition-list {
   @extend %margins-horizontal;
 
@@ -25,7 +32,7 @@
   display: flex;
   flex-direction: column;
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     flex-direction: row;
   }
 
@@ -44,7 +51,7 @@
   margin-bottom: 25px;
   max-width: 100%;
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     margin-bottom: initial;
     margin-right: 25px;
     max-width: 175px;

@@ -1,3 +1,10 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/inset-width";
+@use "../layout-grid/variables" as *;
+
 .section-default-content {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;

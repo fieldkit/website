@@ -1,3 +1,10 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/variables" as *;
+@use "../content/heading";
+
 .section-how-it-works-steps {
   @extend %margins-horizontal;
 
@@ -5,13 +12,13 @@
   margin-top: $spacing-2;
   padding-bottom: $spacing-2;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: $spacing-1;
     padding-bottom: $spacing-medium-1;
     padding-top: 0;
   }
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     margin-top: 0;
     padding-bottom: $spacing-large-1;
     padding-top: 0;
@@ -25,7 +32,7 @@
 .section-how-it-works-steps__item {
   margin-bottom: $spacing-2;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     align-items: flex-start;
     display: grid;
     grid-template: auto/24% 76%;
@@ -33,7 +40,7 @@
     margin-bottom: $spacing-medium-2;
   }
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: $spacing-large-1;
   }
 
@@ -46,7 +53,7 @@
   grid-area: img;
   margin-bottom: 20px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin: auto;
     margin-bottom: initial;
     margin-right: 47px;

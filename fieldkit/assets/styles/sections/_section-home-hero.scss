@@ -1,3 +1,11 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/inset-width";
+@use "../layout-grid/variables" as *;
+@use "sass:math";
+
 .section-home-hero {
   @extend %margins-horizontal;
   @extend %margins-vertical;
@@ -6,11 +14,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vw * 612 / 1440;
+  min-height: math.div(100vw * 612, 1440);
   position: relative;
   z-index: 0;
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     padding-bottom: 120px;
   }
 
@@ -20,7 +28,7 @@
     display: flex;
     flex-direction: column;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
@@ -29,8 +37,8 @@
 }
 
 .section-home-hero__text {
-  @include mq($from: medium) {
-    width: calc(50% - #{$margin-left-medium / 2});
+  @include mq.viewport-medium {
+    width: calc(50% - #{math.div($margin-left-medium, 2)});
   }
 
   .rich-text {
@@ -43,18 +51,18 @@
 .section-home-hero__link {
   margin-top: 1em;
 
-  @include mq($until: small) {
+  @media (max-width: mq.$small) {
     width: 100%;
   }
 }
 
 .section-home-hero__image {
-  @include mq($until: medium) {
+  @media (max-width: mq.$medium) {
     margin-top: $margin-top * 2;
   }
 
-  @include mq($from: medium) {
-    width: calc(50% - #{$margin-left-medium / 2});
+  @include mq.viewport-medium {
+    width: calc(50% - #{math.div($margin-left-medium, 2)});
   }
 
   img {
@@ -80,7 +88,7 @@
     object-position: left center;
     width: 200%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       object-position: 50% 50%;
       width: 100%;
     }

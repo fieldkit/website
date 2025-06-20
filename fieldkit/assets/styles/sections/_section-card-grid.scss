@@ -1,9 +1,14 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .section-card-grid {
   @extend %margins-horizontal;
 
   margin-top: 47px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 0;
   }
 
@@ -24,7 +29,7 @@
   margin-bottom: 20px;
   width: 100%;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 22px;
     padding-left: 10px;
     padding-right: 10px;
@@ -53,7 +58,7 @@
   padding-right: 11px;
   padding-top: 29px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-bottom: 44px;
     padding-left: 23px;
     padding-right: 23px;
@@ -71,7 +76,7 @@
     max-width: 53px;
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       max-width: 40px;
     }
   }
@@ -81,7 +86,7 @@
   padding-left: 18px;
   width: 90%;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-left: 21px;
   }
 }

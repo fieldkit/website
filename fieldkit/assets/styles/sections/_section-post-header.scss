@@ -1,10 +1,16 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/inset-width";
+
 .section-post-header {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
   margin-bottom: 52px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 35px;
   }
 

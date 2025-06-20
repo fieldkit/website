@@ -1,3 +1,6 @@
+@use "./button";
+@use "../abstracts/mixins/mq-conf" as mq;
+
 #fieldkit_newsletter_heading {
   margin-bottom: 20px;
 }
@@ -12,14 +15,14 @@
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     min-width: 160px;
   }
 }
 
 .klaviyo-form {
   margin-top: 25px;
-  @include mq($from: large) {
+  @include mq.viewport-large {
     margin-top: 0;
   }
 }

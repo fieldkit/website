@@ -1,8 +1,16 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/inset-width";
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/variables" as *;
+@use "sass:math";
+
 .section-product-guide {
   padding-bottom: 200px;
   padding-top: 80px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-bottom: 400px;
     padding-top: 80px;
   }
@@ -14,7 +22,7 @@
   margin-bottom: 40px;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     border-bottom: 1px solid $color-gray-4;
     margin-bottom: 60px;
     padding-bottom: 60px;
@@ -35,13 +43,13 @@
     grid-template: auto / 100%;
     grid-template-areas: "aside" "content";
 
-    @include mq($from: small) {
+    @include mq.viewport-small {
       grid-gap: $margin-left-medium;
     }
 
-    @include mq($from: medium) {
-      grid-template: auto / #{(100% * 3 / 12)} calc(
-          #{(100% * 9 / 12)} - #{$margin-left-medium}
+    @include mq.viewport-medium {
+      grid-template: auto / #{math.div(100% * 3, 12)} calc(
+          #{math.div(100% * 9, 12)} - #{$margin-left-medium}
         );
       grid-template-areas: "aside content";
     }
@@ -52,7 +60,7 @@
   grid-area: aside;
   margin-bottom: 40px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 0px;
   }
 }
@@ -78,7 +86,7 @@
   p {
     font-size: 17px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       font-size: 16px;
     }
   }

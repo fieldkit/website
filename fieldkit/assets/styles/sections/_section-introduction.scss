@@ -1,3 +1,10 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/inset-width";
+@use "../layout-grid/variables" as *;
+@use "../content/heading";
+
 .section-introduction {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
@@ -14,7 +21,7 @@
 
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     max-width: 565px;
   }
 }
@@ -24,13 +31,13 @@
   margin-right: -20px;
   margin-top: 36px;
 
-  @include mq($from: 480px) {
+  @media (min-width: 480px) {
     margin-left: -56px;
     margin-right: -56px;
     margin-top: 60px;
   }
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     margin-left: unset;
     margin-right: unset;
   }
@@ -45,7 +52,7 @@
 .section-introduction__text {
   margin-top: 36px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     column-count: 2;
     margin-top: 60px;
   }

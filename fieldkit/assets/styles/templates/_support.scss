@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .page-template-support {
   .section-about-header {
     .section__inner {
@@ -9,7 +13,7 @@
   .section-about-header__body {
     max-width: 280px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       max-width: 700px;
     }
   }
@@ -23,7 +27,7 @@
     position: relative;
     top: -0.5em;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       top: -1em;
     }
   }
@@ -32,7 +36,7 @@
     background-color: #1b80c9;
     margin-top: 20px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin-top: 60px;
     }
   }
@@ -42,7 +46,7 @@
 
     margin-bottom: 40px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin-bottom: 126px;
     }
 

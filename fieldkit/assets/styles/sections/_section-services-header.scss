@@ -1,10 +1,13 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "./section-about-header";
+
 .section-services-header {
   @extend .section-about-header;
 
   margin-top: 30px;
-  min-height: 100vw * 500 / 1560;
+  min-height: 100vw * calc(500 / 1560);
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 45px;
   }
 
@@ -12,7 +15,7 @@
     font-size: 16px;
     line-height: normal;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       font-size: 24px;
       line-height: normal;
     }
@@ -26,7 +29,7 @@
   padding-top: 30px;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     max-width: 803px;
   }
 }
@@ -41,7 +44,7 @@
   width: 100%;
   z-index: -1;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     max-width: 760px;
   }
 
@@ -51,7 +54,7 @@
     object-fit: inherit;
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       object-fit: contain;
     }
   }

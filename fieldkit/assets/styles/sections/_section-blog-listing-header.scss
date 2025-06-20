@@ -1,3 +1,6 @@
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .section-blog-listing-header {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;

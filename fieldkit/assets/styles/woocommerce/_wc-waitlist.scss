@@ -1,3 +1,10 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../content/body";
+@use "../content/heading";
+@use "../components/button";
+
 .wcwl-input-group {
   margin-top: 35px;
   position: relative;
@@ -61,7 +68,7 @@
   text-align: center;
   width: 100%;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 20px;
     text-align: left;
   }
@@ -71,7 +78,7 @@
 
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       width: unset;
     }
   }
@@ -133,7 +140,7 @@
   font-size: 16px;
   font-weight: 900;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     font-size: 32px;
   }
 }
@@ -146,7 +153,7 @@
   margin-top: 56px;
   width: 100%;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 29px;
   }
 
@@ -168,7 +175,7 @@
     margin-bottom: 14px;
     margin-top: 27px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin-bottom: 17px;
       margin-top: 30px;
     }
@@ -195,7 +202,7 @@
   overflow: hidden;
   position: relative;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 14px;
   }
 }

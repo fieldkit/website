@@ -1,9 +1,15 @@
+@use "../abstracts/variables/variables" as *;
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../content/heading";
+@use "../content/list";
 .rich-text {
   > *:not(:first-child) {
     margin-top: 1em;
   }
 
-  a:not(.button):not(.woocommerce-error):not(.woocommerce-info):not(.mp-lightbox) {
+  a:not(.button):not(.woocommerce-error):not(.woocommerce-info):not(
+      .mp-lightbox
+    ) {
     color: $color-primary-dark-blue;
     font-weight: 900;
 
@@ -101,7 +107,7 @@
     margin-left: 0;
     padding: 4px 33px 4px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin-left: 20px;
     }
 

@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../content/body";
+
 .woocommerce-account form .reg_password .show-password-input {
   &::after {
     color: #2c3e50;

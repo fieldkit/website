@@ -1,3 +1,8 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../content/body";
+@use "../content/heading";
 .product-type-composite .composite_form .composite_pagination {
   ul.pagination_elements li.pagination_element {
     background-color: #f4f5f7;
@@ -146,7 +151,7 @@
   padding: 0 !important;
   width: 40% !important;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     width: 20% !important;
   }
 }
@@ -158,7 +163,7 @@
     text-align: left !important;
     width: 60% !important;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       width: 80% !important;
     }
   }
@@ -348,7 +353,7 @@ li.component_option_thumbnail_container {
     transform: translateY(-70%) rotate(-45deg);
     width: 10px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       right: 16%;
     }
   }

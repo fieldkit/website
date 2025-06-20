@@ -1,3 +1,8 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .section-about-values {
   @extend %margins-horizontal;
   @extend %margins-vertical;
@@ -21,11 +26,11 @@
   margin-bottom: 140px;
   text-align: center;
 
-  @include mq($from: small) {
+  @include mq.viewport-small {
     margin-bottom: 100px;
   }
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: initial;
@@ -36,9 +41,9 @@
   margin-bottom: 76px;
   width: 100%;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 0px;
-    width: (100% / 5);
+    width: calc(100% / 5);
   }
 
   &:last-child {

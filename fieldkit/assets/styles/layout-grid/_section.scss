@@ -1,3 +1,9 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "variables" as *;
+@use "maximum-width";
+@use "margins";
+@use "inset-width";
+
 .section {
   width: 100%;
 }
@@ -39,7 +45,7 @@
 .hide-desktop {
   display: block;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     display: none;
   }
 }
@@ -47,7 +53,7 @@
 .hide-mobile {
   display: none;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     display: block;
   }
 }

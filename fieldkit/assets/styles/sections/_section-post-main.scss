@@ -1,3 +1,9 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/inset-width";
+
 .section-post-main {
   @extend %margins-horizontal;
 
@@ -11,12 +17,12 @@
   margin-left: -20px;
   margin-right: -20px;
 
-  @include mq($from: 480px) {
+  @media (min-width: 480px) {
     margin-left: -56px;
     margin-right: -56px;
   }
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     margin-left: unset;
     margin-right: unset;
   }

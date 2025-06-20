@@ -1,10 +1,16 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/variables" as *;
+
 .section.search-results {
   @extend %margins-horizontal;
 
   padding-bottom: 80px;
   padding-top: 20px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-top: 40px;
   }
 
@@ -31,7 +37,7 @@
 .search-results__group {
   margin-top: $margin-top;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 3em;
   }
 }
@@ -52,11 +58,11 @@
     padding: 16px;
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       width: 50%;
     }
 
-    @include mq($from: large) {
+    @include mq.viewport-large {
       width: 33.33%;
     }
   }

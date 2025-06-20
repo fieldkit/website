@@ -1,3 +1,8 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../content/heading";
+@use "../content/form";
+
 .wpcf7-form {
   p {
     margin-top: 20px;
@@ -51,7 +56,7 @@
   max-width: 620px;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: initial;
     text-align: right;
   }
@@ -60,8 +65,7 @@
 div.wpcf7 {
   margin: 0 auto;
   max-width: 620px;
-
-  @include mq($until: medium) {
+  @media (min-width: #{mq.$medium}) {
     margin-top: 40px;
   }
 }
@@ -217,7 +221,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .wpcf7-form-control-wrap.role {
   margin-top: 50px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 60px;
   }
 }
@@ -225,7 +229,7 @@ div.wpcf7-mail-sent-ok.wpcf7-response-output {
 .wpcf7-form-control-wrap.how-can-we-help {
   margin-top: 30px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 40px;
   }
 }

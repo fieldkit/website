@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .section-fk-platform-header-block {
   @extend %margins-horizontal;
   @extend %margins-vertical;
@@ -12,7 +16,7 @@
   max-width: 100%;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     max-width: 820px;
   }
 }

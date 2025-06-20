@@ -1,3 +1,9 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/inset-width";
+@use "../layout-grid/variables" as *;
+
 .section-image {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;

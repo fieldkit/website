@@ -31,7 +31,7 @@ function fieldkit_scripts()
 	wp_enqueue_script(
 		'fieldkit-script',
 		get_theme_file_uri('/assets/scripts/main.bundle.js'),
-		array(),
+		array('jquery'),
 		$theme_version,
 		true
 	);

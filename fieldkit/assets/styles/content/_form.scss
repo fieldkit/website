@@ -1,3 +1,7 @@
+@use "../abstracts/variables/variables" as *;
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "body";
+
 .text-input-container {
   display: block;
   padding-top: 12px;
@@ -12,7 +16,7 @@
   display: block;
   left: 0;
   position: absolute;
-  top: (12px + (30px / 2));
+  top: (12px + calc(30px / 2));
   transform: translateY(-50%);
   transition: none;
   width: 100%;

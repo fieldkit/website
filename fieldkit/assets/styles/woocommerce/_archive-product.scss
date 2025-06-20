@@ -1,3 +1,8 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../content/body";
+
 .woocommerce-breadcrumb {
   display: none;
 }
@@ -35,7 +40,7 @@ select {
   margin-bottom: 38px;
   margin-top: 64px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 188px;
     margin-top: 55px;
   }
@@ -134,7 +139,7 @@ select {
   .woocommerce-ordering select {
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       width: auto;
     }
   }
@@ -170,14 +175,14 @@ select {
 }
 
 .woocommerce-page ul.products {
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-left: -2.5%;
     margin-right: -2.5%;
   }
 }
 
 .woocommerce-page ul.products li.product {
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     float: unset;
     margin: 0 2% 2.992em 2%;
     text-align: center;
@@ -223,7 +228,7 @@ select {
 }
 
 .woocommerce ul.products.columns-3 {
-  @include mq($until: medium) {
+  @media (max-width: mq.$medium) {
     li.product {
       margin-right: 0;
       width: 100%;
@@ -316,7 +321,7 @@ select {
   padding-left: 20px;
   white-space: nowrap;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     justify-content: center;
     overflow-x: initial;
     padding-left: initial;
@@ -371,7 +376,7 @@ select {
   flex-wrap: wrap;
 
   li.widget {
-    @include mq($until: medium) {
+    @media (max-width: mq.$medium) {
       margin-bottom: 38px;
       width: 100%;
     }
@@ -381,7 +386,7 @@ select {
 .fieldkit-sidebar-filter li:not(:first-child) {
   margin-top: 10px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-left: 30px;
     margin-top: 0px;
   }
@@ -394,7 +399,7 @@ select {
 .archive .margins-horizontal .section-callout {
   margin-bottom: 0px !important;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 60px !important;
   }
 }
@@ -406,7 +411,7 @@ select {
 }
 
 .archive .margins-horizontal {
-  @include mq($until: medium) {
+  @media (max-width: mq.$medium) {
     padding-left: 0;
     padding-right: 0;
   }

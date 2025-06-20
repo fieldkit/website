@@ -1,3 +1,9 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../content/body";
+@use "../content/heading";
+
 .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
   background-color: $color-gray-2;
   display: flex;
@@ -106,7 +112,7 @@
 .woocommerce-order-details .woocommerce-order-details__title {
   margin-bottom: 20px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 30px;
   }
 }
@@ -114,7 +120,7 @@
 .woocommerce-customer-details .woocommerce-column__title {
   margin-bottom: 20px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: 30px;
   }
 }

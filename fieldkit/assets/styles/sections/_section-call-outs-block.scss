@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../content/body";
+
 .section-rich-text {
   &.section-callout-block {
     blockquote {
@@ -51,7 +55,7 @@
       top: 16px;
       width: 18px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         top: 20px;
       }
     }
@@ -73,7 +77,7 @@
       top: 16px;
       width: 18px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         top: 22px;
       }
     }
@@ -95,7 +99,7 @@
       top: 16px;
       width: 22px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         top: 22px;
       }
     }

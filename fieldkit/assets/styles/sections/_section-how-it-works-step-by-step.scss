@@ -1,15 +1,22 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/variables" as *;
+@use "../content/heading";
+
 .section-how-it-works-step-by-step {
   @extend %margins-horizontal;
 
   padding-bottom: $spacing-3;
   padding-top: $spacing-2;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-bottom: $spacing-medium-3;
     padding-top: $spacing-medium-2;
   }
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     padding-bottom: $spacing-large-3;
     padding-top: $spacing-large-1;
   }
@@ -23,11 +30,11 @@
   margin-bottom: 57px;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-bottom: $spacing-medium-3;
   }
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     margin-bottom: $spacing-large-3;
   }
 }
@@ -37,7 +44,7 @@
   margin-bottom: 29px;
   text-align: center;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-bottom: initial;
     text-align: left;
   }
@@ -60,13 +67,13 @@
   grid-template-areas: "img" "info";
   margin-bottom: 70px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     grid-template: auto/40% 10% 50%;
     grid-template-areas: "img . info";
     margin-bottom: $spacing-medium-3;
   }
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     margin-bottom: $spacing-large-3;
   }
 
@@ -92,7 +99,7 @@
     width: 16px;
   }
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     font-size: 20px;
 
     img {

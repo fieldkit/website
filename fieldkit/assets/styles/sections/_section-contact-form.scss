@@ -1,10 +1,17 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/variables" as *;
+@use "../components/button";
+
 .section-contact-form {
   @extend %margins-horizontal;
 
   padding-bottom: 130px;
   padding-top: 80px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-bottom: 160px;
     padding-top: 0;
   }
@@ -13,7 +20,7 @@
     margin-bottom: 0;
     text-align: center;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin: 50px auto 70px;
       max-width: 565px;
     }
@@ -42,7 +49,7 @@
     max-width: 100%;
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       width: auto;
     }
   }
@@ -56,7 +63,7 @@
       line-height: normal;
       text-align: center;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         text-align: right;
       }
     }

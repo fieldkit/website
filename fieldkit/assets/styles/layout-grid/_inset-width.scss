@@ -1,10 +1,13 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "variables" as *;
+
 %inset-width {
   margin-left: auto;
   margin-right: auto;
   max-width: $inset-width;
   width: 100%;
 
-  @include mq($from: large) {
-    width: (100% * 12 / 16);
+  @include mq.viewport-large {
+    width: calc(100% * 12 / 16);
   }
 }

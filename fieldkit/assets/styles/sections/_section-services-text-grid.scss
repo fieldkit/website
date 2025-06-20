@@ -1,9 +1,13 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .section-services-text-grid {
   @extend %margins-horizontal;
 
   padding-top: 100px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     padding-top: 80px;
   }
 
@@ -21,7 +25,7 @@
   flex: 0 0 100%;
   padding-bottom: 43px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     flex: 0 0 50%;
     padding-bottom: 93px;
   }

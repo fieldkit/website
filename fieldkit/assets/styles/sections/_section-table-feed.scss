@@ -1,3 +1,8 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/inset-width";
+
 .section-table {
   @extend %margins-horizontal;
   @extend %margins-vertical;

@@ -1,3 +1,7 @@
+@use "../abstracts/variables/variables" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/root" as *;
 $site-header-breakpoint: 1080px;
 
 .site-header {
@@ -10,7 +14,7 @@ $site-header-breakpoint: 1080px;
   top: 0;
   z-index: 1000;
 
-  @include mq($from: $site-header-breakpoint) {
+  @media (min-width: $site-header-breakpoint) {
     padding-left: 32px;
   }
 }
@@ -34,7 +38,7 @@ $site-header-breakpoint: 1080px;
     height: 25px;
     width: auto;
 
-    @include mq($from: $site-header-breakpoint) {
+    @media (min-width: $site-header-breakpoint) {
       height: 30px;
     }
   }
@@ -48,12 +52,12 @@ $site-header-breakpoint: 1080px;
 .site-header__control {
   margin-left: 11px;
 
-  @include mq($from: 1200px) {
+  @media (min-width: 1200px) {
     margin-left: 28px;
   }
 }
 
-@include mq($from: $site-header-breakpoint) {
+@media (min-width: $site-header-breakpoint) {
   .site-header__control {
     &:first-child {
       margin-right: $margin-left-medium;
@@ -69,10 +73,9 @@ $site-header-breakpoint: 1080px;
 }
 
 .site-language-switcher {
-
   margin-bottom: 28px;
 
-  @include mq($from: $site-header-breakpoint) {
+  @media (min-width: $site-header-breakpoint) {
     display: none;
   }
 }
@@ -97,8 +100,12 @@ $site-header-breakpoint: 1080px;
     padding: 13px 0px;
     background: $color-gray-2;
 
-    li a:hover{
-      text-shadow: .1px .1px 0 currentColor,.4px .1px 0 currentColor,.1px .1px 0 currentColor,.3px .3px 0 currentColor;
+    li a:hover {
+      text-shadow:
+        0.1px 0.1px 0 currentColor,
+        0.4px 0.1px 0 currentColor,
+        0.1px 0.1px 0 currentColor,
+        0.3px 0.3px 0 currentColor;
     }
   }
 }
@@ -129,7 +136,6 @@ $site-header-breakpoint: 1080px;
     height: 16px;
   }
 }
-
 
 .site-language-switcher__arrow-up {
   display: none;

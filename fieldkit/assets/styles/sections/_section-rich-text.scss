@@ -1,10 +1,14 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .section-rich-text {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
   margin-top: 81px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 228px;
   }
 

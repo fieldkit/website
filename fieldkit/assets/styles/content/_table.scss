@@ -1,3 +1,6 @@
+@use "body";
+@use "../abstracts/variables/colors" as *;
+
 table {
   border: none;
 }

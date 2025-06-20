@@ -1,9 +1,12 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+
 .social-share-menu-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     flex-direction: row;
   }
 
@@ -15,7 +18,7 @@
   .social-share-menu {
     align-self: start;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       align-self: center;
     }
   }
@@ -29,7 +32,7 @@
   position: relative;
   z-index: 0;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-left: 20px;
     margin-top: 0;
     padding-left: 20px;
@@ -46,7 +49,7 @@
     transform: translateY(-50%);
     width: 1px;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       display: block;
     }
   }

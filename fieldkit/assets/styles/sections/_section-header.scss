@@ -1,10 +1,18 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/inset-width";
+@use "../layout-grid/variables" as *;
+@use "../content/heading";
+
 .section-header {
   @extend %margins-horizontal;
   @extend %margins-vertical--margin;
 
   margin-top: 55px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 100px;
   }
 
@@ -24,7 +32,7 @@
   justify-content: center;
   margin-top: 75px;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     flex-direction: row;
     margin-top: 126px;
   }
@@ -37,7 +45,7 @@
     margin-top: 32px;
   }
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 0;
 
     &:not(:first-child) {

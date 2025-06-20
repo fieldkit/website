@@ -1,3 +1,8 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+
 .section-about-header {
   @extend %margins-horizontal;
 
@@ -5,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vw * 729 / 2560;
+  min-height: 100vw * calc(729 / 2560);
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -22,7 +27,7 @@
   position: relative;
   top: -0.5em;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     top: -1em;
   }
 }
@@ -42,7 +47,7 @@
     transform: scale(1.25);
     width: 100%;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       transform: none;
     }
   }

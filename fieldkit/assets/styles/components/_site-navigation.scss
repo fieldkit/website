@@ -1,3 +1,7 @@
+@use "../abstracts/variables/variables" as *;
+@use "../content/body";
+@use "../components/button";
+
 $site-header-breakpoint: 1080px;
 
 .site-navigation-toggle {
@@ -26,19 +30,19 @@ $site-header-breakpoint: 1080px;
 
 .site-navigation {
   .menu {
-    @include mq($from: $site-header-breakpoint) {
+    @media (min-width: $site-header-breakpoint) {
       display: flex;
     }
   }
 
- .menu-header-container .menu .menu-item,
- .menu-header-spanish-container .menu .menu-item {
+  .menu-header-container .menu .menu-item,
+  .menu-header-spanish-container .menu .menu-item {
     @extend .body;
 
     font-size: 14px;
     text-transform: uppercase;
 
-    @include mq($until: $site-header-breakpoint) {
+    @media (max-width: $site-header-breakpoint) {
       &:not(:first-child) {
         margin-top: 28px;
       }
@@ -46,16 +50,16 @@ $site-header-breakpoint: 1080px;
   }
 
   .menu-header-container .sub-menu .menu-item,
-  .menu-header-spanish-container .sub-menu .menu-item{
+  .menu-header-spanish-container .sub-menu .menu-item {
     font-weight: 500;
     text-transform: uppercase;
-    @include mq($until: $site-header-breakpoint) {
+    @media (max-width: $site-header-breakpoint) {
       text-transform: capitalize;
     }
   }
 
   .menu .menu-item {
-    @include mq($from: $site-header-breakpoint) {
+    @media (min-width: $site-header-breakpoint) {
       display: flex;
       margin-right: 29px;
 
@@ -70,12 +74,15 @@ $site-header-breakpoint: 1080px;
 
     &:not(.current-menu-item) a:hover,
     &:not(.current-menu-item) a:focus {
-      text-shadow: 0.1px 0.1px 0 currentColor, 0.4px 0.1px 0 currentColor,
-        0.1px 0.1px 0 currentColor, 0.3px 0.3px 0 currentColor;
+      text-shadow:
+        0.1px 0.1px 0 currentColor,
+        0.4px 0.1px 0 currentColor,
+        0.1px 0.1px 0 currentColor,
+        0.3px 0.3px 0 currentColor;
     }
 
     a {
-      @include mq($from: $site-header-breakpoint) {
+      @media (min-width: $site-header-breakpoint) {
         font-size: 14px;
         font-weight: normal;
         font-weight: 500;
@@ -84,11 +91,10 @@ $site-header-breakpoint: 1080px;
     }
   }
 
-  @include mq($until: $site-header-breakpoint) {
+  @media (max-width: $site-header-breakpoint) {
     .menu-item-has-children {
-
-      > a::after{
-        content:  url("assets/icons/icon-arrow-down.svg");
+      > a::after {
+        content: url("assets/icons/icon-arrow-down.svg");
         padding-left: 9px;
       }
       .sub-menu {
@@ -98,18 +104,19 @@ $site-header-breakpoint: 1080px;
         padding-bottom: 20px;
         padding-top: 20px;
 
-        li{
+        li {
           padding-left: 9px;
         }
       }
 
-      &--open, .current_page_parent{
+      &--open,
+      .current_page_parent {
         .sub-menu {
           display: block;
         }
 
-        > a::after{
-          content:  url("assets/icons/icon-arrow-up.svg");
+        > a::after {
+          content: url("assets/icons/icon-arrow-up.svg");
         }
       }
 
@@ -122,7 +129,7 @@ $site-header-breakpoint: 1080px;
     }
   }
 
-  @include mq($from: $site-header-breakpoint) {
+  @media (min-width: $site-header-breakpoint) {
     .menu-item-has-children {
       position: relative;
 
@@ -142,7 +149,9 @@ $site-header-breakpoint: 1080px;
         position: absolute;
         right: 0;
         top: 21px;
-        transition: opacity $duration-fast, visibility 0s $duration-fast;
+        transition:
+          opacity $duration-fast,
+          visibility 0s $duration-fast;
         visibility: hidden;
         width: 160px;
 
@@ -177,7 +186,7 @@ $site-header-breakpoint: 1080px;
     margin-right: 34px;
     display: block;
 
-    @include mq($from: $site-header-breakpoint) {
+    @media (min-width: $site-header-breakpoint) {
       display: none;
     }
 
@@ -199,7 +208,7 @@ $site-header-breakpoint: 1080px;
   padding-right: 0;
 }
 
-@include mq($until: $site-header-breakpoint) {
+@media (max-width: $site-header-breakpoint) {
   .site-navigation {
     background-color: #ffffff;
     height: 100vh;
@@ -208,7 +217,9 @@ $site-header-breakpoint: 1080px;
     padding-top: 56px;
     position: absolute;
     top: 0;
-    transition: opacity $duration-fast, visibility 0s $duration-fast;
+    transition:
+      opacity $duration-fast,
+      visibility 0s $duration-fast;
     visibility: hidden;
     width: 100%;
     z-index: -1;
@@ -219,7 +230,9 @@ $site-header-breakpoint: 1080px;
 
     .site-navigation-open & {
       opacity: 1;
-      transition: opacity $duration-fast, visibility 0s;
+      transition:
+        opacity $duration-fast,
+        visibility 0s;
       visibility: visible;
 
       @media screen and (prefers-reduced-motion: reduce) {
@@ -239,7 +252,7 @@ $site-header-breakpoint: 1080px;
   }
 }
 
-@include mq($from: $site-header-breakpoint) {
+@media (min-width: $site-header-breakpoint) {
   .site-navigation-toggle,
   .site-navigation-close {
     display: none;

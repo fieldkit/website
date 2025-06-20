@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/variables" as *;
+@use "../components/button";
+
 .woocommerce-cart {
   .section__inner {
     max-width: 1080px;
@@ -25,12 +29,12 @@
       }
 
       &.cart td.product-remove {
-        @include mq($until: medium) {
+        @media (max-width: mq.$medium) {
           padding: 0px;
         }
 
         a.remove {
-          @include mq($until: medium) {
+          @media (max-width: mq.$medium) {
             margin-bottom: 12px;
           }
         }
@@ -43,7 +47,7 @@
       .component_table_item .component_table_item_indent {
         float: right;
 
-        @include mq($from: medium) {
+        @include mq.viewport-medium {
           float: unset;
           padding-left: 30px;
         }
@@ -54,7 +58,7 @@
       }
 
       &.cart .component_table_item td.product-subtotal {
-        @include mq($until: medium) {
+        @media (max-width: mq.$medium) {
           padding: 0;
         }
       }
@@ -73,16 +77,15 @@
       .bundle_table_item .product-price,
       .bundled_table_item .product-price,
       .bundled_table_item .product-subtotal {
-        @include mq($until: medium) {
+        @media (max-width: mq.$medium) {
           display: none;
           padding: 0;
+          visibility: hidden;
         }
-
-        visibility: hidden;
       }
 
       .bundled_table_item .product-subtotal {
-        @include mq($until: medium) {
+        @media (max-width: mq.$medium) {
           padding: 0px 0px 10px 0px;
         }
       }
@@ -95,7 +98,7 @@
         font-weight: 600;
         letter-spacing: 0.39px;
         a {
-          @include mq($until: medium) {
+          @media (max-width: mq.$medium) {
             display: flex;
             justify-content: flex-end;
             width: 100%;
@@ -106,7 +109,7 @@
       .bundled_table_item .bundled_table_item_indent {
         padding-left: 0px;
 
-        @include mq($from: medium) {
+        @include mq.viewport-medium {
           padding-left: 50px;
         }
 
@@ -178,7 +181,7 @@
           color: #2c3e50;
           font-size: 14px;
           font-weight: 600;
-          letter-spacing: .39px;
+          letter-spacing: 0.39px;
         }
       }
     }
@@ -189,7 +192,7 @@
 
       margin-bottom: 10px;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         margin-bottom: 0px;
         margin-right: 8px;
       }
@@ -287,7 +290,7 @@
     .cart_totals {
       width: 100%;
 
-      @include mq($from: medium) {
+      @include mq.viewport-medium {
         width: 40%;
       }
 
@@ -375,7 +378,7 @@
   td:first-child {
     padding-left: 0.9rem;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       padding-left: 1.3rem;
     }
   }
@@ -393,7 +396,7 @@
   td:first-child {
     padding-left: 0.9rem;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       padding-left: 1.3rem;
     }
   }
@@ -410,7 +413,7 @@
 
 .cart_totals.calculated_shipping .shop_table td {
   &::before {
-    @include mq($until: medium) {
+    @media (max-width: mq.$medium) {
       color: #2c3e50;
       font-family: $font-family-base;
       font-size: 16px;
@@ -436,7 +439,7 @@ td#fieldkit-shipping-methods {
     margin-top: 25px;
     text-align: left;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       margin-top: 35px;
     }
   }
@@ -457,7 +460,7 @@ ul#shipping_method {
   margin-bottom: 22px;
   text-align: left;
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     letter-spacing: normal;
   }
 }
@@ -469,7 +472,7 @@ ul#shipping_method {
   margin-bottom: 22px;
   text-align: left;
 
-  @include mq($from: large) {
+  @include mq.viewport-large {
     letter-spacing: normal;
   }
 }

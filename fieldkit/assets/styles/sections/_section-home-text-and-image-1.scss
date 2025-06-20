@@ -1,3 +1,11 @@
+@use "../abstracts/mixins/mq-conf" as mq;
+@use "../abstracts/variables/colors" as *;
+@use "../layout-grid/margins";
+@use "../layout-grid/maximum-width";
+@use "../layout-grid/variables" as *;
+@use "../content/heading";
+@use "sass:math";
+
 .section-home-text-and-image-1 {
   @extend %margins-horizontal;
 
@@ -5,7 +13,7 @@
   padding-bottom: $margin-bottom * 3;
   padding-top: $margin-top * 3;
 
-  @include mq($from: medium) {
+  @include mq.viewport-medium {
     margin-top: 0;
     padding-bottom: $margin-bottom * 6;
     padding-top: $margin-top * 5;
@@ -17,7 +25,7 @@
     display: flex;
     flex-direction: column-reverse;
 
-    @include mq($from: medium) {
+    @include mq.viewport-medium {
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
@@ -26,12 +34,12 @@
 }
 
 .section-home-text-and-image-1__text {
-  @include mq($until: medium) {
+  @media (max-width: mq.$medium) {
     margin-top: $margin-top * 2;
   }
 
-  @include mq($from: medium) {
-    width: calc(50% - #{$margin-left-medium / 2});
+  @include mq.viewport-medium {
+    width: calc(50% - #{math.div($margin-left-medium, 2)});
   }
 
   p {
@@ -47,8 +55,8 @@
 }
 
 .section-home-text-and-image-1__image {
-  @include mq($from: medium) {
-    width: calc(50% - #{$margin-left-medium / 2});
+  @include mq.viewport-medium {
+    width: calc(50% - #{math.div($margin-left-medium, 2)});
   }
 
   img {
